@@ -1,0 +1,42 @@
+baseurl: https://math2001.github.io
+languageCode: en-us
+title: Math2001's blog
+theme: minimal
+
+params:
+  author: Mathieu Paturel
+  description: My personal blog
+  githubUsername: 'math2001'
+  accent: red
+  font: Raleway
+  showBorder: true
+  highlight: true
+  highlightStyle: solarized-dark
+  highlightLanguages:
+    - go
+    - python
+    - javascript
+    - vim
+
+menu:
+  main:
+    - url: /
+      name: Home
+      weight: 1
+    - url: /post/
+      name: Posts
+      weight: 2
+    - url: /project/
+      name: Projects
+      weight: 3
+
+  icon:
+    - url: mailto:australie.p@gmail.com
+      name: envelope-o
+      weight: 1
+    - url: https://github.com/math2001
+      name: github
+      weight: 2
+    - url: https://twitter.com/_math2001
+      name: twitter
+      weight: 3
