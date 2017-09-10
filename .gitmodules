@@ -1,3 +1,9 @@
 [submodule "themes/minimal"]
 	path = themes/minimal
 	url = https://github.com/calintat/minimal.git
+[submodule "themes/icarus"]
+	path = themes/icarus
+	url = https://github.com/digitalcraftsman/hugo-icarus-theme.git
+[submodule "themes/fasty"]
+	path = themes/fasty
+	url = git@github.com:math2001/fasty

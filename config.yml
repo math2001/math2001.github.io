@@ -1,42 +1,35 @@
-baseurl: https://math2001.github.io
+title: "Math2001's blog"
+baseURL: https://math2001.github.io
 languageCode: en-us
-title: Math2001's blog
-theme: minimal
+metaDataFormat: yaml
+preserveTaxonomyNames: true
+
+theme: fasty
+author:
+  math2001: "Mathieu Paturel"
+description: My blog
+copyright: '© Mathieu Paturel 2017'
 
 params:
-  author: Mathieu Paturel
   description: My personal blog
-  githubUsername: 'math2001'
-  accent: red
-  font: Raleway
-  showBorder: true
-  highlight: true
-  highlightStyle: solarized-dark
-  highlightLanguages:
-    - go
-    - python
-    - javascript
-    - vim
+  github_username: math2001
 
 menu:
   main:
-    - url: /
-      name: Home
-      weight: 1
     - url: /post/
       name: Posts
-      weight: 2
+      weight: 1
     - url: /project/
       name: Projects
-      weight: 3
-
-  icon:
-    - url: mailto:australie.p@gmail.com
-      name: envelope-o
-      weight: 1
-    - url: https://github.com/math2001
-      name: github
       weight: 2
-    - url: https://twitter.com/_math2001
-      name: twitter
-      weight: 3
+
+#     icon:
+#       - url: mailto:australie.p@gmail.com
+#         name: envelope-o
+#         weight: 1
+#       - url: https://github.com/math2001
+#         name: github
+#         weight: 2
+#       - url: https://twitter.com/_math2001
+#         name: twitter
+#         weight: 3
