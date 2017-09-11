@@ -1,7 +1,7 @@
 ---
 title: DynamicOpen function in VIM 
 slug: dynamicopen-function-vim
-tags: [ [ vim, vimscript ] ]
+tags: [ vim, vimscript ]
 categories: [ cool feature ]
 date: 2017-08-27
 place: In the car

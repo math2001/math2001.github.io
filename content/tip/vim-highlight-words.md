@@ -1,7 +1,7 @@
 ---
 title: Highlight every occurrences of the word under the cursor in VIM
 slug: highlight-every-occurrences-word-under-cursor-vim
-tags: [ [ vim, vimscript ] ]
+tags: [ vim, vimscript ]
 categories: [ cool feature ]
 date: 2017-08-22
 ---
