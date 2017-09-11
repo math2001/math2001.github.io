@@ -1,7 +1,7 @@
 ---
 title: Network throttling
 slug: network-throttling
-date: "2017-08-20"
+date: 2017-08-20
 categories: [ "web development" ]
 tags: [ "chrome", "devtools", "network", "performances", "testing" ]
 ---
