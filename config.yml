@@ -13,6 +13,8 @@ copyright: '© Mathieu Paturel 2017'
 params:
   description: My personal blog
   github_username: math2001
+  dev: true
+  themefoldername: fasty
 
 menu:
   main:
@@ -21,7 +23,28 @@ menu:
       weight: 1
     - url: /project/
       name: Projects
-      weight: 2
+      weight: 5
+    - url: /tip/
+      name: Tips
+      weight: 10
+    - url: /categories/
+      pre: "|"
+      name: Categories
+      weight: 15
+    - url: /tags/
+      name: Tags
+      weight: 20
+
+  home:
+    - url: /post/
+      name: Posts
+      weight: 1
+    - url: /project/
+      name: Projects
+      weight: 5
+    - url: /tip/
+      name: Tips
+      weight: 10
 
 #     icon:
 #       - url: mailto:australie.p@gmail.com
