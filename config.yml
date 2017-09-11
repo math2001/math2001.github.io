@@ -13,7 +13,6 @@ copyright: '© Mathieu Paturel 2017'
 params:
   description: My personal blog
   github_username: math2001
-  dev: true
   themefoldername: fasty
 
 menu:
