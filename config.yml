@@ -11,9 +11,14 @@ description: My blog
 copyright: '© Mathieu Paturel 2017'
 
 params:
+  dev: true
   description: My personal blog
   github_username: math2001
   themefoldername: fasty
+  avatar:
+    path: img/math2001.svg
+    alt: Math2001's logo
+  favicon: img/math2001.png
 
 menu:
   main:
