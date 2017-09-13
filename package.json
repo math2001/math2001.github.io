@@ -4,13 +4,11 @@
   "description": "Math2001's blog",
   "main": "index.js",
   "scripts": {
-      "index": "hugo-lunr -o docs/index.json"
+    "index": "hugo-lunr -o docs/index.json"
   },
   "repository": "git@github.com:math2001/blog",
   "author": "Mathieu PATUREL <australie.p@gmail.com>",
   "license": "MIT",
   "private": false,
-  "dependencies": {
-    "hugo-lunr": "^0.0.4"
-  }
+  "dependencies": {}
 }
