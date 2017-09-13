@@ -1,9 +1,9 @@
 ---
 title: The confirm option on VIM
-slug: config-option-vim
+slug: confirm-option-vim
 tags: [ vim, option ]
 categories: [ cool feature ]
-date: 2017-07-03
+date: 2017-09-03
 ---
 
 This is probably one of my favorite option in VIM. Just add this to your `.vimrc`:
