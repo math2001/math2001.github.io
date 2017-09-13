@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Options on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/tags/options/</link>
+    <description>Recent content in Options on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017</copyright>
+    <lastBuildDate>Sat, 26 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/tags/options/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The difference between the VIM options &#39;readonly&#39; and &#39;modifiable&#39;</title>
+      <link>https://math2001.github.io/tip/difference-vim-options-readonly-modifiable/</link>
+      <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tip/difference-vim-options-readonly-modifiable/</guid>
+      <description>All the readonly does, when enabled, is it prevents you from writing the file (you can bypass it by doing :w! though), while modifiable, when disabled prevents you from actually editing the buffer.</description>
+    </item>
+    
+  </channel>
+</rss>

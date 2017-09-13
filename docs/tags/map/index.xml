@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Map on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/tags/map/</link>
+    <description>Recent content in Map on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017</copyright>
+    <lastBuildDate>Sun, 27 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/tags/map/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Current buffer only mapping in VIM</title>
+      <link>https://math2001.github.io/tip/current-buffer-only-mapping-vim/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tip/current-buffer-only-mapping-vim/</guid>
+      <description>If you want to set a mapping only for the current buffer in VIM, it&amp;rsquo;s super simple: just use the buffer special argument, like so for example:
+nnoremap &amp;lt;buffer&amp;gt; ,tip call InsertTipYamlFrontMatter()  Learn more: :help :map-local</description>
+    </item>
+    
+    <item>
+      <title>Silent command-line mapping in VIM</title>
+      <link>https://math2001.github.io/tip/silent-command-line-mapping-vim/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tip/silent-command-line-mapping-vim/</guid>
+      <description>If you want to set a mapping to run something that is echoed into the command line (something starting with : or / for example) to not be displayed, you can use the special argument silent, like so for example:
+map &amp;lt;silent&amp;gt; &amp;lt;leader&amp;gt;r :MyCommand  By the way, you should (almost) always use noremap.
+Learn more: :help :map-silent</description>
+    </item>
+    
+  </channel>
+</rss>

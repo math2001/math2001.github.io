@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Infos on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/categories/infos/</link>
+    <description>Recent content in Infos on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017</copyright>
+    <lastBuildDate>Sat, 26 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/categories/infos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The difference between the VIM options &#39;readonly&#39; and &#39;modifiable&#39;</title>
+      <link>https://math2001.github.io/tip/difference-vim-options-readonly-modifiable/</link>
+      <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tip/difference-vim-options-readonly-modifiable/</guid>
+      <description>All the readonly does, when enabled, is it prevents you from writing the file (you can bypass it by doing :w! though), while modifiable, when disabled prevents you from actually editing the buffer.</description>
+    </item>
+    
+    <item>
+      <title>Variable scopes in vim</title>
+      <link>https://math2001.github.io/tip/variable-scopes-vim/</link>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tip/variable-scopes-vim/</guid>
+      <description>An interesting feature of vim script is variable scoping. Here&amp;rsquo;s a copy-paste from the documentation, just in case you never saw it before:
+There are several name spaces for variables. Which one is to be used is specified by what is prepended: (nothing) In a function: local to a function; otherwise: global buffer-variable b: Local to the current buffer. window-variable w: Local to the current window. tabpage-variable t: Local to the current tab page.</description>
+    </item>
+    
+    <item>
+      <title>Vim help index</title>
+      <link>https://math2001.github.io/tip/vim-help-index/</link>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tip/vim-help-index/</guid>
+      <description>A very strong point of vim is its documentation. There&amp;rsquo;s just so much of it!!
+So, use it
+It doesn&amp;rsquo;t matter if you&amp;rsquo;re an experienced user of vim or a complete beginner, there&amp;rsquo;ll be something in there for you to learn for sure.
+Where could you start? Well, at the index of course! Just type :help and hit enter and scroll down a bit.
+See that? You got a few kind of &amp;ldquo;tutorials&amp;rdquo; (I especially like the one Clever tricks).</description>
+    </item>
+    
+  </channel>
+</rss>

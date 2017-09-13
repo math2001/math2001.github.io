@@ -1,0 +1,131 @@
+:root {
+  --page-bg: hsla(195, 55%, 98%, 1);
+  --monospace: Inconsolata, menlo, consolas;
+  --color: #333;
+  --font-mute: hsla(214, 3%, 59%, 1);
+  --purple: hsla(232, 59%, 58%, 1);
+  --header-bg: hsl(194, 4%, 19%);
+  --header-fg: #ccc;
+  --code-bg: #F3F3F3;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+* { 
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--purple);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--monospace);
+  margin: 0;
+  background: var(--page-bg);
+  height: 100%;
+  position: relative;
+  color: #333;
+  line-height: 1.5;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+  position: relative;
+}
+
+main {
+  margin-bottom: 20px;
+}
+
+.nav {
+  flex: 1;
+}
+
+.nav-list {
+  padding: 0;
+  list-style: none;
+}
+
+.nav-separator {
+  border-left: 1px solid hsl(0, 0%, 42%);
+  height: 1.2em;
+  vertical-align: middle;
+}
+
+.nav-list-item {
+  display: inline-block;
+}
+
+.header-search input {
+  font-family: inherit;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 100%;
+  outline: none;
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+}
+
+.tags a {
+  color: #888;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  font-size: 90%;
+}
+
+.tags a:hover {
+  border-color: #aaa;
+  color: #555;
+}
+
+.categories {
+  padding: 0;
+  list-style: none;
+}
+
+.categories a::after,
+.categories a::before {
+  content: "{";
+  margin-right: 5px;
+  display: inline-block;
+  color: #888;
+}
+
+.categories a::after {
+  content: "}";
+  margin: 0;
+  margin-left: 5px;
+}
+
+.categories a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+.categories a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+/* geektnt.com/how-to-remove-x-from-search-input-field-on-chrome-and-ie.html */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none;  }
+

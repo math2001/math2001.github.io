@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/categories/about/</link>
+    <description>Recent content in About on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017</copyright>
+    <lastBuildDate>Sat, 09 Sep 2017 19:43:23 +1000</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/categories/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My new blog</title>
+      <link>https://math2001.github.io/post/my-new-blog/</link>
+      <pubDate>Sat, 09 Sep 2017 19:43:23 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/my-new-blog/</guid>
+      <description>This is my new blog, powered by Hugo, a go static website generator. You probably heard of it. It&amp;rsquo;s super fast.</description>
+    </item>
+    
+  </channel>
+</rss>
