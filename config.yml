@@ -4,6 +4,7 @@ languageCode: en-us
 metaDataFormat: yaml
 preserveTaxonomyNames: true
 publishDir: docs
+publishBranch: gh-pages
 
 theme: fasty
 author:

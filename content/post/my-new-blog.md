@@ -10,7 +10,7 @@ Hello everyone!
 My name's Mathieu Paturel - `@math2001` - and I love coding.
 
 I'm French (from Provence, if you know where that is), but my family and I moved 2 years ago to
-Australia so that we could learn to speak fluently English (without this disgusting accent :smile:)
+Australia so that we could learn to speak fluently English (without this disgusting accent :smile:).
 
 ### How did I discovered coding
 
