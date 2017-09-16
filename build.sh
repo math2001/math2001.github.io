@@ -5,7 +5,7 @@ fi
 
 echo "build into 'public'"
 hugo -d public
-echo "get branch name"
+echo "get publish branch name"
 BRANCH_NAME=$(hugo config | egrep ^publishbranch:\ \" -m 1 | egrep '"[^!\^:\\ ]+"' -oi | tr -d '"')
 if !git check-ref-format --branch $BRANCH_NAME; then
     exit 1

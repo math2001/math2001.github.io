@@ -72,7 +72,7 @@ maintainer's response (I really didn't speak properly English at the time). I th
 the PR I read the answer from the email notification, I didn't understood that I could edit the
 code and edit it, I didn't really get concept of Pull Request (I just followed the step by step
 guide in the Package Control's documentation). I never answered anything back (I don't even remember
-seeing the ping from the maintainer). The result being that the PR was closed.
+seeing the ping from the maintainer). The result being that the PR was closed. :disappointed:
 
 But anyway... I made some other plugins later on, I had a better understanding of GitHub, and some
 of [my plugins][] are now on Package Control.
