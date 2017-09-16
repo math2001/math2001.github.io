@@ -1,5 +1,5 @@
 ---
-title: Rerun last command with bang (force) in VIM 
+title: Rerun last command with bang
 slug: rerun-last-command-bang-vim
 tags: [ vim, vimscript, bang ]
 categories: [ cool feature ]

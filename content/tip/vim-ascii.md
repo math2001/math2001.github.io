@@ -1,5 +1,5 @@
 ---
-title: How do I get the ASCII value of a character in vim?
+title: How do I get the ASCII value of a character?
 slug: get-ascii-value-character-vim
 categories: [ cool feature ]
 tags: [ vim, ascii ]

@@ -1,6 +1,6 @@
 ---
-title: Silent command-line mapping in VIM 
-slug: silent-command-line-mapping-vim
+title: Silent command-line mapping
+slug: silent-command-line-mapping
 tags: [ vim, map, command ]
 categories: [ cool feature ]
 date: 2017-08-27

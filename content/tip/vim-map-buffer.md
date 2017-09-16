@@ -1,5 +1,5 @@
 ---
-title: Current buffer only mapping in VIM 
+title: Current buffer only mapping
 slug: current-buffer-only-mapping-vim
 tags: [ vim, map, buffer ]
 categories: [ cool feature ]

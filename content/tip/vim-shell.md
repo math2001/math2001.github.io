@@ -1,5 +1,5 @@
 ---
-title: Change shell used to run external command in VIM
+title: Change shell used to run external command
 slug: change-shell-run-external-command-vim
 tags: [ vim, shell, bash, windows, sh ]
 categories: [ cool feature ]

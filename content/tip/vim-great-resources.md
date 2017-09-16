@@ -1,7 +1,7 @@
 ---
 title: Great resources for VIM users 
 slug: great-resources-for-vim-users
-tags: [ vim, vimscript, resources ]
+tags: [ vim, vimscript ]
 categories: [ resources ]
 date: 2017-09-03
 ---
@@ -13,7 +13,4 @@ probably will know some ­ if not all ­ of them)
 - [vimcolors.com](http://vimcolors.com) A list of color schemes
 - [vimawesome.com](http://vimawesome.com) A website listing vim plugin
 - [vi.stackexchange.com](http://vi.stackexchange.com) The stack exchange website for VIM
-
-
-
 

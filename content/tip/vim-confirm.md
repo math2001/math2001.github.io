@@ -1,5 +1,5 @@
 ---
-title: The confirm option on VIM
+title: The confirm option
 slug: confirm-option-vim
 tags: [ vim, option ]
 categories: [ cool feature ]
@@ -14,7 +14,7 @@ This will affect different command in VIM: instead of just failing (and telling
 you to use force if you want to overwrite), it'll show a confirm "popup" at the
 bottom and you'll be good to do.
 
-## Quick example
+### Quick example
 
 When you want to quit a file that isn't saved, here's what you get:
 

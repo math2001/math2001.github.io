@@ -1,12 +1,13 @@
 ---
-title: Highlight every occurrences of the word under the cursor in VIM
-slug: highlight-every-occurrences-word-under-cursor-vim
+title: Highlight word under the cursor
+slug: highlight-word-under-cursor
 tags: [ vim, vimscript ]
 categories: [ cool feature ]
 date: 2017-08-22
+draft: true
 ---
 
-[ A feature of Sublime Text I really enjoyed was highlighting every occurrence of ]
+A feature of Sublime Text I really enjoyed was highlighting every occurrence of
 the selected word.
 
 So, here's the VIM way. It's not implemented by default, but a bit of vimscript

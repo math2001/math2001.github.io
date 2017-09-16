@@ -10,13 +10,16 @@ author:
   math2001: "Mathieu Paturel"
 description: My blog
 copyright: '© Mathieu Paturel 2017'
+enableEmoji: true
+hrefTargetBlank: true
+newContentEditor: "vim"
 
 params:
   dev: true
   disableSearch: true # not available yet
   description: My personal blog
   github_username: math2001
-  themefoldername: fasty
+  themefolderpath: "themes/fasty"
   avatar:
     path: img/math2001.svg
     alt: Math2001's logo

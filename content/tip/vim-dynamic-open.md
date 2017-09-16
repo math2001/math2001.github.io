@@ -1,5 +1,5 @@
 ---
-title: DynamicOpen function in VIM 
+title: DynamicOpen function
 slug: dynamicopen-function-vim
 tags: [ vim, vimscript ]
 categories: [ cool feature ]
