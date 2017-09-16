@@ -3,7 +3,7 @@ set -o errexit # abort if a command fails
 VERSION="0.1.0"
 
 function git_clean {
-    if [[ $(git status --short) == '' ]]; then
+    if [[ $(git status --short > /dev/null) == '' ]]; then
         return 0
     fi
     return 1
@@ -41,6 +41,7 @@ CURRENT_COMMIT=$(git rev-parse HEAD)
 tmpdir=$(mktemp -d)
 hugo -d $tmpdir
 git checkout $BRANCH
+
 if ! git_clean; then
     echo 'git status not clean. Please commit your manual edits'
     exit 1
