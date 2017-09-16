@@ -9,6 +9,7 @@ function git_clean {
     return 1
 }
 if ! git_clean; then
+    echo "git status dirty"
     echo "You need to commit/remove your changes before you can deploy"
     exit 1
 fi
@@ -44,6 +45,7 @@ if ! git_clean; then
     echo 'git status not clean. Please commit your manual edits'
     exit 1
 fi
+rm -rf ./*
 mv $tmpdir/* .
 git add .
 git commit -m "Auto build [$VERSION] commit: $CURRENT_COMMIT"
