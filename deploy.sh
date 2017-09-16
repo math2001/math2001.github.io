@@ -18,7 +18,7 @@ if [[ "$(git branch --list $BRANCH)" == '' ]]; then
     # create branch
     git checkout --orphan $BRANCH
     git reset --hard
-    git commit -m "Auto build [$VERSION] initial commit"
+    git commit -m "Auto build [$VERSION] initial commit" --allow-empty
     git checkout $CURRENT_BRANCH
 fi
 
