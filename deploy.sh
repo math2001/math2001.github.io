@@ -1,6 +1,18 @@
 set -o errexit # abort if a command fails
 
 VERSION="0.1.0"
+
+function git_clean {
+    if [[ $(git status --short) == '' ]]; then
+        return 0
+    fi
+    return 1
+}
+if ! git_clean; then
+    echo "You need to commit/remove your changes before you can deploy"
+    exit 1
+fi
+
 BRANCH=$(hugo config | grep publishbranch | egrep '"[^!\^:\\ ]+"' -o | tr -d '"')
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
@@ -13,6 +25,7 @@ if [[ $line != 'y' ]]; then
     echo "Abort"
     exit 1
 fi
+
 
 if [[ "$(git branch --list $BRANCH)" == '' ]]; then
     # create branch
@@ -27,7 +40,7 @@ CURRENT_COMMIT=$(git rev-parse HEAD)
 tmpdir=$(mktemp -d)
 hugo -d $tmpdir
 git checkout $BRANCH
-if [[ $(git status --short) != '' ]]; then
+if ! git_clean; then
     echo 'git status not clean. Please commit your manual edits'
     exit 1
 fi
