@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ascii on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/tags/ascii/</link>
+    <description>Recent content in Ascii on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017</copyright>
+    <lastBuildDate>Sat, 26 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/tags/ascii/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How do I get the ASCII value of a character?</title>
+      <link>https://math2001.github.io/tip/get-ascii-value-character-vim/</link>
+      <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tip/get-ascii-value-character-vim/</guid>
+      <description>To get the ASCII value of the character under the cursor, just press ga (or run :ascii).
+It&amp;rsquo;ll print it in three format: in decimal, hexadecimal and octal.
+So, when your cursor is on an arrow and that you press ga: →, you&amp;rsquo;ll see at the bottom:
+&amp;lt;→&amp;gt; 8594, Hex: 2192, Octal: 20622   Mnemonic: Get ASCII value. ­ from :help :ascii
+ </description>
+    </item>
+    
+  </channel>
+</rss>

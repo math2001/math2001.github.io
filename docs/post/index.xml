@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/post/</link>
+    <description>Recent content in Posts on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017</copyright>
+    <lastBuildDate>Sat, 09 Sep 2017 19:43:23 +1000</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My new blog</title>
+      <link>https://math2001.github.io/post/my-new-blog/</link>
+      <pubDate>Sat, 09 Sep 2017 19:43:23 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/my-new-blog/</guid>
+      <description>Hello everyone!
+My name&amp;rsquo;s Mathieu Paturel - @math2001 - and I love coding.
+I&amp;rsquo;m French (from Provence, if you know where that is), but my family and I moved 2 years ago to Australia so that we could learn to speak fluently English (without this disgusting accent 😄).
+How did I discovered coding It all started with the basic &amp;ldquo;programming language&amp;rdquo; (notice the quotes 😄). My farther taught me the very basic of programming (and it was pretty much all you could do with this language I&amp;rsquo;d 😆).</description>
+    </item>
+    
+  </channel>
+</rss>

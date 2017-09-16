@@ -3,6 +3,7 @@ baseURL: https://math2001.github.io
 languageCode: en-us
 metaDataFormat: yaml
 preserveTaxonomyNames: true
+publishDir: 'docs'
 
 theme: fasty
 author:
@@ -14,11 +15,11 @@ hrefTargetBlank: true
 newContentEditor: "vim"
 
 params:
-  dev: true
+  dev: false
   disableSearch: true # not available yet
   description: My personal blog
   github_username: math2001
-  themefolderpath: ~/.hugo-themes/fasty
+  themefolderpath: themes/fasty
   avatar:
     path: img/math2001.svg
     alt: Math2001's logo
