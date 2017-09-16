@@ -1,18 +1,28 @@
 set -o errexit # abort if a command fails
 
 VERSION="0.1.0"
+BRANCH=$(hugo config | grep publishbranch | egrep '"[^!\^:\\ ]+"' -o | tr -d '"')
+CURRENT_BRANCH=$(git rev-parse --abbrev-red HEAD)
+
+if [[ "$(git branch --list $BRANCH)" == '' ]]; then
+    # create branch
+    git checkout --orphan $BRANCH
+    git commit -m "Auto build [$VERSION] initial commit"
+    git checkout $CURRENT_BRANCH
+fi
+
 CURRENT_COMMIT=$(git rev-parse HEAD)
 
 tmpdir=$(mktemp -d)
 hugo -d $tmpdir
-git checkout gh-pages
+git checkout $BRANCH
 if [[ $(git status --short) != '' ]]; then
     echo 'git status not clean. Please commit your manual edits'
     exit 1
 fi
 mv $tmpdir/* .
 git add .
-git commit -am "Auto build [$VERSION] commit: $CURRENT_COMMIT"
-git checkout master
+git commit -m "Auto build [$VERSION] commit: $CURRENT_COMMIT"
+git checkout $CURRENT_BRANCH
 
 set +o errexit
