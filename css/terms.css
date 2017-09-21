@@ -1,0 +1,15 @@
+.terms-top {
+  text-align: center;
+}
+
+.terms-content {
+  width: 500px;
+  max-width: 100%;
+  margin: auto;
+  columns: auto 10em;
+}
+
+.terms-tags,
+.terms-categories {
+  margin: 0;
+}

@@ -1,0 +1,470 @@
+<html lang="en-us">
+<head>
+    <meta name="generator" content="Hugo 0.27.1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+
+    <link rel=icon type=image/png href='/img/math2001.png'>
+    <title>My new blog - Math2001&#39;s blog</title><style>
+    :root {
+  --page-bg: hsla(195, 55%, 98%, 1);
+  --monospace: Inconsolata, menlo, consolas;
+  --color: #333;
+  --font-mute: hsla(214, 3%, 59%, 1);
+  --purple: hsla(232, 59%, 58%, 1);
+  --header-bg: hsl(194, 4%, 19%);
+  --header-fg: #ccc;
+  --code-bg: #F3F3F3;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+* { 
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--purple);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--monospace);
+  margin: 0;
+  background: var(--page-bg);
+  height: 100%;
+  position: relative;
+  color: #333;
+  line-height: 1.5;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+  position: relative;
+}
+
+main {
+  margin-bottom: 20px;
+}
+
+header {
+  background-color: var(--header-bg);
+  padding: 5px 10px;
+  display: flex;
+  align-items: baseline;
+  color: var(--header-fg);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+header a {
+  color: var(--header-fg);
+  text-decoration: none;
+}
+
+.header-brand {
+  margin-right: 10px;
+}
+
+.nav {
+  flex-grow: 1;
+}
+
+.nav-list {
+  padding: 0;
+  list-style: none;
+}
+
+.nav-separator {
+  border-left: 1px solid hsl(0, 0%, 42%);
+  height: 1.2em;
+  vertical-align: middle;
+}
+
+.nav-list-item {
+  display: inline-block;
+}
+
+.header-search input {
+  font-family: inherit;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 100%;
+  outline: none;
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+}
+
+.tags a {
+  color: #888;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  font-size: 90%;
+}
+
+.tags a:hover {
+  border-color: #aaa;
+  color: #555;
+}
+
+.categories {
+  padding: 0;
+  list-style: none;
+}
+
+.categories a::after,
+.categories a::before {
+  content: "{";
+  margin-right: 5px;
+  display: inline-block;
+  color: #888;
+}
+
+.categories a::after {
+  content: "}";
+  margin: 0;
+  margin-left: 5px;
+}
+
+.categories a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+.categories a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding: 0 10px;
+}
+
+/* geektnt.com/how-to-remove-x-from-search-input-field-on-chrome-and-ie.html */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none;  }
+
+
+</style><style>
+    /* Tomorrow Night Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #969896;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #cc6666;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #de935f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+  color: #f0c674;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #b5bd68;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+  color: #81a2be;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #b294bb;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #1d1f21;
+  color: #c5c8c6;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+</style><style>
+    .page-top {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.page-title {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.page-categories {
+  margin-top: 0;
+}
+
+.page-categories li {
+  display: inline-block;
+}
+
+.page-content {
+  width: 1000px;
+  max-width: 100%;
+  margin: 20px auto;
+  background: white;
+  text-align: justify;
+  box-shadow: 5px 5px 20px #ddd;
+  padding: 10px 0;
+  --x-margin: 5%;
+}
+
+.page-content p,
+.page-content blockquote,
+.page-content ul,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6 {
+  margin-right: var(--x-margin);
+  margin-left: var(--x-margin);
+}
+
+.page-tags {
+  text-align: center;
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.page-tags li {
+  display: inline-block;
+}
+
+.page-bottom {
+  text-align: center;
+  padding: 1px 20px;
+}
+
+.page-date {
+  font-style: italic;
+  color: var(--font-mute);
+}
+
+/* content */
+
+.hljs {
+  padding: 20px calc(var(--x-margin) + 3%);
+}
+
+:not(pre) > code {
+  background-color: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+
+blockquote {
+  border-left: 4px solid #ddd;
+  color: #aaa;
+}
+</style>
+</head>
+<body>
+    <div class="wrapper"><header>
+        <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2><nav class="nav header-nav">
+    <ul class="nav-list">
+        <li class="nav-list-item"><a href="/post/">Posts</a></li>
+        <li class="nav-list-item"><a href="/project/">Projects</a></li>
+        <li class="nav-list-item"><a href="/tip/">Tips</a></li>
+        <li class="nav-list-item nav-separator"></li>
+        <li class="nav-list-item"><a href="/categories/">Categories</a></li>
+        <li class="nav-list-item"><a href="/tags/">Tags</a></li>
+        
+    </ul>
+</nav>
+</header>
+    <main>
+<div class="page-top">
+    <h1 class="page-title">My new blog</h1>
+    <ul class="page-categories categories">
+        <li><a href="/categories/about">About</a></li>
+    </ul>
+    
+    <ul class="page-tags tags">
+        <li><a href="/tags/new">new</a></li>
+        <li><a href="/tags/static-website">static website</a></li>
+    </ul>
+</div>
+
+<section class="page-content">
+
+<p>Hello everyone!</p>
+
+<p>My name&rsquo;s Mathieu Paturel - <code>@math2001</code> - and I love coding.</p>
+
+<p>I&rsquo;m French (from Provence, if you know where that is), but my family and I moved 2 years ago to
+Australia so that we could learn to speak fluently English (without this disgusting accent 😄).</p>
+
+<h3 id="how-did-i-discovered-coding">How did I discovered coding</h3>
+
+<p>It all started with the basic &ldquo;programming language&rdquo; (notice the quotes 😄). My farther taught
+me the very basic of programming (and it was pretty much all you could do with this language I&rsquo;d
+😆). The farthest I went with this is making a little program that would ask test you on the
+tables of multiplications.</p>
+
+<p>It was interesting, but honestly, it wasn&rsquo;t too fun. The fun started when my uncle showed my Python
+(❤️). We made a game with <code>pygame</code>. I said <q>We</q>, but it was more &ldquo;he&rdquo;. He was typing, I
+was following along, thinking I was understanding most of it.</p>
+
+<p>But when he said:</p>
+
+<blockquote>
+<p>All right, your turn now!</p>
+</blockquote>
+
+<p>I realized I didn&rsquo;t remember much, I had no idea what to do (to make a simple program that would
+draw lines around the corners of the screens)&hellip;</p>
+
+<p>Then, we moved to Australia. My farther had to look for a job, and it pretty hard. It took him 8
+month. During this time, we couldn&rsquo;t go to the Australian school, since because we were just
+visitors, the cost was pretty high (something like $500 per week and per children, which is $1500
+per week). We were living on our savings, so we stayed at home, only doing remote French school
+(called CNED, really bad&hellip;). It was only partial, since we were meant to go the Australian school
+too. So, it would took us around half a day every day. The rest was free time.</p>
+
+<p>So, since I didn&rsquo;t what to do, I started looking at Python again, making some little games.</p>
+
+<p>Of course, I had some issues, some thing I didn&rsquo;t know how to do. So, what did I do? Looked it up on
+the internet. The problem was that it was pretty hard, since we had to go to the library to get a
+miserably slow connection.</p>
+
+<p>All I was aware of was the <code>help</code> function of python. That&rsquo;s it. I had no idea about the Python
+documentation, or any other resources. All I could do was look at the programs my uncle left me, and
+kind of &ldquo;guess&rdquo;. Lucky I was using Python and not JavaScript or PHP 😄.</p>
+
+<p>And one website&rsquo;s forum kept coming up: <a href="https://openclassrooms.com">openclassrooms.com</a>. It&rsquo;s a
+French one (although their now making some courses in English). I discovered that they had a course
+about <code>pygame</code> and python. I read them, and kept making some little games.</p>
+
+<p>One day, my uncle send me an email saying that I should look at <code>flask</code> to make some little
+websites. Luckily, they had a course about this on OpenClassrooms. But one of the requirement was
+to know <code>html</code>, which I didn&rsquo;t. Of course, they had a course about it. I read it, started loving web
+dev, forgot Flask and followed the author with the course he recommended next: PHP and MySql.</p>
+
+<p>While still making some little games with Python, some little websites with PHP, I learned git
+(with a course on OpenClassrooms of course). This was a pretty big step. It didn&rsquo;t appear like it
+<em>straight away</em>, but when I look back, I&rsquo;m pretty sure it is, and for one reason:</p>
+
+<p><a href="https://github.com">GitHub</a></p>
+
+<p>It took me a while to figure out the basics, though.</p>
+
+<p>I started making some plugins for Sublime Text. I was much more comfortable with python. My first
+plugin was a kind of a failure, I haven&rsquo;t deleted <a href="https://github.com/math2001/snippet-lister">the repo</a> just for fun.</p>
+
+<p>The plugin was working, but when I send the PR to get on package control, I didn&rsquo;t understand the
+maintainer&rsquo;s response (I really didn&rsquo;t speak properly English at the time). I thought he rejected
+the PR I read the answer from the email notification, I didn&rsquo;t understood that I could edit the
+code and edit it, I didn&rsquo;t really get concept of Pull Request (I just followed the step by step
+guide in the Package Control&rsquo;s documentation). I never answered anything back (I don&rsquo;t even remember
+seeing the ping from the maintainer). The result being that the PR was closed. 😞</p>
+
+<p>But anyway&hellip; I made some other plugins later on, I had a better understanding of GitHub, and some
+of <a href="https://packagecontrol.io/browse/authors/math2001">my plugins</a> are now on Package Control.</p>
+
+<p>You might be wondering why this is relevant. Well, my Sublime Text plugins were the first repository
+I shared with other people.</p>
+
+<p>It&rsquo;s from here that I started to have a decent workflow, read the documentations, learn some new
+cool stuff.</p>
+
+<p>So, now, here I am. I created this new blog to share what I know.</p>
+
+<p>Hopefully you&rsquo;ll enjoy the content!</p>
+</section>
+
+<div class="page-bottom">
+    <p class="page-date">Published on Saturday 9 September 2017</p>
+</div>    </main>
+</div>
+<footer>
+    <p>© Mathieu Paturel 2017.
+    Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>, theme
+    <a href="https://github.com/math2001/fasty">Fasty</a> by <a href="https://github.com/math2001">@math2001</a>.</p>
+</footer>
+
+<script type="text/javascript">
+function loadCSS(stylesheets) {
+    let media, link
+    for (let stylesheet of stylesheets) {
+        console.log('load', stylesheet.href)
+        media = stylesheet.media ? ' media="' + stylesheet.media + '"' : ''
+        link = '<link rel="stylesheet" type="text/css" href="'
+                + "/" + "css/" + stylesheet.href + '"' + media + '>'
+        document.head.innerHTML += link
+
+    }
+}
+function loadJs(scripts) {
+    for (let key in scripts) {
+        tag = document.createElement('script')
+        tag.onload = "/" + 'js/' + scripts[key]
+        tag.src = key
+        document.body.appendChild(tag)
+    }
+}
+
+loadCSS([{ href: 'phone.css', media: 'screen and (max-width: 600px)' }])
+</script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script></body>
+</html>

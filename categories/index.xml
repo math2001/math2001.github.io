@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/categories/</link>
+    <description>Recent content in Categories on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017</copyright>
+    <lastBuildDate>Sat, 09 Sep 2017 19:43:23 +1000</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://math2001.github.io/categories/about/</link>
+      <pubDate>Sat, 09 Sep 2017 19:43:23 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/categories/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cool feature</title>
+      <link>https://math2001.github.io/categories/cool-feature/</link>
+      <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/categories/cool-feature/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Infos</title>
+      <link>https://math2001.github.io/categories/infos/</link>
+      <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/categories/infos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Itsbuiltin</title>
+      <link>https://math2001.github.io/categories/itsbuiltin/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/categories/itsbuiltin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>https://math2001.github.io/categories/resources/</link>
+      <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/categories/resources/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web development</title>
+      <link>https://math2001.github.io/categories/web-development/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/categories/web-development/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
