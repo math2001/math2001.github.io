@@ -14,14 +14,15 @@ if ! git_clean; then
     exit 1
 fi
 
-TARGET_BRANCH=$(hugo config | grep publishBranch | egrep '"[^!\^:\\ ]+"' -o | tr -d '"')
+TARGET_BRANCH=$(hugo config | grep publishbranch | egrep '"[^!\^:\\ ]+"' -o | tr -d '"')
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 CURRENT_COMMIT=$(git rev-parse --short HEAD)
 
-echo "Current branch: $CURRENT_BRANCH"
-echo "Target branch: $BRANCH"
+echo "Current branch: '$CURRENT_BRANCH'"
+echo "Target branch: '$TARGET_BRANCH'"
 
-echo -n "Keep going (y/n): "
+# get user confirmation
+echo -n "Keep going (y/N): "
 read line
 if [[ $line != 'y' ]]; then
     echo "Abort"
@@ -47,30 +48,4 @@ done
 
 git commit -m "auto build [$VERSION] $CURRENT_COMMIT"
 
-exit 0
-
-if [[ "$(git branch --list $BRANCH)" == '' ]]; then
-    # create branch
-    git checkout --orphan $BRANCH
-    git reset --hard
-    git commit -m "Auto build [$VERSION] initial commit" --allow-empty
-    git checkout $CURRENT_BRANCH
-fi
-
-CURRENT_COMMIT=$(git rev-parse HEAD)
-
-tmpdir=$(mktemp -d)
-hugo -d $tmpdir
-git checkout $BRANCH
-
-if ! git_clean; then
-    echo 'git status not clean. Please commit your manual edits'
-    exit 1
-fi
-rm -rf ./*
-mv $tmpdir/* .
-git add .
-git commit -m "Auto build [$VERSION] commit: $CURRENT_COMMIT"
 git checkout $CURRENT_BRANCH
-
-set +o errexit
