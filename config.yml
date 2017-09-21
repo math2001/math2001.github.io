@@ -3,16 +3,17 @@ baseURL: https://math2001.github.io
 languageCode: en-us
 metaDataFormat: yaml
 preserveTaxonomyNames: true
-publishDir: 'docs'
+# publishDir: 'docs'
+publishBranch: master
 
 theme: fasty
 author:
-  math2001: "Mathieu Paturel"
+  math2001: Mathieu Paturel
 description: My blog
-copyright: '© Mathieu Paturel 2017'
+copyright: © Mathieu Paturel 2017
 enableEmoji: true
 hrefTargetBlank: true
-newContentEditor: "vim"
+newContentEditor: vim
 
 params:
   dev: false
