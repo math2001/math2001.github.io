@@ -14,8 +14,9 @@ if ! git_clean; then
     exit 1
 fi
 
-BRANCH=$(hugo config | grep publishbranch | egrep '"[^!\^:\\ ]+"' -o | tr -d '"')
+TARGET_BRANCH=$(hugo config | grep publishBranch | egrep '"[^!\^:\\ ]+"' -o | tr -d '"')
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+CURRENT_COMMIT=$(git rev-parse --short HEAD)
 
 echo "Current branch: $CURRENT_BRANCH"
 echo "Target branch: $BRANCH"
@@ -27,6 +28,26 @@ if [[ $line != 'y' ]]; then
     exit 1
 fi
 
+SUBMODULES=$(git config --file .gitmodules --get-regexp submodule\..+\.path | awk '{ print $2  }')
+
+# build
+tmpdir=$(mktemp -d)
+hugo -d $tmpdir
+
+git checkout $TARGET_BRANCH
+
+mv $tmpdir/* .
+
+git add .
+
+# remove submodules from index (so they don't get commited)
+echo $SUBMODULES | while read submodule; do
+git rm --cached $SUBMODULES
+done
+
+git commit -m "auto build [$VERSION] $CURRENT_COMMIT"
+
+exit 0
 
 if [[ "$(git branch --list $BRANCH)" == '' ]]; then
     # create branch
