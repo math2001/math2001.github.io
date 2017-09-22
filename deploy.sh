@@ -37,6 +37,8 @@ find -depth -not -path "*.git*" -not -path "*$THEMES_DIR*" -type d -empty -exec 
 
 mv $TEMP/* .
 
+rmdir $TEMP
+
 git add .
 
 git rm --cached "$THEMES_DIR"
