@@ -48,3 +48,5 @@ open `http://localhost/path/to/your/svg.svg`, the path being, of course, relativ
 to where you started `live-svg` from.
 
 That's basically it! You'll find more informations about usage in the README.
+
+[Inkscape]: https://inkscape.org
