@@ -1,4 +1,4 @@
-VERSION="1.0.0"
+VERSION="1.0.1"
 
 if ! `git diff --exit-code > /dev/null`; then
     echo "Uncommitted changes"
@@ -16,9 +16,8 @@ CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 CURRENT_COMMIT=$(git rev-parse --short HEAD)
 
+echo "$CURRENT_BRANCH@$CURRENT_COMMIT => build => $TARGET_BRANCH"
 echo "Themes directory: '$THEMES_DIR'"
-echo "Target branch: '$TARGET_BRANCH'"
-echo "Current branch: '$CURRENT_BRANCH'"
 
 echo -n "Continue? (y/N) "
 read line
