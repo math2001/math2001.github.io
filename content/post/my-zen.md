@@ -6,12 +6,14 @@ tags: [python, zen, conventions]
 draft: true
 ---
 
-[Python](https://python.org) is by far my favorite language (I event wish we spoke it :smile:).
+[Python](https://python.org) is by far my favorite language (I even wish we spoke it :smile:).
 
-On thing I found funny, and in the same time really good is [its
+One thing I found funny about it, and in the same time really good, is [its
 zen](https://python.org/dev/peps/pep-0020/).
 
-So, today, *dans un élan d'inspiration*, I decided to write my own.
+They're basically guidelines.
+
+So, today, *dans un élan d'inspiration*, I decided to write my own. Here it is:
 
 ```
 Keep it simple.
