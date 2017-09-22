@@ -41,7 +41,7 @@ rmdir $TEMP
 
 git add .
 
-git rm --cached "$THEMES_DIR"
+git rm --cached "$THEMES_DIR" -r
 
 git commit -m "Auto build for $CURRENT_COMMIT" -m "deployer version: $VERSION"
 
