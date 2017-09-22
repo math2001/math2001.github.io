@@ -47,11 +47,4 @@ Just run `live-svg`. It'll start a server on `localhost`. Then, you just need to
 open `http://localhost/path/to/your/svg.svg`, the path being, of course, relative
 to where you started `live-svg` from.
 
-That's basically it!
-
-Of course, it's **open source**. You can find the GitHub repository here:
-[`math2001/live-svg`](https://github.com/math2001/live-svg)
-
-You'll find more informations about usage in the README.
-
-If you like this, please share it, I'd really appreciate it!
+That's basically it! You'll find more informations about usage in the README.
