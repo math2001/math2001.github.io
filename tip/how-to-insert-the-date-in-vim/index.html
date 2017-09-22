@@ -270,6 +270,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   --x-margin: 5%;
 }
 
+.page-content img {
+  max-width: 100%;
+}
+
 .page-content p,
 .page-content blockquote,
 .page-content ul,
@@ -318,6 +322,14 @@ blockquote {
   border-left: 4px solid #ddd;
   color: #aaa;
 }
+
+kbd {
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
 </style>
 </head>
 <body>
@@ -346,6 +358,9 @@ blockquote {
         <li><a href="/tags/date">date</a></li>
         <li><a href="/tags/strftime">strftime</a></li>
     </ul>
+
+    
+
 </div>
 
 <section class="page-content"><p>First off, I really don&rsquo;t recommend you use the <code>strftime()</code> function vim has,

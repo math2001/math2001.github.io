@@ -30,6 +30,10 @@
   --x-margin: 5%;
 }
 
+.page-content img {
+  max-width: 100%;
+}
+
 .page-content p,
 .page-content blockquote,
 .page-content ul,
@@ -77,4 +81,11 @@
 blockquote {
   border-left: 4px solid #ddd;
   color: #aaa;
+}
+
+kbd {
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  border-radius: 2px;
 }
