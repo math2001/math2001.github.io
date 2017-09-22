@@ -34,7 +34,7 @@ git checkout "$TARGET_BRANCH"
 
 find -not -path "*.git*" -not -path "*$THEMES_DIR*" -type f -delete
 
-mv "$TEMP/*" .
+mv $TEMP/* .
 
 git add .
 
