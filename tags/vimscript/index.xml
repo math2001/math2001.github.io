@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vimscript on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/tags/vimscript/</link>
+    <description>Recent content in Vimscript on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017</copyright>
+    <lastBuildDate>Sun, 03 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/tags/vimscript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Great resources for VIM users</title>
+      <link>https://math2001.github.io/tip/great-resources-for-vim-users/</link>
+      <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tip/great-resources-for-vim-users/</guid>
+      <description>If you&amp;rsquo;re a VIM user, have a look at these resources, they&amp;rsquo;re pretty good (you probably will know some ­ if not all ­ of them)
+ vimcast.org Just awesome screencasts and tips in general vimcolors.com A list of color schemes vimawesome.com A website listing vim plugin vi.stackexchange.com The stack exchange website for VIM  </description>
+    </item>
+    
+    <item>
+      <title>DynamicOpen function</title>
+      <link>https://math2001.github.io/tip/dynamicopen-function-vim/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tip/dynamicopen-function-vim/</guid>
+      <description>I really open my .vimrc often. Too often to have to type :e ~/.vimrc or :tabe ~/.vimrcevery time.
+Here&amp;rsquo;s a little function that will open a file in a new tab if there isn&amp;rsquo;t enough room for a new split, and, you guessed it, in a new vertical split if there is.
+function! DynamicOpen(file) if winwidth(win_getid()) &amp;gt; 160 execute &amp;quot;vsplit &amp;quot;.a:file else execute &amp;quot;tabe &amp;quot;.a:file endif endfunction nnoremap &amp;lt;leader&amp;gt;ev :call DynamicOpen($MYVIMRC)&amp;lt;CR&amp;gt;  It just checks with width of the current window.</description>
+    </item>
+    
+    <item>
+      <title>Rerun last command with bang</title>
+      <link>https://math2001.github.io/tip/rerun-last-command-bang-vim/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tip/rerun-last-command-bang-vim/</guid>
+      <description>Put this little vim script in your .vimrc to rerun the previous command with the bang (!) by just typing :Please.
+function! BangLastCommand() &amp;quot; The last command that was run is stored in the register `:` (:registers) let lastcommand = split(@:, &#39; &#39;) let command = lastcommand[0] . &#39;! &#39; . join(lastcommand[1:], &#39; &#39;) execute command endfunction command! Please call BangLastCommand()  So, now, if you do:
+:e ~/.vimrc  And you get an error because the current file has to be save, something like:</description>
+    </item>
+    
+    <item>
+      <title>Variable scopes in vim</title>
+      <link>https://math2001.github.io/tip/variable-scopes-vim/</link>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tip/variable-scopes-vim/</guid>
+      <description>An interesting feature of vim script is variable scoping. Here&amp;rsquo;s a copy-paste from the documentation, just in case you never saw it before:
+There are several name spaces for variables. Which one is to be used is specified by what is prepended: (nothing) In a function: local to a function; otherwise: global buffer-variable b: Local to the current buffer. window-variable w: Local to the current window. tabpage-variable t: Local to the current tab page.</description>
+    </item>
+    
+  </channel>
+</rss>

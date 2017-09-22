@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/tags/python/</link>
+    <description>Recent content in Python on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017</copyright>
+    <lastBuildDate>Sun, 20 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The string module in Python</title>
+      <link>https://math2001.github.io/tip/string-module-python/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tip/string-module-python/</guid>
+      <description>If you want the list of every letter, just do:
+&amp;gt;&amp;gt;&amp;gt; import string &amp;gt;&amp;gt;&amp;gt; print(string.ascii_uppercase) ABCDEFGHIJKLMNOPQRSTUVWXYZ  </description>
+    </item>
+    
+  </channel>
+</rss>

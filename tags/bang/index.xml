@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bang on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/tags/bang/</link>
+    <description>Recent content in Bang on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017</copyright>
+    <lastBuildDate>Sun, 27 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/tags/bang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rerun last command with bang</title>
+      <link>https://math2001.github.io/tip/rerun-last-command-bang-vim/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tip/rerun-last-command-bang-vim/</guid>
+      <description>Put this little vim script in your .vimrc to rerun the previous command with the bang (!) by just typing :Please.
+function! BangLastCommand() &amp;quot; The last command that was run is stored in the register `:` (:registers) let lastcommand = split(@:, &#39; &#39;) let command = lastcommand[0] . &#39;! &#39; . join(lastcommand[1:], &#39; &#39;) execute command endfunction command! Please call BangLastCommand()  So, now, if you do:
+:e ~/.vimrc  And you get an error because the current file has to be save, something like:</description>
+    </item>
+    
+  </channel>
+</rss>
