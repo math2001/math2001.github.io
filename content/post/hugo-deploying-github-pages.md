@@ -3,7 +3,6 @@ title: Deploying a hugo site on GitHub pages
 date: 2017-09-23T11:23:45+10:00
 categories: [howto]
 tags: [hugo, static site, bash, github-pages]
-draft: true
 ---
 
 When you want to deploy a static website built with the fantastic [Hugo][] on
