@@ -44,4 +44,6 @@ git rm --cached "$THEMES_DIR" -r
 
 git commit -m "Auto build for $CURRENT_COMMIT" -m "deployer version: $VERSION"
 
+git push origin HEAD
+
 git checkout "$CURRENT_BRANCH"
