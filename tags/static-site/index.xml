@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bash on Math2001&#39;s blog</title>
-    <link>https://math2001.github.io/tags/bash/</link>
-    <description>Recent content in Bash on Math2001&#39;s blog</description>
+    <title>Static site on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/tags/static-site/</link>
+    <description>Recent content in Static site on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017</copyright>
     <lastBuildDate>Sat, 23 Sep 2017 11:23:45 +1000</lastBuildDate>
     
-	<atom:link href="https://math2001.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://math2001.github.io/tags/static-site/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,20 +20,6 @@
       <guid>https://math2001.github.io/post/hugo-deploying-github-pages/</guid>
       <description>When you want to deploy a static website built with the fantastic Hugo on GitHub pages, you don&amp;rsquo;t have 100 of possibilities. A clean one, and an easy one 😄.
 The easy one is to build your website to the docs folder. It&amp;rsquo;s not super clean though since the source code is on the same branch as the built code. It doesn&amp;rsquo;t make diffing super great, gives a long output when you commit, you have to build at every single commit to keep consistent.</description>
-    </item>
-    
-    <item>
-      <title>Change shell used to run external command</title>
-      <link>https://math2001.github.io/tip/change-shell-run-external-command-vim/</link>
-      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://math2001.github.io/tip/change-shell-run-external-command-vim/</guid>
-      <description>On windows, the cmd sucks. But if you have sh installed from git-for-windows for example, you can tell vim to run external commands :!.
-Add this to your .vimrc
-set shell=sh set shellcmdflag=-c  Now, vim won&amp;rsquo;t run external commands like this
-cmd /c &amp;quot;your command&amp;quot;  But like this:
-sh -c &amp;quot;your command&amp;quot;  So, you can now run Unix commands from VIM.
-To learn more: :help &#39;shell&#39;</description>
     </item>
     
   </channel>

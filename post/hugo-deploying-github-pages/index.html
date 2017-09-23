@@ -7,7 +7,7 @@
     
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>My Zen - Math2001&#39;s blog</title><style>
+    <title>Deploying a hugo site on GitHub pages - Math2001&#39;s blog</title><style>
     :root {
   --page-bg: hsla(195, 55%, 98%, 1);
   --monospace: Inconsolata, menlo, consolas;
@@ -352,47 +352,77 @@ kbd {
 </header>
     <main>
 <div class="page-top">
-    <h1 class="page-title">My Zen</h1>
+    <h1 class="page-title">Deploying a hugo site on GitHub pages</h1>
     <ul class="page-categories categories">
-        <li><a href="/categories/code-aesthetic">code aesthetic</a></li>
+        <li><a href="/categories/howto">howto</a></li>
     </ul>
     
     <ul class="page-tags tags">
-        <li><a href="/tags/python">python</a></li>
-        <li><a href="/tags/zen">zen</a></li>
-        <li><a href="/tags/conventions">conventions</a></li>
+        <li><a href="/tags/hugo">hugo</a></li>
+        <li><a href="/tags/static-site">static site</a></li>
+        <li><a href="/tags/bash">bash</a></li>
+        <li><a href="/tags/github-pages">github-pages</a></li>
     </ul>
 
     
 
 </div>
 
-<section class="page-content"><p><a href="https://python.org">Python</a> is by far my favorite language (I even wish we spoke it 😄).</p>
+<section class="page-content">
 
-<p>One thing I found funny about it, and in the same time really good, is <a href="https://python.org/dev/peps/pep-0020/">its
-zen</a>.</p>
+<p>When you want to deploy a static website built with the fantastic <a href="https://gohugo.io">Hugo</a> on
+GitHub pages, you don&rsquo;t have 100 of possibilities. A clean one, and an easy one
+😄.</p>
 
-<p>They&rsquo;re basically guidelines.</p>
+<p>The easy one is to build your website to the <code>docs</code> folder. It&rsquo;s not super clean
+though since the source code is on the same branch as the built code. It doesn&rsquo;t
+make diffing super great, gives a long output when you commit, you have to build
+at every single commit to keep consistent.</p>
 
-<p>So, today, <em>dans un élan d&rsquo;inspiration</em>, I decided to write my own. Here it is:</p>
+<p>You got it, I don&rsquo;t like it.</p>
 
-<pre><code>Keep it simple.
-Lazyness is a quality.
-Learn to use your tools efficiently.
-Get inspired by great things.
-Do one thing, and do it well.
-Perfect programmers don't need comments.
-But every user needs documentation.
+<p>So, the other solution is to build it on the <code>gh-pages</code> branch. I could do it
+manually every time, but wasting my time isn&rsquo;t my thing&hellip; 😄 No, I wanted
+to build something like <a href="https://www.mkdocs.org">mkdocs</a> has:</p>
+
+<pre><code>mkdocs gh-deploy
 </code></pre>
+
+<p>And boom, it builds your website to an other branch (in this case <code>gh-pages</code>),
+commit, and push.</p>
+
+<p>So, I tripped a few times along the way of making this little script (life tip:
+if you <code>rm</code> files automatically, make sure at least 3 times that no files in a
+<code>.git</code> folder gets delete 😉, you&rsquo;d loose <strong>everything</strong>)</p>
+
+<h3 id="installation">Installation</h3>
+
+<p>Just download <a href="https://GitHub.com/math2001/math2001.GitHub.io/blob/dev/deploy.sh">this
+script</a>.</p>
+
+<h3 id="usage">Usage</h3>
+
+<p>In your hugo config, add a <code>publishBranch</code> key with the name of the branch you
+want. It should be a string.</p>
+
+<p>Then, you just need run the script you just downloaded, and it&rsquo;ll build, commit,
+and push for you!</p>
+
+<hr />
+
+<p>This script does some weird stuff due to git submodules not coping very well with
+branches in the parent repository. When you <code>checkout</code>, the submodules don&rsquo;t get
+removed/added, you need to do it manually. If you have submodules in your
+website&rsquo;s sources elsewhere than in your theme folders (<code>themes</code> by default),
+you&rsquo;ll need to tweak this script a bit.</p>
 </section>
 
 <div class="page-bottom">
-    <p class="page-date">Published on Wednesday 13 September 2017</p><h4>Read an other post</h4>
+    <p class="page-date">Published on Saturday 23 September 2017</p><h4>Read an other post</h4>
     <div class="page-read-other">
         
-        <p>← <a href="/post/my-new-blog/">My new blog</a></p>
-        
-        <p><a href="/post/hugo-deploying-github-pages/">Deploying a hugo site on GitHub pages</a> →</p></div>
+        <p>← <a href="/post/my-zen/">My Zen</a></p>
+        </div>
 </div>    </main>
 </div>
 <footer>

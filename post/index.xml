@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017</copyright>
-    <lastBuildDate>Wed, 13 Sep 2017 14:18:22 +1000</lastBuildDate>
+    <lastBuildDate>Sat, 23 Sep 2017 11:23:45 +1000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deploying a hugo site on GitHub pages</title>
+      <link>https://math2001.github.io/post/hugo-deploying-github-pages/</link>
+      <pubDate>Sat, 23 Sep 2017 11:23:45 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/hugo-deploying-github-pages/</guid>
+      <description>When you want to deploy a static website built with the fantastic Hugo on GitHub pages, you don&amp;rsquo;t have 100 of possibilities. A clean one, and an easy one 😄.
+The easy one is to build your website to the docs folder. It&amp;rsquo;s not super clean though since the source code is on the same branch as the built code. It doesn&amp;rsquo;t make diffing super great, gives a long output when you commit, you have to build at every single commit to keep consistent.</description>
+    </item>
     
     <item>
       <title>My Zen</title>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://math2001.github.io/post/hugo-deploying-github-pages/</loc>
+    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/project/live-svg/</loc>
     <lastmod>2017-09-22T18:31:15+10:00</lastmod>
   </url>
@@ -123,7 +128,7 @@
   
   <url>
     <loc>https://math2001.github.io/tags/bash/</loc>
-    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -194,6 +199,24 @@
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/github-pages/</loc>
+    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/categories/howto/</loc>
+    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/hugo/</loc>
+    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/categories/infos/</loc>
     <lastmod>2017-08-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -219,7 +242,7 @@
   
   <url>
     <loc>https://math2001.github.io/</loc>
-    <lastmod>2017-09-22T18:31:15+10:00</lastmod>
+    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -267,7 +290,7 @@
   
   <url>
     <loc>https://math2001.github.io/post/</loc>
-    <lastmod>2017-09-13T14:18:22+10:00</lastmod>
+    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -310,6 +333,12 @@
   <url>
     <loc>https://math2001.github.io/tags/shell/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/static-site/</loc>
+    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
     <priority>0</priority>
   </url>
   

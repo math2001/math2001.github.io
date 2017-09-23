@@ -7,7 +7,7 @@
     
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Tags - Math2001&#39;s blog</title><style>
+    <title>Github-pages - Math2001&#39;s blog</title><style>
     :root {
   --page-bg: hsla(195, 55%, 98%, 1);
   --monospace: Inconsolata, menlo, consolas;
@@ -161,20 +161,60 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
 
 </style><style>
-    .terms-top {
+    .list-top {
   text-align: center;
 }
 
-.terms-content {
-  width: 500px;
-  max-width: 100%;
-  margin: auto;
-  columns: auto 10em;
+.list-description {
+  color: var(--font-mute);
 }
 
-.terms-tags,
-.terms-categories {
-  margin: 0;
+.list-window {
+  width: 750px;
+  margin: auto;
+  max-width: 100%;
+}
+
+.list-list {
+  outline: none;
+  padding: 0;
+  list-style: none;
+  padding: 0 10px;
+}
+
+.list-content {
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.list-content-tags,
+.list-content-tags li {
+  display: inline-block;
+}
+
+.list-list .categories {
+  display: inline-block;
+  font-size: 80%;
+}
+
+.list-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: .2s all;
+  display: inline;
+}
+
+.list-link:hover {
+  color: var(--purple)
+}
+
+.list-content-reading-time {
+  font-size: 80%;
+  opacity: .8;
 }
 
 </style>
@@ -194,97 +234,33 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 </nav>
 </header>
     <main>
-
-
-<div class="terms-top">
-    <h1>Tags</h1>
+<div class="list-top">
+    <h1>Github-pages</h1>
+    <div class="list-description"></div>
 </div>
 
-<div class="terms-content">
-    <ul class="tags terms-tags">
+<div class="list-window">
+    <ul class="list-list">
         
-        <li>(1) <a href="alphabet">alphabet</a></li>
-        
-        <li>(1) <a href="ascii">ascii</a></li>
-        
-        <li>(1) <a href="bang">bang</a></li>
-        
-        <li>(2) <a href="bash">bash</a></li>
-        
-        <li>(1) <a href="buffer">buffer</a></li>
-        
-        <li>(1) <a href="chrome">chrome</a></li>
-        
-        <li>(1) <a href="command">command</a></li>
-        
-        <li>(1) <a href="conventions">conventions</a></li>
-        
-        <li>(1) <a href="date">date</a></li>
-        
-        <li>(1) <a href="devtools">devtools</a></li>
-        
-        <li>(1) <a href="doc">doc</a></li>
-        
-        <li>(1) <a href="github-pages">github-pages</a></li>
-        
-        <li>(1) <a href="hugo">hugo</a></li>
-        
-        <li>(1) <a href="javascript">javascript</a></li>
-        
-        <li>(2) <a href="map">map</a></li>
-        
-        <li>(1) <a href="module">module</a></li>
-        
-        <li>(1) <a href="network">network</a></li>
-        
-        <li>(1) <a href="new">new</a></li>
-        
-        <li>(1) <a href="nodejs">nodejs</a></li>
-        
-        <li>(1) <a href="option">option</a></li>
-        
-        <li>(1) <a href="options">options</a></li>
-        
-        <li>(1) <a href="performances">performances</a></li>
-        
-        <li>(1) <a href="preview">preview</a></li>
-        
-        <li>(2) <a href="python">python</a></li>
-        
-        <li>(1) <a href="scopes">scopes</a></li>
-        
-        <li>(1) <a href="sh">sh</a></li>
-        
-        <li>(1) <a href="shell">shell</a></li>
-        
-        <li>(1) <a href="static-site">static site</a></li>
-        
-        <li>(1) <a href="static-website">static website</a></li>
-        
-        <li>(1) <a href="strftime">strftime</a></li>
-        
-        <li>(1) <a href="string">string</a></li>
-        
-        <li>(1) <a href="svg">svg</a></li>
-        
-        <li>(1) <a href="symbols">symbols</a></li>
-        
-        <li>(1) <a href="testing">testing</a></li>
-        
-        <li>(1) <a href="variable">variable</a></li>
-        
-        <li>(13) <a href="vim">vim</a></li>
-        
-        <li>(4) <a href="vimscript">vimscript</a></li>
-        
-        <li>(1) <a href="windows">windows</a></li>
-        
-        <li>(1) <a href="zen">zen</a></li>
+        <li class="list-content">
+            <div>
+                <ul class="list-content-tags tags">
+                    <li><a href="/tags/hugo">hugo</a></li>
+                    <li><a href="/tags/static-site">static site</a></li>
+                </ul>
+                <a class=list-link href="https://math2001.github.io/post/hugo-deploying-github-pages/">Deploying a hugo site on GitHub pages</a>
+                <small class="list-content-reading-time"
+                    title="290 words">(~ 2 min)</small>
+            </div>
+            <ul class="categories">
+                <li>
+                    <a href="/categories/howto">howto</a>
+                </li>
+            </ul>
+        </li>
         
     </ul>
-</div>
-
-    </main>
+</div>    </main>
 </div>
 <footer>
     <p>© Mathieu Paturel 2017.
@@ -318,4 +294,3 @@ loadCSS([{ href: 'phone.css', media: 'screen and (max-width: 600px)' }])
 
 </body>
 </html>
-
