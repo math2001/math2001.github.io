@@ -5,7 +5,6 @@ noreadingtime: true
 isindex: true
 ---
 
-Want to improve your workflow, but you're in a rush (who isn't)? Have a look at
-those little quick tips!
+Some quick little tips to improve your workflow.
 
-Don't hesitate to share the ones you like, I'd really appreciate it!
+Remember to share the ones you like! :slightly_smiling:
