@@ -60,7 +60,7 @@ While still making some little games with Python, some little websites with PHP,
 (with a course on OpenClassrooms of course). This was a pretty big step. It didn't appear like it
 *straight away*, but when I look back, I'm pretty sure it is, and for one reason:
 
-[GitHub](https://github.com)
+[GitHub][]
 
 It took me a while to figure out the basics, though.
 
@@ -89,3 +89,4 @@ Hopefully you'll enjoy the content!
 
 [snippetlister]: https://github.com/math2001/snippet-lister
 [my plugins]: https://packagecontrol.io/browse/authors/math2001
+[GitHub]: https://gitHub.com
