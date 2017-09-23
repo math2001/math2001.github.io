@@ -7,4 +7,4 @@ isindex: true
 
 Some quick little tips to improve your workflow.
 
-Remember to share the ones you like! :slightly_smiling:
+Remember to share the ones you like! :smiley:
