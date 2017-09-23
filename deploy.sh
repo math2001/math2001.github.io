@@ -49,10 +49,6 @@ mv $TEMP/* .
 
 rmdir $TEMP
 
-git add .
-
-git rm --cached "$THEMES_DIR" -r &> /dev/null
-
 if `git diff --exit-code > /dev/null`; then
     echo "No change since last build"
     echo "-> don't commit or push"
@@ -62,6 +58,10 @@ else
     git push origin HEAD > /dev/null
 fi
 
-git checkout "$CURRENT_BRANCH" &> /dev/null
+git add .
+
+git rm --cached "$THEMES_DIR" -r &> /dev/null
+
+git checkout "$CURRENT_BRANCH" > /dev/null
 
 

@@ -89,4 +89,4 @@ Hopefully you'll enjoy the content!
 
 [snippetlister]: https://github.com/math2001/snippet-lister
 [my plugins]: https://packagecontrol.io/browse/authors/math2001
-[GitHub]: https://gitHub.com
+[GitHub]: https://github.com
