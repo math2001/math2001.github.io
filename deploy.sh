@@ -1,3 +1,5 @@
+set -o errexit
+
 VERSION="1.0.1"
 
 if ! `git diff --exit-code > /dev/null`; then
@@ -19,7 +21,22 @@ CURRENT_COMMIT=$(git rev-parse --short HEAD)
 echo "$CURRENT_BRANCH@$CURRENT_COMMIT => $TARGET_BRANCH"
 echo "Themes directory: '$THEMES_DIR'"
 
-echo -n "Continue? (y/N) "
+if ! `git rev-parse --verify --quiet "$TARGET_BRANCH" > /dev/null`; then
+    echo -e "\nThe branch '$TARGET_BRANCH' doesn't exits."
+    echo -n "Create it? (y/N) "
+    read line
+    if [[ $line != 'y' ]]; then
+        echo "Then please create it manually"
+        exit 1
+    fi
+    git checkout --orphan "$TARGET_BRANCH" --quiet
+    git reset --hard --quiet &> /dev/null
+    git commit --allow-empty -m "Initial commit" --quiet
+    git checkout "$CURRENT_COMMIT" --quiet &> /dev/null
+    echo 'Done.'
+fi
+
+echo -n "Build? (y/N) "
 read line
 if [[ $line != 'y' ]]; then
     echo "Abort"
