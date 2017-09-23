@@ -3,7 +3,6 @@ title: My Zen
 date: 2017-09-13T14:18:22+10:00
 categories: [code aesthetic]
 tags: [python, zen, conventions]
-draft: true
 ---
 
 [Python](https://python.org) is by far my favorite language (I even wish we spoke it :smile:).
