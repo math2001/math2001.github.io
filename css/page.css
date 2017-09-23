@@ -50,6 +50,12 @@
   margin-left: var(--x-margin);
 }
 
+.page-content hr {
+  border: none;
+  border-top: 4px solid hsla(192, 16%, 92%, 1);
+  margin: 30px auto;
+}
+
 .page-tags {
   text-align: center;
   flex-basis: 100%;
