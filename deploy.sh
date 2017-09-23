@@ -16,7 +16,7 @@ CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 CURRENT_COMMIT=$(git rev-parse --short HEAD)
 
-echo "$CURRENT_BRANCH@$CURRENT_COMMIT => build => $TARGET_BRANCH"
+echo "$CURRENT_BRANCH@$CURRENT_COMMIT => $TARGET_BRANCH"
 echo "Themes directory: '$THEMES_DIR'"
 
 echo -n "Continue? (y/N) "
@@ -38,9 +38,9 @@ function get_temp_dir {
 }
 
 TEMP=$(get_temp_dir)
-hugo -d "$TEMP"
+hugo -d "$TEMP" --quiet
 
-git checkout "$TARGET_BRANCH"
+git checkout "$TARGET_BRANCH" &> /dev/null
 
 find -not -path "*.git*" -not -path "*$THEMES_DIR*" -type f -delete
 find -depth -not -path "*.git*" -not -path "*$THEMES_DIR*" -type d -empty -exec rmdir {} +
@@ -51,10 +51,17 @@ rmdir $TEMP
 
 git add .
 
-git rm --cached "$THEMES_DIR" -r
+git rm --cached "$THEMES_DIR" -r &> /dev/null
 
-git commit -m "Auto build for $CURRENT_COMMIT" -m "deployer version: $VERSION"
+if `git diff --exit-code > /dev/null`; then
+    echo "No change since last build"
+    echo "-> don't commit or push"
+else 
+    git commit -m "Auto build for $CURRENT_COMMIT" -m "deployer version: $VERSION" &> /dev/null
 
-git push origin HEAD
+    git push origin HEAD > /dev/null
+fi
 
-git checkout "$CURRENT_BRANCH"
+git checkout "$CURRENT_BRANCH" &> /dev/null
+
+
