@@ -6,126 +6,50 @@ tags: [hugo, static site, bash, github-pages]
 draft: true
 ---
 
-If you don't already know it, [Hugo][] is a super fast static website generator, written in [golang][]. 
+When you want to deploy a static website built with the fantastic [Hugo][] on
+GitHub pages, you don't have 100 of possibilities. A clean one, and an easy one
+:smile:.
 
-Of course, you'll get to a point where you want to publish your website. Super
-easy! You just need to run `hugo` in your website directory, and you'll get a
-`public` directory containing your website, ready to be published!
+The easy one is to build your website to the `docs` folder. It's not super clean
+though since the source code is on the same branch as the built code. It doesn't
+make diffing super great, gives a long output when you commit, you have to build
+at every single commit to keep consistent.
 
-If, like me, you decided to host it on github pages, you just need add this to
-your configuration file:
+You got it, I don't like it.
 
-```yaml
-pusblishDir: docs
-```
+So, the other solution is to build it on the `gh-pages` branch. I could do it
+manually every time, but wasting my time isn't my thing... :smile: No, I wanted
+to build something like [mkdocs][] has:
 
-And hugo will put your website in a directory called `docs` instead of `public`.
+    mkdocs gh-deploy
 
-Then you just need to set your GitHub pages source to be the `docs` folder in
-your repository settings, and then run `git push` and your website's up and
-running!
+And boom, it builds your website to an other branch (in this case `gh-pages`),
+commit, and push.
 
-Now, that works perfectly fine. It's not super awesome though, the build and the
-source code are on the same branch. It makes diffing *a lot* more fun (I'm trying
-to be sarcastic here :smile:), and it isn't super clean in my opinion.
+So, I tripped a few times along the way of making this little script (life tip:
+if you `rm` files automatically, make sure at least 3 times that no files in a
+`.git` folder gets delete :wink:, you'd loose **everything**)
 
-What I wanted to have was a branch with the source code, and a branch with the
-dist.
+### Installation
 
-GitHub allows you to do that since you can set your pages source to be from the
-`gh-pages` branch instead of the `docs` folder.
+Just download [this
+script](https://GitHub.com/math2001/math2001.GitHub.io/blob/dev/deploy.sh).
 
-So, on `master`, the source, and on `docs`, the website.
+### Usage
 
-I'm not crazy, I didn't want to do that by hand, I wanted to make a little script
-that would deploy everything for me. Basically, here's what it'd do:
+In your hugo config, add a `publishBranch` key with the name of the branch you
+want. It should be a string.
 
-1. Build my website into a temporary folder *out of the current repository*
-2. Checkout on my publish branch (in this case, `gh-pages`)
-3. Update my repository from the temporary folder
-4. Commit (and eventually push)
+Then, you just need run the script you just downloaded, and it'll build, commit,
+and push for you!
 
-Doesn't seem to hard, right? There are few tricks along the way though, here they
-are:
+---
 
-### "Update my repository from the temporary folder", you said?
+This script does some weird stuff due to git submodules not coping very well with
+branches in the parent repository. When you `checkout`, the submodules don't get
+removed/added, you need to do it manually. If you have submodules in your
+website's sources elsewhere than in your theme folders (`themes` by default),
+you'll need to tweak this script a bit.
 
-At first, I thought a simple `mv $TEMP/* .` would do the trick, but what if you
-delete a post in the source? With `mv`, it wouldn't get erased in the build, and
-therefore still appear on your website! Furthermore, it has troubles overwriting
-existing directory.
-
-So, `rm -rf *` before `mv $TEMP/* .`? No!! You'll remove the `.git` folder do,
-and bye bye your sources!
-
-So, you need to remove everything except the `.git` folder. So, something like
-this should work:
-
-```bash
-# remove every file in the not in .git/
-find -not -path "./.git*" -delete -type f
-# remove every empty folder
-find -not -path "./.git*" -depth -type d -empty -exec rmdir {} +
-```
-
-I thought that'd be enough to. But no. `git submodules` don't play very well with
-branches in the parent repository. 
-
-If you don't know what git submodules are, they're just repository *inside*
-repository.
-
-Git cannot delete them when you switch branches (which is understandable). So,
-the submodules are present in every branches.
-
-> Why would you use this submodule thingy, though?
-
-For the themes. You need to put your theme in the `themes` directory and the
-active it in your config. You install a theme like this:
-
-```bash
-$ #              -> the url                               -> where to download it
-$ git submodule add https://github.com/someone/awesome-theme themes/awesome-theme
-```
-In this case, it's bad since you don't want your theme folder with the layouts
-and everything to be up on your website.
-
-> ?? Why don't you just `git clone` it inside? It should work, no?
-
-Yes, it does when you have no intention of tweaking the theme. In my case, it
-wasn't right since I'm using my own theme. If you `git clone`, you'd be
-versioning a repository inside a repository I think, and it's not great.
-
-### So, the solution?
-
-The solution is to still use the git submodules, but make sure they aren't
-committed on the publish branch (make sure they're not in the index). An other
-little trick is to make sure you don't delete the theme's directory on the
-publish branch, since because it isn't managed by git, you'll delete it for good,
-*on every branches*.
-
-Also, to make everyone's life easier, we ignore the whole `themes` folder, not
-every theme separately (so every subfolder in `themes`).
-
-And, [the solution][] is just ~ 50 lines long!
-
-Here's how it works:
-
-In your hugo configuration file, make sure you specify `publishBranch: ` plus
-whatever you want it do be. It needs to be an exiting branch, though. Here's how
-you can create it:
-
-```
-$ git checkout --orphan <your branch>
-$ git reset --hard
-$ git commit --allow-empty -m "Initial commit"
-```
-
-Creating an `orphan` branch means it doesn't have any commits by default. You
-need to do a `git reset --hard` because by default, every files are the previous
-branch will be added to the git index (which is pretty stupid in my opinion, but
-anyway). And then, you commit with the `--allow-empty` flag because no file will
-be actually committed (and at least one commit needs to be on a branch for it to
-exists).
-
-No, you just need to run `./deploy.sh`. It'll build your website, "move" it to the
-publish branch, commit, push, and get back to the origin branch.
+[Hugo]: https://gohugo.io
+[mkdocs]: https://www.mkdocs.org
