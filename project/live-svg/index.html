@@ -245,6 +245,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   flex-wrap: wrap;
 }
 
+.repository-star {
+  font-size: 25px;
+}
+
 .page-title {
   margin-right: 10px;
   margin-left: 10px;
@@ -362,8 +366,11 @@ kbd {
 
     
     
-    <p>Repository: <code><a href="https://github.com/math2001">
-            math2001/live-svg</a></code></p>
+    <p>
+        Repository: <code><a href="https://github.com/math2001">
+                math2001/live-svg</a></code>
+        <span id="repository-stargazers-count"></span> <span class="repository-star">&#x2605;</span>
+    </p>
     
     
 
@@ -432,7 +439,6 @@ to where you started <code>live-svg</code> from.</p>
 function loadCSS(stylesheets) {
     let media, link
     for (let stylesheet of stylesheets) {
-        console.log('load', stylesheet.href)
         media = stylesheet.media ? ' media="' + stylesheet.media + '"' : ''
         link = '<link rel="stylesheet" type="text/css" href="'
                 + "/" + "css/" + stylesheet.href + '"' + media + '>'
@@ -440,6 +446,7 @@ function loadCSS(stylesheets) {
 
     }
 }
+
 function loadJs(scripts) {
     for (let key in scripts) {
         tag = document.createElement('script')
@@ -450,5 +457,13 @@ function loadJs(scripts) {
 }
 
 loadCSS([{ href: 'phone.css', media: 'screen and (max-width: 600px)' }])
-</script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script></body>
+</script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script><script>
+    fetch('https://api.github.com/repos/math2001/live-svg')
+    .then(response => response.json())
+    .then(repository => {
+        document.querySelector('#repository-stargazers-count').textContent = repository.stargazers_count
+    })
+</script>
+
+</body>
 </html>

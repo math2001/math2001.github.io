@@ -5,6 +5,10 @@
   flex-wrap: wrap;
 }
 
+.repository-star {
+  font-size: 25px;
+}
+
 .page-title {
   margin-right: 10px;
   margin-left: 10px;

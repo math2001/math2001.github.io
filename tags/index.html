@@ -286,7 +286,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 function loadCSS(stylesheets) {
     let media, link
     for (let stylesheet of stylesheets) {
-        console.log('load', stylesheet.href)
         media = stylesheet.media ? ' media="' + stylesheet.media + '"' : ''
         link = '<link rel="stylesheet" type="text/css" href="'
                 + "/" + "css/" + stylesheet.href + '"' + media + '>'
@@ -294,6 +293,7 @@ function loadCSS(stylesheets) {
 
     }
 }
+
 function loadJs(scripts) {
     for (let key in scripts) {
         tag = document.createElement('script')
@@ -304,6 +304,8 @@ function loadJs(scripts) {
 }
 
 loadCSS([{ href: 'phone.css', media: 'screen and (max-width: 600px)' }])
-</script></body>
+</script>
+
+</body>
 </html>
 
