@@ -40,7 +40,7 @@ function get_temp_dir {
 TEMP=$(get_temp_dir)
 hugo -d "$TEMP" --quiet
 
-git checkout "$TARGET_BRANCH" &> /dev/null
+git checkout "$TARGET_BRANCH" --quiet
 
 find -not -path "*.git*" -not -path "*$THEMES_DIR*" -type f -delete
 find -depth -not -path "*.git*" -not -path "*$THEMES_DIR*" -type d -empty -exec rmdir {} +
@@ -51,19 +51,19 @@ rmdir $TEMP
 
 git add .
 
-git rm --cached "$THEMES_DIR" -r &> /dev/null
+git rm --cached "$THEMES_DIR" -r --quiet
 
 if `git diff --exit-code --cached > /dev/null`; then
     echo "No change since last build"
     echo "-> don't commit or push"
-else 
+else
     echo "Commit..."
-    git commit -m "Auto build for $CURRENT_COMMIT" -m "deployer version: $VERSION" &> /dev/null
+    git commit -m "Auto build for $CURRENT_COMMIT" -m "deployer version: $VERSION" --quiet
 
     echo "Push..."
     git push origin HEAD --quiet
 fi
 
-git checkout "$CURRENT_BRANCH" > /dev/null
+git checkout "$CURRENT_BRANCH" --quiet
 
 
