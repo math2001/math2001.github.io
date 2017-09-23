@@ -3,7 +3,7 @@ baseURL: https://math2001.github.io
 languageCode: en-us
 metaDataFormat: yaml
 preserveTaxonomyNames: true
-publishBranch: sample
+publishBranch: master
 
 theme: fasty
 author:
