@@ -26,7 +26,18 @@ if [[ $line != 'y' ]]; then
     exit 1
 fi
 
-TEMP=$(mktemp -d)
+function get_temp_dir {
+    # cannot use mktemp because hugo on windows doesn't work with path
+    # starting with /
+    local temp="../"
+    while [[ -d $temp ]]; do
+        local temp="../hugo-build-$RANDOM"
+    done
+    mkdir $temp
+    echo $temp
+}
+
+TEMP=$(get_temp_dir)
 hugo -d "$TEMP"
 
 git checkout "$TARGET_BRANCH"
