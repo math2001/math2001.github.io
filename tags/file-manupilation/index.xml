@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Itsbuiltin on Math2001&#39;s blog</title>
-    <link>https://math2001.github.io/categories/itsbuiltin/</link>
-    <description>Recent content in Itsbuiltin on Math2001&#39;s blog</description>
+    <title>File manupilation on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/tags/file-manupilation/</link>
+    <description>Recent content in File manupilation on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017</copyright>
     <lastBuildDate>Sun, 24 Sep 2017 07:51:15 +1000</lastBuildDate>
     
-	<atom:link href="https://math2001.github.io/categories/itsbuiltin/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://math2001.github.io/tags/file-manupilation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,16 +23,6 @@ What does it do? It &amp;ldquo;finds&amp;rdquo; files. By default, it outputs th
 Let&amp;rsquo;s get started!
 The basics With this structure:
 . ├── app │ ├── index.</description>
-    </item>
-    
-    <item>
-      <title>The string module in Python</title>
-      <link>https://math2001.github.io/tip/string-module-python/</link>
-      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://math2001.github.io/tip/string-module-python/</guid>
-      <description>If you want the list of every letter, just do:
-&amp;gt;&amp;gt;&amp;gt; import string &amp;gt;&amp;gt;&amp;gt; print(string.ascii_uppercase) ABCDEFGHIJKLMNOPQRSTUVWXYZ  </description>
     </item>
     
   </channel>

@@ -7,7 +7,7 @@
     
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>My Zen - Math2001&#39;s blog</title><style>
+    <title>File manupilation - Math2001&#39;s blog</title><style>
     :root {
   --page-bg: hsla(195, 55%, 98%, 1);
   --monospace: Inconsolata, menlo, consolas;
@@ -161,183 +161,60 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
 
 </style><style>
-    /* Tomorrow Night Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-  color: #969896;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-  color: #cc6666;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-  color: #de935f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-  color: #f0c674;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-  color: #b5bd68;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-  color: #81a2be;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-  color: #b294bb;
-}
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  background: #1d1f21;
-  color: #c5c8c6;
-  padding: 0.5em;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
-}
-
-</style><style>
-    .page-top {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  flex-wrap: wrap;
-}
-
-.repository-star {
-  font-size: 25px;
-}
-
-.page-title {
-  margin-right: 10px;
-  margin-left: 10px;
+    .list-top {
   text-align: center;
 }
 
-.page-categories {
-  margin-top: 0;
-}
-
-.page-categories li {
-  display: inline-block;
-}
-
-.page-content {
-  width: 1000px;
-  max-width: 100%;
-  margin: 20px auto;
-  background: white;
-  text-align: justify;
-  box-shadow: 5px 5px 20px #ddd;
-  padding: 10px 0;
-  --x-margin: 5%;
-}
-
-.page-content img {
-  max-width: 100%;
-}
-
-.page-content p,
-.page-content blockquote,
-.page-content ul,
-.page-content h2,
-.page-content h3,
-.page-content h4,
-.page-content h5,
-.page-content h6 {
-  margin-right: var(--x-margin);
-  margin-left: var(--x-margin);
-}
-
-.page-content hr {
-  border: none;
-  border-top: 4px solid hsla(192, 16%, 92%, 1);
-  margin: 30px auto;
-}
-
-.page-tags {
-  text-align: center;
-  flex-basis: 100%;
-  margin: 0;
-}
-
-.page-tags li {
-  display: inline-block;
-}
-
-.page-bottom {
-  text-align: center;
-  padding: 1px 20px;
-}
-
-.page-date {
-  font-style: italic;
+.list-description {
   color: var(--font-mute);
 }
 
-/* content */
-
-.hljs {
-  padding: 20px calc(var(--x-margin) + 3%);
+.list-window {
+  width: 750px;
+  margin: auto;
+  max-width: 100%;
 }
 
-:not(pre) > code {
-  background-color: var(--code-bg);
-  padding: 2px 5px;
-  border-radius: 2px;
+.list-list {
+  outline: none;
+  padding: 0;
+  list-style: none;
+  padding: 0 10px;
 }
 
-blockquote {
-  border-left: 4px solid #ddd;
-  color: #aaa;
+.list-content {
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-kbd {
-  color: #666;
-  border: 1px solid #ccc;
-  padding: 1px 5px;
-  border-radius: 2px;
+.list-content-tags,
+.list-content-tags li {
+  display: inline-block;
+}
+
+.list-list .categories {
+  display: inline-block;
+  font-size: 80%;
+}
+
+.list-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: .2s all;
+  display: inline;
+}
+
+.list-link:hover {
+  color: var(--purple)
+}
+
+.list-content-reading-time {
+  font-size: 80%;
+  opacity: .8;
 }
 
 </style>
@@ -357,48 +234,32 @@ kbd {
 </nav>
 </header>
     <main>
-<div class="page-top">
-    <h1 class="page-title">My Zen</h1>
-    <ul class="page-categories categories">
-        <li><a href="/categories/code-aesthetic">code aesthetic</a></li>
-    </ul>
-    
-    <ul class="page-tags tags">
-        <li><a href="/tags/python">python</a></li>
-        <li><a href="/tags/zen">zen</a></li>
-        <li><a href="/tags/conventions">conventions</a></li>
-    </ul>
-
-    
-
+<div class="list-top">
+    <h1>File manupilation</h1>
+    <div class="list-description"></div>
 </div>
 
-<section class="page-content"><p><a href="https://python.org" target="_blank">Python</a> is by far my favorite language (I even wish we spoke it 😄).</p>
-
-<p>One thing I found funny about it, and in the same time really good, is <a href="https://python.org/dev/peps/pep-0020/" target="_blank">its
-zen</a>.</p>
-
-<p>They&rsquo;re basically guidelines.</p>
-
-<p>So, today, <em>dans un élan d&rsquo;inspiration</em>, I decided to write my own. Here it is:</p>
-
-<pre><code>Keep it simple.
-Lazyness is a quality.
-Learn to use your tools efficiently.
-Get inspired by great things.
-Do one thing, and do it well.
-Perfect programmers don't need comments.
-But every user needs documentation.
-</code></pre>
-</section>
-
-<div class="page-bottom">
-    <p class="page-date">Published on Wednesday 13 September 2017</p><h4>Read an other post</h4>
-    <div class="page-read-other">
+<div class="list-window">
+    <ul class="list-list">
         
-        <p>← <a href="/post/my-new-blog/">My new blog</a></p>
+        <li class="list-content">
+            <div>
+                <ul class="list-content-tags tags">
+                    <li><a href="/tags/bash">bash</a></li>
+                    <li><a href="/tags/find">find</a></li>
+                </ul>
+                <a class=list-link href="https://math2001.github.io/post/bash-find/">Bash Find</a>
+                <small class="list-content-reading-time"
+                    title="1230 words">(~ 6 min)</small>
+            </div>
+            <ul class="categories">
+                <li>
+                    <a href="/categories/itsbuiltin">itsbuiltin</a>
+                </li>
+            </ul>
+        </li>
         
-        <p><a href="/post/hugo-deploying-github-pages/">Deploying a hugo site on GitHub pages</a> →</p></div>
+    </ul>
 </div>    </main>
 </div>
 <footer>
@@ -429,7 +290,7 @@ function loadJs(scripts) {
 }
 
 loadCSS([{ href: 'phone.css', media: 'screen and (max-width: 600px)' }])
-</script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script>
+</script>
 
 </body>
 </html>

@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017</copyright>
-    <lastBuildDate>Sat, 23 Sep 2017 11:23:45 +1000</lastBuildDate>
+    <lastBuildDate>Sun, 24 Sep 2017 07:51:15 +1000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bash Find</title>
+      <link>https://math2001.github.io/post/bash-find/</link>
+      <pubDate>Sun, 24 Sep 2017 07:51:15 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/bash-find/</guid>
+      <description>The find command in bash is quite powerful, and knowing the basics might save you some scripting.
+What does it do? It &amp;ldquo;finds&amp;rdquo; files. By default, it outputs their path relative to where you ran find. But, in addition of providing you with advanced &amp;ldquo;filters&amp;rdquo; it actually allows you to run commands on each of those files.
+Let&amp;rsquo;s get started!
+The basics With this structure:
+. ├── app │ ├── index.</description>
+    </item>
     
     <item>
       <title>Deploying a hugo site on GitHub pages</title>
