@@ -9,16 +9,26 @@ draft: true
 The `find` command in bash is quite powerful, and knowing the basics might save
 you some scripting.
 
-What does it do? It "finds" files. You can apply some "filters" and it outputs
-their relative path.
+What does it do? It "finds" files. By default, it outputs their path relative to
+where you ran `find`. But, in addition of providing you with advanced "filters"
+it actually allows you to run commands on each of those files.
 
-For example, with the following structure:
+Let's get started!
+
+### The basics
+
+With this structure:
 
 ```
-dist
-├── app.js
-├── index.html
-└── style.css
+.
+├── app
+│   ├── index.html
+│   ├── app.js
+│   └── style.css
+└── dist
+    ├── app.js
+    ├── index.html
+    └── style.css
 ```
 
 ```bash
@@ -36,10 +46,22 @@ $ find
 
 It lists every folder and files recursively.
 
-### Tests
+You can specify a path to find items in, like so:
 
-Some of `find`'s power comes from it's ability to *filter* which files and folder
-it "selects". They are called *tests*. So, here are some of them:
+```bash
+$ find app
+app
+app/index.html
+app/script
+app/script/app.js
+app/style
+app/style/style.css
+```
+
+### Tests (filters)
+
+Some of `find`'s power comes from it's ability to *filter* which files and
+folder it "selects". They are called *tests*. So, here are some of them:
 
 #### `-type`
 
@@ -57,8 +79,8 @@ $ find -type d
 ./dist
 ```
 
-Here, the filter is `-type`. You guessed it, `f` is for `file` and `d` for
-`directory`. [More about `-type`][-type]
+Here, the filter is `-type`. You guessed it, `-type f` selects files, and `-type
+d` selects directories. [More about `-type`][-type]
 
 #### `-name`
 
@@ -72,7 +94,8 @@ $ find -iname "*.JS"
 ./dist/app.js
 ```
 
-`-name` takes a glob. The `-iname` variant is case insensitive. [More about `-name`][-name]
+`-name` takes a glob. The `-iname` variant is case insensitive. [More about
+`-name`][-name]
 
 
 #### `-path`
@@ -88,9 +111,9 @@ Note: `-wholename` is the same as `-path`, but `-path` is more portable.
 
 ### Combining test – operators
 
-So, everything returns a value (except operators of course). A test returns true
-if it matches (`-name "*.js"` returns true for `app.js`, but not `index.html`).
-You can conjugate everything with operators.
+Every expression returns a value except operators. A test returns true if it
+matches the current file (`-name "*.js"` returns true for `app.js`, but not
+`index.html`).  You can conjugate everything with operators.
 
 Every operators only applies to the next expression. So, `expr1 or expr2 and
 expr3` is the same as `(expr1 or expr2) and expr3`.
@@ -104,7 +127,7 @@ $ find -name "*.js" -type f
 ```
 
 Pretty straight forward, right? You select items that finish with `.js` *and*
-that are a file. You can guess the operator `-and` is the default one. Therefore
+that are file. You can guess the operator `-and` is the default one. Therefore
 `find -name "*.js" -and -type f` is the exact same!
 
 #### `-or`
@@ -135,8 +158,8 @@ $ find -not -name "*.js" -type f
 
 #### Grouping
 
-Of course, you can group stuff together. Here, we find every file that finishes
-by `.js` or any directories.
+Of course, you can group expressions together. Here, we find every file that
+finishes by `.js` or any directories.
 
 ```bash
 $ find \( -name "*.js" -type f \) -or -type d
@@ -149,20 +172,18 @@ $ find \( -name "*.js" -type f \) -or -type d
 ./dist/app.js
 ```
 
-Again, you might have to escape the brackets (it's so that it looks cool :rage:)
+Thanks to bash (:rage:), you have to escape the brackets.
 
 #### Comma `,`
 
-Separates 2 expressions: it evaluates both of them, but only returns the value of
-the second one.
+Separates 2 expressions: it evaluates both of them, but only returns the value
+of the second one.
 
 ```
 $ find -name "whatever" , -name "*.html"
 ./app/index.html
 ./dist/index.html
 ```
-
-This will become handy when we'll use `-prune`.
 
 #### Aliases
 
@@ -175,15 +196,13 @@ clear:
 ! = -not (you'll need to escape it though, like so \!)
 ```
 
-[More about combining test][-combining]
+[More about operators][-combining]
 
 ### Actions
 
 Now, printing out the filenames if fun, doing some stuff with them is even
 better! And guess why it actually prints out the filenames: because the default
 action is `-print`!
-
-Just as the tests, actions **return a value** too. Remember this.
 
 ```bash
 $ find -type f -print
@@ -197,10 +216,13 @@ $ find -type f -print
 
 It's exactly what you'd expect, right?
 
+Note: Just as the tests, actions **return a value** too. Remember this.
+
 #### `-delete`
 
-`-delete` is a pretty useful action (watch out though: it doesn't through what it
-deletes to the bin, it *actually* deletes them, like `rm`).
+`-delete` is a pretty useful action. Guess what it does: deletes files (watch
+out though: it doesn't throw what it deletes to the bin, it *actually* deletes
+them, like `rm`).
 
 If you want to delete every temporary file created by vim (files that end with
 `~`), you can just run this:
@@ -211,8 +233,8 @@ $ find -name "*~" -delete
 
 Gone! Every temp files are gone!
 
-What I recommend you do before this is run just `find -name "*~"` so that you see
-which file are going to be deleted when you run `find -name "*~" -delete`.
+What I recommend you do before this is run just `find -name "*~"` so that you
+see which file are going to be deleted.
 
 #### `-exec`
 
@@ -229,8 +251,10 @@ $ # does the same thing as
 $ find -name "*~" -exec rm {} \;
 ```
 
-Note: as you can see, we need to escape the `;` to prevent bash from interpreting
-it.
+Note: as you can see, we need to escape the `;` to prevent bash from
+interpreting it.
+
+`-delete` is more efficient though, and more secure. Use it when you can.
 
 ##### Optimizing
 
@@ -247,15 +271,20 @@ $ rm 2.jpg
 $ rm 3.jpg
 ```
 
-If course, it depends on the command, but `find` gives you the possibility of
-doing the first thing in your `-exec` actions. It'll automatically adapt to the
-maximum command line length of your system. 
+Of course, the ability to do that depends on the command, but `find` gives you
+the possibility of doing that in your `-exec` actions.
+
+Note: It'll automatically adapt to the maximum command line length of your
+system. 
 
 In order to do that, you have to use `{} +`, like so:
 
 ```bash
 $ find -name "*~" -exec rm {} +
 ```
+
+In this case `{} +` will be replaced by as many paths as the maximum command
+line length of your system allows.
 
 Note that `{} +` has to be at the *end* of the command. [More about
 optimizing][optimizing]
@@ -264,23 +293,31 @@ optimizing][optimizing]
 
 #### `-maxdepth`
 
-> Descend at most levels (a non-negative integer) levels of directories below the
-> command line arguments. ‘-maxdepth 0’ means only apply the tests and actions to
-> the command line arguments.
+> Descend at most levels (a non-negative integer) levels of directories below
+> the command line arguments. ‘-maxdepth 0’ means only apply the tests and
+> actions to the command line arguments.
 
 #### `-depth`
 
-The `-depth` option makes `find` list folders *content* before itself.
-The `-depth` options makes find start move from the *bottom* to the *top* instead
-of the opposite. T
+The `-depth` option makes `find` list folders' *content* before itself.
 
 Note: the `-delete` action implies `-depth`
 
+Examples are shown in the `-prune` explanation.
+
 #### `-prune`
 
-The `-prune` action allows you to prevent `find` from going into a directory that
-matches some tests. Weirdly enough though, it returns `true` when it found a
-directory to ignore. For example:
+The `-prune` action allows you to prevent `find` from going into a directory
+that matches some tests. Weirdly enough though, it returns `true` when it found
+a directory to ignore. For example:
+
+```bash
+$ find -name "app" -prune
+./app
+```
+
+So, it only lists directories that it ignores.  To counter that, just add `-or
+-print`
 
 ```bash
 $ find -name "app" -prune -or -print
@@ -291,13 +328,16 @@ $ find -name "app" -prune -or -print
 ./dist/style.css
 ```
 
-You need to `-or` operator since `-prune` is true when it **excludes** a
-directory. It is false when it doesn't.
+> Hold on a sec... `-or`? But `-prune` would return false when it looks at
+> `./app/app.js` for example, why doesn't it print then?
+
+No, because `-prune` **excludes** the directory, remember. So, `./app/app.js`
+**never** gets looked at.
 
 ##### Gotcha
 
-The problem is that it doesn't play well with `-depth`. It actually doesn't work,
-have a look:
+The problem is that it doesn't play well with `-depth`. It actually doesn't
+work, have a look:
 
 ```bash
 $ find -depth -name "app" -prune -or -print
@@ -313,8 +353,11 @@ $ find -depth -name "app" -prune -or -print
 .
 ```
 
+It doesn't have the time to "prune" the directory since we start from the
+bottom.
+
 Remember: `-delete` implies `-depth`. Therefore, DO NOT USE `-prune` with
-`-delete`. Instead, do it manually with `-path`:
+`-delete`. Instead, "prune" it manually with `-path`:
 
 ```bash
 $ find -depth -not -path "*app*"
@@ -324,8 +367,11 @@ $ find -depth -not -path "*app*"
 .
 ```
 
-Ok, I guess that's it! If you want to learn even more, have a look at the [documentation][]  Hope it'll save you some time. If it does, please share
-this post!
+Ok, I guess that's it! If you want to learn even more, have a look at the
+[documentation][].
+
+Hope it'll save you some time. If it does, please share this
+post!
 
 [-type]: https://www.gnu.org/software/findutils/manual/html_mono/find.html#Type
 [-name]: https://www.gnu.org/software/findutils/manual/html_mono/find.html#Base-Name-Patterns
