@@ -3,7 +3,6 @@ title: Bash Find
 date: 2017-09-24T07:51:15+10:00
 categories: [itsbuiltin]
 tags: [bash, find, file manupilation]
-draft: true
 ---
 
 The `find` command in bash is quite powerful, and knowing the basics might save
