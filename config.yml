@@ -34,9 +34,6 @@ menu:
     - url: /project/
       name: Projects
       weight: 5
-    - url: /tip/
-      name: Tips
-      weight: 10
     - url: /categories/
       pre: "|"
       name: Categories
@@ -52,9 +49,6 @@ menu:
     - url: /project/
       name: Projects
       weight: 5
-    - url: /tip/
-      name: Tips
-      weight: 10
 
 #     icon:
 #       - url: mailto:australie.p@gmail.com
