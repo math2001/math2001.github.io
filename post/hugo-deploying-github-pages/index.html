@@ -407,16 +407,18 @@ script</a>.</p>
 <p>In your hugo config, add a <code>publishBranch</code> key with the name of the branch you
 want. It should be a string.</p>
 
-<p>Then, you just need run the script you just downloaded, and it&rsquo;ll build, commit,
-and push for you!</p>
+<pre><code>~/mysite/ $ ./deploy.sh
+</code></pre>
+
+<p>Boom! It&rsquo;ll build, commit, and push for you!</p>
 
 <hr />
 
-<p>This script does some weird stuff due to git submodules not coping very well with
-branches in the parent repository. When you <code>checkout</code>, the submodules don&rsquo;t get
-removed/added, you need to do it manually. If you have submodules in your
-website&rsquo;s sources elsewhere than in your theme folders (<code>themes</code> by default),
-you&rsquo;ll need to tweak this script a bit.</p>
+<p>This script does some weird stuff due to git submodules not coping very well
+with branches in the parent repository. When you <code>checkout</code>, the submodules
+don&rsquo;t get removed/added, you need to do it manually. If you have submodules in
+your website&rsquo;s sources elsewhere than in your theme folders (<code>themes</code> by
+default), you&rsquo;ll need to tweak this script a bit.</p>
 </section>
 
 <div class="page-bottom">
