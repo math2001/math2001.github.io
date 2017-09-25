@@ -57,7 +57,7 @@ function get_temp_dir {
 TEMP=$(get_temp_dir)
 hugo -d "$TEMP" --quiet
 
-git checkout "$TARGET_BRANCH" --quiet
+git checkout "$TARGET_BRANCH" --quiet &> /dev/null
 
 find -not -path "*.git*" -not -path "*$THEMES_DIR*" -type f -delete
 find -depth -not -path "*.git*" -not -path "*$THEMES_DIR*" -type d -empty -exec rmdir {} +
@@ -66,7 +66,7 @@ mv $TEMP/* .
 
 rmdir $TEMP
 
-git add .
+git add . &> /dev/null
 
 git rm --cached "$THEMES_DIR" -r --quiet
 
