@@ -2,8 +2,12 @@
 <head>
     <meta name="generator" content="Hugo 0.27.1" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Rerun last command with bang - Math2001&#39;s blog</title><style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+
+    <link rel=icon type=image/png href='/img/math2001.png'>
+    <title>How do I get the ASCII value of a character? - Math2001&#39;s blog</title><style>
     :root {
   --page-bg: hsla(195, 55%, 98%, 1);
   --monospace: Inconsolata, menlo, consolas;
@@ -344,7 +348,6 @@ kbd {
     <ul class="nav-list">
         <li class="nav-list-item"><a href="/post/">Posts</a></li>
         <li class="nav-list-item"><a href="/project/">Projects</a></li>
-        <li class="nav-list-item"><a href="/tip/">Tips</a></li>
         <li class="nav-list-item nav-separator"></li>
         <li class="nav-list-item"><a href="/categories/">Categories</a></li>
         <li class="nav-list-item"><a href="/tags/">Tags</a></li>
@@ -354,72 +357,44 @@ kbd {
 </header>
     <main>
 <div class="page-top">
-    <h1 class="page-title">Rerun last command with bang</h1>
+    <h1 class="page-title">How do I get the ASCII value of a character?</h1>
     <ul class="page-categories categories">
         <li><a href="/categories/cool-feature">cool feature</a></li>
     </ul>
     
     <ul class="page-tags tags">
         <li><a href="/tags/vim">vim</a></li>
-        <li><a href="/tags/vimscript">vimscript</a></li>
-        <li><a href="/tags/bang">bang</a></li>
+        <li><a href="/tags/ascii">ascii</a></li>
     </ul>
 
     
 
 </div>
 
-<section class="page-content"><p>Put this little vim script in your <code>.vimrc</code> to rerun the previous command with
-the bang (<code>!</code>) by just typing <code>:Please</code>.</p>
+<section class="page-content"><p>To get the ASCII value of the character under the cursor, just press <code>ga</code> (or
+run <code>:ascii</code>).</p>
 
-<pre><code class="language-vim">function! BangLastCommand()
-    &quot; The last command that was run is stored in the register `:` (:registers)
-    let lastcommand = split(@:, ' ')
-    let command = lastcommand[0] . '! ' . join(lastcommand[1:], ' ')
-    execute command 
-endfunction
+<p>It&rsquo;ll print it in three format: in decimal, hexadecimal and octal.</p>
 
-command! Please call BangLastCommand()
+<p>So, when your cursor is on an arrow and that you press <code>ga</code>: →, you&rsquo;ll see at the
+bottom:</p>
+
+<pre><code>&lt;→&gt; 8594, Hex: 2192, Octal: 20622
 </code></pre>
 
-<p>So, now, if you do:</p>
-
-<pre><code>:e ~/.vimrc
-</code></pre>
-
-<p>And you get an error because the current file has to be save, something like:</p>
-
-<pre><code>E37: No write since last change (add ! to override)
-</code></pre>
-
-<p>You can just do this:</p>
-
-<pre><code>:Please
-</code></pre>
-
-<p>And it&rsquo;ll run</p>
-
-<pre><code>:e! ~/.vimrc
-</code></pre>
-
-<p>Pretty cool, hey? You can change the name <code>Please</code> to whatever you want, but it
-has to start with a capitale letter. Here are a few suggestion:</p>
-
-<ul>
-<li><code>:Sudo</code>: <code>command! Sudo call s:RerunBangLastCommand()</code></li>
-<li><code>:Please!</code>: <code>command! -bang Sudo call s:RerunBangLastCommand()</code></li>
-</ul>
-
-<p>Have fun!</p>
+<blockquote>
+<p>Mnemonic: Get ASCII value.
+­ from <code>:help :ascii</code></p>
+</blockquote>
 </section>
 
 <div class="page-bottom">
-    <p class="page-date">Published on Sunday 27 August 2017</p><h4>Read an other tip</h4>
+    <p class="page-date">Published on Saturday 26 August 2017</p><h4>Read an other post</h4>
     <div class="page-read-other">
         
-        <p>← <a href="/tip/silent-command-line-mapping/">Silent command-line mapping</a></p>
+        <p>← <a href="/post/variable-scopes-vim/">Variable scopes in vim</a></p>
         
-        <p><a href="/tip/dynamicopen-function-vim/">DynamicOpen function</a> →</p></div>
+        <p><a href="/post/difference-vim-options-readonly-modifiable/">&#39;readonly&#39; != &#39;modifiable&#39;</a> →</p></div>
 </div>    </main>
 </div>
 <footer>

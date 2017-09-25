@@ -14,10 +14,10 @@
     
     <item>
       <title>How do I get the ASCII value of a character?</title>
-      <link>https://math2001.github.io/tip/get-ascii-value-character-vim/</link>
+      <link>https://math2001.github.io/post/get-ascii-value-character-vim/</link>
       <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://math2001.github.io/tip/get-ascii-value-character-vim/</guid>
+      <guid>https://math2001.github.io/post/get-ascii-value-character-vim/</guid>
       <description>To get the ASCII value of the character under the cursor, just press ga (or run :ascii).
 It&amp;rsquo;ll print it in three format: in decimal, hexadecimal and octal.
 So, when your cursor is on an arrow and that you press ga: →, you&amp;rsquo;ll see at the bottom:

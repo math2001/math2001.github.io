@@ -14,10 +14,10 @@
     
     <item>
       <title>Variable scopes in vim</title>
-      <link>https://math2001.github.io/tip/variable-scopes-vim/</link>
+      <link>https://math2001.github.io/post/variable-scopes-vim/</link>
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://math2001.github.io/tip/variable-scopes-vim/</guid>
+      <guid>https://math2001.github.io/post/variable-scopes-vim/</guid>
       <description>An interesting feature of vim script is variable scoping. Here&amp;rsquo;s a copy-paste from the documentation, just in case you never saw it before:
 There are several name spaces for variables. Which one is to be used is specified by what is prepended: (nothing) In a function: local to a function; otherwise: global buffer-variable b: Local to the current buffer. window-variable w: Local to the current window. tabpage-variable t: Local to the current tab page.</description>
     </item>

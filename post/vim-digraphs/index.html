@@ -2,8 +2,12 @@
 <head>
     <meta name="generator" content="Hugo 0.27.1" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Current buffer only mapping - Math2001&#39;s blog</title><style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+
+    <link rel=icon type=image/png href='/img/math2001.png'>
+    <title>Vim digraphs - Math2001&#39;s blog</title><style>
     :root {
   --page-bg: hsla(195, 55%, 98%, 1);
   --monospace: Inconsolata, menlo, consolas;
@@ -344,7 +348,6 @@ kbd {
     <ul class="nav-list">
         <li class="nav-list-item"><a href="/post/">Posts</a></li>
         <li class="nav-list-item"><a href="/project/">Projects</a></li>
-        <li class="nav-list-item"><a href="/tip/">Tips</a></li>
         <li class="nav-list-item nav-separator"></li>
         <li class="nav-list-item"><a href="/categories/">Categories</a></li>
         <li class="nav-list-item"><a href="/tags/">Tags</a></li>
@@ -354,37 +357,93 @@ kbd {
 </header>
     <main>
 <div class="page-top">
-    <h1 class="page-title">Current buffer only mapping</h1>
+    <h1 class="page-title">Vim digraphs</h1>
     <ul class="page-categories categories">
         <li><a href="/categories/cool-feature">cool feature</a></li>
     </ul>
     
     <ul class="page-tags tags">
         <li><a href="/tags/vim">vim</a></li>
-        <li><a href="/tags/map">map</a></li>
-        <li><a href="/tags/buffer">buffer</a></li>
+        <li><a href="/tags/symbols">symbols</a></li>
     </ul>
 
     
 
 </div>
 
-<section class="page-content"><p>If you want to set a mapping only for the current buffer in VIM, it&rsquo;s super
-simple: just use the <code>buffer</code> special argument, like so for example:</p>
+<section class="page-content">
 
-<pre><code class="language-vim">nnoremap &lt;buffer&gt; ,tip call InsertTipYamlFrontMatter()
+<p>This is a pretty good thing if you use symbols that aren&rsquo;t on your keyboard, like
+the copyright symbol for example (©).</p>
+
+<p>Do you know how much time it took me to insert this symbol? Less than a second&hellip;
+Do you know how much time it would have took you? Well, depending on your
+internet connection, it might be about 10 seconds.</p>
+
+<p>So, how did I do that? I just pressed <kbd>ctr+k</kbd>+<kbd>Co</kbd> (in insert
+mode).</p>
+
+<p><kbd>ctrl+k</kbd> <em>in insert mode</em> listens for a shortcut, which will then insert
+the corresponding symbol.</p>
+
+<p>How do you know which one it is? Just look for it in the <code>:digraphs</code> list!</p>
+
+<p>You can also define your own digraph:</p>
+
+<pre><code class="language-vim">:digraph .. …
 </code></pre>
 
-<p>Learn more: <code>:help :map-local</code></p>
+<p>You can also specify the decimal value of the symbol, like so:</p>
+
+<pre><code class="language-vim">:diagraph .. 8230
+</code></pre>
+
+<p>You might be wondering how you get the value&hellip; Well, have a look at this: <tiplink to="vim-ascii.md"></tiplink></p>
+
+<h2 id="little-cheat-sheet">Little cheat sheet</h2>
+
+<p>Because I&rsquo;m nice (😄), I made a little list of the ones you might be likely
+to use:</p>
+
+<pre><code>Abbreviation → Symbol 
+Co → ©
+TM → ™
+-&gt; → →
+&lt;- → ←
+=&gt; → ⇒
+&lt;= → ⇐
+12 → ½
+22 → ²
+&lt;&lt; → «
+&gt;&gt; → »
+Eu → €
+$$ → £
+RT → √
+-- → ­
+</code></pre>
+
+<h3 id="if-you-re-french">If you&rsquo;re french</h3>
+
+<pre><code>Abbreviation → Symbol
+e! → è
+e' → é
+e&gt; → ê
+e&quot; → ë
+oe → œ
+</code></pre>
+
+<p>Note: use upper cased abbreviation to get upper cased symbols</p>
+
+<p>To learn more: <code>:help digraphs</code></p>
 </section>
 
 <div class="page-bottom">
-    <p class="page-date">Published on Sunday 27 August 2017</p><h4>Read an other tip</h4>
+    <p class="page-date">Published on Friday 25 August 2017</p><h4>Read an other post</h4>
     <div class="page-read-other">
         
-        <p>← <a href="/tip/dynamicopen-function-vim/">DynamicOpen function</a></p>
+        <p>← <a href="/post/vim-help-index/">Vim help index</a></p>
         
-        <p><a href="/tip/change-shell-run-external-command-vim/">Change shell used to run external command</a> →</p></div>
+        <p><a href="/post/variable-scopes-vim/">Variable scopes in vim</a> →</p></div>
 </div>    </main>
 </div>
 <footer>

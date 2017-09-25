@@ -2,8 +2,12 @@
 <head>
     <meta name="generator" content="Hugo 0.27.1" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Vim help index - Math2001&#39;s blog</title><style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+
+    <link rel=icon type=image/png href='/img/math2001.png'>
+    <title>DynamicOpen function - Math2001&#39;s blog</title><style>
     :root {
   --page-bg: hsla(195, 55%, 98%, 1);
   --monospace: Inconsolata, menlo, consolas;
@@ -344,7 +348,6 @@ kbd {
     <ul class="nav-list">
         <li class="nav-list-item"><a href="/post/">Posts</a></li>
         <li class="nav-list-item"><a href="/project/">Projects</a></li>
-        <li class="nav-list-item"><a href="/tip/">Tips</a></li>
         <li class="nav-list-item nav-separator"></li>
         <li class="nav-list-item"><a href="/categories/">Categories</a></li>
         <li class="nav-list-item"><a href="/tags/">Tags</a></li>
@@ -354,41 +357,50 @@ kbd {
 </header>
     <main>
 <div class="page-top">
-    <h1 class="page-title">Vim help index</h1>
+    <h1 class="page-title">DynamicOpen function</h1>
     <ul class="page-categories categories">
-        <li><a href="/categories/infos">infos</a></li>
+        <li><a href="/categories/cool-feature">cool feature</a></li>
     </ul>
     
     <ul class="page-tags tags">
         <li><a href="/tags/vim">vim</a></li>
-        <li><a href="/tags/doc">doc</a></li>
+        <li><a href="/tags/vimscript">vimscript</a></li>
     </ul>
 
     
 
 </div>
 
-<section class="page-content"><p>A very strong point of vim is its documentation. There&rsquo;s just so much of it!!</p>
+<section class="page-content"><p>I really open my <code>.vimrc</code> often. Too often to have to type <code>:e ~/.vimrc</code> or
+<code>:tabe ~/.vimrc</code>every time.</p>
 
-<p>So, <strong>use it</strong></p>
+<p>Here&rsquo;s a little function that will open a file in a new tab if there isn&rsquo;t enough
+room for a new split, and, you guessed it, in a new <em>vertical</em> split if there
+is.</p>
 
-<p>It doesn&rsquo;t matter if you&rsquo;re an experienced user of vim or a complete beginner,
-there&rsquo;ll be something in there for you to learn <em>for sure</em>.</p>
+<pre><code class="language-vim">function! DynamicOpen(file)
+    if winwidth(win_getid()) &gt; 160
+        execute &quot;vsplit &quot;.a:file
+    else
+        execute &quot;tabe &quot;.a:file
+    endif
+endfunction
 
-<p>Where could you start? Well, at the index of course! Just type <code>:help</code> and hit
-<kbd>enter</kbd> and scroll down a bit.</p>
+nnoremap &lt;leader&gt;ev :call DynamicOpen($MYVIMRC)&lt;CR&gt;
+</code></pre>
 
-<p>See that? You got a few kind of &ldquo;tutorials&rdquo; (I especially like the one <code>Clever
-tricks</code>). Looks like you got a lot of learning to go 😄!</p>
+<p>It just checks with width of the current window.</p>
+
+<p>More infos: <code>:help window-functions</code></p>
 </section>
 
 <div class="page-bottom">
-    <p class="page-date">Published on Friday 25 August 2017</p><h4>Read an other tip</h4>
+    <p class="page-date">Published on Sunday 27 August 2017</p><h4>Read an other post</h4>
     <div class="page-read-other">
         
-        <p>← <a href="/tip/how-to-insert-the-date-in-vim/">How to insert the date in Vim?</a></p>
+        <p>← <a href="/post/rerun-last-command-bang-vim/">Rerun last command with bang</a></p>
         
-        <p><a href="/tip/vim-digraphs/">Vim digraphs</a> →</p></div>
+        <p><a href="/post/current-buffer-only-mapping-vim/">Current buffer only mapping</a> →</p></div>
 </div>    </main>
 </div>
 <footer>

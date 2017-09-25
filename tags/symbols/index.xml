@@ -14,10 +14,10 @@
     
     <item>
       <title>Vim digraphs</title>
-      <link>https://math2001.github.io/tip/vim-digraphs/</link>
+      <link>https://math2001.github.io/post/vim-digraphs/</link>
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://math2001.github.io/tip/vim-digraphs/</guid>
+      <guid>https://math2001.github.io/post/vim-digraphs/</guid>
       <description>This is a pretty good thing if you use symbols that aren&amp;rsquo;t on your keyboard, like the copyright symbol for example (©).
 Do you know how much time it took me to insert this symbol? Less than a second&amp;hellip; Do you know how much time it would have took you? Well, depending on your internet connection, it might be about 10 seconds.
 So, how did I do that? I just pressed ctr+k+Co (in insert mode).</description>

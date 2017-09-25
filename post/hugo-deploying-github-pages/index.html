@@ -2,7 +2,11 @@
 <head>
     <meta name="generator" content="Hugo 0.27.1" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel=icon type=image/png href='/img/math2001.png'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+
+    <link rel=icon type=image/png href='/img/math2001.png'>
     <title>Deploying a hugo site on GitHub pages - Math2001&#39;s blog</title><style>
     :root {
   --page-bg: hsla(195, 55%, 98%, 1);
@@ -344,7 +348,6 @@ kbd {
     <ul class="nav-list">
         <li class="nav-list-item"><a href="/post/">Posts</a></li>
         <li class="nav-list-item"><a href="/project/">Projects</a></li>
-        <li class="nav-list-item"><a href="/tip/">Tips</a></li>
         <li class="nav-list-item nav-separator"></li>
         <li class="nav-list-item"><a href="/categories/">Categories</a></li>
         <li class="nav-list-item"><a href="/tags/">Tags</a></li>
@@ -407,18 +410,16 @@ script</a>.</p>
 <p>In your hugo config, add a <code>publishBranch</code> key with the name of the branch you
 want. It should be a string.</p>
 
-<pre><code>~/mysite/ $ ./deploy.sh
-</code></pre>
-
-<p>Boom! It&rsquo;ll build, commit, and push for you!</p>
+<p>Then, you just need run the script you just downloaded, and it&rsquo;ll build, commit,
+and push for you!</p>
 
 <hr />
 
-<p>This script does some weird stuff due to git submodules not coping very well
-with branches in the parent repository. When you <code>checkout</code>, the submodules
-don&rsquo;t get removed/added, you need to do it manually. If you have submodules in
-your website&rsquo;s sources elsewhere than in your theme folders (<code>themes</code> by
-default), you&rsquo;ll need to tweak this script a bit.</p>
+<p>This script does some weird stuff due to git submodules not coping very well with
+branches in the parent repository. When you <code>checkout</code>, the submodules don&rsquo;t get
+removed/added, you need to do it manually. If you have submodules in your
+website&rsquo;s sources elsewhere than in your theme folders (<code>themes</code> by default),
+you&rsquo;ll need to tweak this script a bit.</p>
 </section>
 
 <div class="page-bottom">

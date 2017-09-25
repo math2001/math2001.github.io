@@ -2,8 +2,12 @@
 <head>
     <meta name="generator" content="Hugo 0.27.1" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel=icon type=image/png href='/img/math2001.png'>
-    <title>DynamicOpen function - Math2001&#39;s blog</title><style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+
+    <link rel=icon type=image/png href='/img/math2001.png'>
+    <title>How to insert the date in Vim? - Math2001&#39;s blog</title><style>
     :root {
   --page-bg: hsla(195, 55%, 98%, 1);
   --monospace: Inconsolata, menlo, consolas;
@@ -344,7 +348,6 @@ kbd {
     <ul class="nav-list">
         <li class="nav-list-item"><a href="/post/">Posts</a></li>
         <li class="nav-list-item"><a href="/project/">Projects</a></li>
-        <li class="nav-list-item"><a href="/tip/">Tips</a></li>
         <li class="nav-list-item nav-separator"></li>
         <li class="nav-list-item"><a href="/categories/">Categories</a></li>
         <li class="nav-list-item"><a href="/tags/">Tags</a></li>
@@ -354,50 +357,69 @@ kbd {
 </header>
     <main>
 <div class="page-top">
-    <h1 class="page-title">DynamicOpen function</h1>
+    <h1 class="page-title">How to insert the date in Vim?</h1>
     <ul class="page-categories categories">
         <li><a href="/categories/cool-feature">cool feature</a></li>
     </ul>
     
     <ul class="page-tags tags">
         <li><a href="/tags/vim">vim</a></li>
-        <li><a href="/tags/vimscript">vimscript</a></li>
+        <li><a href="/tags/date">date</a></li>
+        <li><a href="/tags/strftime">strftime</a></li>
     </ul>
 
     
 
 </div>
 
-<section class="page-content"><p>I really open my <code>.vimrc</code> often. Too often to have to type <code>:e ~/.vimrc</code> or
-<code>:tabe ~/.vimrc</code>every time.</p>
+<section class="page-content"><p>First off, I really don&rsquo;t recommend you use the <code>strftime()</code> function vim has,
+since, as it says in the help message (<code>:help strftime</code>)</p>
 
-<p>Here&rsquo;s a little function that will open a file in a new tab if there isn&rsquo;t enough
-room for a new split, and, you guessed it, in a new <em>vertical</em> split if there
-is.</p>
+<blockquote>
+<p>The accepted {format} depends on your system, thus this is not portable!</p>
+</blockquote>
 
-<pre><code class="language-vim">function! DynamicOpen(file)
-    if winwidth(win_getid()) &gt; 160
-        execute &quot;vsplit &quot;.a:file
-    else
-        execute &quot;tabe &quot;.a:file
-    endif
-endfunction
+<p>So, a somewhat better solution is to use the <code>date</code> shell command. Yes, it seems
+even less portable, but at least you know for sure if it&rsquo;s going to work or not
+(with <code>strftime()</code>, I don&rsquo;t know if vim could get mixed up about the OS when you
+use a simulate a Unix environment in your terminal)</p>
 
-nnoremap &lt;leader&gt;ev :call DynamicOpen($MYVIMRC)&lt;CR&gt;
+<pre><code class="language-sh">$ date +&quot;%A %d %B %Y @ %H:%M&quot;
+Sunday 20 August 2017 @ 11:11
 </code></pre>
 
-<p>It just checks with width of the current window.</p>
+<p>So, now, you just need to add this to your <code>.vimrc</code></p>
 
-<p>More infos: <code>:help window-functions</code></p>
+<pre><code class="language-vim">function! Insert(text)
+    &quot; a simple function to insert text where the cursor is
+    execute &quot;normal! \&lt;Esc&gt;a&quot;.a:text
+endfunction
+
+function! Strip(text)
+    return substitute(a:text, '^\_s*\(.\{-}\)\_s*$', '\1', '')
+endfunction
+
+command! InsertDate :call Insert(Strip(system('date +&quot;%A %d %B %Y @ %H:%M&quot;')))
+</code></pre>
+
+<p>All you need to do now is:</p>
+
+<pre><code>:InsertDate
+</code></pre>
+
+<p>And, you&rsquo;ll get the date inserted automatically.</p>
+
+<p>If you want to customize the format of the date, I&rsquo;d recommend using a tool like
+<a href="https://strftime.net" target="_blank">strftime.net</a>.</p>
 </section>
 
 <div class="page-bottom">
-    <p class="page-date">Published on Sunday 27 August 2017</p><h4>Read an other tip</h4>
+    <p class="page-date">Published on Sunday 20 August 2017</p><h4>Read an other post</h4>
     <div class="page-read-other">
         
-        <p>← <a href="/tip/rerun-last-command-bang-vim/">Rerun last command with bang</a></p>
+        <p>← <a href="/post/network-throttling/">Network throttling</a></p>
         
-        <p><a href="/tip/current-buffer-only-mapping-vim/">Current buffer only mapping</a> →</p></div>
+        <p><a href="/post/vim-help-index/">Vim help index</a> →</p></div>
 </div>    </main>
 </div>
 <footer>

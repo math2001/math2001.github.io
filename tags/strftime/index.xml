@@ -14,10 +14,10 @@
     
     <item>
       <title>How to insert the date in Vim?</title>
-      <link>https://math2001.github.io/tip/how-to-insert-the-date-in-vim/</link>
+      <link>https://math2001.github.io/post/how-to-insert-the-date-in-vim/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://math2001.github.io/tip/how-to-insert-the-date-in-vim/</guid>
+      <guid>https://math2001.github.io/post/how-to-insert-the-date-in-vim/</guid>
       <description>First off, I really don&amp;rsquo;t recommend you use the strftime() function vim has, since, as it says in the help message (:help strftime)
  The accepted {format} depends on your system, thus this is not portable!
  So, a somewhat better solution is to use the date shell command. Yes, it seems even less portable, but at least you know for sure if it&amp;rsquo;s going to work or not (with strftime(), I don&amp;rsquo;t know if vim could get mixed up about the OS when you use a simulate a Unix environment in your terminal)</description>

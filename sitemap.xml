@@ -18,7 +18,7 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/</loc>
+    <loc>https://math2001.github.io/post/</loc>
     <lastmod>2017-09-14T19:18:40+10:00</lastmod>
   </url>
   
@@ -33,77 +33,77 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/great-resources-for-vim-users/</loc>
+    <loc>https://math2001.github.io/post/great-resources-for-vim-users/</loc>
     <lastmod>2017-09-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/confirm-option-vim/</loc>
+    <loc>https://math2001.github.io/post/confirm-option-vim/</loc>
     <lastmod>2017-09-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/change-shell-run-external-command-vim/</loc>
+    <loc>https://math2001.github.io/post/change-shell-run-external-command-vim/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/current-buffer-only-mapping-vim/</loc>
+    <loc>https://math2001.github.io/post/current-buffer-only-mapping-vim/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/dynamicopen-function-vim/</loc>
+    <loc>https://math2001.github.io/post/dynamicopen-function-vim/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/rerun-last-command-bang-vim/</loc>
+    <loc>https://math2001.github.io/post/rerun-last-command-bang-vim/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/silent-command-line-mapping/</loc>
+    <loc>https://math2001.github.io/post/silent-command-line-mapping/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/difference-vim-options-readonly-modifiable/</loc>
+    <loc>https://math2001.github.io/post/difference-vim-options-readonly-modifiable/</loc>
     <lastmod>2017-08-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/get-ascii-value-character-vim/</loc>
+    <loc>https://math2001.github.io/post/get-ascii-value-character-vim/</loc>
     <lastmod>2017-08-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/variable-scopes-vim/</loc>
+    <loc>https://math2001.github.io/post/variable-scopes-vim/</loc>
     <lastmod>2017-08-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/vim-digraphs/</loc>
+    <loc>https://math2001.github.io/post/vim-digraphs/</loc>
     <lastmod>2017-08-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/vim-help-index/</loc>
+    <loc>https://math2001.github.io/post/vim-help-index/</loc>
     <lastmod>2017-08-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/how-to-insert-the-date-in-vim/</loc>
+    <loc>https://math2001.github.io/post/how-to-insert-the-date-in-vim/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/network-throttling/</loc>
+    <loc>https://math2001.github.io/post/network-throttling/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tip/string-module-python/</loc>
+    <loc>https://math2001.github.io/post/string-module-python/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -302,12 +302,6 @@
   <url>
     <loc>https://math2001.github.io/tags/performances/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/post/</loc>
-    <lastmod>2017-09-24T07:51:15+10:00</lastmod>
     <priority>0</priority>
   </url>
   

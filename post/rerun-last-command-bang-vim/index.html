@@ -2,8 +2,12 @@
 <head>
     <meta name="generator" content="Hugo 0.27.1" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Network throttling - Math2001&#39;s blog</title><style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+
+    <link rel=icon type=image/png href='/img/math2001.png'>
+    <title>Rerun last command with bang - Math2001&#39;s blog</title><style>
     :root {
   --page-bg: hsla(195, 55%, 98%, 1);
   --monospace: Inconsolata, menlo, consolas;
@@ -344,7 +348,6 @@ kbd {
     <ul class="nav-list">
         <li class="nav-list-item"><a href="/post/">Posts</a></li>
         <li class="nav-list-item"><a href="/project/">Projects</a></li>
-        <li class="nav-list-item"><a href="/tip/">Tips</a></li>
         <li class="nav-list-item nav-separator"></li>
         <li class="nav-list-item"><a href="/categories/">Categories</a></li>
         <li class="nav-list-item"><a href="/tags/">Tags</a></li>
@@ -354,37 +357,72 @@ kbd {
 </header>
     <main>
 <div class="page-top">
-    <h1 class="page-title">Network throttling</h1>
+    <h1 class="page-title">Rerun last command with bang</h1>
     <ul class="page-categories categories">
-        <li><a href="/categories/web-development">web development</a></li>
+        <li><a href="/categories/cool-feature">cool feature</a></li>
     </ul>
     
     <ul class="page-tags tags">
-        <li><a href="/tags/chrome">chrome</a></li>
-        <li><a href="/tags/devtools">devtools</a></li>
-        <li><a href="/tags/network">network</a></li>
-        <li><a href="/tags/performances">performances</a></li>
-        <li><a href="/tags/testing">testing</a></li>
+        <li><a href="/tags/vim">vim</a></li>
+        <li><a href="/tags/vimscript">vimscript</a></li>
+        <li><a href="/tags/bang">bang</a></li>
     </ul>
 
     
 
 </div>
 
-<section class="page-content"><p>Ever wanted to simulate a slow connection? Well, the chrome&rsquo;s DevTools makes it
-very easy to do!</p>
+<section class="page-content"><p>Put this little vim script in your <code>.vimrc</code> to rerun the previous command with
+the bang (<code>!</code>) by just typing <code>:Please</code>.</p>
 
-<p>Open it up (<kbd>ctrl+shift+i</kbd>), in the <code>Network</code> tab, find the
-<code>No throttling</code> dropdown menu, and you&rsquo;re good to go</p>
+<pre><code class="language-vim">function! BangLastCommand()
+    &quot; The last command that was run is stored in the register `:` (:registers)
+    let lastcommand = split(@:, ' ')
+    let command = lastcommand[0] . '! ' . join(lastcommand[1:], ' ')
+    execute command 
+endfunction
+
+command! Please call BangLastCommand()
+</code></pre>
+
+<p>So, now, if you do:</p>
+
+<pre><code>:e ~/.vimrc
+</code></pre>
+
+<p>And you get an error because the current file has to be save, something like:</p>
+
+<pre><code>E37: No write since last change (add ! to override)
+</code></pre>
+
+<p>You can just do this:</p>
+
+<pre><code>:Please
+</code></pre>
+
+<p>And it&rsquo;ll run</p>
+
+<pre><code>:e! ~/.vimrc
+</code></pre>
+
+<p>Pretty cool, hey? You can change the name <code>Please</code> to whatever you want, but it
+has to start with a capitale letter. Here are a few suggestion:</p>
+
+<ul>
+<li><code>:Sudo</code>: <code>command! Sudo call s:RerunBangLastCommand()</code></li>
+<li><code>:Please!</code>: <code>command! -bang Sudo call s:RerunBangLastCommand()</code></li>
+</ul>
+
+<p>Have fun!</p>
 </section>
 
 <div class="page-bottom">
-    <p class="page-date">Published on Sunday 20 August 2017</p><h4>Read an other tip</h4>
+    <p class="page-date">Published on Sunday 27 August 2017</p><h4>Read an other post</h4>
     <div class="page-read-other">
         
-        <p>← <a href="/tip/string-module-python/">The string module in Python</a></p>
+        <p>← <a href="/post/silent-command-line-mapping/">Silent command-line mapping</a></p>
         
-        <p><a href="/tip/how-to-insert-the-date-in-vim/">How to insert the date in Vim?</a> →</p></div>
+        <p><a href="/post/dynamicopen-function-vim/">DynamicOpen function</a> →</p></div>
 </div>    </main>
 </div>
 <footer>
