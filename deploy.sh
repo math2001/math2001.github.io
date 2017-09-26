@@ -1,10 +1,20 @@
+[[ $@ == *--quiet* ]]
+QUIET=$?
+
+function output {
+    if [[ ! $QUIET -eq 0 ]]; then
+        echo $@
+    fi
+}
+
+alias echoerr='>&2 echo'
 set -o errexit
 
 VERSION="1.0.1"
 
 if ! `git diff --exit-code > /dev/null`; then
-    echo "Uncommitted changes"
-    echo "Please commit your changes before you deploy."
+    echoerr "Uncommitted changes"
+    echoerr "Please commit your changes before you deploy."
     exit 1
 fi
 
@@ -18,29 +28,16 @@ CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 CURRENT_COMMIT=$(git rev-parse --short HEAD)
 
-echo "$CURRENT_BRANCH@$CURRENT_COMMIT => $TARGET_BRANCH"
-echo "Themes directory: '$THEMES_DIR'"
+output "$CURRENT_BRANCH@$CURRENT_COMMIT => $TARGET_BRANCH"
 
 if ! `git rev-parse --verify --quiet "$TARGET_BRANCH" > /dev/null`; then
-    echo -e "\nThe branch '$TARGET_BRANCH' doesn't exits."
-    echo -n "Create it? (y/N) "
-    read line
-    if [[ $line != 'y' ]]; then
-        echo "Then please create it manually"
-        exit 1
-    fi
+    output -e "\nThe branch '$TARGET_BRANCH' doesn't exits."
+    output -n "Creating it..."
     git checkout --orphan "$TARGET_BRANCH" --quiet
     git reset --hard --quiet &> /dev/null
     git commit --allow-empty -m "Initial commit" --quiet
     git checkout "$CURRENT_COMMIT" --quiet &> /dev/null
-    echo 'Done.'
-fi
-
-echo -n "Build? (y/N) "
-read line
-if [[ $line != 'y' ]]; then
-    echo "Abort"
-    exit 1
+    output 'Done.'
 fi
 
 function get_temp_dir {
@@ -71,13 +68,13 @@ git add . &> /dev/null
 git rm --cached "$THEMES_DIR" -r --quiet
 
 if `git diff --exit-code --cached > /dev/null`; then
-    echo "No change since last build"
-    echo "-> don't commit or push"
+    output "No change since last build"
+    output "-> don't commit or push"
 else
-    echo "Commit..."
+    output "Commit..."
     git commit -m "Auto build for $CURRENT_COMMIT" -m "deployer version: $VERSION" --quiet
 
-    echo "Push..."
+    output "Push..."
     git push origin HEAD --quiet
 fi
 
