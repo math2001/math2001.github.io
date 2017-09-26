@@ -13,15 +13,14 @@
     
     
     <item>
-      <title>Bash Edit Command</title>
-      <link>https://math2001.github.io/post/bash-edit-command/</link>
+      <title>Bash&#39;s fc</title>
+      <link>https://math2001.github.io/post/bash-fc/</link>
       <pubDate>Tue, 26 Sep 2017 18:03:22 +1000</pubDate>
       
-      <guid>https://math2001.github.io/post/bash-edit-command/</guid>
-      <description>When editing long commands in your terminal (you know, the one that wraps 😉), sometimes you&amp;rsquo;d be better of using your actual editor (like vim or Sublime).
-First, you need to set your $EDITOR environment variable. It&amp;rsquo;s just a little export EDITOR=&amp;lt;cmd&amp;gt; in your .bashrc.
-Here are the command you need to replace &amp;lt;cmd&amp;gt; with for different editors:
-   Editor Command     vim vim   Sublime Text subl -w -n   Atom atom --wait    If you use vim, just replace &amp;lt;cmd&amp;gt; with vim.</description>
+      <guid>https://math2001.github.io/post/bash-fc/</guid>
+      <description>&lt;p&gt;When editing long commands in your terminal (you know, the one that wraps
+😉), sometimes you&amp;rsquo;d be better of using your actual editor (like vim or
+Sublime). And guess what? Bash let&amp;rsquo;s you do that! 🎉&lt;/p&gt;</description>
     </item>
     
     <item>

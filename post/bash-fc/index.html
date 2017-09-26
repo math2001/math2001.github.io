@@ -7,16 +7,15 @@
     <meta name="twitter:site" content="@_math2001">
     <meta name="twitter:creator" content="@_math2001">
 
-    <meta property="og:title" content="Bash Edit Command">
+    <meta property="og:title" content="Bash&#39;s fc">
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
-    <meta property="og:url" content="https://math2001.github.io/post/bash-edit-command/">
-    <meta property="og:description" content="When editing long commands in your terminal (you know, the one that wraps 😉), sometimes you&rsquo;d be better of using your actual editor (like vim or Sublime).
-First, you need to set your $EDITOR environment variable. It&rsquo;s just a little export EDITOR=&lt;cmd&gt; in your .bashrc.
-Here are the command you need to replace &lt;cmd&gt; with for different editors:
-   Editor Command     vim vim   Sublime Text subl -w -n   Atom atom --wait    If you use vim, just replace &lt;cmd&gt; with vim.">
+    <meta property="og:url" content="https://math2001.github.io/post/bash-fc/">
+    <meta property="og:description" content="When editing long commands in your terminal (you know, the one that wraps
+😉), sometimes you&rsquo;d be better of using your actual editor (like vim or
+Sublime). And guess what? Bash let&rsquo;s you do that! 🎉">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Bash Edit Command - Math2001&#39;s blog</title><style>
+    <title>Bash&#39;s fc - Math2001&#39;s blog</title><style>
     :root {
   --page-bg: hsla(195, 55%, 98%, 1);
   --monospace: Menlo, Inconsolata, consolas;
@@ -486,7 +485,7 @@ header a {
         <span id="show-header" class="show-header"></span>
     
 <div class="page-top">
-    <h1 class="page-title">Bash Edit Command</h1>
+    <h1 class="page-title">Bash&#39;s fc</h1>
     <ul class="page-categories categories">
         <li><a href="/categories/cool-feature">cool feature</a></li>
     </ul>
@@ -500,11 +499,9 @@ header a {
 
 </div>
 
-<section class="page-content">
-
-<p>When editing long commands in your terminal (you know, the one that wraps
+<section class="page-content"><p>When editing long commands in your terminal (you know, the one that wraps
 😉), sometimes you&rsquo;d be better of using your actual editor (like vim or
-Sublime).</p>
+Sublime). And guess what? Bash let&rsquo;s you do that! 🎉</p>
 
 <p>First, you need to set your <code>$EDITOR</code> environment variable. It&rsquo;s just a little
 <code>export EDITOR=&lt;cmd&gt;</code> in your <code>.bashrc</code>.</p>
@@ -573,8 +570,7 @@ this:</p>
 <pre><code class="language-bash">~/some/where $ fc
 </code></pre>
 
-<p>Same thing, as soon as you&rsquo;ll save and quit your editor, it&rsquo;ll run the command.</p>
-</section>
+<p>Same thing, as soon as you&rsquo;ll save and quit your editor, it&rsquo;ll run the command.</p></section>
 
 <div class="page-bottom">
     <p class="page-date">Published on Tuesday 26 September 2017</p><h4>Read an other post</h4>
