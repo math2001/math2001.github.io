@@ -16,11 +16,12 @@ blackfriday:
 
 params:
   disableSearch: true # not available yet
-  description: My personal blog
+  description: "Hum... Just an other blog I guess. :smiley:"
   github_username: math2001
   themefolderpath: themes/fasty
   avatar:
-    path: img/math2001.svg
+    vector: img/math2001.svg
+    raster: img/math2001.png
     alt: Math2001's logo
   favicon: img/math2001.png
   social:
