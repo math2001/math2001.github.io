@@ -1,5 +1,5 @@
 ---
-title: Bash Edit Command
+title: Bash's fc
 date: 2017-09-26T18:03:22+10:00
 categories: [cool feature]
 tags: [bash, editor]
@@ -7,7 +7,8 @@ tags: [bash, editor]
 
 When editing long commands in your terminal (you know, the one that wraps
 :wink:), sometimes you'd be better of using your actual editor (like vim or
-Sublime).
+Sublime). And guess what? Bash let's you do that! :tada:<!--more-->
+
 
 First, you need to set your `$EDITOR` environment variable. It's just a little
 `export EDITOR=<cmd>` in your `.bashrc`.
