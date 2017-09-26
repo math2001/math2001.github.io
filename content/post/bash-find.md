@@ -1,5 +1,5 @@
 ---
-title: Bash Find
+title: Bash's find
 date: 2017-09-24T07:51:15+10:00
 categories: [itsbuiltin]
 tags: [bash, find, file manupilation]

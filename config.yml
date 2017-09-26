@@ -10,13 +10,11 @@ author:
   math2001: Mathieu Paturel
 copyright: © Mathieu Paturel 2017
 enableEmoji: true
-newContentEditor: vim
 
 blackfriday:
   hrefTargetBlank: true
 
 params:
-  dev: false
   disableSearch: true # not available yet
   description: My personal blog
   github_username: math2001
@@ -25,19 +23,25 @@ params:
     path: img/math2001.svg
     alt: Math2001's logo
   favicon: img/math2001.png
+  social:
+    github: math2001
+    twitter: _math2001
+    stackoverflow: math2001
+
 
 menu:
   main:
     - url: /post/
       name: Posts
       weight: 1
+      pre: "Sections"
     - url: /project/
       name: Projects
       weight: 5
     - url: /categories/
-      pre: "|"
       name: Categories
       weight: 15
+      pre: "Classifications"
     - url: /tags/
       name: Tags
       weight: 20
@@ -50,13 +54,3 @@ menu:
       name: Projects
       weight: 5
 
-#     icon:
-#       - url: mailto:australie.p@gmail.com
-#         name: envelope-o
-#         weight: 1
-#       - url: https://github.com/math2001
-#         name: github
-#         weight: 2
-#       - url: https://twitter.com/_math2001
-#         name: twitter
-#         weight: 3
