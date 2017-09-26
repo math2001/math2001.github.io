@@ -2,16 +2,28 @@
 <head>
     <meta name="generator" content="Hugo 0.27.1" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel=icon type=image/png href='/img/math2001.png'>
+    <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@_math2001">
+    <meta name="twitter:creator" content="@_math2001">
+
+    <meta name="og:title" content="Current buffer only mapping">
+    <meta name="og:image" content="https://math2001.github.io/img/math2001.svg">
+    <meta name="og:url" content="https://math2001.github.io/post/current-buffer-only-mapping-vim/">
+    <meta name="og:description" content="If you want to set a mapping only for the current buffer in VIM, it&rsquo;s super simple: just use the buffer special argument, like so for example:
+nnoremap &lt;buffer&gt; ,tip call InsertTipYamlFrontMatter()  Learn more: :help :map-local">
+    <link rel=icon type=image/png href='/img/math2001.png'>
     <title>Current buffer only mapping - Math2001&#39;s blog</title><style>
     :root {
   --page-bg: hsla(195, 55%, 98%, 1);
-  --monospace: Inconsolata, menlo, consolas;
+  --monospace: Menlo, Inconsolata, consolas;
+  --monospace-secondary: Inconsolata, consolas;
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
   --purple: hsla(232, 59%, 58%, 1);
   --header-bg: hsl(194, 4%, 19%);
+  --header-bg: rgba(255, 255, 255, 0.7);
   --header-fg: #ccc;
+  --header-fg: inherit;
   --code-bg: #F3F3F3;
 }
 
@@ -20,9 +32,7 @@ html {
   width: 100%;
 }
 
-* { 
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 a {
   color: var(--purple);
@@ -31,7 +41,7 @@ a {
 body {
   display: flex;
   flex-direction: column;
-  font-family: var(--monospace);
+  font-family: Roboto Slab, Verdana, sans-serif;
   margin: 0;
   background: var(--page-bg);
   height: 100%;
@@ -39,6 +49,12 @@ body {
   color: #333;
   line-height: 1.5;
 }
+
+h1, h2 {
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
 
 .wrapper {
   flex: 1 0 auto;
@@ -49,44 +65,6 @@ main {
   margin-bottom: 20px;
 }
 
-header {
-  background-color: var(--header-bg);
-  padding: 5px 10px;
-  display: flex;
-  align-items: baseline;
-  color: var(--header-fg);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-header a {
-  color: var(--header-fg);
-  text-decoration: none;
-}
-
-.header-brand {
-  margin-right: 10px;
-}
-
-.nav {
-  flex-grow: 1;
-}
-
-.nav-list {
-  padding: 0;
-  list-style: none;
-}
-
-.nav-separator {
-  border-left: 1px solid hsl(0, 0%, 42%);
-  height: 1.2em;
-  vertical-align: middle;
-}
-
-.nav-list-item {
-  display: inline-block;
-}
-
 .header-search input {
   font-family: inherit;
   background: none;
@@ -95,6 +73,8 @@ header a {
   font-size: 100%;
   outline: none;
 }
+
+.tags, .categories { font-family: var(--monospace-secondary); }
 
 .tags {
   list-style: none;
@@ -235,28 +215,40 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
 </style><style>
     .page-top {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  flex-wrap: wrap;
-}
-
-.repository-star {
-  font-size: 25px;
+  padding: 0 10px;
+  text-align: center;
 }
 
 .page-title {
   margin-right: 10px;
   margin-left: 10px;
-  text-align: center;
 }
 
 .page-categories {
   margin-top: 0;
 }
 
-.page-categories li {
+.page-categories, .page-tags,
+.page-categories li, .page-tags li {
   display: inline-block;
+}
+
+.page-tags {
+  text-align: center;
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.repository-star {
+  font-size: 1.2em;
+  color: #333;
+}
+
+
+.page-content hr {
+  border: none;
+  border-top: 4px solid hsla(192, 16%, 92%, 1);
+  margin: 30px auto;
 }
 
 .page-content {
@@ -286,22 +278,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   margin-left: var(--x-margin);
 }
 
-.page-content hr {
-  border: none;
-  border-top: 4px solid hsla(192, 16%, 92%, 1);
-  margin: 30px auto;
-}
-
-.page-tags {
-  text-align: center;
-  flex-basis: 100%;
-  margin: 0;
-}
-
-.page-tags li {
-  display: inline-block;
-}
-
 .page-bottom {
   text-align: center;
   padding: 1px 20px;
@@ -314,8 +290,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
 /* content */
 
+code {
+  font-family: var(--monospace);
+  font-size: .9em;
+}
+
 .hljs {
-  padding: 20px calc(var(--x-margin) + 3%);
+  margin: 20px var(--x-margin);
+  padding: 20px;
 }
 
 :not(pre) > code {
@@ -336,22 +318,155 @@ kbd {
   border-radius: 2px;
 }
 
+</style><style>
+    body.header-active { overflow: hidden; }
+
+body.header-active main,
+body.header-active footer {
+  filter: blur(2px);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 10;
+  background-color: var(--header-bg);
+  transform: translateX(-30px) scale(.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform .2s ease, opacity .2s ease, visibility .2s linear 0s;
+}
+
+body.header-active header {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0, 0);
+  overflow: auto;
+}
+
+.show-header, .hide-header { cursor: pointer; }
+.show-header {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 2px solid #555;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+
+.hide-header {
+  --stroke-width: 2px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.hide-header::before {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border: var(--stroke-width) solid currentColor;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  transform: translate(12px, -1px) rotate(45deg);
+  transform-origin: bottom left;
+}
+
+.hide-header::after {
+  content: "";
+  width: 20px;
+  background-color: currentColor;
+  height: var(--stroke-width);
+  display: inline-block;
+}
+
+.header-brand {
+  font-size: 210%;
+}
+
+header a {
+  color: var(--header-fg);
+  text-decoration: none;
+}
+
+.header-splits {
+  text-align: center;
+  font-size: 120%;
+}
+
+.header-split {
+  min-width: 7em;
+  text-align: left;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.header-split-title {
+  font-weight: normal;
+  color: #666;
+  font-size: .8em;
+}
+
+.header-split-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-split-list a::before {
+  content: "⇒";
+  display: inline;
+  margin-right: 10px;
+  color: #aaa;
+}
+
+.header-split-list a:hover::before,
+.header-split-list a:active::before {
+  color: #555;
+}
+
 </style>
+
 </head>
 <body>
     <div class="wrapper"><header>
-        <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2><nav class="nav header-nav">
-    <ul class="nav-list">
-        <li class="nav-list-item"><a href="/post/">Posts</a></li>
-        <li class="nav-list-item"><a href="/project/">Projects</a></li>
-        <li class="nav-list-item nav-separator"></li>
-        <li class="nav-list-item"><a href="/categories/">Categories</a></li>
-        <li class="nav-list-item"><a href="/tags/">Tags</a></li>
-        
-    </ul>
-</nav>
-</header>
+        <span class="hide-header" id="hide-header"></span>
+        <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+        <nav class="header-splits">
+            
+                
+                    
+                    <div class="header-split">
+                        <h3 class="header-split-title">Sections</h3>
+                        <ul class="header-split-list">
+                
+                <li><a href="/post/">Posts</a></li>
+            
+                
+                <li><a href="/project/">Projects</a></li>
+            
+                
+                    </ul></div>
+                    <div class="header-split">
+                        <h3 class="header-split-title">Classifications</h3>
+                        <ul class="header-split-list">
+                
+                <li><a href="/categories/">Categories</a></li>
+            
+                
+                <li><a href="/tags/">Tags</a></li>
+            
+        </nav></header>
     <main>
+    
+        <span id="show-header" class="show-header"></span>
+    
 <div class="page-top">
     <h1 class="page-title">Current buffer only mapping</h1>
     <ul class="page-categories categories">
@@ -398,7 +513,9 @@ function loadCSS(stylesheets) {
     for (let stylesheet of stylesheets) {
         media = stylesheet.media ? ' media="' + stylesheet.media + '"' : ''
         link = '<link rel="stylesheet" type="text/css" href="'
-                + "/" + "css/" + stylesheet.href + '"' + media + '>'
+        if (stylesheet.href.startsWith('http')) link += stylesheet.href
+        else link += "/" + "css/" + stylesheet.href
+        link += '"' + media + '>'
         document.head.innerHTML += link
 
     }
@@ -413,8 +530,20 @@ function loadJs(scripts) {
     }
 }
 
-loadCSS([{ href: 'phone.css', media: 'screen and (max-width: 600px)' }])
-</script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script>
+loadCSS([
+    { href: 'phone.css', media: 'screen and (max-width: 600px)' },
+    { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
+    { href: 'https://fonts.googleapis.com/css?family=Rosario' },
+    { href: 'https://fonts.googleapis.com/css?family=Oxygen Mono' },
+])
+</script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script><script>
+;(function () {
+    const show = document.querySelector('#show-header')
+    const hide = document.querySelector('#hide-header')
+    show.addEventListener('click', () => { document.body.classList.toggle('header-active') })
+    hide.addEventListener('click', () => { document.body.classList.toggle('header-active') })
+})()
+</script>
 
 </body>
 </html>

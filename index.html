@@ -5,16 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://math2001.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Math2001&#39;s blog" />
     <link href="https://math2001.github.io/index.xml" rel="feed" type="application/rss+xml" title="Math2001&#39;s blog" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@_math2001">
+    <meta name="twitter:creator" content="@_math2001">
+
+    <meta name="og:title" content="Math2001&#39;s blog">
+    <meta name="og:image" content="https://math2001.github.io/img/math2001.svg">
+    <meta name="og:url" content="https://math2001.github.io/">
+    <meta name="og:description" content="My personal blog">
     <link rel=icon type=image/png href='/img/math2001.png'>
     <title>Math2001&#39;s blog</title><style>
     :root {
   --page-bg: hsla(195, 55%, 98%, 1);
-  --monospace: Inconsolata, menlo, consolas;
+  --monospace: Menlo, Inconsolata, consolas;
+  --monospace-secondary: Inconsolata, consolas;
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
   --purple: hsla(232, 59%, 58%, 1);
   --header-bg: hsl(194, 4%, 19%);
+  --header-bg: rgba(255, 255, 255, 0.7);
   --header-fg: #ccc;
+  --header-fg: inherit;
   --code-bg: #F3F3F3;
 }
 
@@ -23,9 +34,7 @@ html {
   width: 100%;
 }
 
-* { 
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 a {
   color: var(--purple);
@@ -34,7 +43,7 @@ a {
 body {
   display: flex;
   flex-direction: column;
-  font-family: var(--monospace);
+  font-family: Roboto Slab, Verdana, sans-serif;
   margin: 0;
   background: var(--page-bg);
   height: 100%;
@@ -42,6 +51,12 @@ body {
   color: #333;
   line-height: 1.5;
 }
+
+h1, h2 {
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
 
 .wrapper {
   flex: 1 0 auto;
@@ -52,44 +67,6 @@ main {
   margin-bottom: 20px;
 }
 
-header {
-  background-color: var(--header-bg);
-  padding: 5px 10px;
-  display: flex;
-  align-items: baseline;
-  color: var(--header-fg);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-header a {
-  color: var(--header-fg);
-  text-decoration: none;
-}
-
-.header-brand {
-  margin-right: 10px;
-}
-
-.nav {
-  flex-grow: 1;
-}
-
-.nav-list {
-  padding: 0;
-  list-style: none;
-}
-
-.nav-separator {
-  border-left: 1px solid hsl(0, 0%, 42%);
-  height: 1.2em;
-  vertical-align: middle;
-}
-
-.nav-list-item {
-  display: inline-block;
-}
-
 .header-search input {
   font-family: inherit;
   background: none;
@@ -98,6 +75,8 @@ header a {
   font-size: 100%;
   outline: none;
 }
+
+.tags, .categories { font-family: var(--monospace-secondary); }
 
 .tags {
   list-style: none;
@@ -161,9 +140,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
 </style><style>
     body {
-  /* background: var(--header-bg); */
-  /* color: var(--header-fg); */
-  /* --border-color: #666; */
   --border-color: #ccc;
 }
 
@@ -201,12 +177,16 @@ h1 {
   max-width: 100%;
   padding: 0 10px;
 }
-nav {
+
+.nav-row, nav, .nav-list-item {
   display: inline-block;
 }
-
-.nav-row, nav {
-  display: inline-block;
+.nav-list {
+  padding: 0;
+  list-style: none;
+}
+.nav-list-item {
+  margin: 0 5px;
 }
 
 .latest-row::before,
@@ -214,7 +194,7 @@ nav {
 .search-row::before {
   content: "⇒ ";
   font-size: 25px;
-  color: var(--font-mute);
+  color: #ccc;
   line-height: 25px;
 }
 
@@ -238,10 +218,12 @@ nav {
 
 
 </style>
+
 </head>
 <body>
     <div class="wrapper">
     <main>
+    
 <div class="home-content"><p class="avatar-row">
         <img class=avatar src="img/math2001.svg" alt="Math2001&#39;s logo">
     </p>
@@ -250,14 +232,7 @@ nav {
     <p class="description">My personal blog</p>
 
     <div class="home-actions"><div class="latest-row">
-            Checkout my last post:
-            <ul class="categories">
-                <li>
-                    <a href="/categories/itsbuiltin">itsbuiltin</a>
-                </li>
-                
-            </ul>
-            <a href="/post/bash-find/">Bash Find</a>
+            Checkout my last post: <a href="/post/bash-find/">Bash&#39;s find</a>
         </div>
         <div class="nav-row">
             Browse: <nav class="nav">
@@ -284,7 +259,9 @@ function loadCSS(stylesheets) {
     for (let stylesheet of stylesheets) {
         media = stylesheet.media ? ' media="' + stylesheet.media + '"' : ''
         link = '<link rel="stylesheet" type="text/css" href="'
-                + "/" + "css/" + stylesheet.href + '"' + media + '>'
+        if (stylesheet.href.startsWith('http')) link += stylesheet.href
+        else link += "/" + "css/" + stylesheet.href
+        link += '"' + media + '>'
         document.head.innerHTML += link
 
     }
@@ -299,7 +276,12 @@ function loadJs(scripts) {
     }
 }
 
-loadCSS([{ href: 'phone.css', media: 'screen and (max-width: 600px)' }])
+loadCSS([
+    { href: 'phone.css', media: 'screen and (max-width: 600px)' },
+    { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
+    { href: 'https://fonts.googleapis.com/css?family=Rosario' },
+    { href: 'https://fonts.googleapis.com/css?family=Oxygen Mono' },
+])
 </script>
 
 </body>

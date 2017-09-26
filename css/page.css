@@ -1,26 +1,38 @@
 .page-top {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  flex-wrap: wrap;
-}
-
-.repository-star {
-  font-size: 25px;
+  padding: 0 10px;
+  text-align: center;
 }
 
 .page-title {
   margin-right: 10px;
   margin-left: 10px;
-  text-align: center;
 }
 
 .page-categories {
   margin-top: 0;
 }
 
-.page-categories li {
+.page-categories, .page-tags,
+.page-categories li, .page-tags li {
   display: inline-block;
+}
+
+.page-tags {
+  text-align: center;
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.repository-star {
+  font-size: 1.2em;
+  color: #333;
+}
+
+
+.page-content hr {
+  border: none;
+  border-top: 4px solid hsla(192, 16%, 92%, 1);
+  margin: 30px auto;
 }
 
 .page-content {
@@ -50,22 +62,6 @@
   margin-left: var(--x-margin);
 }
 
-.page-content hr {
-  border: none;
-  border-top: 4px solid hsla(192, 16%, 92%, 1);
-  margin: 30px auto;
-}
-
-.page-tags {
-  text-align: center;
-  flex-basis: 100%;
-  margin: 0;
-}
-
-.page-tags li {
-  display: inline-block;
-}
-
 .page-bottom {
   text-align: center;
   padding: 1px 20px;
@@ -78,8 +74,14 @@
 
 /* content */
 
+code {
+  font-family: var(--monospace);
+  font-size: .9em;
+}
+
 .hljs {
-  padding: 20px calc(var(--x-margin) + 3%);
+  margin: 20px var(--x-margin);
+  padding: 20px;
 }
 
 :not(pre) > code {

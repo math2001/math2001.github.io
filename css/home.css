@@ -1,7 +1,4 @@
 body {
-  /* background: var(--header-bg); */
-  /* color: var(--header-fg); */
-  /* --border-color: #666; */
   --border-color: #ccc;
 }
 
@@ -39,12 +36,16 @@ h1 {
   max-width: 100%;
   padding: 0 10px;
 }
-nav {
+
+.nav-row, nav, .nav-list-item {
   display: inline-block;
 }
-
-.nav-row, nav {
-  display: inline-block;
+.nav-list {
+  padding: 0;
+  list-style: none;
+}
+.nav-list-item {
+  margin: 0 5px;
 }
 
 .latest-row::before,
@@ -52,7 +53,7 @@ nav {
 .search-row::before {
   content: "⇒ ";
   font-size: 25px;
-  color: var(--font-mute);
+  color: #ccc;
   line-height: 25px;
 }
 
