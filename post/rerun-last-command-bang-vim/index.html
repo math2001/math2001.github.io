@@ -6,10 +6,10 @@
     <meta name="twitter:site" content="@_math2001">
     <meta name="twitter:creator" content="@_math2001">
 
-    <meta name="og:title" content="Rerun last command with bang">
-    <meta name="og:image" content="https://math2001.github.io/img/math2001.svg">
-    <meta name="og:url" content="https://math2001.github.io/post/rerun-last-command-bang-vim/">
-    <meta name="og:description" content="Put this little vim script in your .vimrc to rerun the previous command with the bang (!) by just typing :Please.
+    <meta property="og:title" content="Rerun last command with bang">
+    <meta property="og:image" content="https://math2001.github.io/img/math2001.svg">
+    <meta property="og:url" content="https://math2001.github.io/post/rerun-last-command-bang-vim/">
+    <meta property="og:description" content="Put this little vim script in your .vimrc to rerun the previous command with the bang (!) by just typing :Please.
 function! BangLastCommand() &quot; The last command that was run is stored in the register `:` (:registers) let lastcommand = split(@:, &#39; &#39;) let command = lastcommand[0] . &#39;! &#39; . join(lastcommand[1:], &#39; &#39;) execute command endfunction command! Please call BangLastCommand()  So, now, if you do:
 :e ~/.vimrc  And you get an error because the current file has to be save, something like:">
     <link rel=icon type=image/png href='/img/math2001.png'>
