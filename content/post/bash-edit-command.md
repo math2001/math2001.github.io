@@ -3,7 +3,6 @@ title: Bash Edit Command
 date: 2017-09-26T18:03:22+10:00
 categories: [cool feature]
 tags: [bash, editor]
-draft: true
 ---
 
 When editing long commands in your terminal (you know, the one that wraps
@@ -26,8 +25,12 @@ If you use `vim`, just replace `<cmd>` with `vim`. For Sublime Text, it'd be
 
 You'll need to restart your terminal or `source ~/.bashrc`
 
-To check it's set, run `echo $EDITOR` in your terminal and you should see the
-command.
+To check that it's right:
+
+```bash
+~/some/where $ echo $EDITOR
+<cmd>
+```
 
 ### Edit current command
 
@@ -38,8 +41,9 @@ Now, let's say you started writing a chain of command like this
 ```
 
 But then you realize you'd like to write this in your editor, with all your
-shortcut. Just press <kbd>ctrl+x+e</kbd> (you need to maintain <kbd>ctrl</kbd>
-pressed). 
+shortcuts and everything.
+
+Just press <kbd>ctrl+x+e</kbd>!
 
 Now, you editor opens up with the bit of command already typed in already there
 in your editor.
