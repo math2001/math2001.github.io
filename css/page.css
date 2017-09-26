@@ -28,7 +28,6 @@
   color: #333;
 }
 
-
 .page-content hr {
   border: none;
   border-top: 4px solid hsla(192, 16%, 92%, 1);
@@ -51,6 +50,7 @@
 }
 
 .page-content p,
+.page-content table,
 .page-content blockquote,
 .page-content ul,
 .page-content h2,
@@ -100,4 +100,18 @@ kbd {
   border: 1px solid #ccc;
   padding: 1px 5px;
   border-radius: 2px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #DDD;
+  padding: 3px 5px;
+}
+
+th {
+  font-weight: normal;
+  background-color: #F9F9F9;
 }

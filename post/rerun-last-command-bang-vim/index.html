@@ -2,16 +2,18 @@
 <head>
     <meta name="generator" content="Hugo 0.27.1" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="twitter:card" content="summary">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@_math2001">
     <meta name="twitter:creator" content="@_math2001">
 
     <meta property="og:title" content="Rerun last command with bang">
-    <meta property="og:image" content="https://math2001.github.io/img/math2001.svg">
+    <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/rerun-last-command-bang-vim/">
     <meta property="og:description" content="Put this little vim script in your .vimrc to rerun the previous command with the bang (!) by just typing :Please.
 function! BangLastCommand() &quot; The last command that was run is stored in the register `:` (:registers) let lastcommand = split(@:, &#39; &#39;) let command = lastcommand[0] . &#39;! &#39; . join(lastcommand[1:], &#39; &#39;) execute command endfunction command! Please call BangLastCommand()  So, now, if you do:
 :e ~/.vimrc  And you get an error because the current file has to be save, something like:">
+
     <link rel=icon type=image/png href='/img/math2001.png'>
     <title>Rerun last command with bang - Math2001&#39;s blog</title><style>
     :root {
@@ -245,7 +247,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   color: #333;
 }
 
-
 .page-content hr {
   border: none;
   border-top: 4px solid hsla(192, 16%, 92%, 1);
@@ -268,6 +269,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 }
 
 .page-content p,
+.page-content table,
 .page-content blockquote,
 .page-content ul,
 .page-content h2,
@@ -317,6 +319,20 @@ kbd {
   border: 1px solid #ccc;
   padding: 1px 5px;
   border-radius: 2px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #DDD;
+  padding: 3px 5px;
+}
+
+th {
+  font-weight: normal;
+  background-color: #F9F9F9;
 }
 
 </style><style>

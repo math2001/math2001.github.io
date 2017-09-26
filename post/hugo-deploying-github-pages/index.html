@@ -2,15 +2,17 @@
 <head>
     <meta name="generator" content="Hugo 0.27.1" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="twitter:card" content="summary">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@_math2001">
     <meta name="twitter:creator" content="@_math2001">
 
     <meta property="og:title" content="Deploying a hugo site on GitHub pages">
-    <meta property="og:image" content="https://math2001.github.io/img/math2001.svg">
+    <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/hugo-deploying-github-pages/">
     <meta property="og:description" content="When you want to deploy a static website built with the fantastic Hugo on GitHub pages, you don&rsquo;t have 100 of possibilities. A clean one, and an easy one 😄.
 The easy one is to build your website to the docs folder. It&rsquo;s not super clean though since the source code is on the same branch as the built code. It doesn&rsquo;t make diffing super great, gives a long output when you commit, you have to build at every single commit to keep consistent.">
+
     <link rel=icon type=image/png href='/img/math2001.png'>
     <title>Deploying a hugo site on GitHub pages - Math2001&#39;s blog</title><style>
     :root {
@@ -244,7 +246,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   color: #333;
 }
 
-
 .page-content hr {
   border: none;
   border-top: 4px solid hsla(192, 16%, 92%, 1);
@@ -267,6 +268,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 }
 
 .page-content p,
+.page-content table,
 .page-content blockquote,
 .page-content ul,
 .page-content h2,
@@ -316,6 +318,20 @@ kbd {
   border: 1px solid #ccc;
   padding: 1px 5px;
   border-radius: 2px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #DDD;
+  padding: 3px 5px;
+}
+
+th {
+  font-weight: normal;
+  background-color: #F9F9F9;
 }
 
 </style><style>
