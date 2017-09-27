@@ -536,11 +536,20 @@ license, README and everything.</p>
 <p>So, I made a tiny template manager, called <code>itp</code>, for <em>Insert Template
 Please</em>.</p>
 
+<h3 id="installation">Installation</h3>
+
+<p>It&rsquo;s on <code>npm</code>, so:</p>
+
+<pre><code class="language-sh">~ $ npm install --global itp
+# or if you have yarn
+~ $ yarn global add itp
+</code></pre>
+
 <h3 id="the-basics">The basics</h3>
 
 <p>You put your templates in <code>~/.templates</code>. And then, from anywhere, you run:</p>
 
-<pre><code class="language-bash">~/my/repo $ itp README.md .gitignore
+<pre><code class="language-sh">~/my/repo $ itp README.md .gitignore
 </code></pre>
 
 <p>And it will insert <code>~/templates/README.md</code> and <code>~/.gitignore</code> where you are.</p>
@@ -549,6 +558,17 @@ Please</em>.</p>
 
 <p><code>itp</code> allows you to use <a href="https://handlebarsjs.com/" target="_blank">handlebars</a> in your templates. The list of every
 variables you have access to is on the <a href="https://GitHub.com/math2001/itp/#variables" target="_blank">README.md</a>.</p>
+
+<h3 id="tip">Tip</h3>
+
+<p>If you want to version your templates in your config repository (in my case,
+it&rsquo;s <code>dotfiles</code>), you can make <code>.templates</code> actually be a symlink pointing to
+your actual template directory 😉</p>
+
+<h3 id="example">Example</h3>
+
+<p>You can have a look at my <a href="https://GitHub.com/math2001/dotfiles/tree/master/.templates" target="_blank">dotfiles/templates</a> to see some useful templates
+😉.</p>
 
 <p>Hopefully it&rsquo;ll save you some time!</p></section>
 
