@@ -72,6 +72,26 @@
   color: var(--font-mute);
 }
 
+.page-share, .page-share-list {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page-share-list {
+  padding: 0;
+  list-style: none;
+}
+
+.page-share-list li {
+  display: inline-block;
+  margin: 5px;
+}
+
+.page-share-list img {
+  width: 25px;
+  height: 25px;
+}
+
 /* content */
 
 code {

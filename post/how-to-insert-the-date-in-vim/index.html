@@ -291,6 +291,26 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   color: var(--font-mute);
 }
 
+.page-share, .page-share-list {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page-share-list {
+  padding: 0;
+  list-style: none;
+}
+
+.page-share-list li {
+  display: inline-block;
+  margin: 5px;
+}
+
+.page-share-list img {
+  width: 25px;
+  height: 25px;
+}
+
 /* content */
 
 code {
@@ -542,7 +562,21 @@ command! InsertDate :call Insert(Strip(system('date +&quot;%A %d %B %Y @ %H:%M&q
 </section>
 
 <div class="page-bottom">
-    <p class="page-date">Published on Sunday 20 August 2017</p><h4>Read an other post</h4>
+    <p class="page-date">Published on Sunday 20 August 2017</p>
+    <ul class="page-share-list">
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=How&#43;to&#43;insert&#43;the&#43;date&#43;in&#43;Vim%3F&amp;url=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fhow-to-insert-the-date-in-vim%2F" target="_blank"
+                onclick="window.open(this.href, 'twitter-share', 'width=580,height=300');return false;">
+                <img src="/img/twitter.svg" alt="Share on twitter">
+            </a>
+        </li> 
+        <li>
+            <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fhow-to-insert-the-date-in-vim%2F" target="_blank"
+                onclick="window.open(this.href, 'facebook-share', 'width=580,height=300');return false;">
+                <img src="/img/facebook.svg" alt="Share on facebook">
+            </a>
+        </li> 
+    </ul><h4>Read an other post</h4>
     <div class="page-read-other">
         
         <p>← <a href="/post/network-throttling/">Network throttling</a></p>
