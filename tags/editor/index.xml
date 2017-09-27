@@ -13,11 +13,11 @@
     
     
     <item>
-      <title>Bash&#39;s fc</title>
-      <link>https://math2001.github.io/post/bash-fc/</link>
+      <title>Bash&#39;s fc command</title>
+      <link>https://math2001.github.io/post/bashs-fc-command/</link>
       <pubDate>Tue, 26 Sep 2017 18:03:22 +1000</pubDate>
       
-      <guid>https://math2001.github.io/post/bash-fc/</guid>
+      <guid>https://math2001.github.io/post/bashs-fc-command/</guid>
       <description>&lt;p&gt;When editing long commands in your terminal (you know, the one that wraps
 😉), sometimes you&amp;rsquo;d be better of using your actual editor (like vim or
 Sublime). And guess what? Bash let&amp;rsquo;s you do that! 🎉&lt;/p&gt;</description>

@@ -7,33 +7,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017</copyright>
-    <lastBuildDate>Tue, 26 Sep 2017 18:03:22 +1000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Sep 2017 11:18:56 +1000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Bash&#39;s fc</title>
-      <link>https://math2001.github.io/post/bash-fc/</link>
+      <title>Itp: insert template please</title>
+      <link>https://math2001.github.io/project/itp-insert-template-please/</link>
+      <pubDate>Wed, 27 Sep 2017 11:18:56 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/project/itp-insert-template-please/</guid>
+      <description>&lt;p&gt;I was getting pretty sick of typing the same &lt;code&gt;.gitignore&lt;/code&gt;, copy/pasting my
+license, README and everything.&lt;/p&gt;
+
+&lt;p&gt;So, I made a tiny template manager, called &lt;code&gt;itp&lt;/code&gt;, for &lt;em&gt;Insert Template
+Please&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bash&#39;s fc command</title>
+      <link>https://math2001.github.io/post/bashs-fc-command/</link>
       <pubDate>Tue, 26 Sep 2017 18:03:22 +1000</pubDate>
       
-      <guid>https://math2001.github.io/post/bash-fc/</guid>
+      <guid>https://math2001.github.io/post/bashs-fc-command/</guid>
       <description>&lt;p&gt;When editing long commands in your terminal (you know, the one that wraps
 😉), sometimes you&amp;rsquo;d be better of using your actual editor (like vim or
 Sublime). And guess what? Bash let&amp;rsquo;s you do that! 🎉&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Bash&#39;s find</title>
-      <link>https://math2001.github.io/post/bash-find/</link>
+      <title>Bash&#39;s find command</title>
+      <link>https://math2001.github.io/post/bashs-find-command/</link>
       <pubDate>Sun, 24 Sep 2017 07:51:15 +1000</pubDate>
       
-      <guid>https://math2001.github.io/post/bash-find/</guid>
-      <description>The find command in bash is quite powerful, and knowing the basics might save you some scripting.
-What does it do? It &amp;ldquo;finds&amp;rdquo; files. By default, it outputs their path relative to where you ran find. But, in addition of providing you with advanced &amp;ldquo;filters&amp;rdquo; it actually allows you to run commands on each of those files.
-Let&amp;rsquo;s get started!
-The basics With this structure:
-. ├── app │ ├── index.</description>
+      <guid>https://math2001.github.io/post/bashs-find-command/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;find&lt;/code&gt; command in bash is quite powerful, and knowing the basics might save
+you some scripting.&lt;/p&gt;
+
+&lt;p&gt;What does it do? It &amp;ldquo;finds&amp;rdquo; files. By default, it outputs their path relative to
+where you ran &lt;code&gt;find&lt;/code&gt;. But, in addition of providing you with advanced &amp;ldquo;filters&amp;rdquo;
+it actually allows you to run commands on each of those files.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s get started!&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017</copyright>
-    <lastBuildDate>Fri, 22 Sep 2017 18:31:15 +1000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Sep 2017 11:18:56 +1000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Itp: insert template please</title>
+      <link>https://math2001.github.io/project/itp-insert-template-please/</link>
+      <pubDate>Wed, 27 Sep 2017 11:18:56 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/project/itp-insert-template-please/</guid>
+      <description>&lt;p&gt;I was getting pretty sick of typing the same &lt;code&gt;.gitignore&lt;/code&gt;, copy/pasting my
+license, README and everything.&lt;/p&gt;
+
+&lt;p&gt;So, I made a tiny template manager, called &lt;code&gt;itp&lt;/code&gt;, for &lt;em&gt;Insert Template
+Please&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Live Svg</title>
