@@ -5,9 +5,7 @@
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
   --purple: hsla(232, 59%, 58%, 1);
-  --header-bg: hsl(194, 4%, 19%);
-  --header-bg: rgba(255, 255, 255, 0.7);
-  --header-fg: #ccc;
+  --header-bg: rgba(255, 255, 255, 0.8);
   --header-fg: inherit;
   --code-bg: #F3F3F3;
 }

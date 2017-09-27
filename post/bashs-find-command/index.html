@@ -28,9 +28,7 @@ Let&rsquo;s get started!">
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
   --purple: hsla(232, 59%, 58%, 1);
-  --header-bg: hsl(194, 4%, 19%);
-  --header-bg: rgba(255, 255, 255, 0.7);
-  --header-fg: #ccc;
+  --header-bg: rgba(255, 255, 255, 0.8);
   --header-fg: inherit;
   --code-bg: #F3F3F3;
 }
@@ -477,6 +475,26 @@ header a {
   color: #555;
 }
 
+.header-bio {
+  margin: 40px 0;
+}
+
+.header-social {
+  margin-top: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.header-social li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.header-social img {
+  width: 40px;
+  height: 40px;
+}
+
 </style>
 
 </head>
@@ -508,7 +526,45 @@ header a {
                 
                 <li><a href="/tags/">Tags</a></li>
             
-        </nav></header>
+        </nav><p class="header-bio">French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored.</p>
+
+        <ul class="header-social">
+            <li class="header-social-">
+                <a target="_blank"
+                  href="http://dev.to.com/math2001">
+                    <img src="/img/dev.to.svg" alt="dev.to">
+                </a>
+            </li>
+        
+            <li class="header-social-">
+                <a target="_blank"
+                  href="http://github.com/math2001">
+                    <img src="/img/github.svg" alt="github">
+                </a>
+            </li>
+        
+            <li class="header-social-">
+                <a target="_blank"
+                  href="http://stackoverflow.com/math2001">
+                    <img src="/img/stackoverflow.svg" alt="stackoverflow">
+                </a>
+            </li>
+        
+            <li class="header-social-">
+                <a target="_blank"
+                  href="http://twitter.com/_math2001">
+                    <img src="/img/twitter.svg" alt="twitter">
+                </a>
+            </li>
+        
+            <li class="header-social-">
+                <a target="_blank"
+                  href="https://www.youtube.com/channel/UCi2O717lLg8ugD5KxAJTwAQ">
+                    <img src="/img/youtube.svg" alt="youtube">
+                </a>
+            </li>
+        </ul>
+    </header>
     <main>
     
         <span id="show-header" class="show-header"></span>
@@ -889,6 +945,12 @@ post!</p></section>
             <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fbashs-find-command%2F" target="_blank"
                 onclick="window.open(this.href, 'facebook-share', 'width=580,height=300');return false;">
                 <img src="/img/facebook.svg" alt="Share on facebook">
+            </a>
+        </li> 
+        <li>
+            <a href="https://dev.to/new" target="_blank"
+                onclick="window.open(this.href, 'devto-share', 'width=580,height=300');return false;">
+                <img src="/img/dev.to.svg" alt="Share on dev.to">
             </a>
         </li> 
     </ul><h4>Read an other post</h4>

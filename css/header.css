@@ -109,3 +109,23 @@ header a {
 .header-split-list a:active::before {
   color: #555;
 }
+
+.header-bio {
+  margin: 40px 0;
+}
+
+.header-social {
+  margin-top: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.header-social li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.header-social img {
+  width: 40px;
+  height: 40px;
+}
