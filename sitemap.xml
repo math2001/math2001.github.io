@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://math2001.github.io/post/vim-line-completion/</loc>
+    <lastmod>2017-09-27T12:55:56+10:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/project/itp-insert-template-please/</loc>
     <lastmod>2017-09-27T11:18:56+10:00</lastmod>
   </url>
@@ -184,6 +189,12 @@
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/completion/</loc>
+    <lastmod>2017-09-27T12:55:56+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/tags/conventions/</loc>
     <lastmod>2017-09-13T14:18:22+10:00</lastmod>
     <priority>0</priority>
@@ -257,7 +268,7 @@
   
   <url>
     <loc>https://math2001.github.io/categories/itsbuiltin/</loc>
-    <lastmod>2017-09-24T07:51:15+10:00</lastmod>
+    <lastmod>2017-09-27T12:55:56+10:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -275,7 +286,7 @@
   
   <url>
     <loc>https://math2001.github.io/</loc>
-    <lastmod>2017-09-27T11:18:56+10:00</lastmod>
+    <lastmod>2017-09-27T12:55:56+10:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -425,7 +436,7 @@
   
   <url>
     <loc>https://math2001.github.io/tags/vim/</loc>
-    <lastmod>2017-09-03T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-27T12:55:56+10:00</lastmod>
     <priority>0</priority>
   </url>
   

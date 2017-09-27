@@ -46,7 +46,7 @@ a {
 body {
   display: flex;
   flex-direction: column;
-  font-family: Roboto Slab, Verdana, sans-serif;
+  font-family: Roboto Slab, Roboto, Calibri, Corbel, sans-serif;
   margin: 0;
   background: var(--page-bg);
   height: 100%;
@@ -249,6 +249,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   color: #333;
 }
 
+.page-warning {
+  text-align: center;
+}
+
 .page-content hr {
   border: none;
   border-top: 4px solid hsla(192, 16%, 92%, 1);
@@ -374,7 +378,7 @@ header {
   text-align: center;
   z-index: 10;
   background-color: var(--header-bg);
-  transform: translateX(-30px) scale(.95);
+  transform: scale(1.1);
   opacity: 0;
   visibility: hidden;
   transition: transform .2s ease, opacity .2s ease, visibility .2s linear 0s;
@@ -520,9 +524,7 @@ header a {
 
     
 
-</div>
-
-<section class="page-content"><p><a href="https://python.org" target="_blank">Python</a> is by far my favorite language (I even wish we spoke it 😄).</p>
+</div><section class="page-content"><p><a href="https://python.org" target="_blank">Python</a> is by far my favorite language (I even wish we spoke it 😄).</p>
 
 <p>One thing I found funny about it, and in the same time really good, is <a href="https://python.org/dev/peps/pep-0020/" target="_blank">its
 zen</a>.</p>
@@ -596,8 +598,6 @@ function loadJs(scripts) {
 loadCSS([
     { href: 'phone.css', media: 'screen and (max-width: 600px)' },
     { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
-    { href: 'https://fonts.googleapis.com/css?family=Rosario' },
-    { href: 'https://fonts.googleapis.com/css?family=Oxygen Mono' },
 ])
 </script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script><script>
 ;(function () {

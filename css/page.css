@@ -28,6 +28,10 @@
   color: #333;
 }
 
+.page-warning {
+  text-align: center;
+}
+
 .page-content hr {
   border: none;
   border-top: 4px solid hsla(192, 16%, 92%, 1);

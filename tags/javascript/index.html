@@ -45,7 +45,7 @@ a {
 body {
   display: flex;
   flex-direction: column;
-  font-family: Roboto Slab, Verdana, sans-serif;
+  font-family: Roboto Slab, Roboto, Calibri, Corbel, sans-serif;
   margin: 0;
   background: var(--page-bg);
   height: 100%;
@@ -214,7 +214,7 @@ header {
   text-align: center;
   z-index: 10;
   background-color: var(--header-bg);
-  transform: translateX(-30px) scale(.95);
+  transform: scale(1.1);
   opacity: 0;
   visibility: hidden;
   transition: transform .2s ease, opacity .2s ease, visibility .2s linear 0s;
@@ -423,8 +423,6 @@ function loadJs(scripts) {
 loadCSS([
     { href: 'phone.css', media: 'screen and (max-width: 600px)' },
     { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
-    { href: 'https://fonts.googleapis.com/css?family=Rosario' },
-    { href: 'https://fonts.googleapis.com/css?family=Oxygen Mono' },
 ])
 </script><script>
 ;(function () {

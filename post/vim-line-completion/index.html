@@ -3,20 +3,19 @@
     <meta name="generator" content="Hugo 0.27.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link href="https://math2001.github.io/tags/network/index.xml" rel="alternate" type="application/rss+xml" title="Math2001&#39;s blog" />
-    <link href="https://math2001.github.io/tags/network/index.xml" rel="feed" type="application/rss+xml" title="Math2001&#39;s blog" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@_math2001">
     <meta name="twitter:creator" content="@_math2001">
 
-    <meta property="og:title" content="Network">
+    <meta property="og:title" content="Vim Line Completion">
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
-    <meta property="og:url" content="https://math2001.github.io/tags/network/">
-    <meta property="og:description" content="🤔 Just an other blog I guess. 😃">
+    <meta property="og:url" content="https://math2001.github.io/post/vim-line-completion/">
+    <meta property="og:description" content="Do you know what kind of completion this is? Line completion. It looks for every lines that starts with the same text (it doesn&rsquo;t take into consideration the indication), and completes it for you! Awesome right?
+And to do that, you just need to press this while you&rsquo;re in insert mode:
+ctrl&#43;x and ctrl&#43;l">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Network - Math2001&#39;s blog</title><style>
+    <title>Vim Line Completion - Math2001&#39;s blog</title><style>
     :root {
   --page-bg: hsla(195, 55%, 98%, 1);
   --monospace: Menlo, Inconsolata, consolas;
@@ -141,60 +140,223 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
 
 </style><style>
-    .list-top {
+    /* Tomorrow Night Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #969896;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #cc6666;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #de935f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+  color: #f0c674;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #b5bd68;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+  color: #81a2be;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #b294bb;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #1d1f21;
+  color: #c5c8c6;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+</style><style>
+    .page-top {
+  padding: 0 10px;
   text-align: center;
 }
 
-.list-description {
-  color: var(--font-mute);
+.page-title {
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
-.list-window {
-  width: 750px;
-  margin: auto;
+.page-categories {
+  margin-top: 0;
+}
+
+.page-categories, .page-tags,
+.page-categories li, .page-tags li {
+  display: inline-block;
+}
+
+.page-tags {
+  text-align: center;
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.repository-star {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.page-warning {
+  text-align: center;
+}
+
+.page-content hr {
+  border: none;
+  border-top: 4px solid hsla(192, 16%, 92%, 1);
+  margin: 30px auto;
+}
+
+.page-content {
+  width: 1000px;
+  max-width: 100%;
+  margin: 20px auto;
+  background: white;
+  text-align: justify;
+  box-shadow: 5px 5px 20px #ddd;
+  padding: 10px 0;
+  --x-margin: 5%;
+}
+
+.page-content img {
   max-width: 100%;
 }
 
-.list-list {
-  outline: none;
+.page-content p,
+.page-content table,
+.page-content blockquote,
+.page-content ul,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6 {
+  margin-right: var(--x-margin);
+  margin-left: var(--x-margin);
+}
+
+.page-bottom {
+  text-align: center;
+  padding: 1px 20px;
+}
+
+.page-date {
+  font-style: italic;
+  color: var(--font-mute);
+}
+
+.page-share, .page-share-list {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page-share-list {
   padding: 0;
   list-style: none;
-  padding: 0 10px;
 }
 
-.list-content {
-  padding: 10px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.list-content-tags,
-.list-content-tags li {
+.page-share-list li {
   display: inline-block;
+  margin: 5px;
 }
 
-.list-list .categories {
-  display: inline-block;
-  font-size: 80%;
+.page-share-list img {
+  width: 25px;
+  height: 25px;
 }
 
-.list-link {
-  color: inherit;
-  text-decoration: none;
-  display: inline-block;
-  transition: .2s all;
-  display: inline;
+/* content */
+
+code {
+  font-family: var(--monospace);
+  font-size: .9em;
 }
 
-.list-link:hover {
-  color: var(--purple)
+.hljs {
+  margin: 20px var(--x-margin);
+  padding: 20px;
 }
 
-.list-content-reading-time {
-  font-size: 80%;
-  opacity: .8;
+:not(pre) > code {
+  background-color: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+
+blockquote {
+  border-left: 4px solid #ddd;
+  color: #aaa;
+}
+
+kbd {
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #DDD;
+  padding: 3px 5px;
+}
+
+th {
+  font-weight: normal;
+  background-color: #F9F9F9;
 }
 
 </style><style>
@@ -346,32 +508,50 @@ header a {
     
         <span id="show-header" class="show-header"></span>
     
-<div class="list-top">
-    <h1>Network</h1>
-    <div class="list-description"></div>
-</div>
-
-<div class="list-window">
-    <ul class="list-list">
-        
-        <li class="list-content">
-            <div>
-                <ul class="list-content-tags tags">
-                    <li><a href="/tags/chrome">chrome</a></li>
-                    <li><a href="/tags/devtools">devtools</a></li>
-                </ul>
-                <a class=list-link href="https://math2001.github.io/post/network-throttling/">Network throttling</a>
-                <small class="list-content-reading-time"
-                    title="36 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/web-development">web development</a>
-                </li>
-            </ul>
-        </li>
-        
+<div class="page-top">
+    <h1 class="page-title">Vim Line Completion</h1>
+    <ul class="page-categories categories">
+        <li><a href="/categories/itsbuiltin">itsbuiltin</a></li>
     </ul>
+    
+    <ul class="page-tags tags">
+        <li><a href="/tags/vim">vim</a></li>
+        <li><a href="/tags/completion">completion</a></li>
+    </ul>
+
+    
+
+</div><section class="page-content"><p><img src="/img/vim-ctrl-x_ctrl-l.gif" alt="demo of ctrl-x_ctrl+l in insert mode in vim" /></p>
+
+<p>Do you know what kind of completion this is? <strong>Line</strong> completion. It looks for
+every lines that starts with the same text (it doesn&rsquo;t take into consideration
+the indication), and completes it for you! Awesome right?</p>
+
+<p>And to do that, you just need to press this while you&rsquo;re in insert mode:</p>
+
+<p><kbd>ctrl+x</kbd> and <kbd>ctrl+l</kbd></p>
+</section>
+
+<div class="page-bottom">
+    <p class="page-date">Published on Wednesday 27 September 2017</p>
+    <ul class="page-share-list">
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Vim&#43;Line&#43;Completion&amp;url=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fvim-line-completion%2F" target="_blank"
+                onclick="window.open(this.href, 'twitter-share', 'width=580,height=300');return false;">
+                <img src="/img/twitter.svg" alt="Share on twitter">
+            </a>
+        </li> 
+        <li>
+            <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fvim-line-completion%2F" target="_blank"
+                onclick="window.open(this.href, 'facebook-share', 'width=580,height=300');return false;">
+                <img src="/img/facebook.svg" alt="Share on facebook">
+            </a>
+        </li> 
+    </ul><h4>Read an other post</h4>
+    <div class="page-read-other">
+        
+        <p>← <a href="/post/bashs-fc-command/">Bash&#39;s fc command</a></p>
+        </div>
 </div>    </main>
 </div>
 <footer>
@@ -407,7 +587,7 @@ loadCSS([
     { href: 'phone.css', media: 'screen and (max-width: 600px)' },
     { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
 ])
-</script><script>
+</script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script><script>
 ;(function () {
     const show = document.querySelector('#show-header')
     const hide = document.querySelector('#hide-header')

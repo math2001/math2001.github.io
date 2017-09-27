@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017</copyright>
-    <lastBuildDate>Wed, 27 Sep 2017 11:18:56 +1000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Sep 2017 12:55:56 +1000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vim Line Completion</title>
+      <link>https://math2001.github.io/post/vim-line-completion/</link>
+      <pubDate>Wed, 27 Sep 2017 12:55:56 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/vim-line-completion/</guid>
+      <description>Do you know what kind of completion this is? Line completion. It looks for every lines that starts with the same text (it doesn&amp;rsquo;t take into consideration the indication), and completes it for you! Awesome right?
+And to do that, you just need to press this while you&amp;rsquo;re in insert mode:
+ctrl+x and ctrl+l</description>
+    </item>
     
     <item>
       <title>Itp: insert template please</title>
