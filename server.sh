@@ -8,4 +8,4 @@ if [[ $@ == *--drafts* ]]; then
 else
     hugo server --disableLiveReload &
 fi
-browser-sync --start --proxy "localhost:1313" --files "**/static" --staticFiles "**/static" --no-notify &
+browser-sync start --proxy "localhost:1313" --files "**/static" --staticFiles "**/static" --no-notify &
