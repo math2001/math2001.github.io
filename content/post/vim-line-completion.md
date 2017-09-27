@@ -4,7 +4,6 @@ slug: vim-line-completion
 date: 2017-09-27T12:55:56+10:00
 categories: [ itsbuiltin ]
 tags: [ vim, completion ]
-draft: true
 ---
 
 ![demo of ctrl-x_ctrl+l in insert mode in vim](/img/vim-ctrl-x_ctrl-l.gif)
