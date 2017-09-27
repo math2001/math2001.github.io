@@ -1,5 +1,6 @@
 ---
-title: Bash's find
+title: Bash's find command
+slug: bashs-find-command
 date: 2017-09-24T07:51:15+10:00
 categories: [itsbuiltin]
 tags: [bash, find, file manupilation]
@@ -12,7 +13,7 @@ What does it do? It "finds" files. By default, it outputs their path relative to
 where you ran `find`. But, in addition of providing you with advanced "filters"
 it actually allows you to run commands on each of those files.
 
-Let's get started!
+Let's get started!<!--more-->
 
 ### The basics
 

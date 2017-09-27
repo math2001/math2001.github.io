@@ -1,5 +1,6 @@
 ---
-title: Bash's fc
+title: Bash's fc command
+slug: bashs-fc-command
 date: 2017-09-26T18:03:22+10:00
 categories: [cool feature]
 tags: [bash, editor]
