@@ -1,7 +1,7 @@
 :root {
   --page-bg: hsla(195, 55%, 98%, 1);
-  --monospace: Menlo, Inconsolata, consolas;
-  --monospace-secondary: Inconsolata, consolas;
+  --monospace: Menlo, Inconsolata, consolas, monospace;
+  --monospace-secondary: Inconsolata, consolas, monospace;
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
   --purple: hsla(232, 59%, 58%, 1);
