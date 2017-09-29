@@ -10,6 +10,7 @@ author:
   math2001: Mathieu Paturel
 copyright: © Mathieu Paturel 2017
 enableEmoji: true
+googleAnalytics: "UA-105735012-1"
 
 blackfriday:
   hrefTargetBlank: true
