@@ -17,7 +17,6 @@ blackfriday:
 
 params:
   disableSearch: true # not available yet
-  description: ":thinking: Just an other blog I guess. :smiley:"
   github_username: math2001
   themefolderpath: themes/fasty
   avatar:
@@ -31,8 +30,9 @@ params:
     stackoverflow: math2001
     dev.to: math2001
     youtube: https://www.youtube.com/channel/UCi2O717lLg8ugD5KxAJTwAQ
-  bio: |
-    French, lives in Australia, and gives computer instructions so they don't get bored.
+  description: |
+    French, lives in Australia, and gives computer instructions so they don't get bored. :smiley:
+  githubcommentsrepo: math2001/math2001.github.io
 
 
 menu:
