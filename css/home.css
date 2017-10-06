@@ -17,8 +17,10 @@ h1 {
 }
 
 .description {
-  font-size: 150%;
+  margin: 30px auto;
+  font-size: 130%;
   color: var(--font-mute);
+  max-width: 450px;
 }
 
 .avatar-row {

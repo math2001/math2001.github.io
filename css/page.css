@@ -68,12 +68,73 @@
 
 .page-bottom {
   text-align: center;
-  padding: 1px 20px;
+  padding: 1px 0;
 }
 
+.page-comments {
+  max-width: 100%;
+  width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.page-comment {
+  display: flex;
+  width: 100%;
+  margin: 50px 0;
+  padding: 10px;
+  align-items: center;
+}
+
+.page-comment-author {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 80%;
+}
+
+.page-comment-author:hover .page-comment-author-name {
+  text-decoration: underline;
+}
+
+.page-comment-author-name {
+  margin: 0;
+  text-align: center;
+}
+.page-comment-author-avatar {
+  width: 50px;
+  margin: 0 10px;
+}
+
+.page-comment-content {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 5px 5px 20px #ddd;
+}
+.page-comment-content p:first-of-type { margin-top: 0; }
+.page-comment-content p:last-of-type { margin-bottom: 0; }
 .page-date {
   font-style: italic;
   color: var(--font-mute);
+}
+
+.page-comments-blocked {
+  text-align: center;
+}
+
+.page-comments-padlock {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+}
+
+.page-comments-none,
+.page-comments-loading {
+  text-align: center;
 }
 
 .page-share, .page-share-list {
@@ -91,9 +152,13 @@
   margin: 5px;
 }
 
-.page-share-list img {
+.page-share-list svg {
   width: 25px;
   height: 25px;
+}
+
+.page-read-other {
+  margin-top: 40px;
 }
 
 /* content */

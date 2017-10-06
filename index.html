@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en-us">
 <head>
     <meta name="generator" content="Hugo 0.27.1" />
@@ -13,7 +14,7 @@
     <meta property="og:title" content="Math2001&#39;s blog">
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/">
-    <meta property="og:description" content="🤔 Just an other blog I guess. 😃">
+    <meta property="og:description" content="French, lives in Australia, and gives computer instructions so they don&#39;t get bored. 😃">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
     <title>Math2001&#39;s blog</title><style>
@@ -158,8 +159,10 @@ h1 {
 }
 
 .description {
-  font-size: 150%;
+  margin: 30px auto;
+  font-size: 130%;
   color: var(--font-mute);
+  max-width: 450px;
 }
 
 .avatar-row {
@@ -229,7 +232,8 @@ h1 {
     </p>
     <h1>Math2001&#39;s blog</h1>
 
-    <p class="description">🤔 Just an other blog I guess. 😃</p>
+    <p class="description">French, lives in Australia, and gives computer instructions so they don't get bored. 😃
+</p>
 
     <div class="home-actions"><div class="latest-row">
             Checkout my last post: <a href="/post/vim-line-completion/">Vim Line Completion</a>
@@ -264,15 +268,6 @@ function loadCSS(stylesheets) {
         link += '"' + media + '>'
         document.head.innerHTML += link
 
-    }
-}
-
-function loadJs(scripts) {
-    for (let key in scripts) {
-        tag = document.createElement('script')
-        tag.onload = "/" + 'js/' + scripts[key]
-        tag.src = key
-        document.body.appendChild(tag)
     }
 }
 
