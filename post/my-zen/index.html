@@ -700,25 +700,23 @@ loadCSS([
     { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
 ])
 </script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script>
-<script onload="loadGithubCommentsFrom('math2001\/math2001.github.io',  1 , '\/js\/showdown.js')" src="/js/github-comments.js" async></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105735012-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+<script onload="loadGithubCommentsFrom('math2001\/math2001.github.io',  1 , '\/js\/showdown.js')" src="/js/github-comments.js" async></script><script>
+    function gtag_callback() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'UA-105735012-1');
-
-    gtag('config', 'UA-105735012-1', {
-        'custom_map': { 'dimension1': 'internal' }
-    })
-    if (document.cookie.includes('InternalTraffic=true')) {
-        gtag('event', 'internal_traffic', {'internal': true})
+        gtag('config', 'UA-105735012-1');
     }
+    (function () {
+        if (!document.cookie.includes('InternalTraffic=true')) {
+            const script = document.createElement('script')
+            script.src = "https://www.googletagmanager.com/gtag/js?id=UA-105735012-1"
+            script.onload = gtag_callback
+            document.body.appendChild(script)
+        }
+    })()
 </script>
-
 
 </body>
 </html>
