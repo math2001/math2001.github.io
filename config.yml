@@ -18,6 +18,7 @@ blackfriday:
 params:
   disableSearch: true # not available yet
   github_username: math2001
+  twitter_username: _math2001
   themefolderpath: themes/fasty
   avatar:
     vector: img/math2001.svg
@@ -25,12 +26,24 @@ params:
     alt: Math2001's logo
   favicon: img/math2001.png
   social:
-    twitter: _math2001
-    github: math2001
-    stackoverflow: math2001
-    dev.to: math2001
-    youtube: https://www.youtube.com/channel/UCi2O717lLg8ugD5KxAJTwAQ
+    - username: _math2001
+      name: twitter
+      url: https://twitter.com/_math2001
+    - username: math2001
+      name: github
+      url: https://github.com/math2001
+    - username: math2001
+      name: stackoverflow
+      url: https://stackoverflow.com/users/6164984/math2001
+    - username: math2001
+      name: dev.to
+      url: https://dev.com/math2001
+    - username: math2001
+      name: youtube
+      url: https://www.youtube.com/channel/UCi2O717lLg8ugD5KxAJTwAQ
   description: |
+    :computer: My little open sourced home :tada:
+  bio: |
     French, lives in Australia, and gives computer instructions so they don't get bored. :smiley:
   githubcommentsrepo: math2001/math2001.github.io
 
@@ -40,17 +53,9 @@ menu:
     - url: /post/
       name: Posts
       weight: 1
-      pre: "Sections"
     - url: /project/
       name: Projects
       weight: 5
-    - url: /categories/
-      name: Categories
-      weight: 15
-      pre: "Classifications"
-    - url: /tags/
-      name: Tags
-      weight: 20
 
   home:
     - url: /post/
@@ -60,3 +65,10 @@ menu:
       name: Projects
       weight: 5
 
+  footer:
+    - name: Tags
+      url: /tags
+      weight: 1
+    - name: Categories
+      url: /categories
+      weight: 5
