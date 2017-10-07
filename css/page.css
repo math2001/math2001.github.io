@@ -32,14 +32,8 @@
   text-align: center;
 }
 
-.page-content hr {
-  border: none;
-  border-top: 4px solid hsla(192, 16%, 92%, 1);
-  margin: 30px auto;
-}
-
 .page-content {
-  width: 1000px;
+  width: 960px;
   max-width: 100%;
   margin: 20px auto;
   background: white;
@@ -48,6 +42,13 @@
   padding: 10px 0;
   --x-margin: 5%;
 }
+
+.page-content hr {
+  border: none;
+  border-top: 4px solid hsla(192, 16%, 92%, 1);
+  margin: 30px auto;
+}
+
 
 .page-content img {
   max-width: 100%;

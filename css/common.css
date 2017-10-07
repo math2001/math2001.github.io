@@ -1,13 +1,13 @@
 :root {
-  --page-bg: hsla(195, 55%, 98%, 1);
+  --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Menlo, Inconsolata, consolas, monospace;
   --monospace-secondary: Inconsolata, consolas, monospace;
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
+  --font-mute: #888;
   --purple: hsla(232, 59%, 58%, 1);
-  --header-bg: rgba(255, 255, 255, 0.8);
-  --header-fg: inherit;
   --code-bg: #F3F3F3;
+  --border-color: #EEE;
 }
 
 html {
@@ -26,7 +26,8 @@ body {
   flex-direction: column;
   font-family: Roboto Slab, Roboto, Calibri, Corbel, sans-serif;
   margin: 0;
-  background: var(--page-bg);
+  background: var(--light-blue);
+  background-color: #fff;
   height: 100%;
   position: relative;
   color: #333;
@@ -46,15 +47,6 @@ h1, h2 {
 
 main {
   margin-bottom: 20px;
-}
-
-.header-search input {
-  font-family: inherit;
-  background: none;
-  border: none;
-  color: inherit;
-  font-size: 100%;
-  outline: none;
 }
 
 .tags, .categories { font-family: var(--monospace-secondary); }
@@ -107,9 +99,85 @@ main {
 }
 
 footer {
-  text-align: center;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--border-color);
   padding: 0 10px;
+}
+
+.footer-splits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 960px;
+  margin: auto;
+}
+
+.footer-split {
+  min-width: 300px;
+  flex-basis: -webkit-min-content;
+  flex-basis: -moz-min-content;
+  flex-basis: min-content;
+  padding: 10px 10px;
+  position: relative;
+}
+
+.footer-split:not(:last-of-type) {
+  margin-right: 10px;
+  padding-right: 20px;
+}
+
+.footer-split-title {
+  margin: 5px 0;
+}
+
+.footer-split:not(:last-of-type)::before,
+.footer-split:not(:last-of-type)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -5px;
+  top: calc(50% - 17px); /* half of the height taking into account the rotation */
+  height: 20px;
+  border-left: 3px solid var(--border-color);
+  transform: rotate(-30deg);
+  transform-origin: bottom;
+}
+
+.footer-split:not(:last-of-type)::after {
+  transform-origin: top;
+  transform: rotate(30deg);
+  top: calc(50%);
+}
+
+.footer-social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-social-links li {
+  display: inline-block;
+}
+
+.footer-social-link {
+  text-decoration: none;
+  color: inherit;
+  margin: 0 5px;
+}
+
+.footer-social-link svg {
+  --size: 25px;
+  width: var(--size);
+  height: var(--size);
+}
+
+.footer-bottom {
+  text-align: center;
+}
+.footer-bottom::before {
+  content: '';
+  width: 200px;
+  margin: auto;
+  display: block;
+  border-top: 1px solid var(--border-color);
 }
 
 /* geektnt.com/how-to-remove-x-from-search-input-field-on-chrome-and-ie.html */
@@ -117,4 +185,3 @@ input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none;  }
-

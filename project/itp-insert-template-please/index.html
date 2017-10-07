@@ -20,15 +20,15 @@ Please.">
     <link rel=icon type=image/png href='/img/math2001.png'>
     <title>Itp: insert template please - Math2001&#39;s blog</title><style>
     :root {
-  --page-bg: hsla(195, 55%, 98%, 1);
+  --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Menlo, Inconsolata, consolas, monospace;
   --monospace-secondary: Inconsolata, consolas, monospace;
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
+  --font-mute: #888;
   --purple: hsla(232, 59%, 58%, 1);
-  --header-bg: rgba(255, 255, 255, 0.8);
-  --header-fg: inherit;
   --code-bg: #F3F3F3;
+  --border-color: #EEE;
 }
 
 html {
@@ -47,7 +47,8 @@ body {
   flex-direction: column;
   font-family: Roboto Slab, Roboto, Calibri, Corbel, sans-serif;
   margin: 0;
-  background: var(--page-bg);
+  background: var(--light-blue);
+  background-color: #fff;
   height: 100%;
   position: relative;
   color: #333;
@@ -67,15 +68,6 @@ h1, h2 {
 
 main {
   margin-bottom: 20px;
-}
-
-.header-search input {
-  font-family: inherit;
-  background: none;
-  border: none;
-  color: inherit;
-  font-size: 100%;
-  outline: none;
 }
 
 .tags, .categories { font-family: var(--monospace-secondary); }
@@ -128,9 +120,85 @@ main {
 }
 
 footer {
-  text-align: center;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--border-color);
   padding: 0 10px;
+}
+
+.footer-splits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 960px;
+  margin: auto;
+}
+
+.footer-split {
+  min-width: 300px;
+  flex-basis: -webkit-min-content;
+  flex-basis: -moz-min-content;
+  flex-basis: min-content;
+  padding: 10px 10px;
+  position: relative;
+}
+
+.footer-split:not(:last-of-type) {
+  margin-right: 10px;
+  padding-right: 20px;
+}
+
+.footer-split-title {
+  margin: 5px 0;
+}
+
+.footer-split:not(:last-of-type)::before,
+.footer-split:not(:last-of-type)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -5px;
+  top: calc(50% - 17px); /* half of the height taking into account the rotation */
+  height: 20px;
+  border-left: 3px solid var(--border-color);
+  transform: rotate(-30deg);
+  transform-origin: bottom;
+}
+
+.footer-split:not(:last-of-type)::after {
+  transform-origin: top;
+  transform: rotate(30deg);
+  top: calc(50%);
+}
+
+.footer-social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-social-links li {
+  display: inline-block;
+}
+
+.footer-social-link {
+  text-decoration: none;
+  color: inherit;
+  margin: 0 5px;
+}
+
+.footer-social-link svg {
+  --size: 25px;
+  width: var(--size);
+  height: var(--size);
+}
+
+.footer-bottom {
+  text-align: center;
+}
+.footer-bottom::before {
+  content: '';
+  width: 200px;
+  margin: auto;
+  display: block;
+  border-top: 1px solid var(--border-color);
 }
 
 /* geektnt.com/how-to-remove-x-from-search-input-field-on-chrome-and-ie.html */
@@ -138,7 +206,6 @@ input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none;  }
-
 
 </style><style>
     /* Tomorrow Night Theme */
@@ -252,14 +319,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   text-align: center;
 }
 
-.page-content hr {
-  border: none;
-  border-top: 4px solid hsla(192, 16%, 92%, 1);
-  margin: 30px auto;
-}
-
 .page-content {
-  width: 1000px;
+  width: 960px;
   max-width: 100%;
   margin: 20px auto;
   background: white;
@@ -268,6 +329,13 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   padding: 10px 0;
   --x-margin: 5%;
 }
+
+.page-content hr {
+  border: none;
+  border-top: 4px solid hsla(192, 16%, 92%, 1);
+  margin: 30px auto;
+}
+
 
 .page-content img {
   max-width: 100%;
@@ -426,213 +494,56 @@ th {
 }
 
 </style><style>
-    body.header-active { overflow: hidden; }
-
-body.header-active main,
-body.header-active footer {
-  filter: blur(2px);
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: center;
-  z-index: 10;
-  background-color: var(--header-bg);
-  transform: scale(1.1);
-  opacity: 0;
-  visibility: hidden;
-  transition: transform .2s ease, opacity .2s ease, visibility .2s linear 0s;
-}
-
-body.header-active header {
-  visibility: visible;
-  opacity: 1;
-  transform: translate(0, 0);
-  overflow: auto;
-}
-
-.show-header, .hide-header { cursor: pointer; }
-.show-header {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  border: 2px solid #555;
-  position: fixed;
-  right: 10px;
-  top: 10px;
-}
-
-.hide-header {
-  --stroke-width: 2px;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-.hide-header::before {
-  content: "";
-  display: inline-block;
-  width: 9px;
-  height: 9px;
-  border: var(--stroke-width) solid currentColor;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  transform: translate(12px, -1px) rotate(45deg);
-  transform-origin: bottom left;
-}
-
-.hide-header::after {
-  content: "";
-  width: 20px;
-  background-color: currentColor;
-  height: var(--stroke-width);
-  display: inline-block;
-}
-
-.header-brand {
-  font-size: 210%;
+    header {
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 header a {
-  color: var(--header-fg);
+  color: inherit;
   text-decoration: none;
 }
 
-.header-splits {
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.header-brand,
+.header-nav {
   text-align: center;
-  font-size: 120%;
+  margin: 5px 0;
 }
 
-.header-split {
-  min-width: 7em;
-  text-align: left;
-  margin: 0 10px;
-  display: inline-block;
+.header-brand {
+  white-space: nowrap;
 }
 
-.header-split-title {
-  font-weight: normal;
-  color: #666;
-  font-size: .8em;
-}
-
-.header-split-list {
+.header-nav ul {
   list-style: none;
-  padding: 0;
   margin: 0;
-}
-
-.header-split-list a::before {
-  content: "⇒";
-  display: inline;
-  margin-right: 10px;
-  color: #aaa;
-}
-
-.header-split-list a:hover::before,
-.header-split-list a:active::before {
-  color: #555;
-}
-
-.header-bio {
-  margin: 40px 0;
-}
-
-.header-social {
-  margin-top: 40px;
-  list-style: none;
   padding: 0;
+  white-space: nowrap;
 }
 
-.header-social li {
+.header-nav-item {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
-.header-social img {
-  width: 40px;
-  height: 40px;
+.header-nav-item:first-of-type {
+  margin-left: 1px;
 }
 
 </style>
 
 </head>
-<body>
-    <div class="wrapper"><header>
-        <span class="hide-header" id="hide-header"></span>
-        <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
-        <nav class="header-splits">
-            
-                
-                    
-                    <div class="header-split">
-                        <h3 class="header-split-title">Sections</h3>
-                        <ul class="header-split-list">
-                
-                <li><a href="/post/">Posts</a></li>
-            
-                
-                <li><a href="/project/">Projects</a></li>
-            
-                
-                    </ul></div>
-                    <div class="header-split">
-                        <h3 class="header-split-title">Classifications</h3>
-                        <ul class="header-split-list">
-                
-                <li><a href="/categories/">Categories</a></li>
-            
-                
-                <li><a href="/tags/">Tags</a></li>
-            
-        </nav><p class="header-bio">French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃</p>
-
-        <ul class="header-social">
-            <li class="header-social-">
-                <a target="_blank"
-                  href="http://dev.to.com/math2001">
-                    <img src="/img/dev.to.svg" alt="dev.to">
-                </a>
-            </li>
-        
-            <li class="header-social-">
-                <a target="_blank"
-                  href="http://github.com/math2001">
-                    <img src="/img/github.svg" alt="github">
-                </a>
-            </li>
-        
-            <li class="header-social-">
-                <a target="_blank"
-                  href="http://stackoverflow.com/math2001">
-                    <img src="/img/stackoverflow.svg" alt="stackoverflow">
-                </a>
-            </li>
-        
-            <li class="header-social-">
-                <a target="_blank"
-                  href="http://twitter.com/_math2001">
-                    <img src="/img/twitter.svg" alt="twitter">
-                </a>
-            </li>
-        
-            <li class="header-social-">
-                <a target="_blank"
-                  href="https://www.youtube.com/channel/UCi2O717lLg8ugD5KxAJTwAQ">
-                    <img src="/img/youtube.svg" alt="youtube">
-                </a>
-            </li>
-        </ul>
-    </header>
-    <main>
-    
-        <span id="show-header" class="show-header"></span>
-    
-<svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
+<body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
   <path d="M0 0h26.458v26.458H0z"/>
   <path d="M1.062 13.23v6h2.12c2.344 0 3.32-.3 4.032-1.218.713-.9.826-1.688.75-5.252-.056-3.15-.093-3.414-.506-4.09-.713-1.162-1.5-1.443-4.145-1.443h-2.25zm4.333-3.583c.43.356.45.43.45 3.47 0 2.945-.02 3.132-.413 3.526-.32.3-.656.413-1.313.413l-.9.018-.06-3.902-.04-3.882h.92c.618 0 1.05.112 1.35.356zM9.71 7.715c-.376.487-.395.73-.395 5.552v5.045l.47.45c.43.45.543.47 3 .47h2.532v-2.045l-1.913-.056-1.932-.052V14.26l1.182-.056 1.163-.056v-2.044h-2.44V9.29h3.94V7.227H12.71c-2.607 0-2.626 0-3 .488zm7.67 2.175c.395 1.482 1.032 3.902 1.426 5.402.6 2.308.807 2.814 1.313 3.32.352.376.783.62 1.064.62.582 0 1.332-.582 1.595-1.257.187-.488 2.85-10.43 2.85-10.654 0-.052-.524-.09-1.16-.052l-1.18.057-1.05 4.033c-.66 2.55-1.09 3.902-1.166 3.658-.15-.468-2.007-7.614-2.007-7.708 0-.038-.546-.075-1.203-.075h-1.2z" fill="#fff"/>
 </symbol><symbol id="si-facebook" viewBox="0 0 266.89 266.89">
@@ -653,6 +564,24 @@ header a {
     <path d="M195.983 186.64v126.72L333.12 250z" fill="#fff" stroke-width="2.42"/>
   </g>
 </symbol></svg>
+<div class="wrapper"><header>
+        <div class="header-inner">
+            <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+            <nav class="header-nav">
+                <ul>
+                    
+                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
+                    
+                    <li class="header-nav-item"><a href="/project/">Projects</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+    
+        <span id="show-header" class="show-header"></span>
+    
 <div class="page-top">
     <h1 class="page-title">Itp: insert template please</h1>
     <ul class="page-categories categories">
@@ -747,9 +676,39 @@ your actual template directory 😉</p>
 </div>    </main>
 </div>
 <footer>
-    <p>© Mathieu Paturel 2017.
-    Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>, theme
-    <a href="https://github.com/math2001/fasty">Fasty</a> by <a href="https://github.com/math2001">@math2001</a>.</p>
+    <div class="footer-splits">
+        <div class="footer-split">
+            <h4 class="footer-split-title">About me</h4>
+            French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃
+        </div>
+        <div class="footer-split">
+            <h4 class="footer-split-title">Browse by</h4>
+            <ul>
+                <li><a href="/tags">Tags</a></li>
+            
+                <li><a href="/categories">Categories</a></li>
+            </ul>
+        </div>
+        <div class="footer-split">
+            <h4 class="footer-split-title">Social</h4>
+            <ul class="footer-social-links">
+                <li><a href="https://twitter.com/_math2001" class="footer-social-link" data-tooltip="_math2001"><svg><use href="#si-twitter"></svg></a></li>
+            
+                <li><a href="https://github.com/math2001" class="footer-social-link" data-tooltip="math2001"><svg><use href="#si-github"></svg></a></li>
+            
+                <li><a href="https://stackoverflow.com/users/6164984/math2001" class="footer-social-link" data-tooltip="math2001"><svg><use href="#si-stackoverflow"></svg></a></li>
+            
+                <li><a href="https://dev.com/math2001" class="footer-social-link" data-tooltip="math2001"><svg><use href="#si-dev.to"></svg></a></li>
+            
+                <li><a href="https://www.youtube.com/channel/UCi2O717lLg8ugD5KxAJTwAQ" class="footer-social-link" data-tooltip="math2001"><svg><use href="#si-youtube"></svg></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© Mathieu Paturel 2017.
+        Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>, theme
+        <a href="https://github.com/math2001/fasty">Fasty</a> by <a href="https://github.com/math2001">@math2001</a>.</p>
+    </div>
 </footer>
 
 <script type="text/javascript">
@@ -771,13 +730,6 @@ loadCSS([
     { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
 ])
 </script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script><script>
-;(function () {
-    const show = document.querySelector('#show-header')
-    const hide = document.querySelector('#hide-header')
-    show.addEventListener('click', () => { document.body.classList.toggle('header-active') })
-    hide.addEventListener('click', () => { document.body.classList.toggle('header-active') })
-})()
-</script><script>
     fetch('https://api.github.com/repos/math2001/itp')
     .then(response => response.json())
     .then(repository => {
