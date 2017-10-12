@@ -112,10 +112,8 @@ footer {
 }
 
 .footer-split {
+  flex: 1;
   min-width: 300px;
-  flex-basis: -webkit-min-content;
-  flex-basis: -moz-min-content;
-  flex-basis: min-content;
   padding: 10px 10px;
   position: relative;
 }

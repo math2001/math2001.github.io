@@ -8,14 +8,16 @@
     <meta name="twitter:site" content="@_math2001">
     <meta name="twitter:creator" content="@_math2001">
 
-    <meta property="og:title" content="&#39;readonly&#39; != &#39;modifiable&#39;">
+    <meta property="og:title" content="How to combine svgs">
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
-    <meta property="og:url" content="https://math2001.github.io/post/difference-vim-options-readonly-modifiable/">
-    <meta property="og:description" content="Do you know the difference between those 2 options
-set readonly set nomodifiable  All the readonly does, when enabled, is it prevents you from writing the file (you can bypass it by doing :w! though), while modifiable, when disabled prevents you from actually editing the buffer.">
+    <meta property="og:url" content="https://math2001.github.io/post/combine-svgs/">
+    <meta property="og:description" content="If you want your website to be fast, you should limit the number of http
+requests. A great way of doing that is combining your images. If you use SVGS
+for your icons and stuff like that, here&rsquo;s how you can combine all your icon in
+one big file, and use them in your website!">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>&#39;readonly&#39; != &#39;modifiable&#39; - Math2001&#39;s blog</title><style>
+    <title>How to combine svgs - Math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Menlo, Inconsolata, consolas, monospace;
@@ -578,40 +580,100 @@ header a {
         <span id="show-header" class="show-header"></span>
     
 <div class="page-top">
-    <h1 class="page-title">&#39;readonly&#39; != &#39;modifiable&#39;</h1>
+    <h1 class="page-title">How to combine svgs</h1>
     <ul class="page-categories categories">
-        <li><a href="/categories/infos">infos</a></li>
+        <li><a href="/categories/howto">howto</a></li>
     </ul>
     
     <ul class="page-tags tags">
-        <li><a href="/tags/vim">vim</a></li>
-        <li><a href="/tags/options">options</a></li>
+        <li><a href="/tags/svg">svg</a></li>
+        <li><a href="/tags/perfs">perfs</a></li>
+        <li><a href="/tags/css">css</a></li>
+        <li><a href="/tags/nodejs">nodejs</a></li>
+        <li><a href="/tags/svgstore">svgstore</a></li>
     </ul>
 
     
 
-</div><section class="page-content"><p>Do you know the difference between those 2 options</p>
+</div><section class="page-content"><p>If you want your website to be fast, you should limit the number of http
+requests. A great way of doing that is combining your images. If you use SVGS
+for your icons and stuff like that, here&rsquo;s how you can combine all your icon in
+one big file, and use them in your website!</p>
 
-<pre><code class="language-vim">set readonly
-set nomodifiable
+<h3 id="how-it-works">How it works</h3>
+
+<p>A combined svg would look like this:</p>
+
+<pre><code class="language-xml">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+    &lt;symbol viewBox=&quot;0 0 20 20&quot; id='circle'&gt;
+        &lt;circle cx=&quot;10&quot; cy=&quot;10&quot; r=&quot;5&quot; fill=&quot;currentColor&quot; /&gt;
+    &lt;/symbol&gt;
+    &lt;symbol viewBox=&quot;0 0 100 100&quot;&gt;
+        &lt;ellipse cx=&quot;50&quot; cy=&quot;50&quot; rx=&quot;60&quot; ry=&quot;40&quot; fill=&quot;currentColor&quot; /&gt;
+    &lt;/symbol&gt;
+&lt;/svg&gt;
 </code></pre>
 
-<p>All the <code>readonly</code> does, when enabled, is it prevents you from <em>writing</em> the file
-(you can bypass it by doing <code>:w!</code> though), while <code>modifiable</code>, when <em>disabled</em>
-prevents you from actually <em>editing</em> the buffer.</p>
-</section>
+<p>Here&rsquo;s how you use it in your web page:</p>
+
+<pre><code class="language-html">&lt;style&gt;
+p { color: #34495e; }
+p svg { width: 2em; vertical-align: middle; }
+&lt;/style&gt;
+&lt;p&gt;
+    Do you want to see what a circle looks like? Here's one:
+    &lt;svg&gt;&lt;use href=&quot;combined.svg#circle&quot;&gt;&lt;/svg&gt;
+&lt;/p&gt;
+</code></pre>
+
+<p>Which would give you something like this:</p>
+
+<p style="color: #34495e; text-align: center;">
+    Do you want to see what a circle looks like? Here's one:
+    <svg viewBox="0 0 20 20" width="2em" style="vertical-align: middle;">
+        <circle cx="10" cy="10" r="5" fill="currentColor" />
+    </svg>
+</p>
+
+<h3 id="combining-your-svgs">Combining your SVGs</h3>
+
+<p>You could have fun doing by hand, but there are some tools out there that allow
+you to do that in super easily.</p>
+
+<p>You can combine your SVGs by using <code>gulp</code> or <code>grunt</code> using their <code>svgstore</code>
+plugin (<code>gulp-svgstore</code> and <code>grunt-svgstore</code>), but in this case, we&rsquo;ll just use
+a simple CLI.</p>
+
+<p>The CLI I use is called <a href="https://github.com/svgstore/svgstore-cli" target="_blank"><code>svgstore-cli</code></a>, and it&rsquo;s a simple npm package.</p>
+
+<pre><code class="language-sh">$ yarn global add svgstore-cli
+$ # or, if you want to wait for at least 3 hours 😄
+$ npm install --global svgstore-cli
+</code></pre>
+
+<p>Awesome! Now you have access to the <code>svgstore</code> command in your terminal.</p>
+
+<h4 id="here-s-the-magical-comment">Here&rsquo;s the magical comment 🎉</h4>
+
+<pre><code class="language-sh">$ svgstore svgs/*.svg &gt; combined.svg
+</code></pre>
+
+<p>This will load every <code>.svg</code> file in the <code>svgs</code> directory, <em>combine</em> them, and
+write this into <code>combined.svg</code>.</p>
+
+<p>And there you have it!</p></section>
 
 <div class="page-bottom">
-    <p class="page-date">Published on Saturday 26 August 2017</p>
+    <p class="page-date">Published on Sunday 8 October 2017</p>
     <ul class="page-share-list">
         <li>
-            <a href="https://twitter.com/intent/tweet?text=%27readonly%27&#43;%21%3D&#43;%27modifiable%27&amp;url=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fdifference-vim-options-readonly-modifiable%2F" target="_blank"
+            <a href="https://twitter.com/intent/tweet?text=How&#43;to&#43;combine&#43;svgs&amp;url=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fcombine-svgs%2F" target="_blank"
                 onclick="window.open(this.href, 'twitter-share', 'width=580,height=300');return false;">
                 <svg><use href="#si-twitter"></svg>
             </a>
         </li>
         <li>
-            <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fdifference-vim-options-readonly-modifiable%2F" target="_blank"
+            <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fcombine-svgs%2F" target="_blank"
                 onclick="window.open(this.href, 'facebook-share', 'width=580,height=300');return false;">
                 <svg><use href="#si-facebook"></svg>
             </a>
@@ -626,9 +688,8 @@ prevents you from actually <em>editing</em> the buffer.</p>
     <section id="page-comments" class="page-comments"></section><h4 class="page-read-other">Read an other post</h4>
     <div>
         
-        <p>← <a href="/post/get-ascii-value-character-vim/">How do I get the ASCII value of a character?</a></p>
-        
-        <p><a href="/post/silent-command-line-mapping/">Silent command-line mapping</a> →</p></div>
+        <p>← <a href="/post/vim-line-completion/">Vim Line Completion</a></p>
+        </div>
 </div>    </main>
 </div>
 <footer>
@@ -685,14 +746,8 @@ loadCSS([
     { href: 'phone.css', media: 'screen and (max-width: 600px)' },
     { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
 ])
-</script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script><script>
-    document.querySelector('#page-comments').innerHTML = 
-    `<p class="page-comments-blocked">
-        <svg class="page-comments-padlock"><use href="#si-padlock"></svg>
-        Comments are blocked for this post
-    </p>`
-</script>
-<script>
+</script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script>
+<script onload="loadGithubCommentsFrom('math2001\/math2001.github.io',  3 , '\/js\/showdown.js')" src="/js/github-comments.js" async></script><script>
     function gtag_callback() {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}

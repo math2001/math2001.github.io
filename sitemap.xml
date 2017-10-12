@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://math2001.github.io/post/combine-svgs/</loc>
+    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/post/vim-line-completion/</loc>
     <lastmod>2017-09-27T12:55:56+10:00</lastmod>
   </url>
@@ -207,6 +212,12 @@
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/css/</loc>
+    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/tags/date/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -250,7 +261,7 @@
   
   <url>
     <loc>https://math2001.github.io/categories/howto/</loc>
-    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
+    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -286,7 +297,7 @@
   
   <url>
     <loc>https://math2001.github.io/</loc>
-    <lastmod>2017-09-27T12:55:56+10:00</lastmod>
+    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -310,7 +321,7 @@
   
   <url>
     <loc>https://math2001.github.io/tags/nodejs/</loc>
-    <lastmod>2017-09-27T11:18:56+10:00</lastmod>
+    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -329,6 +340,12 @@
   <url>
     <loc>https://math2001.github.io/tags/performances/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/perfs/</loc>
+    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -400,7 +417,13 @@
   
   <url>
     <loc>https://math2001.github.io/tags/svg/</loc>
-    <lastmod>2017-09-22T18:31:15+10:00</lastmod>
+    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/svgstore/</loc>
+    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
     <priority>0</priority>
   </url>
   
