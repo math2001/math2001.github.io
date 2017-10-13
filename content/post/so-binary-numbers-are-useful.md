@@ -4,7 +4,7 @@ slug: so-binary-numbers-are-useful
 date: 2017-10-13T16:14:21+11:00
 categories: [ cool-feature ]
 tags: [ binary, python, binary, bit-manipulation ]
-draft: true
+commentsIssueId: 4
 ---
 
 Do you know what binary numbers are? There just a way of counting with just 2
