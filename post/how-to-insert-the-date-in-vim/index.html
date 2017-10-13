@@ -322,8 +322,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   background: white;
   text-align: justify;
   box-shadow: 5px 5px 20px #ddd;
-  padding: 10px 0;
-  --x-margin: 5%;
+  padding: 10px 20px;
 }
 
 .page-content hr {
@@ -335,19 +334,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
 .page-content img {
   max-width: 100%;
-}
-
-.page-content p,
-.page-content table,
-.page-content blockquote,
-.page-content ul,
-.page-content h2,
-.page-content h3,
-.page-content h4,
-.page-content h5,
-.page-content h6 {
-  margin-right: var(--x-margin);
-  margin-left: var(--x-margin);
 }
 
 .page-bottom {
@@ -452,8 +438,7 @@ code {
   font-size: .9em;
 }
 
-.hljs {
-  margin: 20px var(--x-margin);
+.page-content pre code {
   padding: 20px;
 }
 
@@ -481,7 +466,7 @@ table {
 
 td, th {
   border: 1px solid #DDD;
-  padding: 3px 5px;
+  padding: 2px 5px;
 }
 
 th {
@@ -655,12 +640,7 @@ command! InsertDate :call Insert(Strip(system('date +&quot;%A %d %B %Y @ %H:%M&q
             </a>
         </li>
     </ul>
-    <section id="page-comments" class="page-comments"></section><h4 class="page-read-other">Read an other post</h4>
-    <div>
-        
-        <p>← <a href="/post/network-throttling/">Network throttling</a></p>
-        
-        <p><a href="/post/vim-help-index/">Vim help index</a> →</p></div>
+    <section id="page-comments" class="page-comments"></section>
 </div>    </main>
 </div>
 <footer>
@@ -693,9 +673,12 @@ command! InsertDate :call Insert(Strip(system('date +&quot;%A %d %B %Y @ %H:%M&q
         </div>
     </div>
     <div class="footer-bottom">
-        <p>© Mathieu Paturel 2017.
-        Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>, theme
-        <a href="https://github.com/math2001/fasty">Fasty</a> by <a href="https://github.com/math2001">@math2001</a>.</p>
+        <p>
+            © Mathieu Paturel 2017.
+            
+            Code over at <a href="https://github.com/math2001/math2001.github.io"><code>math2001/math2001.github.io</code></a>.
+            
+        </p>
     </div>
 </footer>
 

@@ -8,14 +8,15 @@
     <meta name="twitter:site" content="@_math2001">
     <meta name="twitter:creator" content="@_math2001">
 
-    <meta property="og:title" content="Variable scopes in vim">
+    <meta property="og:title" content="So binary numbers are useful?">
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
-    <meta property="og:url" content="https://math2001.github.io/post/variable-scopes-vim/">
-    <meta property="og:description" content="An interesting feature of vim script is variable scoping. Here&rsquo;s a copy-paste from the documentation, just in case you never saw it before:
-There are several name spaces for variables. Which one is to be used is specified by what is prepended: (nothing) In a function: local to a function; otherwise: global buffer-variable b: Local to the current buffer. window-variable w: Local to the current window. tabpage-variable t: Local to the current tab page.">
+    <meta property="og:url" content="https://math2001.github.io/post/so-binary-numbers-are-useful/">
+    <meta property="og:description" content="Do you know what binary numbers are? There just a way of counting with just 2 numbers: 0 and 1. For example, 9 is in binary 1001.
+This is the format your computer uses to do everything, at a very low level. Either there is some current, or there isn&rsquo;t. And then, it interprets these numbers, and becomes what it is.
+So, what the heck could be the use of binary numbers to us, simple programmers who write some code with all these different symbols, letters, and numbers?">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Variable scopes in vim - Math2001&#39;s blog</title><style>
+    <title>So binary numbers are useful? - Math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Menlo, Inconsolata, consolas, monospace;
@@ -563,62 +564,361 @@ header a {
         <span id="show-header" class="show-header"></span>
     
 <div class="page-top">
-    <h1 class="page-title">Variable scopes in vim</h1>
+    <h1 class="page-title">So binary numbers are useful?</h1>
     <ul class="page-categories categories">
-        <li><a href="/categories/infos">infos</a></li>
+        <li><a href="/categories/cool-feature">cool-feature</a></li>
     </ul>
     
     <ul class="page-tags tags">
-        <li><a href="/tags/vim">vim</a></li>
-        <li><a href="/tags/scopes">scopes</a></li>
-        <li><a href="/tags/variable">variable</a></li>
-        <li><a href="/tags/vimscript">vimscript</a></li>
+        <li><a href="/tags/binary">binary</a></li>
+        <li><a href="/tags/python">python</a></li>
+        <li><a href="/tags/binary">binary</a></li>
+        <li><a href="/tags/bit-manipulation">bit-manipulation</a></li>
     </ul>
 
     
 
-</div><section class="page-content"><p>An interesting feature of vim script is variable scoping. Here&rsquo;s a copy-paste
-from the documentation, just in case you never saw it before:</p>
+</div><section class="page-content">
 
-<pre><code>There are several name spaces for variables.  Which one is to be used is
-specified by what is prepended:
+<p>Do you know what binary numbers are? There just a way of counting with just 2
+numbers: 0 and 1. For example, <code>9</code> is in binary <code>1001</code>.</p>
 
-                 (nothing) In a function: local to a function; otherwise: global
-buffer-variable    b:      Local to the current buffer.
-window-variable    w:      Local to the current window.
-tabpage-variable   t:      Local to the current tab page.
-global-variable    g:      Global.
-local-variable     l:      Local to a function.
-script-variable    s:      Local to a :source'ed Vim script.
-function-argument  a:      Function argument (only inside a function).
-vim-variable       v:      Global, predefined by Vim.
+<p>This is the format your computer uses to do everything, at a very low level.
+Either there is some current, or there isn&rsquo;t. And then, it interprets these
+numbers, and becomes what it is.</p>
+
+<p>So, what the heck could be the use of binary numbers to us, simple programmers
+who write some code with all these different symbols, letters, and numbers?
+🤔</p>
+
+<p>One use case I stumbled upon a few days ago (I was making a little Sublime Text
+plugin, textwidth) was passing multiple flags just through a number. Basically,
+you&rsquo;d give the function a cursor position, and it&rsquo;d tell you if you were at the
+end of a word, at the end of a line, at an opening bracket, etc&hellip;</p>
+
+<p>This made me realize that you can pass a lot more information than we&rsquo;d think
+through a simple number.</p>
+
+<p>Sound&rsquo;s interesting? Let&rsquo;s get going. 🚀</p>
+
+<h3 id="binary-base-2-and-regular-numbers-base-10">Binary (base 2) and regular numbers (base 10)</h3>
+
+<p>(If you already know how to count in binary, then you can skip this section)</p>
+
+<p>Regular numbers as I&rsquo;ll call them, are in base 10, meaning we have 10 different
+figures (0, 1, 2, 3, 4, 5, 6, 7, 8 and 9) to represent them. Base 2 just uses
+the first 2 figures (0 and 1).</p>
+
+<p>Note: an other common base is base 16, or hexadecimal. The figures are (0, 1, 2,
+3, 4, 5, 6, 7, 8, 9, a, b, c, d, e and f). So, for example, 15 is in hexadecimal
+<code>e</code>.</p>
+
+<blockquote>
+<p>What?! How the heck are we suppose to count with only 2 numbers?</p>
+</blockquote>
+
+<p>It&rsquo;s fairly simple once you get it. But first we must understand how we <em>count
+with regular numbers</em>.</p>
+
+<p>If I ask you what is the result of <code>5 + 1</code>, you&rsquo;ll just tell me <code>6</code>. You just
+<em>increased</em> the last figure by one.</p>
+
+<p>But what if I tell you to do <code>9 + 1</code>?</p>
+
+<p>There isn&rsquo;t any figure after <code>9</code>, so you have to replace it with a 0, and
+increase the number <em>before</em> it. In this case, it&rsquo;s a 0 (it&rsquo;s implied here, 09
+is the same as 9). This gives you 10.</p>
+
+<p>And, as long as you get a 9, you repeat the same operation: replace it with a 0,
+and increase the number before it. Check for <code>29 + 1</code> or <code>99 + 1</code> if you want.</p>
+
+<p>The exact same thing happens for binary numbers (and any numbers in any base)!</p>
+
+<p>What is the result of <code>1 + 1</code> in binary? There isn&rsquo;t any figure after <code>1</code>,
+therefore, you replace it with a <code>0</code> and increase the number before it, which
+gives you <code>10</code>.</p>
+
+<p>In binary again, <code>10 + 1</code> gives you <code>11</code>, and <code>11 + 1</code> gives you <code>100</code>.</p>
+
+<h5 id="regular-binary-some-examples">Regular → binary, some examples</h5>
+
+<table>
+<thead>
+<tr>
+<th>Regular</th>
+<th>Binary</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>11</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>100</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>101</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>110</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>111</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>1000</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>1001</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>1010</td>
+</tr>
+</tbody>
+</table>
+
+<p>Note: each figure on a binary number is called a <em>bit</em>.</p>
+
+<h4 id="binary-to-regular-an-other-story">Binary to regular, an other story</h4>
+
+<p>What if you want to convert binary to a regular number. Right now, what is the
+regular number for <code>100101</code>? 🤔</p>
+
+<p>Pretty tough, hey? 😄 You&rsquo;d have to convert every regular number its binary
+version and see which one matches, which isn&rsquo;t efficient at all. Instead, here&rsquo;s
+a better way to do it.</p>
+
+<p>First, we must understand that every bit as a value. The last number is worth 1,
+and every other number is worth the double of the value of the number on its right.</p>
+
+<pre><code>100101
+     ^ worth 1
+    ^ worth 2 (2 x 1)
+   ^ worth 4 (2 x 2)
+  ^ worth 8 (2 x 4)
+ ^ worth 16 (2 x 8)
+^ worth 32 (2 x 16)
 </code></pre>
 
-<p><em>From</em> <code>:help internal-variables</code>.</p>
+<p>Get it? Let&rsquo;s move on then.</p>
 
-<p>So, for example, in your <code>~/.vimrc</code>, unless you&rsquo;re in a function, you shouldn&rsquo;t
-prefix plugin&rsquo;s options let&rsquo;s say with <code>g:</code>, you can just write the variable
-name.</p>
+<blockquote>
+<p>The value of a binary number is the sum of each value of the bit that are equal to 1</p>
+</blockquote>
 
-<pre><code class="language-vim">&quot; no
-let g:indent_guides_auto_colors = 0
+<p>It&rsquo;s easier to read from right to left in this case, it makes it simpler to know
+what is the value of the bit we&rsquo;re at, since it&rsquo;s just the double of the
+previous one.</p>
 
-&quot; yes
-let indent_guides_auto_colors = 0
+<p>So, let&rsquo;s decode <code>100101</code>. Our sum is currently 0.</p>
+
+<p>The last number being a 1, we add its value (1) to the sum. Our sum is
+currently 1.</p>
+
+<p>The previous number being a 0, we don&rsquo;t do anything.</p>
+
+<p>The previous number being a 1, we add its value (4) to the sum. Our sum is now
+5.</p>
+
+<p>The 2 previous numbers being 0, we ignore both of them.</p>
+
+<p>The previous number being a 1, we add its value (32) to the sum. Our sum is now
+1 + 4 + 32, which is 37.</p>
+
+<p>So, <code>100101</code> is equal to 37.</p>
+
+<h3 id="operators">Operators</h3>
+
+<p>What makes binary numbers useful to us is that you can make some operation with
+them (called <em>bitwise</em> operations). In this post, I&rsquo;ll use Python because it&rsquo;s
+awesome, but pretty much every programming language should be able to do this.</p>
+
+<p>The 2 operators I&rsquo;m about to show you use 2 numbers, and does some operations of
+the <em>binary form</em> of the number.</p>
+
+<h4 id="the-and-bitwise-operator">The &ldquo;and&rdquo; bitwise operator</h4>
+
+<p>It&rsquo;s basically the regular <code>and</code> operator for every bit in our numbers.</p>
+
+<pre><code>First:  10111001
+Second: 01011010
+Result: 00011000
 </code></pre>
+
+<p>In simple words, it adds a 1 to the result if both current bits are a 1 too,
+otherwise, it adds a 0.</p>
+
+<h4 id="the-or-bitwise-operator">The &ldquo;or&rdquo; bitwise operator</h4>
+
+<p>You guessed it, it&rsquo;s the equivalent of the <code>or</code> operator for every bit in our
+numbers.</p>
+
+<pre><code>First:  10111001
+Second: 01011010
+Result: 11111011
+</code></pre>
+
+<p>In simple words, it adds a 1 to the result if at least one bit is 1, otherwise a
+0.</p>
+
+<h4 id="python-way">Python way</h4>
+
+<p>In python, here&rsquo;s what it&rsquo;d look like:</p>
+
+<pre><code class="language-python">first = 1
+second = 2
+
+# writing numbers in a binary form
+print(first == 0b1) # True
+print(second == 0b10) # True
+
+# converting numbers into a binary form
+print(bin(first)) # 0b1
+print(bin(second)) # 0b10
+
+# bitwise operators &quot;and&quot;
+print(first &amp; second) # 0b00, or 0
+print(first | second) # 0b11, or 3
+</code></pre>
+
+<h3 id="the-use">The use?</h3>
+
+<blockquote>
+<p>Ok, thanks, but what&rsquo;s the use of this??</p>
+</blockquote>
+
+<p>Flags.</p>
+
+<p>For example, you want to write a function that takes a number and tells you if
+the number is a multiple of 2, 3, 5 and 7.</p>
+
+<p>With some carefully chosen numbers, and the bitwise operators <code>or</code> and <code>and</code>,
+your function can return a simple number, and the end user would be able to tell
+which numbers can divide the number he called your function with.</p>
+
+<h4 id="the-idea">The idea</h4>
+
+<p>The idea is to give a meaning to every bit. If the number I give you is <code>0101</code>, and I tell
+you that if the second bite is 1, then the number is dividable by 2, and that if the
+fourth bit is 1, the number is dividable by 5, you&rsquo;ll know that the number you gave is a
+dividable both by 2 and 5.</p>
+
+<p>And guess what: it&rsquo;s the <code>or</code> and <code>and</code> bitwise that allow you to do that.</p>
+
+<p>You have to combine a set of number that will each &ldquo;active&rdquo; (set to 1) a
+specific bit.</p>
+
+<p>So, which numbers could we combine (using the <code>or</code> bitwise operator) in any
+order so that we could tell which one was used? These ones (in binary form):</p>
+
+<pre><code>   1
+  10
+ 100
+1000
+...
+</code></pre>
+
+<p>Do you understand? If you combine <code>1</code> with <code>100</code> using the <code>or</code> bitwise
+operator, you&rsquo;ll get <code>101</code>, and you&rsquo;ll know that you used <code>100</code> and <code>1</code>.</p>
+
+<p>Do you recognize the relation between those numbers? They&rsquo;re the double of the previous
+one, each time: 1, 2, 4, 8, etc&hellip;</p>
+
+<h4 id="our-little-example">Our little example</h4>
+
+<pre><code class="language-python">DIVIDABLE_BY_2 = 0b0001 # we don't actually need all these extra 0
+DIVIDABLE_BY_3 = 0b0010
+DIVIDABLE_BY_5 = 0b0100
+DIVIDABLE_BY_7 = 0b1000
+
+def classify(number):
+    # same as 0, but it makes it understandable that we're going to use bit
+    result = 0b0
+    if number % 2 == 0:
+        # the number is dividable by 2 (the rest of the division is equal to 0)
+        result = result | DIVIDABLE_BY_2
+    if number % 3 == 0: result |= DIVIDABLE_BY_3
+    if number % 5 == 0: result |= DIVIDABLE_BY_5
+    if number % 7 == 0: result |= DIVIDABLE_BY_7
+    return result
+</code></pre>
+
+<p>Let&rsquo;s see what we get:</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; classify(15)
+'0b0110'
+&gt;&gt;&gt; classify(3)
+'0b0010'
+&gt;&gt;&gt; classify(2 * 3 * 5 * 7)
+'0b1111'
+</code></pre>
+
+<p>And now, we can use the <code>and</code> bitwise operator to check if the returned value
+matches with a number.</p>
+
+<p>If no bit matches, it&rsquo;ll return <code>0b0000</code>, which will be 0, and once converted to
+a boolean, will be <code>False</code>. Otherwise, it&rsquo;ll return an other number, which we
+don&rsquo;t care about (it&rsquo;ll be converted to <code>True</code>, since it will be different from
+0).</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; classification = classify(15)
+&gt;&gt;&gt; bool(classification &amp; DIVIDABLE_BY_2)
+False
+&gt;&gt;&gt; bool(classification &amp; DIVIDABLE_BY_3)
+True
+&gt;&gt;&gt; bool(classification &amp; DIVIDABLE_BY_5)
+True
+&gt;&gt;&gt; bool(classification &amp; DIVIDABLE_BY_7)
+False
+</code></pre>
+
+<p>It might be a bit confusing, so <em>play with it</em>:</p>
+
+<script src="//repl.it/embed/M99I/1.js"></script>
 </section>
 
 <div class="page-bottom">
-    <p class="page-date">Published on Friday 25 August 2017</p>
+    <p class="page-date">Published on Friday 13 October 2017</p>
     <ul class="page-share-list">
         <li>
-            <a href="https://twitter.com/intent/tweet?text=Variable&#43;scopes&#43;in&#43;vim&amp;url=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fvariable-scopes-vim%2F" target="_blank"
+            <a href="https://twitter.com/intent/tweet?text=So&#43;binary&#43;numbers&#43;are&#43;useful%3F&amp;url=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fso-binary-numbers-are-useful%2F" target="_blank"
                 onclick="window.open(this.href, 'twitter-share', 'width=580,height=300');return false;">
                 <svg><use href="#si-twitter"></svg>
             </a>
         </li>
         <li>
-            <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fvariable-scopes-vim%2F" target="_blank"
+            <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fso-binary-numbers-are-useful%2F" target="_blank"
                 onclick="window.open(this.href, 'facebook-share', 'width=580,height=300');return false;">
                 <svg><use href="#si-facebook"></svg>
             </a>
@@ -690,14 +990,8 @@ loadCSS([
     { href: 'phone.css', media: 'screen and (max-width: 600px)' },
     { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
 ])
-</script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script><script>
-    document.querySelector('#page-comments').innerHTML = 
-    `<p class="page-comments-blocked">
-        <svg class="page-comments-padlock"><use href="#si-padlock"></svg>
-        Comments are blocked for this post
-    </p>`
-</script>
-<script>
+</script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script>
+<script onload="loadGithubCommentsFrom('math2001\/math2001.github.io',  4 , '\/js\/showdown.js')" src="/js/github-comments.js" async></script><script>
     function gtag_callback() {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}

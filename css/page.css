@@ -39,8 +39,7 @@
   background: white;
   text-align: justify;
   box-shadow: 5px 5px 20px #ddd;
-  padding: 10px 0;
-  --x-margin: 5%;
+  padding: 10px 20px;
 }
 
 .page-content hr {
@@ -52,19 +51,6 @@
 
 .page-content img {
   max-width: 100%;
-}
-
-.page-content p,
-.page-content table,
-.page-content blockquote,
-.page-content ul,
-.page-content h2,
-.page-content h3,
-.page-content h4,
-.page-content h5,
-.page-content h6 {
-  margin-right: var(--x-margin);
-  margin-left: var(--x-margin);
 }
 
 .page-bottom {
@@ -169,8 +155,7 @@ code {
   font-size: .9em;
 }
 
-.hljs {
-  margin: 20px var(--x-margin);
+.page-content pre code {
   padding: 20px;
 }
 
@@ -198,7 +183,7 @@ table {
 
 td, th {
   border: 1px solid #DDD;
-  padding: 3px 5px;
+  padding: 2px 5px;
 }
 
 th {
