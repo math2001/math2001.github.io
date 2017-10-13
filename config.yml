@@ -21,6 +21,7 @@ params:
   github_username: math2001
   twitter_username: _math2001
   themefolderpath: themes/fasty
+  sitecode: math2001/math2001.github.io
   avatar:
     vector: img/math2001.svg
     raster: img/math2001.png
