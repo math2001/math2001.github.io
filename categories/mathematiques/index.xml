@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mathematiques on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/categories/mathematiques/</link>
+    <description>Recent content in Mathematiques on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017</copyright>
+    <lastBuildDate>Fri, 02 Feb 2018 17:41:26 +1100</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/categories/mathematiques/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>0.9 Repeater</title>
+      <link>https://math2001.github.io/post/0.9-repeater/</link>
+      <pubDate>Fri, 02 Feb 2018 17:41:26 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/post/0.9-repeater/</guid>
+      <description>Today I learned something a bit weird in mathematics, which I find quiet funny. Here it is:
+ Write 0.9 repeater (0.999&amp;hellip;) in the form of a fraction
+ This can be done using an equation, have a look:
+ n = 0.999... 10n = 9.999... 10n - n = 9 9n = 9 n = 1  So, 0.9 repeater is equal to 1. When I saw this, I thought I made a mistake somewhere, but I didn&amp;rsquo;t, and here&amp;rsquo;s how I &amp;ldquo;explain&amp;rdquo; it (to myself at least).</description>
+    </item>
+    
+  </channel>
+</rss>
