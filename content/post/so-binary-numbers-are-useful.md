@@ -7,7 +7,7 @@ tags: [ binary, python, binary, bit-manipulation ]
 commentsIssueId: 4
 ---
 
-Do you know what binary numbers are? There just a way of counting with just 2
+Do you know what binary numbers are? They're just a way of counting with just 2
 numbers: 0 and 1. For example, `9` is in binary `1001`.
 
 This is the format your computer uses to do everything, at a very low level.
