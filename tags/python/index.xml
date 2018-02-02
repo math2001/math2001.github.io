@@ -18,7 +18,7 @@
       <pubDate>Fri, 13 Oct 2017 16:14:21 +1100</pubDate>
       
       <guid>https://math2001.github.io/post/so-binary-numbers-are-useful/</guid>
-      <description>Do you know what binary numbers are? There just a way of counting with just 2 numbers: 0 and 1. For example, 9 is in binary 1001.
+      <description>Do you know what binary numbers are? They&amp;rsquo;re just a way of counting with just 2 numbers: 0 and 1. For example, 9 is in binary 1001.
 This is the format your computer uses to do everything, at a very low level. Either there is some current, or there isn&amp;rsquo;t. And then, it interprets these numbers, and becomes what it is.
 So, what the heck could be the use of binary numbers to us, simple programmers who write some code with all these different symbols, letters, and numbers?</description>
     </item>
