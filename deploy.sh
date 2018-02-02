@@ -7,7 +7,10 @@ function output {
     fi
 }
 
-alias echoerr='>&2 echo'
+function echoerr {
+    echo >&2 $@
+}
+
 set -o errexit
 
 VERSION="1.0.1"
