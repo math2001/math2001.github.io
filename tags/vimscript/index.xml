@@ -30,7 +30,7 @@
       <guid>https://math2001.github.io/post/dynamicopen-function-vim/</guid>
       <description>I really open my .vimrc often. Too often to have to type :e ~/.vimrc or :tabe ~/.vimrcevery time.
 Here&amp;rsquo;s a little function that will open a file in a new tab if there isn&amp;rsquo;t enough room for a new split, and, you guessed it, in a new vertical split if there is.
-function! DynamicOpen(file) if winwidth(win_getid()) &amp;gt; 160 execute &amp;quot;vsplit &amp;quot;.a:file else execute &amp;quot;tabe &amp;quot;.a:file endif endfunction nnoremap &amp;lt;leader&amp;gt;ev :call DynamicOpen($MYVIMRC)&amp;lt;CR&amp;gt;  It just checks with width of the current window.</description>
+function! DynamicOpen(file) if winwidth(win_getid()) &amp;gt; 160 execute&amp;#34;vsplit &amp;#34;.a:file else execute&amp;#34;tabe &amp;#34;.a:file endifendfunctionnnoremap &amp;lt;leader&amp;gt;ev :call DynamicOpen($MYVIMRC)&amp;lt;CR&amp;gt; It just checks with width of the current window.</description>
     </item>
     
     <item>
@@ -40,8 +40,8 @@ function! DynamicOpen(file) if winwidth(win_getid()) &amp;gt; 160 execute &amp;q
       
       <guid>https://math2001.github.io/post/rerun-last-command-bang-vim/</guid>
       <description>Put this little vim script in your .vimrc to rerun the previous command with the bang (!) by just typing :Please.
-function! BangLastCommand() &amp;quot; The last command that was run is stored in the register `:` (:registers) let lastcommand = split(@:, &#39; &#39;) let command = lastcommand[0] . &#39;! &#39; . join(lastcommand[1:], &#39; &#39;) execute command endfunction command! Please call BangLastCommand()  So, now, if you do:
-:e ~/.vimrc  And you get an error because the current file has to be save, something like:</description>
+function! BangLastCommand()&amp;#34; The last command that was run is stored in the register `:` (:registers) let lastcommand = split(@:, &amp;#39; &amp;#39;) let command = lastcommand[0] . &amp;#39;! &amp;#39; . join(lastcommand[1:], &amp;#39; &amp;#39;) execute command endfunctioncommand! Please call BangLastCommand() So, now, if you do:
+:e ~/.vimrc And you get an error because the current file has to be save, something like:</description>
     </item>
     
     <item>

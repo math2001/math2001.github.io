@@ -19,7 +19,7 @@
       
       <guid>https://math2001.github.io/post/confirm-option-vim/</guid>
       <description>This is probably one of my favorite option in VIM. Just add this to your .vimrc:
-set confirm  This will affect different command in VIM: instead of just failing (and telling you to use force if you want to overwrite), it&amp;rsquo;ll show a confirm &amp;ldquo;popup&amp;rdquo; at the bottom and you&amp;rsquo;ll be good to do.
+set confirm This will affect different command in VIM: instead of just failing (and telling you to use force if you want to overwrite), it&amp;rsquo;ll show a confirm &amp;ldquo;popup&amp;rdquo; at the bottom and you&amp;rsquo;ll be good to do.
 Quick example When you want to quit a file that isn&amp;rsquo;t saved, here&amp;rsquo;s what you get:</description>
     </item>
     

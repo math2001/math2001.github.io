@@ -19,7 +19,7 @@
       
       <guid>https://math2001.github.io/post/silent-command-line-mapping/</guid>
       <description>If you want to set a mapping to run something that is echoed into the command line (something starting with : or / for example) to not be displayed, you can use the special argument silent, like so for example:
-map &amp;lt;silent&amp;gt; &amp;lt;leader&amp;gt;r :MyCommand  By the way, you should (almost) always use noremap.
+map &amp;lt;silent&amp;gt; &amp;lt;leader&amp;gt;r :MyCommand By the way, you should (almost) always use noremap.
 Learn more: :help :map-silent</description>
     </item>
     

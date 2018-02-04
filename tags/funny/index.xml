@@ -21,7 +21,7 @@
       <description>Today I learned something a bit weird in mathematics, which I find quiet funny. Here it is:
  Write 0.9 repeater (0.999&amp;hellip;) in the form of a fraction
  This can be done using an equation, have a look:
- n = 0.999... 10n = 9.999... 10n - n = 9 9n = 9 n = 1  So, 0.9 repeater is equal to 1. When I saw this, I thought I made a mistake somewhere, but I didn&amp;rsquo;t, and here&amp;rsquo;s how I &amp;ldquo;explain&amp;rdquo; it (to myself at least).</description>
+n = 0.999... 10n = 9.999... 10n - n = 9 9n = 9 n = 1 So, 0.9 repeater is equal to 1. When I saw this, I thought I made a mistake somewhere, but I didn&amp;rsquo;t, and here&amp;rsquo;s how I &amp;ldquo;explain&amp;rdquo; it (to myself at least).</description>
     </item>
     
   </channel>

@@ -19,7 +19,7 @@
       
       <guid>https://math2001.github.io/post/current-buffer-only-mapping-vim/</guid>
       <description>If you want to set a mapping only for the current buffer in VIM, it&amp;rsquo;s super simple: just use the buffer special argument, like so for example:
-nnoremap &amp;lt;buffer&amp;gt; ,tip call InsertTipYamlFrontMatter()  Learn more: :help :map-local</description>
+nnoremap &amp;lt;buffer&amp;gt; ,tip call InsertTipYamlFrontMatter() Learn more: :help :map-local</description>
     </item>
     
   </channel>

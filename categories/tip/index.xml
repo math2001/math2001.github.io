@@ -19,7 +19,7 @@
       
       <guid>https://math2001.github.io/post/the-last-terminal-title/</guid>
       <description>I use tmux, and in the tabs, it displays the terminal&amp;rsquo;s title, which is just done by this 2 lines in your .tmux.conf:
-setw -g window-status-current-format &#39; #{pane_title} &#39; setw -g window-status-format &#39; #{pane_title} &#39;  What should you display in the tabs in your opinion? For me, it&amp;rsquo;s obvious: the last command that I ran, and the location. Now, we can&amp;rsquo;t display the whole path, but just the current folder name does perfectly the job.</description>
+setw -g window-status-current-format &amp;#39; #{pane_title} &amp;#39; setw -g window-status-format &amp;#39; #{pane_title} &amp;#39; What should you display in the tabs in your opinion? For me, it&amp;rsquo;s obvious: the last command that I ran, and the location. Now, we can&amp;rsquo;t display the whole path, but just the current folder name does perfectly the job.</description>
     </item>
     
   </channel>

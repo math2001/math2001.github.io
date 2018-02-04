@@ -46,7 +46,7 @@ it actually allows you to run commands on each of those files.&lt;/p&gt;
       
       <guid>https://math2001.github.io/post/string-module-python/</guid>
       <description>If you want the list of every letter, just do:
-&amp;gt;&amp;gt;&amp;gt; import string &amp;gt;&amp;gt;&amp;gt; print(string.ascii_uppercase) ABCDEFGHIJKLMNOPQRSTUVWXYZ  </description>
+&amp;gt;&amp;gt;&amp;gt; import string &amp;gt;&amp;gt;&amp;gt; print(string.ascii_uppercase) ABCDEFGHIJKLMNOPQRSTUVWXYZ</description>
     </item>
     
   </channel>

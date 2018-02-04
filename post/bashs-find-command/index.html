@@ -209,81 +209,7 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
 </style><style>
-    /* Tomorrow Night Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-  color: #969896;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-  color: #cc6666;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-  color: #de935f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-  color: #f0c674;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-  color: #b5bd68;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-  color: #81a2be;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-  color: #b294bb;
-}
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  background: #1d1f21;
-  color: #c5c8c6;
-  padding: 0.5em;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
-}
+    .highlight .hll{background-color:#4f5b66}.highlight{background:#2b303b;color:#eff1f5}.highlight .c{color:#65737e}.highlight .err{color:#bf616a}.highlight .k{color:#b48ead}.highlight .l{color:#d08770}.highlight .n{color:#eff1f5}.highlight .o{color:#96b5b4}.highlight .p{color:#eff1f5}.highlight .cm{color:#65737e}.highlight .cp{color:#65737e}.highlight .c1{color:#65737e}.highlight .cs{color:#65737e}.highlight .gd{color:#bf616a}.highlight .ge{font-style:italic}.highlight .gh{color:#eff1f5;font-weight:700}.highlight .gi{color:#a3be8c}.highlight .gp{color:#65737e;font-weight:700}.highlight .gs{font-weight:700}.highlight .gu{color:#96b5b4;font-weight:700}.highlight .kc{color:#b48ead}.highlight .kd{color:#b48ead}.highlight .kn{color:#96b5b4}.highlight .kp{color:#b48ead}.highlight .kr{color:#b48ead}.highlight .kt{color:#ebcb8b}.highlight .ld{color:#a3be8c}.highlight .m{color:#d08770}.highlight .s{color:#a3be8c}.highlight .na{color:#8fa1b3}.highlight .nb{color:#eff1f5}.highlight .nc{color:#ebcb8b}.highlight .no{color:#bf616a}.highlight .nd{color:#96b5b4}.highlight .ni{color:#eff1f5}.highlight .ne{color:#bf616a}.highlight .nf{color:#8fa1b3}.highlight .nl{color:#eff1f5}.highlight .nn{color:#ebcb8b}.highlight .nx{color:#8fa1b3}.highlight .py{color:#eff1f5}.highlight .nt{color:#96b5b4}.highlight .nv{color:#bf616a}.highlight .ow{color:#96b5b4}.highlight .w{color:#eff1f5}.highlight .mf{color:#d08770}.highlight .mh{color:#d08770}.highlight .mi{color:#d08770}.highlight .mo{color:#d08770}.highlight .sb{color:#a3be8c}.highlight .sc{color:#eff1f5}.highlight .sd{color:#65737e}.highlight .s2{color:#a3be8c}.highlight .se{color:#d08770}.highlight .sh{color:#a3be8c}.highlight .si{color:#d08770}.highlight .sx{color:#a3be8c}.highlight .sr{color:#a3be8c}.highlight .s1{color:#a3be8c}.highlight .ss{color:#a3be8c}.highlight .bp{color:#eff1f5}.highlight .vc{color:#bf616a}.highlight .vg{color:#bf616a}.highlight .vi{color:#bf616a}.highlight .il{color:#d08770}
 
 </style><style>
     .page-top {
@@ -345,72 +271,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   padding: 1px 0;
 }
 
-.page-comments {
-  max-width: 100%;
-  width: 600px;
-  margin: auto;
-  text-align: left;
-}
-
-.page-comment {
-  display: flex;
-  width: 100%;
-  margin: 50px 0;
-  padding: 10px;
-  align-items: center;
-}
-
-.page-comment-author {
-  display: inline-block;
-  position: relative;
-  margin-right: 10px;
-  color: inherit;
-  text-decoration: none;
-  font-size: 80%;
-}
-
-.page-comment-author:hover .page-comment-author-name {
-  text-decoration: underline;
-}
-
-.page-comment-author-name {
-  margin: 0;
-  text-align: center;
-}
-.page-comment-author-avatar {
-  width: 50px;
-  margin: 0 10px;
-}
-
-.page-comment-content {
-  flex: 1;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 5px 5px 20px #ddd;
-}
-.page-comment-content p:first-of-type { margin-top: 0; }
-.page-comment-content p:last-of-type { margin-bottom: 0; }
-.page-date {
-  font-style: italic;
-  color: var(--font-mute);
-}
-
-.page-comments-blocked {
-  text-align: center;
-}
-
-.page-comments-padlock {
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  vertical-align: middle;
-}
-
-.page-comments-none,
-.page-comments-loading {
-  text-align: center;
-}
-
 .page-share, .page-share-list {
   display: inline-block;
   vertical-align: middle;
@@ -437,13 +297,13 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
 /* content */
 
-.page-content code {
+.page-content .highlight {
   font-family: var(--monospace);
   font-size: .9em;
 }
 
-.page-content pre code {
-  padding: 20px;
+.page-content .highlight {
+  padding: 10px 20px;
 }
 
 .page-content :not(pre) > code {
@@ -595,8 +455,7 @@ it actually allows you to run commands on each of those files.</p>
 <h3 id="the-basics">The basics</h3>
 
 <p>With this structure:</p>
-
-<pre><code>.
+<div class="highlight"><pre class="chroma">.
 ├── app
 │   ├── index.html
 │   ├── app.js
@@ -604,10 +463,7 @@ it actually allows you to run commands on each of those files.</p>
 └── dist
     ├── app.js
     ├── index.html
-    └── style.css
-</code></pre>
-
-<pre><code class="language-bash">$ find
+    └── style.css</pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find
 .
 ./app
 ./app/app.js
@@ -616,30 +472,24 @@ it actually allows you to run commands on each of those files.</p>
 ./dist
 ./dist/app.js
 ./dist/index.html
-./dist/style.css
-</code></pre>
-
+./dist/style.css</code></pre></div>
 <p>It lists every folder and files recursively.</p>
 
 <p>You can specify a path to find items in, like so:</p>
-
-<pre><code class="language-bash">$ find app
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find app
 app
 app/index.html
 app/script
 app/script/app.js
 app/style
-app/style/style.css
-</code></pre>
-
+app/style/style.css</code></pre></div>
 <h3 id="tests-filters">Tests (filters)</h3>
 
 <p>Some of <code>find</code>&rsquo;s power comes from it&rsquo;s ability to <em>filter</em> which files and
 folder it &ldquo;selects&rdquo;. They are called <em>tests</em>. So, here are some of them:</p>
 
 <h4 id="type"><code>-type</code></h4>
-
-<pre><code class="language-bash">$ find -type f
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -type f
 ./app/app.js
 ./app/index.html
 ./app/style.css
@@ -649,23 +499,18 @@ folder it &ldquo;selects&rdquo;. They are called <em>tests</em>. So, here are so
 $ find -type d
 .
 ./app
-./dist
-</code></pre>
-
+./dist</code></pre></div>
 <p>Here, the filter is <code>-type</code>. You guessed it, <code>-type f</code> selects files, and <code>-type
 d</code> selects directories. <a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html#Type" target="_blank">More about <code>-type</code></a></p>
 
 <h4 id="name"><code>-name</code></h4>
-
-<pre><code class="language-bash">$ find -name &quot;*.js&quot;
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -name <span class="s2">&#34;*.js&#34;</span>
 ./app/app.js
 ./dist/app.js
-$ find -name &quot;*.JS&quot;
-$ find -iname &quot;*.JS&quot;
+$ find -name <span class="s2">&#34;*.JS&#34;</span>
+$ find -iname <span class="s2">&#34;*.JS&#34;</span>
 ./app/app.js
-./dist/app.js
-</code></pre>
-
+./dist/app.js</code></pre></div>
 <p><code>-name</code> takes a glob. The <code>-iname</code> variant is case insensitive. <a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html#Base-Name-Patterns" target="_blank">More about
 <code>-name</code></a></p>
 
@@ -690,12 +535,9 @@ matches the current file (<code>-name &quot;*.js&quot;</code> returns true for <
 expr3</code> is the same as <code>(expr1 or expr2) and expr3</code>.</p>
 
 <h4 id="and"><code>-and</code></h4>
-
-<pre><code class="language-bash">$ find -name &quot;*.js&quot; -type f
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -name <span class="s2">&#34;*.js&#34;</span> -type f
 ./app/app.js
-./dist/app.js
-</code></pre>
-
+./dist/app.js</code></pre></div>
 <p>Pretty straight forward, right? You select items that finish with <code>.js</code> <em>and</em>
 that are file. You can guess the operator <code>-and</code> is the default one. Therefore
 <code>find -name &quot;*.js&quot; -and -type f</code> is the exact same!</p>
@@ -703,64 +545,49 @@ that are file. You can guess the operator <code>-and</code> is the default one. 
 <h4 id="or"><code>-or</code></h4>
 
 <p>What if you want <code>.js</code> and <code>.css</code> files? You can use the <code>-or</code> operator:</p>
-
-<pre><code class="language-bash">$ find -name &quot;*.js&quot; -or -name &quot;*.css&quot; -type f
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -name <span class="s2">&#34;*.js&#34;</span> -or -name <span class="s2">&#34;*.css&#34;</span> -type f
 ./app/app.js
 ./app/style.css
 ./dist/app.js
-./dist/style.css
-</code></pre>
-
+./dist/style.css</code></pre></div>
 <p>Again, this is the same as <code>find -name &quot;*.js&quot; -or -name &quot;*.css&quot; -and -type f</code>.</p>
 
 <h4 id="not"><code>-not</code></h4>
 
 <p>If you want every files that do <em>not</em> end with <code>.js</code>, you can do:</p>
-
-<pre><code class="language-bash">$ find -not -name &quot;*.js&quot; -type f
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -not -name <span class="s2">&#34;*.js&#34;</span> -type f
 ./app/index.html
 ./app/style.css
 ./dist/index.html
-./dist/style.css
-</code></pre>
-
+./dist/style.css</code></pre></div>
 <h4 id="grouping">Grouping</h4>
 
 <p>Of course, you can group expressions together. Here, we find every file that
 finishes by <code>.js</code> or any directories.</p>
-
-<pre><code class="language-bash">$ find \( -name &quot;*.js&quot; -type f \) -or -type d
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find <span class="se">\(</span> -name <span class="s2">&#34;*.js&#34;</span> -type f <span class="se">\)</span> -or -type d
 .
 ./app
 ./app/script
 ./app/script/app.js
 ./app/style
 ./dist
-./dist/app.js
-</code></pre>
-
+./dist/app.js</code></pre></div>
 <p>Thanks to bash (😡), you have to escape the brackets.</p>
 
 <h4 id="comma">Comma <code>,</code></h4>
 
 <p>Separates 2 expressions: it evaluates both of them, but only returns the value
 of the second one.</p>
-
-<pre><code>$ find -name &quot;whatever&quot; , -name &quot;*.html&quot;
+<div class="highlight"><pre class="chroma">$ find -name &#34;whatever&#34; , -name &#34;*.html&#34;
 ./app/index.html
-./dist/index.html
-</code></pre>
-
+./dist/index.html</pre></div>
 <h4 id="aliases">Aliases</h4>
 
 <p>You can use some aliases, although I don&rsquo;t recommend doing so, they aren&rsquo;t as
 clear:</p>
-
-<pre><code>-o = -or
+<div class="highlight"><pre class="chroma">-o = -or
 -a = -and
-! = -not (you'll need to escape it though, like so \!)
-</code></pre>
-
+! = -not (you&#39;ll need to escape it though, like so \!)</pre></div>
 <p><a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html#Combining-Primaries-With-Operators" target="_blank">More about operators</a></p>
 
 <h3 id="actions">Actions</h3>
@@ -768,16 +595,13 @@ clear:</p>
 <p>Now, printing out the filenames if fun, doing some stuff with them is even
 better! And guess why it actually prints out the filenames: because the default
 action is <code>-print</code>!</p>
-
-<pre><code class="language-bash">$ find -type f -print
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -type f -print
 ./app/app.js
 ./app/index.html
 ./app/style.css
 ./dist/app.js
 ./dist/index.html
-./dist/style.css
-</code></pre>
-
+./dist/style.css</code></pre></div>
 <p>It&rsquo;s exactly what you&rsquo;d expect, right?</p>
 
 <p>Note: Just as the tests, actions <strong>return a value</strong> too. Remember this.</p>
@@ -790,10 +614,7 @@ them, like <code>rm</code>).</p>
 
 <p>If you want to delete every temporary file created by vim (files that end with
 <code>~</code>), you can just run this:</p>
-
-<pre><code class="language-bash">$ find -name &quot;*~&quot; -delete
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -name <span class="s2">&#34;*~&#34;</span> -delete</code></pre></div>
 <p>Gone! Every temp files are gone!</p>
 
 <p>What I recommend you do before this is run just <code>find -name &quot;*~&quot;</code> so that you
@@ -807,12 +628,9 @@ action <code>-exec</code>.</p>
 <p>This action takes an undefined number of parameters representing a command that
 it&rsquo;s going to run on <em>every</em> selected files. It stops &ldquo;consuming&rdquo; arguments as
 soon as it sees a <code>;</code>. Note that <code>{}</code> will be replace with file&rsquo;s path. So,</p>
-
-<pre><code class="language-bash">$ find -name &quot;*~&quot; -delete
-$ # does the same thing as
-$ find -name &quot;*~&quot; -exec rm {} \;
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -name <span class="s2">&#34;*~&#34;</span> -delete
+$ <span class="c1"># does the same thing as
+</span><span class="c1"></span>$ find -name <span class="s2">&#34;*~&#34;</span> -exec rm <span class="o">{}</span> <span class="se">\;</span></code></pre></div>
 <p>Note: as you can see, we need to escape the <code>;</code> to prevent bash from
 interpreting it.</p>
 
@@ -822,15 +640,9 @@ interpreting it.</p>
 
 <p>It&rsquo;s better to run one command on multiple files than multiple commands on one
 file each time. For example, the first one is better:</p>
-
-<pre><code class="language-bash">$ rm 1.jpg 2.jpg 3.jpg
-</code></pre>
-
-<pre><code class="language-bash">$ rm 1.jpg
-$ rm 2.jpg
-$ rm 3.jpg
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ rm <span class="m">1</span>.jpg <span class="m">2</span>.jpg <span class="m">3</span>.jpg</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ rm <span class="m">1</span>.jpg
+$ rm <span class="m">2</span>.jpg
+$ rm <span class="m">3</span>.jpg</code></pre></div>
 <p>Of course, the ability to do that depends on the command, but <code>find</code> gives you
 the possibility of doing that in your <code>-exec</code> actions.</p>
 
@@ -838,10 +650,7 @@ the possibility of doing that in your <code>-exec</code> actions.</p>
 system.</p>
 
 <p>In order to do that, you have to use <code>{} +</code>, like so:</p>
-
-<pre><code class="language-bash">$ find -name &quot;*~&quot; -exec rm {} +
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -name <span class="s2">&#34;*~&#34;</span> -exec rm <span class="o">{}</span> +</code></pre></div>
 <p>In this case <code>{} +</code> will be replaced by as many paths as the maximum command
 line length of your system allows.</p>
 
@@ -871,22 +680,16 @@ actions to the command line arguments.</p>
 <p>The <code>-prune</code> action allows you to prevent <code>find</code> from going into a directory
 that matches some tests. Weirdly enough though, it returns <code>true</code> when it found
 a directory to ignore. For example:</p>
-
-<pre><code class="language-bash">$ find -name &quot;app&quot; -prune
-./app
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -name <span class="s2">&#34;app&#34;</span> -prune
+./app</code></pre></div>
 <p>So, it only lists directories that it ignores.  To counter that, just add <code>-or
 -print</code></p>
-
-<pre><code class="language-bash">$ find -name &quot;app&quot; -prune -or -print
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -name <span class="s2">&#34;app&#34;</span> -prune -or -print
 .
 ./dist
 ./dist/app.js
 ./dist/index.html
-./dist/style.css
-</code></pre>
-
+./dist/style.css</code></pre></div>
 <blockquote>
 <p>Hold on a sec&hellip; <code>-or</code>? But <code>-prune</code> would return false when it looks at
 <code>./app/app.js</code> for example, why doesn&rsquo;t it print then?</p>
@@ -899,8 +702,7 @@ a directory to ignore. For example:</p>
 
 <p>The problem is that it doesn&rsquo;t play well with <code>-depth</code>. It actually doesn&rsquo;t
 work, have a look:</p>
-
-<pre><code class="language-bash">$ find -depth -name &quot;app&quot; -prune -or -print
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -depth -name <span class="s2">&#34;app&#34;</span> -prune -or -print
 ./app/index.html
 ./app/script/app.js
 ./app/script
@@ -910,22 +712,17 @@ work, have a look:</p>
 ./dist/index.html
 ./dist/style.css
 ./dist
-.
-</code></pre>
-
+.</code></pre></div>
 <p>It doesn&rsquo;t have the time to &ldquo;prune&rdquo; the directory since we start from the
 bottom.</p>
 
 <p>Remember: <code>-delete</code> implies <code>-depth</code>. Therefore, DO NOT USE <code>-prune</code> with
 <code>-delete</code>. Instead, &ldquo;prune&rdquo; it manually with <code>-path</code>:</p>
-
-<pre><code class="language-bash">$ find -depth -not -path &quot;*app*&quot;
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -depth -not -path <span class="s2">&#34;*app*&#34;</span>
 ./dist/index.html
 ./dist/style.css
 ./dist
-.
-</code></pre>
-
+.</code></pre></div>
 <p>Ok, I guess that&rsquo;s it! If you want to learn even more, have a look at the
 <a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html" target="_blank">documentation</a>.</p>
 
@@ -954,7 +751,6 @@ post!</p></section>
             </a>
         </li>
     </ul>
-    <section id="page-comments" class="page-comments"></section>
 </div>    </main>
 </div>
 <footer>
@@ -1014,13 +810,8 @@ loadCSS([
     { href: 'phone.css', media: 'screen and (max-width: 600px)' },
     { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
 ])
-</script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script><script>
-    document.querySelector('#page-comments').innerHTML = 
-    `<p class="page-comments-blocked">
-        <svg class="page-comments-padlock"><use href="#si-padlock"></svg>
-        Comments are blocked for this post
-    </p>`
 </script>
+
 <script>
     function gtag_callback() {
         window.dataLayer = window.dataLayer || [];

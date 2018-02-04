@@ -19,7 +19,7 @@
       
       <guid>https://math2001.github.io/post/difference-vim-options-readonly-modifiable/</guid>
       <description>Do you know the difference between those 2 options
-set readonly set nomodifiable  All the readonly does, when enabled, is it prevents you from writing the file (you can bypass it by doing :w! though), while modifiable, when disabled prevents you from actually editing the buffer.</description>
+set readonlyset nomodifiable All the readonly does, when enabled, is it prevents you from writing the file (you can bypass it by doing :w! though), while modifiable, when disabled prevents you from actually editing the buffer.</description>
     </item>
     
     <item>

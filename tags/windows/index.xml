@@ -20,9 +20,9 @@
       <guid>https://math2001.github.io/post/change-shell-run-external-command-vim/</guid>
       <description>On windows, the cmd sucks. But if you have sh installed from git-for-windows for example, you can tell vim to run external commands :!.
 Add this to your .vimrc
-set shell=sh set shellcmdflag=-c  Now, vim won&amp;rsquo;t run external commands like this
-cmd /c &amp;quot;your command&amp;quot;  But like this:
-sh -c &amp;quot;your command&amp;quot;  So, you can now run Unix commands from VIM.
+set shell=shset shellcmdflag=-c Now, vim won&amp;rsquo;t run external commands like this
+cmd /c &amp;#34;your command&amp;#34; But like this:
+sh -c &amp;#34;your command&amp;#34; So, you can now run Unix commands from VIM.
 To learn more: :help &#39;shell&#39;</description>
     </item>
     
