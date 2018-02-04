@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017</copyright>
-    <lastBuildDate>Fri, 02 Feb 2018 17:41:26 +1100</lastBuildDate>
+    <lastBuildDate>Sun, 04 Feb 2018 15:07:11 +1100</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Last Terminal Title</title>
+      <link>https://math2001.github.io/post/the-last-terminal-title/</link>
+      <pubDate>Sun, 04 Feb 2018 15:07:11 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/post/the-last-terminal-title/</guid>
+      <description>I use tmux, and in the tabs, it displays the terminal&amp;rsquo;s title, which is just done by this 2 lines in your .tmux.conf:
+setw -g window-status-current-format &#39; #{pane_title} &#39; setw -g window-status-format &#39; #{pane_title} &#39;  What should you display in the tabs in your opinion? For me, it&amp;rsquo;s obvious: the last command that I ran, and the location. Now, we can&amp;rsquo;t display the whole path, but just the current folder name does perfectly the job.</description>
+    </item>
     
     <item>
       <title>0.9 Repeater</title>

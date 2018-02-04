@@ -4,20 +4,18 @@
     <meta name="generator" content="Hugo 0.35" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link href="https://math2001.github.io/tags/index.xml" rel="alternate" type="application/rss+xml" title="Math2001&#39;s blog" />
-    <link href="https://math2001.github.io/tags/index.xml" rel="feed" type="application/rss+xml" title="Math2001&#39;s blog" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@_math2001">
     <meta name="twitter:creator" content="@_math2001">
 
-    <meta property="og:title" content="Tags">
+    <meta property="og:title" content="The Last Terminal Title">
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
-    <meta property="og:url" content="https://math2001.github.io/tags/">
-    <meta property="og:description" content="💻 My little open sourced home 🎉">
+    <meta property="og:url" content="https://math2001.github.io/post/the-last-terminal-title/">
+    <meta property="og:description" content="I use tmux, and in the tabs, it displays the terminal&rsquo;s title, which is just done by this 2 lines in your .tmux.conf:
+setw -g window-status-current-format &#39; #{pane_title} &#39; setw -g window-status-format &#39; #{pane_title} &#39;  What should you display in the tabs in your opinion? For me, it&rsquo;s obvious: the last command that I ran, and the location. Now, we can&rsquo;t display the whole path, but just the current folder name does perfectly the job.">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Tags - Math2001&#39;s blog</title><style>
+    <title>The Last Terminal Title - Math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Menlo, Inconsolata, consolas, monospace;
@@ -205,20 +203,275 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
 </style><style>
-    .terms-top {
+    /* Tomorrow Night Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #969896;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #cc6666;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #de935f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+  color: #f0c674;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #b5bd68;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+  color: #81a2be;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #b294bb;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #1d1f21;
+  color: #c5c8c6;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+</style><style>
+    .page-top {
+  padding: 0 10px;
   text-align: center;
 }
 
-.terms-content {
-  width: 500px;
-  max-width: 100%;
-  margin: auto;
-  columns: auto 10em;
+.page-title {
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
-.terms-tags,
-.terms-categories {
+.page-categories {
+  margin-top: 0;
+}
+
+.page-categories, .page-tags,
+.page-categories li, .page-tags li {
+  display: inline-block;
+}
+
+.page-tags {
+  text-align: center;
+  flex-basis: 100%;
   margin: 0;
+}
+
+.repository-star {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.page-warning {
+  text-align: center;
+}
+
+.page-content {
+  width: 960px;
+  max-width: 100%;
+  margin: 20px auto;
+  background: white;
+  text-align: justify;
+  box-shadow: 5px 5px 20px #ddd;
+  padding: 10px 30px;
+}
+
+.page-content hr {
+  border: none;
+  border-top: 4px solid hsla(192, 16%, 92%, 1);
+  margin: 30px auto;
+}
+
+.page-content img {
+  max-width: 100%;
+}
+
+.page-bottom {
+  text-align: center;
+  padding: 1px 0;
+}
+
+.page-comments {
+  max-width: 100%;
+  width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.page-comment {
+  display: flex;
+  width: 100%;
+  margin: 50px 0;
+  padding: 10px;
+  align-items: center;
+}
+
+.page-comment-author {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 80%;
+}
+
+.page-comment-author:hover .page-comment-author-name {
+  text-decoration: underline;
+}
+
+.page-comment-author-name {
+  margin: 0;
+  text-align: center;
+}
+.page-comment-author-avatar {
+  width: 50px;
+  margin: 0 10px;
+}
+
+.page-comment-content {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 5px 5px 20px #ddd;
+}
+.page-comment-content p:first-of-type { margin-top: 0; }
+.page-comment-content p:last-of-type { margin-bottom: 0; }
+.page-date {
+  font-style: italic;
+  color: var(--font-mute);
+}
+
+.page-comments-blocked {
+  text-align: center;
+}
+
+.page-comments-padlock {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+}
+
+.page-comments-none,
+.page-comments-loading {
+  text-align: center;
+}
+
+.page-share, .page-share-list {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page-share-list {
+  padding: 0;
+  list-style: none;
+}
+
+.page-share-list li {
+  display: inline-block;
+  margin: 5px;
+}
+
+.page-share-list svg {
+  width: 25px;
+  height: 25px;
+}
+
+.page-read-other {
+  margin-top: 40px;
+}
+
+/* content */
+
+.page-content code {
+  font-family: var(--monospace);
+  font-size: .9em;
+}
+
+.page-content pre code {
+  padding: 20px;
+}
+
+.page-content :not(pre) > code {
+  background-color: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+
+.page-content blockquote {
+  border-left: 6px solid #ddd;
+  margin-left: 0;
+  padding-left: 10px;
+  color: #aaa;
+}
+
+.page-content kbd {
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+.page-content table {
+  border-collapse: collapse;
+}
+
+.page-content td, th {
+  border: 1px solid #DDD;
+  padding: 2px 5px;
+}
+
+.page-content th {
+  font-weight: normal;
+  background-color: #F9F9F9;
 }
 
 </style><style>
@@ -310,121 +563,108 @@ header a {
     
         <span id="show-header" class="show-header"></span>
     
-
-
-<div class="terms-top">
-    <h1>Tags</h1>
-</div>
-
-<div class="terms-content">
-    <ul class="tags terms-tags">
-        
-        <li>(1) <a href="alphabet">alphabet</a></li>
-        
-        <li>(1) <a href="ascii">ascii</a></li>
-        
-        <li>(1) <a href="bang">bang</a></li>
-        
-        <li>(5) <a href="bash">bash</a></li>
-        
-        <li>(2) <a href="binary">binary</a></li>
-        
-        <li>(1) <a href="bit-manipulation">bit-manipulation</a></li>
-        
-        <li>(1) <a href="buffer">buffer</a></li>
-        
-        <li>(1) <a href="chrome">chrome</a></li>
-        
-        <li>(1) <a href="command">command</a></li>
-        
-        <li>(1) <a href="completion">completion</a></li>
-        
-        <li>(1) <a href="conventions">conventions</a></li>
-        
-        <li>(1) <a href="css">css</a></li>
-        
-        <li>(1) <a href="date">date</a></li>
-        
-        <li>(1) <a href="devtools">devtools</a></li>
-        
-        <li>(1) <a href="doc">doc</a></li>
-        
-        <li>(1) <a href="editor">editor</a></li>
-        
-        <li>(1) <a href="file-manupilation">file manupilation</a></li>
-        
-        <li>(1) <a href="find">find</a></li>
-        
-        <li>(1) <a href="funny">funny</a></li>
-        
-        <li>(1) <a href="github-pages">github-pages</a></li>
-        
-        <li>(1) <a href="hugo">hugo</a></li>
-        
-        <li>(2) <a href="javascript">javascript</a></li>
-        
-        <li>(2) <a href="map">map</a></li>
-        
-        <li>(1) <a href="module">module</a></li>
-        
-        <li>(1) <a href="network">network</a></li>
-        
-        <li>(1) <a href="new">new</a></li>
-        
-        <li>(3) <a href="nodejs">nodejs</a></li>
-        
-        <li>(1) <a href="option">option</a></li>
-        
-        <li>(1) <a href="options">options</a></li>
-        
-        <li>(1) <a href="performances">performances</a></li>
-        
-        <li>(1) <a href="perfs">perfs</a></li>
-        
-        <li>(1) <a href="preview">preview</a></li>
-        
-        <li>(3) <a href="python">python</a></li>
-        
-        <li>(1) <a href="scopes">scopes</a></li>
-        
-        <li>(1) <a href="sh">sh</a></li>
-        
-        <li>(1) <a href="shell">shell</a></li>
-        
-        <li>(1) <a href="static-site">static site</a></li>
-        
-        <li>(1) <a href="static-website">static website</a></li>
-        
-        <li>(1) <a href="strftime">strftime</a></li>
-        
-        <li>(1) <a href="string">string</a></li>
-        
-        <li>(2) <a href="svg">svg</a></li>
-        
-        <li>(1) <a href="svgstore">svgstore</a></li>
-        
-        <li>(1) <a href="symbols">symbols</a></li>
-        
-        <li>(1) <a href="template">template</a></li>
-        
-        <li>(1) <a href="terminal">terminal</a></li>
-        
-        <li>(1) <a href="testing">testing</a></li>
-        
-        <li>(1) <a href="variable">variable</a></li>
-        
-        <li>(14) <a href="vim">vim</a></li>
-        
-        <li>(4) <a href="vimscript">vimscript</a></li>
-        
-        <li>(1) <a href="windows">windows</a></li>
-        
-        <li>(1) <a href="zen">zen</a></li>
-        
+<div class="page-top">
+    <h1 class="page-title">The Last Terminal Title</h1>
+    <ul class="page-categories categories">
+        <li><a href="/categories/tip">tip</a></li>
     </ul>
-</div>
+    
+    <ul class="page-tags tags">
+        <li><a href="/tags/bash">bash</a></li>
+        <li><a href="/tags/terminal">terminal</a></li>
+    </ul>
 
-    </main>
+    
+
+</div><section class="page-content">
+
+<p><img src="/img/tmux-title.png" alt="ls@asyncio   vim@math2001.github.io   git@dotfiles" /></p>
+
+<p>I use tmux, and in the tabs, it displays the terminal&rsquo;s title, which is just
+done by this 2 lines in your <code>.tmux.conf</code>:</p>
+
+<pre><code>setw -g window-status-current-format ' #{pane_title} '
+setw -g window-status-format ' #{pane_title} '
+</code></pre>
+
+<p>What should you display in the tabs in your opinion? For me, it&rsquo;s obvious: the
+last command that I ran, and the location. Now, we can&rsquo;t display the whole path,
+but just the current folder name does perfectly the job. It&rsquo;d be something like
+<code>vim@math2001.github.io</code>.</p>
+
+<p>And I tried this a fair while ago, but didn&rsquo;t succeed (it was super slow,
+because you have to re-compute it every time).</p>
+
+<p>But, today, I find a super simple (and fast) solution.</p>
+
+<h3 id="the-last-command">The last command</h3>
+
+<p>To get the last command, we use bash&rsquo;s history, like so:</p>
+
+<pre><code class="language-bash">history | awk '{END print $2}'
+</code></pre>
+
+<p>This might look a bit complex if you don&rsquo;t know awk, but all it does is take the
+history of commands, take the last line only (because of the <code>END</code>), and print
+the second word (the second field for the purists 😄), which is the
+command.</p>
+
+<h3 id="the-location">The location</h3>
+
+<p>Now, we want the folder name, which we can easily get from the environment
+variable <code>$PWD</code>.</p>
+
+<pre><code class="language-bash">~/some/place $ echo ${PWD/*\//}
+place
+</code></pre>
+
+<p>This is fairly simple: the <code>*</code> matches any character, and because there is a <code>/</code>
+after it (which we have to escape), it only stops when it finds a forward slash.
+Because by default <code>*</code> is greedy (meaning it wants to match as many character as
+possible), it leaves us with the current folder name.</p>
+
+<h3 id="into-our-bashrc">Into our <code>.bashrc</code></h3>
+
+<p>Now, here&rsquo;s how you plug it in your <code>.bashrc</code>:</p>
+
+<pre><code class="language-bash">function window_title {
+    echo -ne &quot;\033]0;$(history | awk 'END {print $2}')@${PWD/*\//}\007&quot;
+}
+
+function my_custom_prompt {
+    window_title
+    # your prompt code
+}
+
+PROMPT_COMMAND=my_custom_prompt
+window_title
+</code></pre>
+</section>
+
+<div class="page-bottom">
+    <p class="page-date">Published on Sunday 4 February 2018</p>
+    <ul class="page-share-list">
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=The&#43;Last&#43;Terminal&#43;Title&amp;url=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fthe-last-terminal-title%2F" target="_blank"
+                onclick="window.open(this.href, 'twitter-share', 'width=580,height=300');return false;">
+                <svg><use href="#si-twitter"></svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fthe-last-terminal-title%2F" target="_blank"
+                onclick="window.open(this.href, 'facebook-share', 'width=580,height=300');return false;">
+                <svg><use href="#si-facebook"></svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://dev.to/new" target="_blank"
+                onclick="window.open(this.href, 'devto-share', 'width=580,height=300');return false;">
+                <svg><use href="#si-dev.to"></svg>
+            </a>
+        </li>
+    </ul>
+    <section id="page-comments" class="page-comments"></section>
+</div>    </main>
 </div>
 <footer>
     <div class="footer-splits">
@@ -483,7 +723,14 @@ loadCSS([
     { href: 'phone.css', media: 'screen and (max-width: 600px)' },
     { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
 ])
-</script><script>
+</script><script src="/js/highlight.pack.js" async onload="hljs.initHighlightingOnLoad()"></script><script>
+    document.querySelector('#page-comments').innerHTML = 
+    `<p class="page-comments-blocked">
+        <svg class="page-comments-padlock"><use href="#si-padlock"></svg>
+        Comments are blocked for this post
+    </p>`
+</script>
+<script>
     function gtag_callback() {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -503,4 +750,3 @@ loadCSS([
 
 </body>
 </html>
-

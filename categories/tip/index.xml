@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tip on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/categories/tip/</link>
+    <description>Recent content in Tip on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017</copyright>
+    <lastBuildDate>Sun, 04 Feb 2018 15:07:11 +1100</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/categories/tip/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Last Terminal Title</title>
+      <link>https://math2001.github.io/post/the-last-terminal-title/</link>
+      <pubDate>Sun, 04 Feb 2018 15:07:11 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/post/the-last-terminal-title/</guid>
+      <description>I use tmux, and in the tabs, it displays the terminal&amp;rsquo;s title, which is just done by this 2 lines in your .tmux.conf:
+setw -g window-status-current-format &#39; #{pane_title} &#39; setw -g window-status-format &#39; #{pane_title} &#39;  What should you display in the tabs in your opinion? For me, it&amp;rsquo;s obvious: the last command that I ran, and the location. Now, we can&amp;rsquo;t display the whole path, but just the current folder name does perfectly the job.</description>
+    </item>
+    
+  </channel>
+</rss>
