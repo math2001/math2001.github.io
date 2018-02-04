@@ -12,6 +12,9 @@ author:
 copyright: © Mathieu Paturel 2017
 enableEmoji: true
 googleAnalytics: "UA-105735012-1"
+pygmentsUseClasses: true
+pygmentsCodefences: true
+pygmentsCodefencesGuessSyntax: true
 
 blackfriday:
   hrefTargetBlank: true
