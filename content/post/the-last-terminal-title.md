@@ -4,9 +4,7 @@ slug: the-last-terminal-title
 date: 2018-02-04T15:07:11+11:00
 categories: [tip]
 tags: [bash, terminal]
-draft: true
 ---
-
 
 ![ls@asyncio   vim@math2001.github.io   git@dotfiles](/img/tmux-title.png)
 
