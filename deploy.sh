@@ -59,7 +59,7 @@ hugo -d "$TEMP" --quiet
 
 git checkout "$TARGET_BRANCH" --quiet &> /dev/null
 
-find -not -path "*.git*" -not -path "*$THEMES_DIR*" -type f -delete
+find -not -path "*.git*" -not -path "*$THEMES_DIR*" -not -name 'README.md' -type f -delete
 find -depth -not -path "*.git*" -not -path "*$THEMES_DIR*" -type d -empty -exec rmdir {} +
 
 mv $TEMP/* .
