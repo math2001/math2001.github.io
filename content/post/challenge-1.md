@@ -24,6 +24,7 @@ I guarantee you the original message:
 - contains only lower case ASCII letters (`abcdefghijklmnopqrstuvwxyz`)
 - has the same spaces as in the encrypted message. So you know that the first
     word will have 2 letters, the second one as well, the third one 7, etc...
+- can only translated to one string (the one I gave you)
 
 ### They found it!
 
