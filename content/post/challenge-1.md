@@ -1,0 +1,39 @@
+---
+title: "Challenge #1: Translate back"
+slug: challenge-1-what-am-i-really
+date: 2018-05-25T22:32:29+10:00
+categories: [ challenge ]
+tags: [ cipher ]
+---
+
+I've got a little challenge for you.
+
+    ib jb eikybfi eite hvim
+
+Can you translate this encrypted text back to its original form?
+
+If you do, send me an email at
+[math2001.contact@protonmail.com](mailto:math2001.contact@protonmail.com)
+explaining how you found it, and I'll add you to the glorious list of people who
+found the solution to my challenge (see below).
+
+### Rules
+
+I guarantee you the original message:
+
+- contains only lower case ASCII letters (`abcdefghijklmnopqrstuvwxyz`)
+- has the same spaces as in the encrypted message. So you know that the first
+    word will have 2 letters, the second one as well, the third one 7, etc...
+
+### They found it!
+
+> The glorious and amazing people who had a crack and found the secret message!
+
+*No one yet. :cry:*
+
+### Solution
+
+Hey hey. Smart one, looking at the right place, :smile:
+
+I'll be posting the original message, as well as an explanation about how it
+worked next week, that is the **Friday 1 June 2018**.
