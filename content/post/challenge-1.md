@@ -1,6 +1,6 @@
 ---
 title: "Challenge #1: Translate back"
-slug: challenge-1-what-am-i-really
+slug: challenge-1-translate-back
 date: 2018-05-25T22:32:29+10:00
 categories: [ challenge ]
 tags: [ cipher ]
