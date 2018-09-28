@@ -207,4 +207,4 @@ Enjoy :smile:
 
 [fzf]: https://github.com/junegunn/fzf
 [fzf.vim]: https://github.com/junegunn/fzf.vim
-[ftplugin]: /posts/vim-type-specific-settings
+[ftplugin]: /post/vim-filetype-specific-settings
