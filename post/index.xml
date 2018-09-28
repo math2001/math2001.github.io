@@ -13,6 +13,31 @@
     
     
     <item>
+      <title>Vim file type specific settings</title>
+      <link>https://math2001.github.io/post/vim-filetype-specific-settings/</link>
+      <pubDate>Fri, 28 Sep 2018 15:25:33 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/vim-filetype-specific-settings/</guid>
+      <description>If you want to run some vim script for a specific file type, don&amp;rsquo;t make an auto command. They get messy really quickly.
+Just edit ~/.vim/ftplugin/&amp;lt;filetype&amp;gt;.vim.
+ ftplugin stands for file type plugin
+ To get the file type of the current file, just do:
+:set filetype? It&amp;rsquo;ll be automatically sourced when you open a file of that specific type.
+Edit matching file Most of the time, you&amp;rsquo;ll find yourself wanting to edit the ftplugin file of the current filetype.</description>
+    </item>
+    
+    <item>
+      <title>Jump to function definition in vim</title>
+      <link>https://math2001.github.io/post/vim-jump-to-function-definition/</link>
+      <pubDate>Fri, 28 Sep 2018 11:47:21 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/vim-jump-to-function-definition/</guid>
+      <description>One of the features I miss from Sublime Text is the Goto Anything. In vim, by default, you have :e **/bit and then tab, and it gets annoying pretty quickly. Thankfully, there&amp;rsquo;s fzf (with fzf.vim).
+But although it provides a fairly long list of commands, it doesn&amp;rsquo;t allow us to jump to function definitions (which is one of the main function of the Goto Anything).
+fzf for the win There&amp;rsquo;s no question, fzf as done a really good job at being easily extensible.</description>
+    </item>
+    
+    <item>
       <title>Challenge #1: Translate back</title>
       <link>https://math2001.github.io/post/challenge-1-translate-back/</link>
       <pubDate>Fri, 25 May 2018 22:32:29 +1000</pubDate>

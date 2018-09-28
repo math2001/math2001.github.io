@@ -7,13 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017</copyright>
-    <lastBuildDate>Sun, 20 Aug 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Alphabet</title>
+      <title>alphabet</title>
       <link>https://math2001.github.io/tags/alphabet/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -22,7 +21,7 @@
     </item>
     
     <item>
-      <title>Ascii</title>
+      <title>ascii</title>
       <link>https://math2001.github.io/tags/ascii/</link>
       <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -31,7 +30,7 @@
     </item>
     
     <item>
-      <title>Bang</title>
+      <title>bang</title>
       <link>https://math2001.github.io/tags/bang/</link>
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -40,7 +39,7 @@
     </item>
     
     <item>
-      <title>Bash</title>
+      <title>bash</title>
       <link>https://math2001.github.io/tags/bash/</link>
       <pubDate>Sun, 04 Feb 2018 15:07:11 +1100</pubDate>
       
@@ -49,7 +48,7 @@
     </item>
     
     <item>
-      <title>Binary</title>
+      <title>binary</title>
       <link>https://math2001.github.io/tags/binary/</link>
       <pubDate>Fri, 13 Oct 2017 16:14:21 +1100</pubDate>
       
@@ -58,7 +57,7 @@
     </item>
     
     <item>
-      <title>Bit-manipulation</title>
+      <title>bit-manipulation</title>
       <link>https://math2001.github.io/tags/bit-manipulation/</link>
       <pubDate>Fri, 13 Oct 2017 16:14:21 +1100</pubDate>
       
@@ -67,7 +66,7 @@
     </item>
     
     <item>
-      <title>Buffer</title>
+      <title>buffer</title>
       <link>https://math2001.github.io/tags/buffer/</link>
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -76,7 +75,7 @@
     </item>
     
     <item>
-      <title>Chrome</title>
+      <title>chrome</title>
       <link>https://math2001.github.io/tags/chrome/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -85,7 +84,7 @@
     </item>
     
     <item>
-      <title>Cipher</title>
+      <title>cipher</title>
       <link>https://math2001.github.io/tags/cipher/</link>
       <pubDate>Fri, 25 May 2018 22:32:29 +1000</pubDate>
       
@@ -94,7 +93,7 @@
     </item>
     
     <item>
-      <title>Command</title>
+      <title>command</title>
       <link>https://math2001.github.io/tags/command/</link>
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -103,7 +102,7 @@
     </item>
     
     <item>
-      <title>Completion</title>
+      <title>completion</title>
       <link>https://math2001.github.io/tags/completion/</link>
       <pubDate>Wed, 27 Sep 2017 12:55:56 +1000</pubDate>
       
@@ -112,7 +111,7 @@
     </item>
     
     <item>
-      <title>Conventions</title>
+      <title>conventions</title>
       <link>https://math2001.github.io/tags/conventions/</link>
       <pubDate>Wed, 13 Sep 2017 14:18:22 +1000</pubDate>
       
@@ -121,7 +120,7 @@
     </item>
     
     <item>
-      <title>Css</title>
+      <title>css</title>
       <link>https://math2001.github.io/tags/css/</link>
       <pubDate>Sun, 08 Oct 2017 17:18:21 +1100</pubDate>
       
@@ -130,7 +129,7 @@
     </item>
     
     <item>
-      <title>Date</title>
+      <title>date</title>
       <link>https://math2001.github.io/tags/date/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -139,7 +138,7 @@
     </item>
     
     <item>
-      <title>Devtools</title>
+      <title>devtools</title>
       <link>https://math2001.github.io/tags/devtools/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -148,7 +147,7 @@
     </item>
     
     <item>
-      <title>Doc</title>
+      <title>doc</title>
       <link>https://math2001.github.io/tags/doc/</link>
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -157,7 +156,7 @@
     </item>
     
     <item>
-      <title>Editor</title>
+      <title>editor</title>
       <link>https://math2001.github.io/tags/editor/</link>
       <pubDate>Tue, 26 Sep 2017 18:03:22 +1000</pubDate>
       
@@ -166,7 +165,7 @@
     </item>
     
     <item>
-      <title>File manupilation</title>
+      <title>file manupilation</title>
       <link>https://math2001.github.io/tags/file-manupilation/</link>
       <pubDate>Sun, 24 Sep 2017 07:51:15 +1000</pubDate>
       
@@ -175,7 +174,16 @@
     </item>
     
     <item>
-      <title>Find</title>
+      <title>filetype</title>
+      <link>https://math2001.github.io/tags/filetype/</link>
+      <pubDate>Fri, 28 Sep 2018 15:25:33 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/tags/filetype/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>find</title>
       <link>https://math2001.github.io/tags/find/</link>
       <pubDate>Sun, 24 Sep 2017 07:51:15 +1000</pubDate>
       
@@ -184,7 +192,7 @@
     </item>
     
     <item>
-      <title>Funny</title>
+      <title>funny</title>
       <link>https://math2001.github.io/tags/funny/</link>
       <pubDate>Fri, 02 Feb 2018 17:41:26 +1100</pubDate>
       
@@ -193,7 +201,16 @@
     </item>
     
     <item>
-      <title>Github-pages</title>
+      <title>fzf</title>
+      <link>https://math2001.github.io/tags/fzf/</link>
+      <pubDate>Fri, 28 Sep 2018 11:47:21 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/tags/fzf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github-pages</title>
       <link>https://math2001.github.io/tags/github-pages/</link>
       <pubDate>Sat, 23 Sep 2017 11:23:45 +1000</pubDate>
       
@@ -202,7 +219,16 @@
     </item>
     
     <item>
-      <title>Hugo</title>
+      <title>go</title>
+      <link>https://math2001.github.io/tags/go/</link>
+      <pubDate>Fri, 28 Sep 2018 11:47:21 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
       <link>https://math2001.github.io/tags/hugo/</link>
       <pubDate>Sat, 23 Sep 2017 11:23:45 +1000</pubDate>
       
@@ -211,7 +237,7 @@
     </item>
     
     <item>
-      <title>Javascript</title>
+      <title>javascript</title>
       <link>https://math2001.github.io/tags/javascript/</link>
       <pubDate>Wed, 27 Sep 2017 11:18:56 +1000</pubDate>
       
@@ -220,7 +246,7 @@
     </item>
     
     <item>
-      <title>Map</title>
+      <title>map</title>
       <link>https://math2001.github.io/tags/map/</link>
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -229,7 +255,7 @@
     </item>
     
     <item>
-      <title>Module</title>
+      <title>module</title>
       <link>https://math2001.github.io/tags/module/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -238,7 +264,7 @@
     </item>
     
     <item>
-      <title>Network</title>
+      <title>network</title>
       <link>https://math2001.github.io/tags/network/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -247,7 +273,7 @@
     </item>
     
     <item>
-      <title>New</title>
+      <title>new</title>
       <link>https://math2001.github.io/tags/new/</link>
       <pubDate>Sat, 09 Sep 2017 19:43:23 +1000</pubDate>
       
@@ -256,7 +282,7 @@
     </item>
     
     <item>
-      <title>Nodejs</title>
+      <title>nodejs</title>
       <link>https://math2001.github.io/tags/nodejs/</link>
       <pubDate>Sun, 08 Oct 2017 17:18:21 +1100</pubDate>
       
@@ -265,7 +291,7 @@
     </item>
     
     <item>
-      <title>Option</title>
+      <title>option</title>
       <link>https://math2001.github.io/tags/option/</link>
       <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
       
@@ -274,7 +300,7 @@
     </item>
     
     <item>
-      <title>Options</title>
+      <title>options</title>
       <link>https://math2001.github.io/tags/options/</link>
       <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -283,7 +309,7 @@
     </item>
     
     <item>
-      <title>Performances</title>
+      <title>performances</title>
       <link>https://math2001.github.io/tags/performances/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -292,7 +318,7 @@
     </item>
     
     <item>
-      <title>Perfs</title>
+      <title>perfs</title>
       <link>https://math2001.github.io/tags/perfs/</link>
       <pubDate>Mon, 21 May 2018 17:59:22 +1000</pubDate>
       
@@ -301,7 +327,7 @@
     </item>
     
     <item>
-      <title>Preview</title>
+      <title>preview</title>
       <link>https://math2001.github.io/tags/preview/</link>
       <pubDate>Fri, 22 Sep 2017 18:31:15 +1000</pubDate>
       
@@ -310,7 +336,7 @@
     </item>
     
     <item>
-      <title>Profile</title>
+      <title>profile</title>
       <link>https://math2001.github.io/tags/profile/</link>
       <pubDate>Mon, 21 May 2018 17:59:22 +1000</pubDate>
       
@@ -319,7 +345,7 @@
     </item>
     
     <item>
-      <title>Python</title>
+      <title>python</title>
       <link>https://math2001.github.io/tags/python/</link>
       <pubDate>Fri, 13 Oct 2017 16:14:21 +1100</pubDate>
       
@@ -328,7 +354,7 @@
     </item>
     
     <item>
-      <title>Scopes</title>
+      <title>scopes</title>
       <link>https://math2001.github.io/tags/scopes/</link>
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -337,7 +363,7 @@
     </item>
     
     <item>
-      <title>Sh</title>
+      <title>sh</title>
       <link>https://math2001.github.io/tags/sh/</link>
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -346,7 +372,7 @@
     </item>
     
     <item>
-      <title>Shell</title>
+      <title>shell</title>
       <link>https://math2001.github.io/tags/shell/</link>
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -355,7 +381,7 @@
     </item>
     
     <item>
-      <title>Static site</title>
+      <title>static site</title>
       <link>https://math2001.github.io/tags/static-site/</link>
       <pubDate>Sat, 23 Sep 2017 11:23:45 +1000</pubDate>
       
@@ -364,7 +390,7 @@
     </item>
     
     <item>
-      <title>Static website</title>
+      <title>static website</title>
       <link>https://math2001.github.io/tags/static-website/</link>
       <pubDate>Sat, 09 Sep 2017 19:43:23 +1000</pubDate>
       
@@ -373,7 +399,7 @@
     </item>
     
     <item>
-      <title>Strftime</title>
+      <title>strftime</title>
       <link>https://math2001.github.io/tags/strftime/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -382,7 +408,7 @@
     </item>
     
     <item>
-      <title>String</title>
+      <title>string</title>
       <link>https://math2001.github.io/tags/string/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -391,7 +417,7 @@
     </item>
     
     <item>
-      <title>Svg</title>
+      <title>svg</title>
       <link>https://math2001.github.io/tags/svg/</link>
       <pubDate>Sun, 08 Oct 2017 17:18:21 +1100</pubDate>
       
@@ -400,7 +426,7 @@
     </item>
     
     <item>
-      <title>Svgstore</title>
+      <title>svgstore</title>
       <link>https://math2001.github.io/tags/svgstore/</link>
       <pubDate>Sun, 08 Oct 2017 17:18:21 +1100</pubDate>
       
@@ -409,7 +435,7 @@
     </item>
     
     <item>
-      <title>Symbols</title>
+      <title>symbols</title>
       <link>https://math2001.github.io/tags/symbols/</link>
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -418,7 +444,7 @@
     </item>
     
     <item>
-      <title>Template</title>
+      <title>template</title>
       <link>https://math2001.github.io/tags/template/</link>
       <pubDate>Wed, 27 Sep 2017 11:18:56 +1000</pubDate>
       
@@ -427,7 +453,7 @@
     </item>
     
     <item>
-      <title>Terminal</title>
+      <title>terminal</title>
       <link>https://math2001.github.io/tags/terminal/</link>
       <pubDate>Sun, 04 Feb 2018 15:07:11 +1100</pubDate>
       
@@ -436,7 +462,7 @@
     </item>
     
     <item>
-      <title>Testing</title>
+      <title>testing</title>
       <link>https://math2001.github.io/tags/testing/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -445,7 +471,7 @@
     </item>
     
     <item>
-      <title>Variable</title>
+      <title>variable</title>
       <link>https://math2001.github.io/tags/variable/</link>
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -454,16 +480,16 @@
     </item>
     
     <item>
-      <title>Vim</title>
+      <title>vim</title>
       <link>https://math2001.github.io/tags/vim/</link>
-      <pubDate>Mon, 21 May 2018 17:59:22 +1000</pubDate>
+      <pubDate>Fri, 28 Sep 2018 15:25:33 +1000</pubDate>
       
       <guid>https://math2001.github.io/tags/vim/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Vimscript</title>
+      <title>vimscript</title>
       <link>https://math2001.github.io/tags/vimscript/</link>
       <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
       
@@ -472,7 +498,7 @@
     </item>
     
     <item>
-      <title>Windows</title>
+      <title>windows</title>
       <link>https://math2001.github.io/tags/windows/</link>
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
@@ -481,7 +507,7 @@
     </item>
     
     <item>
-      <title>Zen</title>
+      <title>zen</title>
       <link>https://math2001.github.io/tags/zen/</link>
       <pubDate>Wed, 13 Sep 2017 14:18:22 +1000</pubDate>
       
