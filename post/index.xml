@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>Tmux Zoom</title>
+      <link>https://math2001.github.io/post/tmux-zoom/</link>
+      <pubDate>Tue, 02 Oct 2018 08:41:38 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/tmux-zoom/</guid>
+      <description>When you have multiple panes open in tmux, just press prefix z to toggle zoom mode. When activated, only the current pane will be shown. 😉</description>
+    </item>
+    
+    <item>
       <title>Vim file type specific settings</title>
       <link>https://math2001.github.io/post/vim-filetype-specific-settings/</link>
       <pubDate>Fri, 28 Sep 2018 15:25:33 +1000</pubDate>
