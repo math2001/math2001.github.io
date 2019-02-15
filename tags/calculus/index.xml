@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>calculus on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/tags/calculus/</link>
+    <description>Recent content in calculus on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017</copyright>
+    <lastBuildDate>Fri, 15 Feb 2019 11:12:47 +1100</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/tags/calculus/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Motion and calculus</title>
+      <link>https://math2001.github.io/post/motion-and-calculus/</link>
+      <pubDate>Fri, 15 Feb 2019 11:12:47 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/post/motion-and-calculus/</guid>
+      <description>Motions If you studied physics, one of the first things you probably did was graph the &amp;ldquo;motion&amp;rdquo; of objects. That is the displacement, velocity, and acceleration at an instant t.
+Observation Let&amp;rsquo;s say we have an object whos displacement is such that:
+$$ s(t) = t^2 \quad \text{where t is the time} $$
+If we graphed this function, we&amp;rsquo;d get a parabola:
+ Now, let&amp;rsquo;s graph its velocity. You can do it manually, but if you try to feel it, you&amp;rsquo;ll see that since as the time goes by the displacement keeps on increasing faster and faster, the velocity could increase linearly.</description>
+    </item>
+    
+    <item>
+      <title>Length of a curve</title>
+      <link>https://math2001.github.io/post/length-of-a-curve/</link>
+      <pubDate>Thu, 14 Feb 2019 21:31:45 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/post/length-of-a-curve/</guid>
+      <description>Finding the length of a curve After misunderstanding a question in physics, I thought I had to calculate the length of a curved trajectory (ie. the distance) instead of just the straight line (ie. the displacement). Turns out it was the easy option, but I now wanted to know how to get the length of a curve. I mean, it&amp;rsquo;d just be summing up an infinite number of straight lines, which is almost exactly what integration is&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

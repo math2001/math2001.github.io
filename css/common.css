@@ -170,6 +170,11 @@ footer {
 .footer-bottom {
   text-align: center;
 }
+
+.center {
+  text-align: center;
+}
+
 .footer-bottom::before {
   content: '';
   width: 200px;

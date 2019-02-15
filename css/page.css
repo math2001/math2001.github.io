@@ -38,7 +38,6 @@
   margin: 20px auto;
   background: white;
   text-align: justify;
-  box-shadow: 5px 5px 20px #ddd;
   padding: 10px 30px;
 }
 
@@ -124,4 +123,11 @@
 .page-content th {
   font-weight: normal;
   background-color: #F9F9F9;
+}
+
+.desmos {
+  display: block;
+  width: 500px;
+  height: 500px;
+  margin: auto;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.49" />
+    <meta name="generator" content="Hugo 0.50" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -190,6 +190,11 @@ footer {
 .footer-bottom {
   text-align: center;
 }
+
+.center {
+  text-align: center;
+}
+
 .footer-bottom::before {
   content: '';
   width: 200px;
@@ -463,7 +468,7 @@ loadCSS([
         gtag('config', 'UA-105735012-1');
     }
     (function () {
-        if (!document.cookie.includes('InternalTraffic=true')) {
+        if (!document.cookie.includes('InternalTraffic=true') && location.hostname != 'localhost') {
             const script = document.createElement('script')
             script.src = "https://www.googletagmanager.com/gtag/js?id=UA-105735012-1"
             script.onload = gtag_callback
@@ -471,6 +476,8 @@ loadCSS([
         }
     })()
 </script>
+
+
 
 </body>
 </html>

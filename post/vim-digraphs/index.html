@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.49" />
+    <meta name="generator" content="Hugo 0.50" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -189,6 +189,11 @@ footer {
 .footer-bottom {
   text-align: center;
 }
+
+.center {
+  text-align: center;
+}
+
 .footer-bottom::before {
   content: '';
   width: 200px;
@@ -247,7 +252,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   margin: 20px auto;
   background: white;
   text-align: justify;
-  box-shadow: 5px 5px 20px #ddd;
   padding: 10px 30px;
 }
 
@@ -335,6 +339,12 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   background-color: #F9F9F9;
 }
 
+.desmos {
+  display: block;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
 </style><style>
     header {
   padding: 10px 15px;
@@ -583,7 +593,7 @@ loadCSS([
         gtag('config', 'UA-105735012-1');
     }
     (function () {
-        if (!document.cookie.includes('InternalTraffic=true')) {
+        if (!document.cookie.includes('InternalTraffic=true') && location.hostname != 'localhost') {
             const script = document.createElement('script')
             script.src = "https://www.googletagmanager.com/gtag/js?id=UA-105735012-1"
             script.onload = gtag_callback
@@ -591,6 +601,8 @@ loadCSS([
         }
     })()
 </script>
+
+
 
 </body>
 </html>

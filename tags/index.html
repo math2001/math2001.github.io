@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.49" />
+    <meta name="generator" content="Hugo 0.50" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -190,6 +190,11 @@ footer {
 .footer-bottom {
   text-align: center;
 }
+
+.center {
+  text-align: center;
+}
+
 .footer-bottom::before {
   content: '';
   width: 200px;
@@ -333,6 +338,8 @@ header a {
         
         <li>(1) <a href="buffer">buffer</a></li>
         
+        <li>(2) <a href="calculus">calculus</a></li>
+        
         <li>(1) <a href="chrome">chrome</a></li>
         
         <li>(1) <a href="cipher">cipher</a></li>
@@ -379,6 +386,8 @@ header a {
         
         <li>(1) <a href="new">new</a></li>
         
+        <li>(1) <a href="newtown">newtown</a></li>
+        
         <li>(3) <a href="nodejs">nodejs</a></li>
         
         <li>(1) <a href="option">option</a></li>
@@ -388,6 +397,8 @@ header a {
         <li>(1) <a href="performances">performances</a></li>
         
         <li>(2) <a href="perfs">perfs</a></li>
+        
+        <li>(1) <a href="physics">physics</a></li>
         
         <li>(1) <a href="preview">preview</a></li>
         
@@ -506,7 +517,7 @@ loadCSS([
         gtag('config', 'UA-105735012-1');
     }
     (function () {
-        if (!document.cookie.includes('InternalTraffic=true')) {
+        if (!document.cookie.includes('InternalTraffic=true') && location.hostname != 'localhost') {
             const script = document.createElement('script')
             script.src = "https://www.googletagmanager.com/gtag/js?id=UA-105735012-1"
             script.onload = gtag_callback
@@ -514,6 +525,8 @@ loadCSS([
         }
     })()
 </script>
+
+
 
 </body>
 </html>

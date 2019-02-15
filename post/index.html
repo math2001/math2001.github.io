@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.49" />
+    <meta name="generator" content="Hugo 0.50" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -190,6 +190,11 @@ footer {
 .footer-bottom {
   text-align: center;
 }
+
+.center {
+  text-align: center;
+}
+
 .footer-bottom::before {
   content: '';
   width: 200px;
@@ -365,6 +370,39 @@ header a {
         <li class="list-content">
             <div>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/calculus">calculus</a></li>
+                    <li><a href="/tags/physics">physics</a></li>
+                </ul>
+                <a class=list-link href="/post/motion-and-calculus/">Motion and calculus</a>
+                <small class="list-content-reading-time"
+                    title="433 words">(~ 3 min)</small>
+            </div>
+            <ul class="categories">
+                <li>
+                    <a href="/categories/mathematics">mathematics</a>
+                </li>
+            </ul>
+        </li>
+        
+        <li class="list-content">
+            <div>
+                <ul class="list-content-tags tags">
+                    <li><a href="/tags/calculus">calculus</a></li>
+                </ul>
+                <a class=list-link href="/post/length-of-a-curve/">Length of a curve</a>
+                <small class="list-content-reading-time"
+                    title="521 words">(~ 3 min)</small>
+            </div>
+            <ul class="categories">
+                <li>
+                    <a href="/categories/mathematics">mathematics</a>
+                </li>
+            </ul>
+        </li>
+        
+        <li class="list-content">
+            <div>
+                <ul class="list-content-tags tags">
                     <li><a href="/tags/tmux">tmux</a></li>
                     <li><a href="/tags/terminal">terminal</a></li>
                 </ul>
@@ -470,11 +508,11 @@ header a {
                 </ul>
                 <a class=list-link href="/post/0.9-repeater/">0.9 Repeater</a>
                 <small class="list-content-reading-time"
-                    title="115 words">(~ 1 min)</small>
+                    title="119 words">(~ 1 min)</small>
             </div>
             <ul class="categories">
                 <li>
-                    <a href="/categories/mathematiques">mathematiques</a>
+                    <a href="/categories/mathematics">mathematics</a>
                 </li>
             </ul>
         </li>
@@ -491,7 +529,7 @@ header a {
             </div>
             <ul class="categories">
                 <li>
-                    <a href="/categories/cool-feature">cool-feature</a>
+                    <a href="/categories/cool-feature">cool feature</a>
                 </li>
             </ul>
         </li>
@@ -941,7 +979,7 @@ loadCSS([
         gtag('config', 'UA-105735012-1');
     }
     (function () {
-        if (!document.cookie.includes('InternalTraffic=true')) {
+        if (!document.cookie.includes('InternalTraffic=true') && location.hostname != 'localhost') {
             const script = document.createElement('script')
             script.src = "https://www.googletagmanager.com/gtag/js?id=UA-105735012-1"
             script.onload = gtag_callback
@@ -949,6 +987,8 @@ loadCSS([
         }
     })()
 </script>
+
+
 
 </body>
 </html>

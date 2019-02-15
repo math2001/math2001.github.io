@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.49" />
+    <meta name="generator" content="Hugo 0.50" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -190,6 +190,11 @@ footer {
 .footer-bottom {
   text-align: center;
 }
+
+.center {
+  text-align: center;
+}
+
 .footer-bottom::before {
   content: '';
   width: 200px;
@@ -375,6 +380,20 @@ h1 {
     <div class="home-actions">
         <ul class="home-latest-contents">
             <li>
+                <a class="home-latest-content" href="/post/motion-and-calculus/">
+                    <span class="home-latest-content-title">Motion and calculus</span>
+                    <span class="home-latest-content-reading-time">~ 3 min</span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="home-latest-content" href="/post/length-of-a-curve/">
+                    <span class="home-latest-content-title">Length of a curve</span>
+                    <span class="home-latest-content-reading-time">~ 3 min</span>
+                </a>
+            </li>
+        
+            <li>
                 <a class="home-latest-content" href="/post/tmux-zoom/">
                     <span class="home-latest-content-title">Tmux Zoom</span>
                     <span class="home-latest-content-reading-time">~ 1 min</span>
@@ -392,20 +411,6 @@ h1 {
                 <a class="home-latest-content" href="/post/vim-jump-to-function-definition/">
                     <span class="home-latest-content-title">Jump to function definition in vim</span>
                     <span class="home-latest-content-reading-time">~ 5 min</span>
-                </a>
-            </li>
-        
-            <li>
-                <a class="home-latest-content" href="/post/challenge-1-translate-back/">
-                    <span class="home-latest-content-title">Challenge #1: Translate back</span>
-                    <span class="home-latest-content-reading-time">~ 1 min</span>
-                </a>
-            </li>
-        
-            <li>
-                <a class="home-latest-content" href="/post/so-vim-became-slow/">
-                    <span class="home-latest-content-title">So vim got slow</span>
-                    <span class="home-latest-content-reading-time">~ 2 min</span>
                 </a>
             </li>
         </ul>
@@ -489,7 +494,7 @@ loadCSS([
         gtag('config', 'UA-105735012-1');
     }
     (function () {
-        if (!document.cookie.includes('InternalTraffic=true')) {
+        if (!document.cookie.includes('InternalTraffic=true') && location.hostname != 'localhost') {
             const script = document.createElement('script')
             script.src = "https://www.googletagmanager.com/gtag/js?id=UA-105735012-1"
             script.onload = gtag_callback
@@ -497,6 +502,8 @@ loadCSS([
         }
     })()
 </script>
+
+
 
 </body>
 </html>

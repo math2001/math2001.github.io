@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://math2001.github.io/post/motion-and-calculus/</loc>
+    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/post/length-of-a-curve/</loc>
+    <lastmod>2019-02-14T21:31:45+11:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/post/tmux-zoom/</loc>
     <lastmod>2018-10-02T08:41:38+10:00</lastmod>
   </url>
@@ -181,7 +191,7 @@
   
   <url>
     <loc>https://math2001.github.io/</loc>
-    <lastmod>2018-10-02T08:41:38+10:00</lastmod>
+    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -239,6 +249,12 @@
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/calculus/</loc>
+    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/categories/challenge/</loc>
     <lastmod>2018-05-25T22:32:29+10:00</lastmod>
     <priority>0</priority>
@@ -283,12 +299,6 @@
   <url>
     <loc>https://math2001.github.io/tags/conventions/</loc>
     <lastmod>2017-09-13T14:18:22+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/categories/cool-feature/</loc>
-    <lastmod>2018-05-21T17:59:22+10:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -407,8 +417,8 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/categories/mathematiques/</loc>
-    <lastmod>2018-02-02T17:41:26+11:00</lastmod>
+    <loc>https://math2001.github.io/categories/mathematics/</loc>
+    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -427,6 +437,12 @@
   <url>
     <loc>https://math2001.github.io/tags/new/</loc>
     <lastmod>2017-09-09T19:43:23+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/newtown/</loc>
+    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -457,6 +473,12 @@
   <url>
     <loc>https://math2001.github.io/tags/perfs/</loc>
     <lastmod>2018-05-21T17:59:22+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/physics/</loc>
+    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
     <priority>0</priority>
   </url>
   
