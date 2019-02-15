@@ -2,9 +2,7 @@
 title: How to combine svgs
 slug: combine-svgs
 date: 2017-10-08T17:18:21+11:00
-categories: [ howto ]
-tags: [ svg, perfs, css, nodejs, svgstore ]
-commentsIssueId: 3
+tags: [howto, svg, performances, css, nodejs, svgstore]
 ---
 
 If you want your website to be fast, you should limit the number of http

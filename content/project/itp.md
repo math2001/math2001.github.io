@@ -2,8 +2,7 @@
 title: "Itp: insert template please"
 slug: itp-insert-template-please
 date: 2017-09-27T11:18:56+10:00
-categories: [cli]
-tags: [nodejs, javascript, template]
+tags: [cli, nodejs, javascript, template]
 repository: itp
 ---
 

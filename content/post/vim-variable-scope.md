@@ -1,8 +1,7 @@
 ---
 title: Variable scopes in vim
 slug: variable-scopes-vim
-tags: [ vim, scopes, variable, vimscript ]
-categories: [ infos ]
+tags: [tip, vim, scopes, vimscript]
 date: "2017-08-25"
 place: In the car on the way to the snow!
 ---

@@ -1,8 +1,7 @@
 ---
 title: Current buffer only mapping
 slug: current-buffer-only-mapping-vim
-tags: [ vim, map, buffer ]
-categories: [ cool feature ]
+tags: [tip, vim, map, buffer]
 date: 2017-08-27
 place: In a stopped car
 ---

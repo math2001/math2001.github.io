@@ -1,8 +1,7 @@
 ---
 title: Vim digraphs
 slug: vim-digraphs
-tags: [ vim, symbols ]
-categories: [ cool feature ]
+tags: [tip, vim, symbols]
 date: 2017-08-25
 place: In the car, next to my sister
 ---

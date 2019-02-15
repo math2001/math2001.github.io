@@ -1,8 +1,7 @@
 ---
 title: Change shell used to run external command
 slug: change-shell-run-external-command-vim
-tags: [ vim, shell, bash, windows, sh ]
-categories: [ cool feature ]
+tags: [tip, vim, shell, bash, windows, sh]
 date: 2017-08-27
 place: In a car, with the 4 WD on
 ---

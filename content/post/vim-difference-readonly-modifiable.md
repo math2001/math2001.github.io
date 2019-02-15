@@ -1,8 +1,7 @@
 ---
 title: "'readonly' != 'modifiable'"
 slug: difference-vim-options-readonly-modifiable
-tags: [ vim, options ]
-categories: [ infos ]
+tags: [vim, options]
 date: 2017-08-26
 place: In the car, on the way back from x-ski
 ---

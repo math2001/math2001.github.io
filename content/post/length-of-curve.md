@@ -2,9 +2,7 @@
 title: Length of a curve
 slug: length-of-a-curve
 date: 2019-02-14T21:31:45+11:00
-categories: [mathematics]
-tags: [calculus]
-maths: true
+tags: [mathematics, calculus]
 ---
 
 ### Finding the length of a curve

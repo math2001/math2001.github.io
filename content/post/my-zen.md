@@ -1,9 +1,7 @@
 ---
 title: My Zen
 date: 2017-09-13T14:18:22+10:00
-categories: [code aesthetic]
-tags: [python, zen, conventions]
-commentsissueid: 1
+tags: [code aesthetic, python, zen, conventions]
 ---
 
 [Python](https://python.org) is by far my favorite language (I even wish we spoke it :smile:).

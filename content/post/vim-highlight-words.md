@@ -1,8 +1,7 @@
 ---
 title: Highlight word under the cursor
 slug: highlight-word-under-cursor
-tags: [ vim, vimscript ]
-categories: [ cool feature ]
+tags: [tip, vim, vimscript]
 date: 2017-08-22
 draft: true
 ---

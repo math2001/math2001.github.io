@@ -1,8 +1,7 @@
 ---
 title: Css Arrows
 date: 2017-09-27T18:31:58+10:00
-categories: [ trick ]
-tags: [ css ]
+tags: [trick, css]
 draft: true
 ---
 

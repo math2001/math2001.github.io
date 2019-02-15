@@ -1,8 +1,7 @@
 ---
 date: "2017-09-09T19:43:23+10:00"
 title: My new blog
-categories: [About]
-tags: [new, static website]
+tags: [about, new, static website]
 ---
 
 Hello everyone!

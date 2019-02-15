@@ -1,8 +1,7 @@
 ---
 title: "So vim got slow"
 date: 2018-05-21T17:59:22+10:00
-tags: [ vim, profile, perfs ]
-categories: [ cool feature ]
+tags: [tip, vim, profile, performances]
 ---
 
 You know that feeling? You press in a key, and you have to wait like 0.5 seconds

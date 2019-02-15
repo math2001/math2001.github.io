@@ -1,8 +1,7 @@
 ---
 title: Vim help index
 slug: vim-help-index
-tags: [ vim, doc ]
-categories: [ infos ]
+tags: [tip, vim, doc]
 date: 2017-08-25
 ---
 

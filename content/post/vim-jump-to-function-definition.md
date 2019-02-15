@@ -2,8 +2,7 @@
 title: Jump to function definition in vim
 slug: vim-jump-to-function-definition
 date: 2018-09-28T11:47:21+10:00
-categories: [tip]
-tags: [go, vim, fzf]
+tags: [tip, go, vim, fzf]
 ---
 
 One of the features I miss from Sublime Text is the Goto Anything. In vim, by

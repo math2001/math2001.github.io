@@ -2,8 +2,7 @@
 title: Motion and calculus
 slug: motion-and-calculus
 date: 2019-02-15T11:12:47+11:00
-categories: [mathematics]
-tags: [calculus, physics, newtown]
+tags: [mathematics, calculus, physics, newtown]
 ---
 
 ### Motions

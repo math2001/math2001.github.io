@@ -1,8 +1,7 @@
 ---
 title: Rerun last command with bang
 slug: rerun-last-command-bang-vim
-tags: [ vim, vimscript, bang ]
-categories: [ cool feature ]
+tags: [tip, vim, vimscript, bang]
 date: 2017-08-27
 place: In the car, on a snowy road
 ---

@@ -2,8 +2,7 @@
 title: Getting started with svgs
 slug: getting-started-with-svgs
 date: 2017-10-10T17:55:27+11:00
-categories: [ intro ]
-tags: [ svg, image, vector ]
+tags: [introduction, svg, image, vector ]
 draft: true
 ---
 

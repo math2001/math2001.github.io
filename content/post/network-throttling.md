@@ -2,8 +2,7 @@
 title: Network throttling
 slug: network-throttling
 date: '2017-08-20'
-categories: [ "web development" ]
-tags: [ "chrome", "devtools", "network", "performances", "testing" ]
+tags: [web development, "chrome", "devtools", "network", "performances", "testing" ]
 ---
 
 Ever wanted to simulate a slow connection? Well, the chrome's DevTools makes it

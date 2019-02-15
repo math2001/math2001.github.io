@@ -2,8 +2,7 @@
 title: Vim Line Completion
 slug: vim-line-completion
 date: 2017-09-27T12:55:56+10:00
-categories: [ itsbuiltin ]
-tags: [ vim, completion ]
+tags: [tip, vim, completion]
 commentsissueid: 2
 ---
 

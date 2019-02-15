@@ -2,8 +2,7 @@
 title: Bash's find command
 slug: bashs-find-command
 date: 2017-09-24T07:51:15+10:00
-categories: [itsbuiltin]
-tags: [bash, find, file manupilation]
+tags: [tip, bash, find, file manupilation]
 ---
 
 The `find` command in bash is quite powerful, and knowing the basics might save

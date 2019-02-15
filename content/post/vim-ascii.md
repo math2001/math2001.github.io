@@ -1,8 +1,7 @@
 ---
 title: How do I get the ASCII value of a character?
 slug: get-ascii-value-character-vim
-categories: [ cool feature ]
-tags: [ vim, ascii ]
+tags: [tip, vim, ascii]
 date: 2017-08-26
 place: In the car, going to ski
 ---

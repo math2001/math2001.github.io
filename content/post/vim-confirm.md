@@ -1,8 +1,7 @@
 ---
 title: The confirm option
 slug: confirm-option-vim
-tags: [ vim, option ]
-categories: [ cool feature ]
+tags: [tip, vim, option]
 date: 2017-09-03
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: Great resources for VIM users 
 slug: great-resources-for-vim-users
-tags: [ vim, vimscript ]
-categories: [ resources ]
+tags: [resources, vim, vimscript]
 date: 2017-09-03
 ---
 

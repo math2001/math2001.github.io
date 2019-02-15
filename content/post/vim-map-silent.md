@@ -1,8 +1,7 @@
 ---
 title: Silent command-line mapping
 slug: silent-command-line-mapping
-tags: [ vim, map, command ]
-categories: [ cool feature ]
+tags: [tip, vim, map, command]
 date: 2017-08-27
 place: From a very warm car
 ---

@@ -2,8 +2,7 @@
 title: "Challenge #1: Translate back"
 slug: challenge-1-translate-back
 date: 2018-05-25T22:32:29+10:00
-categories: [ challenge ]
-tags: [ cipher ]
+tags: [challenge, cipher]
 ---
 
 I've got a little challenge for you.

@@ -1,8 +1,7 @@
 ---
 title: How to insert the date in Vim?
 slug: how-to-insert-the-date-in-vim
-tags: [ vim, date, strftime ]
-categories: [ cool feature ]
+tags: [tip, vim, date, strftime]
 date: 2017-08-20
 ---
 

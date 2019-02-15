@@ -2,8 +2,7 @@
 title: Bash's fc command
 slug: bashs-fc-command
 date: 2017-09-26T18:03:22+10:00
-categories: [cool feature]
-tags: [bash, editor]
+tags: [tip, bash, editor]
 ---
 
 When editing long commands in your terminal (you know, the one that wraps

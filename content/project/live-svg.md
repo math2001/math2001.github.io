@@ -1,8 +1,7 @@
 ---
 title: Live Svg
 date: 2017-09-22T18:31:15+10:00
-categories: [cli]
-tags: [nodejs, svg, preview, javascript]
+tags: [cli, nodejs, svg, preview, javascript]
 repository: live-svg
 ---
 
