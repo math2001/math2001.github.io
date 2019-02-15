@@ -7,11 +7,9 @@ place: In the car
 ---
 
 I really open my `.vimrc` often. Too often to have to type `:e ~/.vimrc` or
-`:tabe ~/.vimrc `every time.
-
-Here's a little function that will open a file in a new tab if there isn't enough
-room for a new split, and, you guessed it, in a new *vertical* split if there
-is.
+`:tabe ~/.vimrc ` every time. Here's little function that will open a file in a
+new tab if there isn't enough room for a new split, and, you guessed it, in a
+new *vertical* split if there is.<!--more-->
 
 ```vim
 function! DynamicOpen(file)

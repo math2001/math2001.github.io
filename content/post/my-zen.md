@@ -4,14 +4,12 @@ date: 2017-09-13T14:18:22+10:00
 tags: [code aesthetic, python, zen, conventions]
 ---
 
-[Python](https://python.org) is by far my favorite language (I even wish we spoke it :smile:).
+[Python](https://python.org) is by far my favorite language (I even wish we
+[spoke it :smile:). One thing I found funny about it, and in the same time
+really good, is [its zen](https://python.org/dev/peps/pep-0020/); they're
+basically guidelines.
 
-One thing I found funny about it, and in the same time really good, is [its
-zen](https://python.org/dev/peps/pep-0020/).
-
-They're basically guidelines.
-
-So, today, *dans un élan d'inspiration*, I decided to write my own. Here it is:
+So, today, *dans un élan d'inspiration*, I decided to write my own.<!--more-->
 
 ```
 Keep it simple.

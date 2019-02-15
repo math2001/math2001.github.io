@@ -10,7 +10,7 @@ commentsissueid: 2
 
 Do you know what kind of completion this is? **Line** completion. It looks for
 every lines that starts with the same text (it doesn't take into consideration
-the indication), and completes it for you! Awesome right?
+the indication), and completes it for you! Awesome right? <!--more-->
 
 And to do that, you just need to press this while you're in insert mode:
 

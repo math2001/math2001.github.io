@@ -8,7 +8,7 @@ place: From a very warm car
 
 If you want to set a mapping to run something that is echoed into the command
 line (something starting with `:` or `/` for example) to *not* be displayed, you
-can use the special argument `silent`, like so for example:
+can use the special argument `silent`. <!--more-->
 
 ```vim
 map <silent> <leader>r :MyCommand

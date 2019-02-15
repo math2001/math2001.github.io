@@ -6,7 +6,7 @@ date: 2017-08-20
 ---
 
 First off, I really don't recommend you use the `strftime()` function vim has,
-since, as it says in the help message (`:help strftime`)
+since, as it says in the help message (`:help strftime`)<!--more-->
 
 > The accepted {format} depends on your system, thus this is not portable!
 

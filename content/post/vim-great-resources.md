@@ -6,7 +6,7 @@ date: 2017-09-03
 ---
 
 If you're a VIM user, have a look at these resources, they're pretty good (you
-probably will know some ­ if not all ­ of them)
+probably will know some, if not all of them)<!--more-->
 
 - [vimcast.org](http://vimcast.org) Just awesome screencasts and tips in general
 - [vimcolors.com](http://vimcolors.com) A list of color schemes

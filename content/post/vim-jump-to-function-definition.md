@@ -6,8 +6,8 @@ tags: [tip, go, vim, fzf]
 ---
 
 One of the features I miss from Sublime Text is the Goto Anything. In vim, by
-default, you have `:e **/bit` and then tab, and *it gets annoying pretty
-quickly*. Thankfully, there's [`fzf`][fzf] (with [`fzf.vim`][fzf.vim]).
+default, you have `:e **/bit` and then tab, and it gets annoying pretty
+quickly. Thankfully, there's [`fzf`][fzf] (with [`fzf.vim`][fzf.vim]).<!--more-->
 
 But although it provides a fairly long list of commands, it doesn't allow us to
 *jump to function definitions* (which is one of the main function of the Goto

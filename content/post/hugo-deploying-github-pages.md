@@ -6,7 +6,7 @@ tags: [howto, hugo, static site, bash, github-pages]
 
 When you want to deploy a static website built with the fantastic [Hugo][] on
 GitHub pages, you don't have 100 of possibilities. A clean one, and an easy one
-:smile:.
+:smile:.<!--more-->
 
 The easy one is to build your website to the `docs` folder. It's not super clean
 though since the source code is on the same branch as the built code. It doesn't

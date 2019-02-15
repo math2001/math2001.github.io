@@ -5,11 +5,9 @@ date: 2019-02-15T11:12:47+11:00
 tags: [mathematics, calculus, physics, newtown]
 ---
 
-### Motions
-
 If you studied physics, one of the first things you probably did was graph the
 "motion" of objects. That is the displacement, velocity, and acceleration at
-an instant *t*.
+an instant *t*. Didn't it remind you of a mathematical concept? <!--more-->
 
 #### Observation
 

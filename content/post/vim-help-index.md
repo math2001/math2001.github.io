@@ -1,13 +1,12 @@
 ---
 title: Vim help index
 slug: vim-help-index
-tags: [tip, vim, doc]
+tags: [tip, vim, documentation]
 date: 2017-08-25
 ---
 
 A very strong point of vim is its documentation. There's just so much of it!!
-
-So, **use it**
+So, **use it** <!--more-->
 
 It doesn't matter if you're an experienced user of vim or a complete beginner,
 there'll be something in there for you to learn *for sure*.

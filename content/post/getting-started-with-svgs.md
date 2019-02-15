@@ -6,16 +6,8 @@ tags: [introduction, svg, image, vector ]
 draft: true
 ---
 
-<style>
-.page-content svg {
-    outline: 1px solid #888;
-    width: 100px;
-    height: 100px;
-}
-</style>
-
-Have you heard about SVGs? What are they? Here's a quick introduction to these fabulous
-format.
+Have you heard about SVGs? What are they? Here's a quick introduction to this
+fabulous format.<!--more-->
 
 SVG stands for Scalable Vector Graphic. And, it's an other format of image, just
 as you have PNG, JPG, etc...
@@ -331,3 +323,11 @@ case you don't even need to `xmlns` attribute). Let's take an example:
 </body>
 </html>
 ```
+
+<style>
+.page-content svg {
+    outline: 1px solid #888;
+    width: 100px;
+    height: 100px;
+}
+</style>

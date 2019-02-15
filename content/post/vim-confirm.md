@@ -9,6 +9,8 @@ This is probably one of my favorite option in VIM. Just add this to your `.vimrc
 
     set confirm
 
+<!--more-->
+
 This will affect different command in VIM: instead of just failing (and telling
 you to use force if you want to overwrite), it'll show a confirm "popup" at the
 bottom and you'll be good to do.

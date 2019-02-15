@@ -5,11 +5,10 @@ tags: [cli, nodejs, svg, preview, javascript]
 repository: live-svg
 ---
 
-SVGs are awesome. They allow you to make some infinitely resizable images. 
-
+SVGs are awesome. They allow you to make some infinitely resizable images.
 Sometimes, you want to make a complex image, so you use something [Inkscape][],
 but sometimes, you just want to make a simple one, so you take a deep breath and
-away you go to write a SVG by hand!
+away you go to write a SVG by hand!<!--more-->
 
 So, you open your favorite text editor and your browser, splitting your screen in
 half.

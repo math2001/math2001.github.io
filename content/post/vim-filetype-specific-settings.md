@@ -6,7 +6,7 @@ tags: [tip, vim, filetype]
 ---
 
 If you want to run some vim script for a specific file type, don't make an
-auto command. They get messy really quickly.
+auto command, they get messy really quickly. Instead, you should use `ftplugin`. <!--more-->
 
 Just edit `~/.vim/ftplugin/<filetype>.vim`.
 

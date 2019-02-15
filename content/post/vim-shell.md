@@ -7,7 +7,7 @@ place: In a car, with the 4 WD on
 ---
 
 On windows, the cmd sucks. But if you have sh installed from git-for-windows
-for example, you can tell vim to run external commands `:!`.
+for example, you can tell vim to run external commands `:!` using this `sh`!.<!--more-->
 
 Add this to your `.vimrc`
 

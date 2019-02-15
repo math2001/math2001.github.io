@@ -6,8 +6,8 @@ date: 2017-08-27
 place: In the car, on a snowy road
 ---
 
-Put this little vim script in your `.vimrc` to rerun the previous command with
-the bang (`!`) by just typing `:Please`.
+Put this code in your vimrc to re run the previous command but with the bang
+(`!`) by just typing `:Please`. <!--more-->
 
 ```vim
 function! BangLastCommand()

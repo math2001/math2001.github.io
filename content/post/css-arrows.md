@@ -5,7 +5,7 @@ tags: [trick, css]
 draft: true
 ---
 
-CSS allows you to make plenty of tricks, and a pretty cool one is *arrow*. They
-are simple to make, you just have to think of it (I didn't :smile:).
+CSS allows you to do plenty of tricks, and a pretty cool one is *arrow*. They
+are simple to make, you just have to think of it (I didn't :smile:).<!--more-->
 
 Our arrow is going to be simple: a dash, and corner

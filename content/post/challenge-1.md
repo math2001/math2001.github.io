@@ -5,7 +5,7 @@ date: 2018-05-25T22:32:29+10:00
 tags: [challenge, cipher]
 ---
 
-I've got a little challenge for you.
+I've got a little challenge for you.<!--more-->
 
     ib jb eikybfi eite hvim
 

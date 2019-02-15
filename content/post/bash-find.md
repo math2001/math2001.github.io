@@ -10,9 +10,7 @@ you some scripting.
 
 What does it do? It "finds" files. By default, it outputs their path relative to
 where you ran `find`. But, in addition of providing you with advanced "filters"
-it actually allows you to run commands on each of those files.
-
-Let's get started!<!--more-->
+it actually allows you to run commands on each of those files.<!--more-->
 
 ### The basics
 

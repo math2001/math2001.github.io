@@ -6,7 +6,7 @@ tags: [tip, vim, profile, performances]
 
 You know that feeling? You press in a key, and you have to wait like 0.5 seconds
 to see it appear on screen. You try to run `vim --clean` and everything's back
-to "normal".
+to "normal". How do you find *quickly* the cause of this horrible disaster :smile: <!--more-->
 
 As you expected, it is caused by a/some plugin(s) and/or you vimrc. Have fun
 debugging that. You probably know the bulk force: disable every plugin, and

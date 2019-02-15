@@ -7,8 +7,8 @@ tags: [tip, bash, terminal]
 
 ![ls@asyncio   vim@math2001.github.io   git@dotfiles](/img/tmux-title.png)
 
-I use tmux, and in the tabs, it displays the terminal's title, which is just
-done by this 2 lines in your `.tmux.conf`:
+I use tmux, and in the tabs title, it displays the terminal's title, which is
+just done by this 2 lines in your `.tmux.conf` <!--more-->
 
 ```
 setw -g window-status-current-format ' #{pane_title} '

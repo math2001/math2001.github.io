@@ -14,7 +14,7 @@ numbers, and becomes what it is.
 
 So, what the heck could be the use of binary numbers to us, simple programmers
 who write some code with all these different symbols, letters, and numbers?
-:thinking:
+:thinking:<!--more-->
 
 One use case I stumbled upon a few days ago (I was making a little Sublime Text
 plugin, textwidth) was passing multiple flags just through a number. Basically,

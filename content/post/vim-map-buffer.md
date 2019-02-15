@@ -7,7 +7,7 @@ place: In a stopped car
 ---
 
 If you want to set a mapping only for the current buffer in VIM, it's super
-simple: just use the `buffer` special argument, like so for example:
+simple: just use the `buffer` special argument.<!--more-->
 
 ```vim
 nnoremap <buffer> ,tip call InsertTipYamlFrontMatter()

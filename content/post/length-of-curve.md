@@ -5,14 +5,12 @@ date: 2019-02-14T21:31:45+11:00
 tags: [mathematics, calculus]
 ---
 
-### Finding the length of a curve
-
 After misunderstanding a question in physics, I thought I had to calculate the
 length of a curved trajectory (ie. the distance) instead of just the straight
 line (ie. the displacement). Turns out it was the easy option, but I now wanted
 to know how to get the length of a curve. I mean, it'd just be summing up
 an infinite number of straight lines, which is almost exactly what integration
-is...
+is...<!--more-->
 
 If you know calculus, you know that there are 2 main concepts:
 

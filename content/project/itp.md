@@ -7,7 +7,7 @@ repository: itp
 ---
 
 I was getting pretty sick of typing the same `.gitignore`, copy/pasting my
-license, README and everything. 
+license, README and everything. <!--more-->
 
 So, I made a tiny template manager, called `itp`, for *Insert Template
 Please*.<!--more-->

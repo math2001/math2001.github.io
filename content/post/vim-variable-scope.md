@@ -7,7 +7,7 @@ place: In the car on the way to the snow!
 ---
 
 An interesting feature of vim script is variable scoping. Here's a copy-paste
-from the documentation, just in case you never saw it before:
+from the documentation, just in case you never saw it before.<!--more-->
 
 ```
 There are several name spaces for variables.  Which one is to be used is
