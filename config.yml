@@ -9,7 +9,7 @@ newContentEditor: vim
 theme: fasty
 author:
   math2001: Mathieu Paturel
-copyright: © Mathieu Paturel 2017
+copyright: © Mathieu Paturel 2017-2019
 enableEmoji: true
 googleAnalytics: "UA-105735012-1"
 pygmentsUseClasses: true
