@@ -2,7 +2,7 @@
 title: So binary numbers are useful?
 slug: so-binary-numbers-are-useful
 date: 2017-10-13T16:14:21+11:00
-categories: [ cool-feature ]
+categories: [ cool feature ]
 tags: [ binary, python, binary, bit-manipulation ]
 commentsIssueId: 4
 ---
