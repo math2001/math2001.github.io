@@ -6,7 +6,7 @@
     <description>Recent content in python on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
     <lastBuildDate>Fri, 13 Oct 2017 16:14:21 +1100</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
@@ -18,9 +18,16 @@
       <pubDate>Fri, 13 Oct 2017 16:14:21 +1100</pubDate>
       
       <guid>https://math2001.github.io/post/so-binary-numbers-are-useful/</guid>
-      <description>Do you know what binary numbers are? They&amp;rsquo;re just a way of counting with just 2 numbers: 0 and 1. For example, 9 is in binary 1001.
-This is the format your computer uses to do everything, at a very low level. Either there is some current, or there isn&amp;rsquo;t. And then, it interprets these numbers, and becomes what it is.
-So, what the heck could be the use of binary numbers to us, simple programmers who write some code with all these different symbols, letters, and numbers?</description>
+      <description>&lt;p&gt;Do you know what binary numbers are? They&amp;rsquo;re just a way of counting with just 2
+numbers: 0 and 1. For example, &lt;code&gt;9&lt;/code&gt; is in binary &lt;code&gt;1001&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is the format your computer uses to do everything, at a very low level.
+Either there is some current, or there isn&amp;rsquo;t. And then, it interprets these
+numbers, and becomes what it is.&lt;/p&gt;
+
+&lt;p&gt;So, what the heck could be the use of binary numbers to us, simple programmers
+who write some code with all these different symbols, letters, and numbers?
+🤔&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,11 +36,12 @@ So, what the heck could be the use of binary numbers to us, simple programmers w
       <pubDate>Wed, 13 Sep 2017 14:18:22 +1000</pubDate>
       
       <guid>https://math2001.github.io/post/my-zen/</guid>
-      <description>Python is by far my favorite language (I even wish we spoke it 😄).
-One thing I found funny about it, and in the same time really good, is its zen.
-They&amp;rsquo;re basically guidelines.
-So, today, dans un élan d&amp;rsquo;inspiration, I decided to write my own. Here it is:
-Keep it simple. Lazyness is a quality. Learn to use your tools efficiently. Get inspired by great things. Do one thing, and do it well.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://python.org&#34; target=&#34;_blank&#34;&gt;Python&lt;/a&gt; is by far my favorite language (I even wish we
+[spoke it 😄). One thing I found funny about it, and in the same time
+really good, is &lt;a href=&#34;https://python.org/dev/peps/pep-0020/&#34; target=&#34;_blank&#34;&gt;its zen&lt;/a&gt;; they&amp;rsquo;re
+basically guidelines.&lt;/p&gt;
+
+&lt;p&gt;So, today, &lt;em&gt;dans un élan d&amp;rsquo;inspiration&lt;/em&gt;, I decided to write my own.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -42,8 +50,8 @@ Keep it simple. Lazyness is a quality. Learn to use your tools efficiently. Get 
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/string-module-python/</guid>
-      <description>If you want the list of every letter, just do:
-&amp;gt;&amp;gt;&amp;gt; import string &amp;gt;&amp;gt;&amp;gt; print(string.ascii_uppercase) ABCDEFGHIJKLMNOPQRSTUVWXYZ</description>
+      <description>&lt;p&gt;If you want every letter in the alphabet in python, don&amp;rsquo;t write them all out
+manually.. &lt;/p&gt;</description>
     </item>
     
   </channel>

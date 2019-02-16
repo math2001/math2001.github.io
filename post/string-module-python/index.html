@@ -11,15 +11,14 @@
     <meta property="og:title" content="The string module in Python">
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/string-module-python/">
-    <meta property="og:description" content="If you want the list of every letter, just do:
-&gt;&gt;&gt; import string &gt;&gt;&gt; print(string.ascii_uppercase) ABCDEFGHIJKLMNOPQRSTUVWXYZ">
+    <meta property="og:description" content="If you want every letter in the alphabet in python, don&rsquo;t write them all out
+manually.. ">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
     <title>The string module in Python - Math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
-  --monospace: Menlo, Inconsolata, consolas, monospace;
-  --monospace-secondary: Inconsolata, consolas, monospace;
+  --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
   --font-mute: #888;
@@ -51,12 +50,24 @@ body {
   color: #333;
   line-height: 1.5;
 }
-
 h1, h2 {
   letter-spacing: 2px;
-  font-weight: normal;
+  font-weight: 100;
 }
 
+h3, h4 {
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+h3 { font-size: 140%; }
+h4 { font-size: 120%; }
+
+h1 > small, h2 > small, h3 > small {
+  font-size: 70%;
+  opacity: .8;
+  font-weight: normal;
+}
 
 .wrapper {
   flex: 1 0 auto;
@@ -67,7 +78,21 @@ main {
   margin-bottom: 20px;
 }
 
-.tags, .categories { font-family: var(--monospace-secondary); }
+.tags { font-family: var(--monospace); }
+
+.page-content :not(pre) > code,
+.list-summary code {
+  background-color: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+.page-content kbd,
+.list-summary kbd {
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
 
 .tags {
   list-style: none;
@@ -85,35 +110,6 @@ main {
 .tags a:hover {
   border-color: #aaa;
   color: #555;
-}
-
-.categories {
-  padding: 0;
-  list-style: none;
-}
-
-.categories a::after,
-.categories a::before {
-  content: "{";
-  margin-right: 5px;
-  display: inline-block;
-  color: #888;
-}
-
-.categories a::after {
-  content: "}";
-  margin: 0;
-  margin-left: 5px;
-}
-
-.categories a {
-  color: var(--color);
-  text-decoration: none;
-}
-
-.categories a:hover {
-  color: #000;
-  text-decoration: underline;
 }
 
 footer {
@@ -193,6 +189,10 @@ footer {
   text-align: center;
 }
 
+.align-right {
+  text-align: right;
+}
+
 .footer-bottom::before {
   content: '';
   width: 200px;
@@ -221,12 +221,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   margin-left: 10px;
 }
 
-.page-categories {
-  margin-top: 0;
-}
-
-.page-categories, .page-tags,
-.page-categories li, .page-tags li {
+.page-tags,
+.page-tags li {
   display: inline-block;
 }
 
@@ -293,6 +289,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   margin-top: 40px;
 }
 
+.page-date {
+  color: hsla(230, 4%, 48%, 1);
+  font-style: italic;
+}
+
 /* content */
 
 .page-content .highlight {
@@ -304,24 +305,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   padding: 10px 20px;
 }
 
-.page-content :not(pre) > code {
-  background-color: var(--code-bg);
-  padding: 2px 5px;
-  border-radius: 2px;
-}
-
 .page-content blockquote {
   border-left: 6px solid #ddd;
   margin-left: 0;
   padding-left: 10px;
   color: #aaa;
-}
-
-.page-content kbd {
-  color: #666;
-  border: 1px solid #ccc;
-  padding: 1px 5px;
-  border-radius: 2px;
 }
 
 .page-content table {
@@ -435,11 +423,11 @@ header a {
     
 <div class="page-top">
     <h1 class="page-title">The string module in Python</h1>
-    <ul class="page-categories categories">
-        <li><a href="/categories/itsbuiltin">itsbuiltin</a></li>
-    </ul>
-    
+
+    <p class="page-date">20 August 2017</p>
+
     <ul class="page-tags tags">
+        <li><a href="/tags/tip">tip</a></li>
         <li><a href="/tags/python">python</a></li>
         <li><a href="/tags/module">module</a></li>
         <li><a href="/tags/string">string</a></li>
@@ -448,13 +436,13 @@ header a {
 
     
 
-</div><section class="page-content"><p>If you want the list of every letter, just do:</p>
+</div><section class="page-content"><p>If you want every letter in the alphabet in python, don&rsquo;t write them all out
+manually.. </p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">string</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_uppercase</span><span class="p">)</span>
 <span class="n">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span></code></pre></div></section>
 
 <div class="page-bottom">
-    <p class="page-date">Published on Sunday 20 August 2017</p>
     <ul class="page-share-list">
         <li>
             <a href="https://twitter.com/intent/tweet?text=The&#43;string&#43;module&#43;in&#43;Python&amp;url=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fstring-module-python%2F" target="_blank"
@@ -487,8 +475,6 @@ header a {
             <h4 class="footer-split-title">Browse by</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
-            
-                <li><a href="/categories">Categories</a></li>
             </ul>
         </div>
         <div class="footer-split">
@@ -508,7 +494,7 @@ header a {
     </div>
     <div class="footer-bottom">
         <p>
-            © Mathieu Paturel 2017.
+            © Mathieu Paturel 2017-2019.
             
             Code over at <a href="https://github.com/math2001/math2001.github.io"><code>math2001/math2001.github.io</code></a>.
             

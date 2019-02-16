@@ -20,8 +20,7 @@
     <title>Tags - Math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
-  --monospace: Menlo, Inconsolata, consolas, monospace;
-  --monospace-secondary: Inconsolata, consolas, monospace;
+  --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
   --font-mute: #888;
@@ -53,12 +52,24 @@ body {
   color: #333;
   line-height: 1.5;
 }
-
 h1, h2 {
   letter-spacing: 2px;
-  font-weight: normal;
+  font-weight: 100;
 }
 
+h3, h4 {
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+h3 { font-size: 140%; }
+h4 { font-size: 120%; }
+
+h1 > small, h2 > small, h3 > small {
+  font-size: 70%;
+  opacity: .8;
+  font-weight: normal;
+}
 
 .wrapper {
   flex: 1 0 auto;
@@ -69,7 +80,21 @@ main {
   margin-bottom: 20px;
 }
 
-.tags, .categories { font-family: var(--monospace-secondary); }
+.tags { font-family: var(--monospace); }
+
+.page-content :not(pre) > code,
+.list-summary code {
+  background-color: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+.page-content kbd,
+.list-summary kbd {
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
 
 .tags {
   list-style: none;
@@ -87,35 +112,6 @@ main {
 .tags a:hover {
   border-color: #aaa;
   color: #555;
-}
-
-.categories {
-  padding: 0;
-  list-style: none;
-}
-
-.categories a::after,
-.categories a::before {
-  content: "{";
-  margin-right: 5px;
-  display: inline-block;
-  color: #888;
-}
-
-.categories a::after {
-  content: "}";
-  margin: 0;
-  margin-left: 5px;
-}
-
-.categories a {
-  color: var(--color);
-  text-decoration: none;
-}
-
-.categories a:hover {
-  color: #000;
-  text-decoration: underline;
 }
 
 footer {
@@ -195,6 +191,10 @@ footer {
   text-align: center;
 }
 
+.align-right {
+  text-align: right;
+}
+
 .footer-bottom::before {
   content: '';
   width: 200px;
@@ -215,14 +215,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 }
 
 .terms-content {
-  width: 500px;
+  width: 960px;
   max-width: 100%;
   margin: auto;
-  columns: auto 10em;
+  columns: auto 13em;
+  padding: 0 20px;
 }
 
-.terms-tags,
-.terms-categories {
+.terms-tags {
   margin: 0;
 }
 
@@ -318,11 +318,45 @@ header a {
 
 
 <div class="terms-top">
-    <h1>Tags</h1>
+    <h1>Tags <small>(67)</small></h1>
 </div>
 
 <div class="terms-content">
     <ul class="tags terms-tags">
+        
+        <li>(20) <a href="tip">tip</a></li>
+        
+        <li>(17) <a href="vim">vim</a></li>
+        
+        <li>(5) <a href="bash">bash</a></li>
+        
+        <li>(4) <a href="vimscript">vimscript</a></li>
+        
+        <li>(3) <a href="mathematics">mathematics</a></li>
+        
+        <li>(3) <a href="nodejs">nodejs</a></li>
+        
+        <li>(3) <a href="performances">performances</a></li>
+        
+        <li>(3) <a href="python">python</a></li>
+        
+        <li>(2) <a href="binary">binary</a></li>
+        
+        <li>(2) <a href="calculus">calculus</a></li>
+        
+        <li>(2) <a href="cli">cli</a></li>
+        
+        <li>(2) <a href="howto">howto</a></li>
+        
+        <li>(2) <a href="javascript">javascript</a></li>
+        
+        <li>(2) <a href="map">map</a></li>
+        
+        <li>(2) <a href="svg">svg</a></li>
+        
+        <li>(2) <a href="terminal">terminal</a></li>
+        
+        <li>(1) <a href="about">about</a></li>
         
         <li>(1) <a href="alphabet">alphabet</a></li>
         
@@ -330,19 +364,17 @@ header a {
         
         <li>(1) <a href="bang">bang</a></li>
         
-        <li>(5) <a href="bash">bash</a></li>
-        
-        <li>(2) <a href="binary">binary</a></li>
-        
         <li>(1) <a href="bit-manipulation">bit-manipulation</a></li>
         
         <li>(1) <a href="buffer">buffer</a></li>
         
-        <li>(2) <a href="calculus">calculus</a></li>
+        <li>(1) <a href="challenge">challenge</a></li>
         
         <li>(1) <a href="chrome">chrome</a></li>
         
         <li>(1) <a href="cipher">cipher</a></li>
+        
+        <li>(1) <a href="code-aesthetic">code aesthetic</a></li>
         
         <li>(1) <a href="command">command</a></li>
         
@@ -356,7 +388,7 @@ header a {
         
         <li>(1) <a href="devtools">devtools</a></li>
         
-        <li>(1) <a href="doc">doc</a></li>
+        <li>(1) <a href="documentation">documentation</a></li>
         
         <li>(1) <a href="editor">editor</a></li>
         
@@ -376,10 +408,6 @@ header a {
         
         <li>(1) <a href="hugo">hugo</a></li>
         
-        <li>(2) <a href="javascript">javascript</a></li>
-        
-        <li>(2) <a href="map">map</a></li>
-        
         <li>(1) <a href="module">module</a></li>
         
         <li>(1) <a href="network">network</a></li>
@@ -388,15 +416,9 @@ header a {
         
         <li>(1) <a href="newtown">newtown</a></li>
         
-        <li>(3) <a href="nodejs">nodejs</a></li>
-        
         <li>(1) <a href="option">option</a></li>
         
         <li>(1) <a href="options">options</a></li>
-        
-        <li>(1) <a href="performances">performances</a></li>
-        
-        <li>(2) <a href="perfs">perfs</a></li>
         
         <li>(1) <a href="physics">physics</a></li>
         
@@ -404,7 +426,7 @@ header a {
         
         <li>(1) <a href="profile">profile</a></li>
         
-        <li>(3) <a href="python">python</a></li>
+        <li>(1) <a href="resources">resources</a></li>
         
         <li>(1) <a href="scopes">scopes</a></li>
         
@@ -420,25 +442,17 @@ header a {
         
         <li>(1) <a href="string">string</a></li>
         
-        <li>(2) <a href="svg">svg</a></li>
-        
         <li>(1) <a href="svgstore">svgstore</a></li>
         
         <li>(1) <a href="symbols">symbols</a></li>
         
         <li>(1) <a href="template">template</a></li>
         
-        <li>(2) <a href="terminal">terminal</a></li>
-        
         <li>(1) <a href="testing">testing</a></li>
         
         <li>(1) <a href="tmux">tmux</a></li>
         
-        <li>(1) <a href="variable">variable</a></li>
-        
-        <li>(17) <a href="vim">vim</a></li>
-        
-        <li>(4) <a href="vimscript">vimscript</a></li>
+        <li>(1) <a href="web-development">web development</a></li>
         
         <li>(1) <a href="windows">windows</a></li>
         
@@ -459,8 +473,6 @@ header a {
             <h4 class="footer-split-title">Browse by</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
-            
-                <li><a href="/categories">Categories</a></li>
             </ul>
         </div>
         <div class="footer-split">
@@ -480,7 +492,7 @@ header a {
     </div>
     <div class="footer-bottom">
         <p>
-            © Mathieu Paturel 2017.
+            © Mathieu Paturel 2017-2019.
             
             Code over at <a href="https://github.com/math2001/math2001.github.io"><code>math2001/math2001.github.io</code></a>.
             

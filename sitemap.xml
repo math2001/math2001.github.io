@@ -178,14 +178,7 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/categories/about/</loc>
-    <lastmod>2017-09-09T19:43:23+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://math2001.github.io/categories/</loc>
-    <lastmod>2017-09-09T19:43:23+10:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -203,6 +196,12 @@
   
   <url>
     <loc>https://math2001.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/about/</loc>
+    <lastmod>2017-09-09T19:43:23+10:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -255,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/categories/challenge/</loc>
+    <loc>https://math2001.github.io/tags/challenge/</loc>
     <lastmod>2018-05-25T22:32:29+10:00</lastmod>
     <priority>0</priority>
   </url>
@@ -273,13 +272,13 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/categories/cli/</loc>
+    <loc>https://math2001.github.io/tags/cli/</loc>
     <lastmod>2017-09-27T11:18:56+10:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/categories/code-aesthetic/</loc>
+    <loc>https://math2001.github.io/tags/code-aesthetic/</loc>
     <lastmod>2017-09-13T14:18:22+10:00</lastmod>
     <priority>0</priority>
   </url>
@@ -303,12 +302,6 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/categories/cool-feature/</loc>
-    <lastmod>2018-05-21T17:59:22+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://math2001.github.io/tags/css/</loc>
     <lastmod>2017-10-08T17:18:21+11:00</lastmod>
     <priority>0</priority>
@@ -327,7 +320,7 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tags/doc/</loc>
+    <loc>https://math2001.github.io/tags/documentation/</loc>
     <lastmod>2017-08-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -381,7 +374,7 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/categories/howto/</loc>
+    <loc>https://math2001.github.io/tags/howto/</loc>
     <lastmod>2017-10-08T17:18:21+11:00</lastmod>
     <priority>0</priority>
   </url>
@@ -389,18 +382,6 @@
   <url>
     <loc>https://math2001.github.io/tags/hugo/</loc>
     <lastmod>2017-09-23T11:23:45+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/categories/infos/</loc>
-    <lastmod>2017-08-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/categories/itsbuiltin/</loc>
-    <lastmod>2017-09-27T12:55:56+10:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -417,7 +398,7 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/categories/mathematics/</loc>
+    <loc>https://math2001.github.io/tags/mathematics/</loc>
     <lastmod>2019-02-15T11:12:47+11:00</lastmod>
     <priority>0</priority>
   </url>
@@ -466,12 +447,6 @@
   
   <url>
     <loc>https://math2001.github.io/tags/performances/</loc>
-    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/perfs/</loc>
     <lastmod>2018-05-21T17:59:22+10:00</lastmod>
     <priority>0</priority>
   </url>
@@ -501,7 +476,7 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/categories/resources/</loc>
+    <loc>https://math2001.github.io/tags/resources/</loc>
     <lastmod>2017-09-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -585,7 +560,7 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/categories/tip/</loc>
+    <loc>https://math2001.github.io/tags/tip/</loc>
     <lastmod>2018-10-02T08:41:38+10:00</lastmod>
     <priority>0</priority>
   </url>
@@ -593,12 +568,6 @@
   <url>
     <loc>https://math2001.github.io/tags/tmux/</loc>
     <lastmod>2018-10-02T08:41:38+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/variable/</loc>
-    <lastmod>2017-08-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -615,7 +584,7 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/categories/web-development/</loc>
+    <loc>https://math2001.github.io/tags/web-development/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

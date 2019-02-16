@@ -6,11 +6,34 @@
     <description>Recent content in performances on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
-    <lastBuildDate>Sun, 20 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
+    <lastBuildDate>Mon, 21 May 2018 17:59:22 +1000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/performances/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>So vim got slow</title>
+      <link>https://math2001.github.io/post/so-vim-became-slow/</link>
+      <pubDate>Mon, 21 May 2018 17:59:22 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/so-vim-became-slow/</guid>
+      <description>&lt;p&gt;You know that feeling? You press in a key, and you have to wait like 0.5 seconds
+to see it appear on screen. You try to run &lt;code&gt;vim --clean&lt;/code&gt; and everything&amp;rsquo;s back
+to &amp;ldquo;normal&amp;rdquo;. How do you find &lt;em&gt;quickly&lt;/em&gt; the cause of this horrible disaster 😄 &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to combine svgs</title>
+      <link>https://math2001.github.io/post/combine-svgs/</link>
+      <pubDate>Sun, 08 Oct 2017 17:18:21 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/post/combine-svgs/</guid>
+      <description>&lt;p&gt;If you want your website to be fast, you should limit the number of http
+requests. A great way of doing that is combining your images. If you use SVGS
+for your icons and stuff like that, here&amp;rsquo;s how you can combine all your icon in
+one big file, and use them in your website!&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Network throttling</title>
@@ -18,8 +41,8 @@
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/network-throttling/</guid>
-      <description>Ever wanted to simulate a slow connection? Well, the chrome&amp;rsquo;s DevTools makes it very easy to do!
-Open it up (ctrl+shift+i), in the Network tab, find the No throttling dropdown menu, and you&amp;rsquo;re good to go</description>
+      <description>&lt;p&gt;Ever wanted to simulate a slow connection? Well, the chrome&amp;rsquo;s DevTools makes it
+very easy to do!&lt;/p&gt;</description>
     </item>
     
   </channel>

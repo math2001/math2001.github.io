@@ -6,7 +6,7 @@
     <description>Recent content in physics on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
     <lastBuildDate>Fri, 15 Feb 2019 11:12:47 +1100</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/physics/index.xml" rel="self" type="application/rss+xml" />
@@ -18,11 +18,9 @@
       <pubDate>Fri, 15 Feb 2019 11:12:47 +1100</pubDate>
       
       <guid>https://math2001.github.io/post/motion-and-calculus/</guid>
-      <description>Motions If you studied physics, one of the first things you probably did was graph the &amp;ldquo;motion&amp;rdquo; of objects. That is the displacement, velocity, and acceleration at an instant t.
-Observation Let&amp;rsquo;s say we have an object whos displacement is such that:
-$$ s(t) = t^2 \quad \text{where t is the time} $$
-If we graphed this function, we&amp;rsquo;d get a parabola:
- Now, let&amp;rsquo;s graph its velocity. You can do it manually, but if you try to feel it, you&amp;rsquo;ll see that since as the time goes by the displacement keeps on increasing faster and faster, the velocity could increase linearly.</description>
+      <description>&lt;p&gt;If you studied physics, one of the first things you probably did was graph the
+&amp;ldquo;motion&amp;rdquo; of objects. That is the displacement, velocity, and acceleration at
+an instant &lt;em&gt;t&lt;/em&gt;. Didn&amp;rsquo;t it remind you of a mathematical concept? &lt;/p&gt;</description>
     </item>
     
   </channel>

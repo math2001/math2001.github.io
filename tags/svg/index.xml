@@ -6,7 +6,7 @@
     <description>Recent content in svg on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
     <lastBuildDate>Sun, 08 Oct 2017 17:18:21 +1100</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/svg/index.xml" rel="self" type="application/rss+xml" />
@@ -30,10 +30,10 @@ one big file, and use them in your website!&lt;/p&gt;</description>
       <pubDate>Fri, 22 Sep 2017 18:31:15 +1000</pubDate>
       
       <guid>https://math2001.github.io/project/live-svg/</guid>
-      <description>SVGs are awesome. They allow you to make some infinitely resizable images.
-Sometimes, you want to make a complex image, so you use something Inkscape, but sometimes, you just want to make a simple one, so you take a deep breath and away you go to write a SVG by hand!
-So, you open your favorite text editor and your browser, splitting your screen in half.
- edit save alt+tab ctrl+r alt+tab  Picture how fun this workflow would can be when you try to learn to write path&amp;rsquo;s d attribute by hand!</description>
+      <description>&lt;p&gt;SVGs are awesome. They allow you to make some infinitely resizable images.
+Sometimes, you want to make a complex image, so you use something &lt;a href=&#34;https://inkscape.org&#34; target=&#34;_blank&#34;&gt;Inkscape&lt;/a&gt;,
+but sometimes, you just want to make a simple one, so you take a deep breath and
+away you go to write a SVG by hand!&lt;/p&gt;</description>
     </item>
     
   </channel>

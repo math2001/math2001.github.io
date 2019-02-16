@@ -20,8 +20,7 @@
     <title>Math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
-  --monospace: Menlo, Inconsolata, consolas, monospace;
-  --monospace-secondary: Inconsolata, consolas, monospace;
+  --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
   --font-mute: #888;
@@ -53,12 +52,24 @@ body {
   color: #333;
   line-height: 1.5;
 }
-
 h1, h2 {
   letter-spacing: 2px;
-  font-weight: normal;
+  font-weight: 100;
 }
 
+h3, h4 {
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+h3 { font-size: 140%; }
+h4 { font-size: 120%; }
+
+h1 > small, h2 > small, h3 > small {
+  font-size: 70%;
+  opacity: .8;
+  font-weight: normal;
+}
 
 .wrapper {
   flex: 1 0 auto;
@@ -69,7 +80,21 @@ main {
   margin-bottom: 20px;
 }
 
-.tags, .categories { font-family: var(--monospace-secondary); }
+.tags { font-family: var(--monospace); }
+
+.page-content :not(pre) > code,
+.list-summary code {
+  background-color: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+.page-content kbd,
+.list-summary kbd {
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
 
 .tags {
   list-style: none;
@@ -87,35 +112,6 @@ main {
 .tags a:hover {
   border-color: #aaa;
   color: #555;
-}
-
-.categories {
-  padding: 0;
-  list-style: none;
-}
-
-.categories a::after,
-.categories a::before {
-  content: "{";
-  margin-right: 5px;
-  display: inline-block;
-  color: #888;
-}
-
-.categories a::after {
-  content: "}";
-  margin: 0;
-  margin-left: 5px;
-}
-
-.categories a {
-  color: var(--color);
-  text-decoration: none;
-}
-
-.categories a:hover {
-  color: #000;
-  text-decoration: underline;
 }
 
 footer {
@@ -193,6 +189,10 @@ footer {
 
 .center {
   text-align: center;
+}
+
+.align-right {
+  text-align: right;
 }
 
 .footer-bottom::before {
@@ -436,8 +436,6 @@ h1 {
             <h4 class="footer-split-title">Browse by</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
-            
-                <li><a href="/categories">Categories</a></li>
             </ul>
         </div>
         <div class="footer-split">
@@ -457,7 +455,7 @@ h1 {
     </div>
     <div class="footer-bottom">
         <p>
-            © Mathieu Paturel 2017.
+            © Mathieu Paturel 2017-2019.
             
             Code over at <a href="https://github.com/math2001/math2001.github.io"><code>math2001/math2001.github.io</code></a>.
             

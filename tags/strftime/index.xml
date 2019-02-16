@@ -6,7 +6,7 @@
     <description>Recent content in strftime on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
     <lastBuildDate>Sun, 20 Aug 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/strftime/index.xml" rel="self" type="application/rss+xml" />
@@ -18,9 +18,8 @@
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/how-to-insert-the-date-in-vim/</guid>
-      <description>First off, I really don&amp;rsquo;t recommend you use the strftime() function vim has, since, as it says in the help message (:help strftime)
- The accepted {format} depends on your system, thus this is not portable!
- So, a somewhat better solution is to use the date shell command. Yes, it seems even less portable, but at least you know for sure if it&amp;rsquo;s going to work or not (with strftime(), I don&amp;rsquo;t know if vim could get mixed up about the OS when you use a simulate a Unix environment in your terminal)</description>
+      <description>&lt;p&gt;First off, I really don&amp;rsquo;t recommend you use the &lt;code&gt;strftime()&lt;/code&gt; function vim has,
+since, as it says in the help message (&lt;code&gt;:help strftime&lt;/code&gt;)&lt;/p&gt;</description>
     </item>
     
   </channel>

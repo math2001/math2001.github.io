@@ -20,8 +20,7 @@
     <title>Posts - Math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
-  --monospace: Menlo, Inconsolata, consolas, monospace;
-  --monospace-secondary: Inconsolata, consolas, monospace;
+  --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
   --font-mute: #888;
@@ -53,12 +52,24 @@ body {
   color: #333;
   line-height: 1.5;
 }
-
 h1, h2 {
   letter-spacing: 2px;
-  font-weight: normal;
+  font-weight: 100;
 }
 
+h3, h4 {
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+h3 { font-size: 140%; }
+h4 { font-size: 120%; }
+
+h1 > small, h2 > small, h3 > small {
+  font-size: 70%;
+  opacity: .8;
+  font-weight: normal;
+}
 
 .wrapper {
   flex: 1 0 auto;
@@ -69,7 +80,21 @@ main {
   margin-bottom: 20px;
 }
 
-.tags, .categories { font-family: var(--monospace-secondary); }
+.tags { font-family: var(--monospace); }
+
+.page-content :not(pre) > code,
+.list-summary code {
+  background-color: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+.page-content kbd,
+.list-summary kbd {
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
 
 .tags {
   list-style: none;
@@ -87,35 +112,6 @@ main {
 .tags a:hover {
   border-color: #aaa;
   color: #555;
-}
-
-.categories {
-  padding: 0;
-  list-style: none;
-}
-
-.categories a::after,
-.categories a::before {
-  content: "{";
-  margin-right: 5px;
-  display: inline-block;
-  color: #888;
-}
-
-.categories a::after {
-  content: "}";
-  margin: 0;
-  margin-left: 5px;
-}
-
-.categories a {
-  color: var(--color);
-  text-decoration: none;
-}
-
-.categories a:hover {
-  color: #000;
-  text-decoration: underline;
 }
 
 footer {
@@ -195,6 +191,10 @@ footer {
   text-align: center;
 }
 
+.align-right {
+  text-align: right;
+}
+
 .footer-bottom::before {
   content: '';
   width: 200px;
@@ -232,21 +232,18 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 }
 
 .list-content {
-  padding: 10px 0px;
-  display: flex;
+  padding: 0px;
+/*  display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+*/
+  display: block;
 }
 
-.list-content-tags,
+
 .list-content-tags li {
   display: inline-block;
-}
-
-.list-list .categories {
-  display: inline-block;
-  font-size: 80%;
 }
 
 .list-link {
@@ -261,11 +258,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   color: var(--purple)
 }
 
-.list-content-reading-time {
-  font-size: 80%;
-  opacity: .8;
+.list-summary {
+  margin-top: 20px;
+  text-align: justify;
 }
 
+.list-summary img {
+  max-width: 100%;
+}
 </style><style>
     header {
   padding: 10px 15px;
@@ -356,7 +356,7 @@ header a {
         <span id="show-header" class="show-header"></span>
     
 <div class="list-top">
-    <h1>Posts</h1>
+    <h1>Posts <small>(32)</small></h1>
     <div class="list-description"><p>Some tips 💡, some explanations ➰, some scripts
 ❓</p>
 
@@ -368,544 +368,762 @@ header a {
     <ul class="list-list">
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/motion-and-calculus/">
+                    Motion and calculus</a>
+                    <small class="list-content-reading-time"
+                        title="440 words">(~ 3 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/mathematics">mathematics</a></li>
                     <li><a href="/tags/calculus">calculus</a></li>
                     <li><a href="/tags/physics">physics</a></li>
+                    <li><a href="/tags/newtown">newtown</a></li>
                 </ul>
-                <a class=list-link href="/post/motion-and-calculus/">Motion and calculus</a>
-                <small class="list-content-reading-time"
-                    title="433 words">(~ 3 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/mathematics">mathematics</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>If you studied physics, one of the first things you probably did was graph the
+&ldquo;motion&rdquo; of objects. That is the displacement, velocity, and acceleration at
+an instant <em>t</em>. Didn&rsquo;t it remind you of a mathematical concept? </p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/motion-and-calculus/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/length-of-a-curve/">
+                    Length of a curve</a>
+                    <small class="list-content-reading-time"
+                        title="515 words">(~ 3 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/mathematics">mathematics</a></li>
                     <li><a href="/tags/calculus">calculus</a></li>
                 </ul>
-                <a class=list-link href="/post/length-of-a-curve/">Length of a curve</a>
-                <small class="list-content-reading-time"
-                    title="521 words">(~ 3 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/mathematics">mathematics</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>After misunderstanding a question in physics, I thought I had to calculate the
+length of a curved trajectory (ie. the distance) instead of just the straight
+line (ie. the displacement). Turns out it was the easy option, but I now wanted
+to know how to get the length of a curve. I mean, it&rsquo;d just be summing up
+an infinite number of straight lines, which is almost exactly what integration
+is&hellip;</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/length-of-a-curve/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/tmux-zoom/">
+                    Tmux Zoom</a>
+                    <small class="list-content-reading-time"
+                        title="26 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/tmux">tmux</a></li>
                     <li><a href="/tags/terminal">terminal</a></li>
                 </ul>
-                <a class=list-link href="/post/tmux-zoom/">Tmux Zoom</a>
-                <small class="list-content-reading-time"
-                    title="26 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/tip">tip</a>
-                </li>
-            </ul>
+                <div class="list-summary">When you have multiple panes open in tmux, just press prefix z to toggle zoom mode. When activated, only the current pane will be shown. 😉</div>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/vim-filetype-specific-settings/">
+                    Vim file type specific settings</a>
+                    <small class="list-content-reading-time"
+                        title="148 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/filetype">filetype</a></li>
                 </ul>
-                <a class=list-link href="/post/vim-filetype-specific-settings/">Vim file type specific settings</a>
-                <small class="list-content-reading-time"
-                    title="143 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/tip">tip</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>If you want to run some vim script for a specific file type, don&rsquo;t make an
+auto command, they get messy really quickly. Instead, you should use <code>ftplugin</code>. </p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/vim-filetype-specific-settings/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/vim-jump-to-function-definition/">
+                    Jump to function definition in vim</a>
+                    <small class="list-content-reading-time"
+                        title="1028 words">(~ 5 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/go">go</a></li>
                     <li><a href="/tags/vim">vim</a></li>
+                    <li><a href="/tags/fzf">fzf</a></li>
                 </ul>
-                <a class=list-link href="/post/vim-jump-to-function-definition/">Jump to function definition in vim</a>
-                <small class="list-content-reading-time"
-                    title="1028 words">(~ 5 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/tip">tip</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>One of the features I miss from Sublime Text is the Goto Anything. In vim, by
+default, you have <code>:e **/bit</code> and then tab, and it gets annoying pretty
+quickly. Thankfully, there&rsquo;s <a href="https://github.com/junegunn/fzf" target="_blank"><code>fzf</code></a> (with <a href="https://github.com/junegunn/fzf.vim" target="_blank"><code>fzf.vim</code></a>).</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/vim-jump-to-function-definition/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/challenge-1-translate-back/">
+                    Challenge #1: Translate back</a>
+                    <small class="list-content-reading-time"
+                        title="167 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/challenge">challenge</a></li>
                     <li><a href="/tags/cipher">cipher</a></li>
                 </ul>
-                <a class=list-link href="/post/challenge-1-translate-back/">Challenge #1: Translate back</a>
-                <small class="list-content-reading-time"
-                    title="167 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/challenge">challenge</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>I&rsquo;ve got a little challenge for you.</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/challenge-1-translate-back/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/so-vim-became-slow/">
+                    So vim got slow</a>
+                    <small class="list-content-reading-time"
+                        title="381 words">(~ 2 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/profile">profile</a></li>
+                    <li><a href="/tags/performances">performances</a></li>
                 </ul>
-                <a class=list-link href="/post/so-vim-became-slow/">So vim got slow</a>
-                <small class="list-content-reading-time"
-                    title="369 words">(~ 2 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/cool-feature">cool feature</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>You know that feeling? You press in a key, and you have to wait like 0.5 seconds
+to see it appear on screen. You try to run <code>vim --clean</code> and everything&rsquo;s back
+to &ldquo;normal&rdquo;. How do you find <em>quickly</em> the cause of this horrible disaster 😄 </p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/so-vim-became-slow/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/the-last-terminal-title/">
+                    The Last Terminal Title</a>
+                    <small class="list-content-reading-time"
+                        title="293 words">(~ 2 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/bash">bash</a></li>
                     <li><a href="/tags/terminal">terminal</a></li>
                 </ul>
-                <a class=list-link href="/post/the-last-terminal-title/">The Last Terminal Title</a>
-                <small class="list-content-reading-time"
-                    title="292 words">(~ 2 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/tip">tip</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p><img src="/img/tmux-title.png" alt="ls@asyncio   vim@math2001.github.io   git@dotfiles" /></p>
+
+<p>I use tmux, and in the tabs title, it displays the terminal&rsquo;s title, which is
+just done by this 2 lines in your <code>.tmux.conf</code> </p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/the-last-terminal-title/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/0.9-repeater/">
+                    0.9 Repeater</a>
+                    <small class="list-content-reading-time"
+                        title="118 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/mathematics">mathematics</a></li>
                     <li><a href="/tags/funny">funny</a></li>
                 </ul>
-                <a class=list-link href="/post/0.9-repeater/">0.9 Repeater</a>
-                <small class="list-content-reading-time"
-                    title="119 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/mathematics">mathematics</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>Today I learned something a bit weird in mathematics, which I find quiet funny
+and interesting.</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/0.9-repeater/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/so-binary-numbers-are-useful/">
+                    So binary numbers are useful?</a>
+                    <small class="list-content-reading-time"
+                        title="1499 words">(~ 8 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
                     <li><a href="/tags/binary">binary</a></li>
                     <li><a href="/tags/python">python</a></li>
+                    <li><a href="/tags/binary">binary</a></li>
+                    <li><a href="/tags/bit-manipulation">bit-manipulation</a></li>
                 </ul>
-                <a class=list-link href="/post/so-binary-numbers-are-useful/">So binary numbers are useful?</a>
-                <small class="list-content-reading-time"
-                    title="1499 words">(~ 8 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/cool-feature">cool feature</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>Do you know what binary numbers are? They&rsquo;re just a way of counting with just 2
+numbers: 0 and 1. For example, <code>9</code> is in binary <code>1001</code>.</p>
+
+<p>This is the format your computer uses to do everything, at a very low level.
+Either there is some current, or there isn&rsquo;t. And then, it interprets these
+numbers, and becomes what it is.</p>
+
+<p>So, what the heck could be the use of binary numbers to us, simple programmers
+who write some code with all these different symbols, letters, and numbers?
+🤔</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/so-binary-numbers-are-useful/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/combine-svgs/">
+                    How to combine svgs</a>
+                    <small class="list-content-reading-time"
+                        title="287 words">(~ 2 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/howto">howto</a></li>
                     <li><a href="/tags/svg">svg</a></li>
-                    <li><a href="/tags/perfs">perfs</a></li>
+                    <li><a href="/tags/performances">performances</a></li>
+                    <li><a href="/tags/css">css</a></li>
+                    <li><a href="/tags/nodejs">nodejs</a></li>
+                    <li><a href="/tags/svgstore">svgstore</a></li>
                 </ul>
-                <a class=list-link href="/post/combine-svgs/">How to combine svgs</a>
-                <small class="list-content-reading-time"
-                    title="287 words">(~ 2 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/howto">howto</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>If you want your website to be fast, you should limit the number of http
+requests. A great way of doing that is combining your images. If you use SVGS
+for your icons and stuff like that, here&rsquo;s how you can combine all your icon in
+one big file, and use them in your website!</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/combine-svgs/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/vim-line-completion/">
+                    Vim Line Completion</a>
+                    <small class="list-content-reading-time"
+                        title="54 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/completion">completion</a></li>
                 </ul>
-                <a class=list-link href="/post/vim-line-completion/">Vim Line Completion</a>
-                <small class="list-content-reading-time"
-                    title="54 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/itsbuiltin">itsbuiltin</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p><img src="/img/vim-ctrl-x_ctrl-l.gif" alt="demo of ctrl-x_ctrl+l in insert mode in vim" /></p>
+
+<p>Do you know what kind of completion this is? <strong>Line</strong> completion. It looks for
+every lines that starts with the same text (it doesn&rsquo;t take into consideration
+the indication), and completes it for you! Awesome right? </p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/vim-line-completion/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/bashs-fc-command/">
+                    Bash&#39;s fc command</a>
+                    <small class="list-content-reading-time"
+                        title="232 words">(~ 2 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/bash">bash</a></li>
                     <li><a href="/tags/editor">editor</a></li>
                 </ul>
-                <a class=list-link href="/post/bashs-fc-command/">Bash&#39;s fc command</a>
-                <small class="list-content-reading-time"
-                    title="232 words">(~ 2 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/cool-feature">cool feature</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>When editing long commands in your terminal (you know, the one that wraps
+😉), sometimes you&rsquo;d be better of using your actual editor (like vim or
+Sublime). And guess what? Bash let&rsquo;s you do that! 🎉</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/bashs-fc-command/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/bashs-find-command/">
+                    Bash&#39;s find command</a>
+                    <small class="list-content-reading-time"
+                        title="1225 words">(~ 6 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/bash">bash</a></li>
                     <li><a href="/tags/find">find</a></li>
+                    <li><a href="/tags/file-manupilation">file manupilation</a></li>
                 </ul>
-                <a class=list-link href="/post/bashs-find-command/">Bash&#39;s find command</a>
-                <small class="list-content-reading-time"
-                    title="1228 words">(~ 6 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/itsbuiltin">itsbuiltin</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>The <code>find</code> command in bash is quite powerful, and knowing the basics might save
+you some scripting.</p>
+
+<p>What does it do? It &ldquo;finds&rdquo; files. By default, it outputs their path relative to
+where you ran <code>find</code>. But, in addition of providing you with advanced &ldquo;filters&rdquo;
+it actually allows you to run commands on each of those files.</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/bashs-find-command/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/hugo-deploying-github-pages/">
+                    Deploying a hugo site on GitHub pages</a>
+                    <small class="list-content-reading-time"
+                        title="290 words">(~ 2 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/howto">howto</a></li>
                     <li><a href="/tags/hugo">hugo</a></li>
                     <li><a href="/tags/static-site">static site</a></li>
+                    <li><a href="/tags/bash">bash</a></li>
+                    <li><a href="/tags/github-pages">github-pages</a></li>
                 </ul>
-                <a class=list-link href="/post/hugo-deploying-github-pages/">Deploying a hugo site on GitHub pages</a>
-                <small class="list-content-reading-time"
-                    title="290 words">(~ 2 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/howto">howto</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>When you want to deploy a static website built with the fantastic <a href="https://gohugo.io" target="_blank">Hugo</a> on
+GitHub pages, you don&rsquo;t have 100 of possibilities. A clean one, and an easy one
+😄.</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/hugo-deploying-github-pages/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/my-zen/">
+                    My Zen</a>
+                    <small class="list-content-reading-time"
+                        title="81 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/code-aesthetic">code aesthetic</a></li>
                     <li><a href="/tags/python">python</a></li>
                     <li><a href="/tags/zen">zen</a></li>
+                    <li><a href="/tags/conventions">conventions</a></li>
                 </ul>
-                <a class=list-link href="/post/my-zen/">My Zen</a>
-                <small class="list-content-reading-time"
-                    title="84 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/code-aesthetic">code aesthetic</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p><a href="https://python.org" target="_blank">Python</a> is by far my favorite language (I even wish we
+[spoke it 😄). One thing I found funny about it, and in the same time
+really good, is <a href="https://python.org/dev/peps/pep-0020/" target="_blank">its zen</a>; they&rsquo;re
+basically guidelines.</p>
+
+<p>So, today, <em>dans un élan d&rsquo;inspiration</em>, I decided to write my own.</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/my-zen/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/my-new-blog/">
+                    My new blog</a>
+                    <small class="list-content-reading-time"
+                        title="809 words">(~ 4 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/about">about</a></li>
                     <li><a href="/tags/new">new</a></li>
                     <li><a href="/tags/static-website">static website</a></li>
                 </ul>
-                <a class=list-link href="/post/my-new-blog/">My new blog</a>
-                <small class="list-content-reading-time"
-                    title="809 words">(~ 4 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/about">About</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>Hello everyone!</p>
+
+<p>My name&rsquo;s Mathieu Paturel - <code>@math2001</code> - and I love coding. I&rsquo;m French (from
+Provence, if you know where that is), but my family and I moved 2 years ago to
+Australia so that we could learn to speak fluently English (without this
+disgusting accent 😄).</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/my-new-blog/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/confirm-option-vim/">
+                    The confirm option</a>
+                    <small class="list-content-reading-time"
+                        title="111 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/option">option</a></li>
                 </ul>
-                <a class=list-link href="/post/confirm-option-vim/">The confirm option</a>
-                <small class="list-content-reading-time"
-                    title="111 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/cool-feature">cool feature</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>This is probably one of my favorite option in VIM. Just add this to your <code>.vimrc</code>:</p>
+<div class="highlight"><pre class="chroma">set confirm</pre></div>
+<p></p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/confirm-option-vim/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/great-resources-for-vim-users/">
+                    Great resources for VIM users</a>
+                    <small class="list-content-reading-time"
+                        title="51 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/resources">resources</a></li>
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/vimscript">vimscript</a></li>
                 </ul>
-                <a class=list-link href="/post/great-resources-for-vim-users/">Great resources for VIM users</a>
-                <small class="list-content-reading-time"
-                    title="53 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/resources">resources</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>If you&rsquo;re a VIM user, have a look at these resources, they&rsquo;re pretty good (you
+probably will know some, if not all of them)</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/great-resources-for-vim-users/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/silent-command-line-mapping/">
+                    Silent command-line mapping</a>
+                    <small class="list-content-reading-time"
+                        title="53 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/map">map</a></li>
+                    <li><a href="/tags/command">command</a></li>
                 </ul>
-                <a class=list-link href="/post/silent-command-line-mapping/">Silent command-line mapping</a>
-                <small class="list-content-reading-time"
-                    title="57 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/cool-feature">cool feature</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>If you want to set a mapping to run something that is echoed into the command
+line (something starting with <code>:</code> or <code>/</code> for example) to <em>not</em> be displayed, you
+can use the special argument <code>silent</code>. </p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/silent-command-line-mapping/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/rerun-last-command-bang-vim/">
+                    Rerun last command with bang</a>
+                    <small class="list-content-reading-time"
+                        title="142 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
+                    <li><a href="/tags/vim">vim</a></li>
+                    <li><a href="/tags/vimscript">vimscript</a></li>
+                    <li><a href="/tags/bang">bang</a></li>
+                </ul>
+                <div class="list-summary"><p>Put this code in your vimrc to re run the previous command but with the bang
+(<code>!</code>) by just typing <code>:Please</code>. </p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/rerun-last-command-bang-vim/">Read more →</a>
+                </p>
+                
+            
+        </li>
+        
+        <li class="list-content">
+            
+                <h3 class='list-title'><a class=list-link href="/post/dynamicopen-function-vim/">
+                    DynamicOpen function</a>
+                    <small class="list-content-reading-time"
+                        title="80 words">(~ 1 min)</small>
+                </h3>
+                <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/vimscript">vimscript</a></li>
                 </ul>
-                <a class=list-link href="/post/rerun-last-command-bang-vim/">Rerun last command with bang</a>
-                <small class="list-content-reading-time"
-                    title="142 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/cool-feature">cool feature</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>I really open my <code>.vimrc</code> often. Too often to have to type <code>:e ~/.vimrc</code> or
+<code>:tabe ~/.vimrc</code> every time. Here&rsquo;s little function that will open a file in a
+new tab if there isn&rsquo;t enough room for a new split, and, you guessed it, in a
+new <em>vertical</em> split if there is.</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/dynamicopen-function-vim/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/current-buffer-only-mapping-vim/">
+                    Current buffer only mapping</a>
+                    <small class="list-content-reading-time"
+                        title="32 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
-                    <li><a href="/tags/vim">vim</a></li>
-                    <li><a href="/tags/vimscript">vimscript</a></li>
-                </ul>
-                <a class=list-link href="/post/dynamicopen-function-vim/">DynamicOpen function</a>
-                <small class="list-content-reading-time"
-                    title="80 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/cool-feature">cool feature</a>
-                </li>
-            </ul>
-        </li>
-        
-        <li class="list-content">
-            <div>
-                <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/map">map</a></li>
+                    <li><a href="/tags/buffer">buffer</a></li>
                 </ul>
-                <a class=list-link href="/post/current-buffer-only-mapping-vim/">Current buffer only mapping</a>
-                <small class="list-content-reading-time"
-                    title="36 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/cool-feature">cool feature</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>If you want to set a mapping only for the current buffer in VIM, it&rsquo;s super
+simple: just use the <code>buffer</code> special argument.</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/current-buffer-only-mapping-vim/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/change-shell-run-external-command-vim/">
+                    Change shell used to run external command</a>
+                    <small class="list-content-reading-time"
+                        title="68 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/shell">shell</a></li>
+                    <li><a href="/tags/bash">bash</a></li>
+                    <li><a href="/tags/windows">windows</a></li>
+                    <li><a href="/tags/sh">sh</a></li>
                 </ul>
-                <a class=list-link href="/post/change-shell-run-external-command-vim/">Change shell used to run external command</a>
-                <small class="list-content-reading-time"
-                    title="65 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/cool-feature">cool feature</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>On windows, the cmd sucks. But if you have sh installed from git-for-windows
+for example, you can tell vim to run external commands <code>:!</code> using this <code>sh</code>!.</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/change-shell-run-external-command-vim/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/get-ascii-value-character-vim/">
+                    How do I get the ASCII value of a character?</a>
+                    <small class="list-content-reading-time"
+                        title="61 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/ascii">ascii</a></li>
                 </ul>
-                <a class=list-link href="/post/get-ascii-value-character-vim/">How do I get the ASCII value of a character?</a>
-                <small class="list-content-reading-time"
-                    title="61 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/cool-feature">cool feature</a>
-                </li>
-            </ul>
+                <div class="list-summary">To get the ASCII value of the character under the cursor, just press ga (or run :ascii).
+It&rsquo;ll print it in three format: in decimal, hexadecimal and octal.
+So, when your cursor is on an arrow and that you press ga: →, you&rsquo;ll see at the bottom:
+&lt;→&gt; 8594, Hex: 2192, Octal: 20622  Mnemonic: Get ASCII value. ­ from :help :ascii
+ </div>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/difference-vim-options-readonly-modifiable/">
+                    &#39;readonly&#39; != &#39;modifiable&#39;</a>
+                    <small class="list-content-reading-time"
+                        title="46 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/options">options</a></li>
                 </ul>
-                <a class=list-link href="/post/difference-vim-options-readonly-modifiable/">&#39;readonly&#39; != &#39;modifiable&#39;</a>
-                <small class="list-content-reading-time"
-                    title="45 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/infos">infos</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>Do you know the difference between the option <code>readonly</code> and <code>nomodifiable</code> in
+vim?</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/difference-vim-options-readonly-modifiable/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/vim-help-index/">
+                    Vim help index</a>
+                    <small class="list-content-reading-time"
+                        title="91 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/vim">vim</a></li>
-                    <li><a href="/tags/doc">doc</a></li>
+                    <li><a href="/tags/documentation">documentation</a></li>
                 </ul>
-                <a class=list-link href="/post/vim-help-index/">Vim help index</a>
-                <small class="list-content-reading-time"
-                    title="91 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/infos">infos</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>A very strong point of vim is its documentation. There&rsquo;s just so much of it!!
+So, <strong>use it</strong> </p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/vim-help-index/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/vim-digraphs/">
+                    Vim digraphs</a>
+                    <small class="list-content-reading-time"
+                        title="245 words">(~ 2 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/symbols">symbols</a></li>
                 </ul>
-                <a class=list-link href="/post/vim-digraphs/">Vim digraphs</a>
-                <small class="list-content-reading-time"
-                    title="248 words">(~ 2 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/cool-feature">cool feature</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>Ever wanted to write fancy symbols in your code or your documentation, like the
+copyright symbol for example (©). Do you know how much time it took me to insert
+this symbol? Less than a second&hellip; Do you know how much time it would have took
+you? Well, depending on your internet connection, it might be about 10 seconds.</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/vim-digraphs/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/variable-scopes-vim/">
+                    Variable scopes in vim</a>
+                    <small class="list-content-reading-time"
+                        title="144 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/scopes">scopes</a></li>
+                    <li><a href="/tags/vimscript">vimscript</a></li>
                 </ul>
-                <a class=list-link href="/post/variable-scopes-vim/">Variable scopes in vim</a>
-                <small class="list-content-reading-time"
-                    title="144 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/infos">infos</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>An interesting feature of vim script is variable scoping. Here&rsquo;s a copy-paste
+from the documentation, just in case you never saw it before.</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/variable-scopes-vim/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/string-module-python/">
+                    The string module in Python</a>
+                    <small class="list-content-reading-time"
+                        title="22 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/python">python</a></li>
                     <li><a href="/tags/module">module</a></li>
+                    <li><a href="/tags/string">string</a></li>
+                    <li><a href="/tags/alphabet">alphabet</a></li>
                 </ul>
-                <a class=list-link href="/post/string-module-python/">The string module in Python</a>
-                <small class="list-content-reading-time"
-                    title="16 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/itsbuiltin">itsbuiltin</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>If you want every letter in the alphabet in python, don&rsquo;t write them all out
+manually.. </p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/string-module-python/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/network-throttling/">
+                    Network throttling</a>
+                    <small class="list-content-reading-time"
+                        title="36 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/web-development">web development</a></li>
                     <li><a href="/tags/chrome">chrome</a></li>
                     <li><a href="/tags/devtools">devtools</a></li>
+                    <li><a href="/tags/network">network</a></li>
+                    <li><a href="/tags/performances">performances</a></li>
+                    <li><a href="/tags/testing">testing</a></li>
                 </ul>
-                <a class=list-link href="/post/network-throttling/">Network throttling</a>
-                <small class="list-content-reading-time"
-                    title="36 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/web-development">web development</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>Ever wanted to simulate a slow connection? Well, the chrome&rsquo;s DevTools makes it
+very easy to do!</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/network-throttling/">Read more →</a>
+                </p>
+                
+            
         </li>
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/how-to-insert-the-date-in-vim/">
+                    How to insert the date in Vim?</a>
+                    <small class="list-content-reading-time"
+                        title="178 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/date">date</a></li>
+                    <li><a href="/tags/strftime">strftime</a></li>
                 </ul>
-                <a class=list-link href="/post/how-to-insert-the-date-in-vim/">How to insert the date in Vim?</a>
-                <small class="list-content-reading-time"
-                    title="178 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/cool-feature">cool feature</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>First off, I really don&rsquo;t recommend you use the <code>strftime()</code> function vim has,
+since, as it says in the help message (<code>:help strftime</code>)</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/how-to-insert-the-date-in-vim/">Read more →</a>
+                </p>
+                
+            
         </li>
         
     </ul>
@@ -921,8 +1139,6 @@ header a {
             <h4 class="footer-split-title">Browse by</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
-            
-                <li><a href="/categories">Categories</a></li>
             </ul>
         </div>
         <div class="footer-split">
@@ -942,7 +1158,7 @@ header a {
     </div>
     <div class="footer-bottom">
         <p>
-            © Mathieu Paturel 2017.
+            © Mathieu Paturel 2017-2019.
             
             Code over at <a href="https://github.com/math2001/math2001.github.io"><code>math2001/math2001.github.io</code></a>.
             

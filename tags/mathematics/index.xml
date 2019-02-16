@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mathematics on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/tags/mathematics/</link>
+    <description>Recent content in mathematics on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
+    <lastBuildDate>Fri, 15 Feb 2019 11:12:47 +1100</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/tags/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Motion and calculus</title>
+      <link>https://math2001.github.io/post/motion-and-calculus/</link>
+      <pubDate>Fri, 15 Feb 2019 11:12:47 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/post/motion-and-calculus/</guid>
+      <description>&lt;p&gt;If you studied physics, one of the first things you probably did was graph the
+&amp;ldquo;motion&amp;rdquo; of objects. That is the displacement, velocity, and acceleration at
+an instant &lt;em&gt;t&lt;/em&gt;. Didn&amp;rsquo;t it remind you of a mathematical concept? &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Length of a curve</title>
+      <link>https://math2001.github.io/post/length-of-a-curve/</link>
+      <pubDate>Thu, 14 Feb 2019 21:31:45 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/post/length-of-a-curve/</guid>
+      <description>&lt;p&gt;After misunderstanding a question in physics, I thought I had to calculate the
+length of a curved trajectory (ie. the distance) instead of just the straight
+line (ie. the displacement). Turns out it was the easy option, but I now wanted
+to know how to get the length of a curve. I mean, it&amp;rsquo;d just be summing up
+an infinite number of straight lines, which is almost exactly what integration
+is&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>0.9 Repeater</title>
+      <link>https://math2001.github.io/post/0.9-repeater/</link>
+      <pubDate>Fri, 02 Feb 2018 17:41:26 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/post/0.9-repeater/</guid>
+      <description>&lt;p&gt;Today I learned something a bit weird in mathematics, which I find quiet funny
+and interesting.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

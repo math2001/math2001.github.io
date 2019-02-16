@@ -20,8 +20,7 @@
     <title>windows - Math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
-  --monospace: Menlo, Inconsolata, consolas, monospace;
-  --monospace-secondary: Inconsolata, consolas, monospace;
+  --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
   --font-mute: #888;
@@ -53,12 +52,24 @@ body {
   color: #333;
   line-height: 1.5;
 }
-
 h1, h2 {
   letter-spacing: 2px;
-  font-weight: normal;
+  font-weight: 100;
 }
 
+h3, h4 {
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+h3 { font-size: 140%; }
+h4 { font-size: 120%; }
+
+h1 > small, h2 > small, h3 > small {
+  font-size: 70%;
+  opacity: .8;
+  font-weight: normal;
+}
 
 .wrapper {
   flex: 1 0 auto;
@@ -69,7 +80,21 @@ main {
   margin-bottom: 20px;
 }
 
-.tags, .categories { font-family: var(--monospace-secondary); }
+.tags { font-family: var(--monospace); }
+
+.page-content :not(pre) > code,
+.list-summary code {
+  background-color: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+.page-content kbd,
+.list-summary kbd {
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
 
 .tags {
   list-style: none;
@@ -87,35 +112,6 @@ main {
 .tags a:hover {
   border-color: #aaa;
   color: #555;
-}
-
-.categories {
-  padding: 0;
-  list-style: none;
-}
-
-.categories a::after,
-.categories a::before {
-  content: "{";
-  margin-right: 5px;
-  display: inline-block;
-  color: #888;
-}
-
-.categories a::after {
-  content: "}";
-  margin: 0;
-  margin-left: 5px;
-}
-
-.categories a {
-  color: var(--color);
-  text-decoration: none;
-}
-
-.categories a:hover {
-  color: #000;
-  text-decoration: underline;
 }
 
 footer {
@@ -195,6 +191,10 @@ footer {
   text-align: center;
 }
 
+.align-right {
+  text-align: right;
+}
+
 .footer-bottom::before {
   content: '';
   width: 200px;
@@ -232,21 +232,18 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 }
 
 .list-content {
-  padding: 10px 0px;
-  display: flex;
+  padding: 0px;
+/*  display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+*/
+  display: block;
 }
 
-.list-content-tags,
+
 .list-content-tags li {
   display: inline-block;
-}
-
-.list-list .categories {
-  display: inline-block;
-  font-size: 80%;
 }
 
 .list-link {
@@ -261,11 +258,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   color: var(--purple)
 }
 
-.list-content-reading-time {
-  font-size: 80%;
-  opacity: .8;
+.list-summary {
+  margin-top: 20px;
+  text-align: justify;
 }
 
+.list-summary img {
+  max-width: 100%;
+}
 </style><style>
     header {
   padding: 10px 15px;
@@ -356,7 +356,7 @@ header a {
         <span id="show-header" class="show-header"></span>
     
 <div class="list-top">
-    <h1>windows</h1>
+    <h1>windows <small>(1)</small></h1>
     <div class="list-description"></div>
 </div>
 
@@ -364,20 +364,28 @@ header a {
     <ul class="list-list">
         
         <li class="list-content">
-            <div>
+            
+                <h3 class='list-title'><a class=list-link href="/post/change-shell-run-external-command-vim/">
+                    Change shell used to run external command</a>
+                    <small class="list-content-reading-time"
+                        title="68 words">(~ 1 min)</small>
+                </h3>
                 <ul class="list-content-tags tags">
+                    <li><a href="/tags/tip">tip</a></li>
                     <li><a href="/tags/vim">vim</a></li>
                     <li><a href="/tags/shell">shell</a></li>
+                    <li><a href="/tags/bash">bash</a></li>
+                    <li><a href="/tags/windows">windows</a></li>
+                    <li><a href="/tags/sh">sh</a></li>
                 </ul>
-                <a class=list-link href="/post/change-shell-run-external-command-vim/">Change shell used to run external command</a>
-                <small class="list-content-reading-time"
-                    title="65 words">(~ 1 min)</small>
-            </div>
-            <ul class="categories">
-                <li>
-                    <a href="/categories/cool-feature">cool feature</a>
-                </li>
-            </ul>
+                <div class="list-summary"><p>On windows, the cmd sucks. But if you have sh installed from git-for-windows
+for example, you can tell vim to run external commands <code>:!</code> using this <code>sh</code>!.</p></div>
+                
+                <p class='align-right'>
+                    <a class="list-readmore" href="/post/change-shell-run-external-command-vim/">Read more →</a>
+                </p>
+                
+            
         </li>
         
     </ul>
@@ -393,8 +401,6 @@ header a {
             <h4 class="footer-split-title">Browse by</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
-            
-                <li><a href="/categories">Categories</a></li>
             </ul>
         </div>
         <div class="footer-split">
@@ -414,7 +420,7 @@ header a {
     </div>
     <div class="footer-bottom">
         <p>
-            © Mathieu Paturel 2017.
+            © Mathieu Paturel 2017-2019.
             
             Code over at <a href="https://github.com/math2001/math2001.github.io"><code>math2001/math2001.github.io</code></a>.
             

@@ -6,7 +6,7 @@
     <description>Recent content in profile on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
     <lastBuildDate>Mon, 21 May 2018 17:59:22 +1000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/profile/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +18,9 @@
       <pubDate>Mon, 21 May 2018 17:59:22 +1000</pubDate>
       
       <guid>https://math2001.github.io/post/so-vim-became-slow/</guid>
-      <description>You know that feeling? You press in a key, and you have to wait like 0.5 seconds to see it appear on screen. You try to run vim --clean and everything&amp;rsquo;s back to &amp;ldquo;normal&amp;rdquo;.
-As you expected, it is caused by a/some plugin(s) and/or you vimrc. Have fun debugging that. You probably know the bulk force: disable every plugin, and enable them once at a time to know which one&amp;rsquo;s slow.</description>
+      <description>&lt;p&gt;You know that feeling? You press in a key, and you have to wait like 0.5 seconds
+to see it appear on screen. You try to run &lt;code&gt;vim --clean&lt;/code&gt; and everything&amp;rsquo;s back
+to &amp;ldquo;normal&amp;rdquo;. How do you find &lt;em&gt;quickly&lt;/em&gt; the cause of this horrible disaster 😄 &lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -6,7 +6,7 @@
     <description>Recent content in bang on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
     <lastBuildDate>Sun, 27 Aug 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/bang/index.xml" rel="self" type="application/rss+xml" />
@@ -18,9 +18,8 @@
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/rerun-last-command-bang-vim/</guid>
-      <description>Put this little vim script in your .vimrc to rerun the previous command with the bang (!) by just typing :Please.
-function! BangLastCommand()&amp;#34; The last command that was run is stored in the register `:` (:registers) let lastcommand = split(@:, &amp;#39; &amp;#39;) let command = lastcommand[0] . &amp;#39;! &amp;#39; . join(lastcommand[1:], &amp;#39; &amp;#39;) execute command endfunctioncommand! Please call BangLastCommand() So, now, if you do:
-:e ~/.vimrc And you get an error because the current file has to be save, something like:</description>
+      <description>&lt;p&gt;Put this code in your vimrc to re run the previous command but with the bang
+(&lt;code&gt;!&lt;/code&gt;) by just typing &lt;code&gt;:Please&lt;/code&gt;. &lt;/p&gt;</description>
     </item>
     
   </channel>

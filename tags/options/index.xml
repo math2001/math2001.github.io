@@ -6,7 +6,7 @@
     <description>Recent content in options on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
     <lastBuildDate>Sat, 26 Aug 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/options/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +18,8 @@
       <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/difference-vim-options-readonly-modifiable/</guid>
-      <description>Do you know the difference between those 2 options
-set readonlyset nomodifiable All the readonly does, when enabled, is it prevents you from writing the file (you can bypass it by doing :w! though), while modifiable, when disabled prevents you from actually editing the buffer.</description>
+      <description>&lt;p&gt;Do you know the difference between the option &lt;code&gt;readonly&lt;/code&gt; and &lt;code&gt;nomodifiable&lt;/code&gt; in
+vim?&lt;/p&gt;</description>
     </item>
     
   </channel>

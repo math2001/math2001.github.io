@@ -6,7 +6,7 @@
     <description>Recent content in cipher on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
     <lastBuildDate>Fri, 25 May 2018 22:32:29 +1000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/cipher/index.xml" rel="self" type="application/rss+xml" />
@@ -18,11 +18,7 @@
       <pubDate>Fri, 25 May 2018 22:32:29 +1000</pubDate>
       
       <guid>https://math2001.github.io/post/challenge-1-translate-back/</guid>
-      <description>I&amp;rsquo;ve got a little challenge for you.
-ib jb eikybfi eite hvim Can you translate this encrypted text back to its original form?
-If you do, send me an email at math2001.contact@protonmail.com explaining how you found it, and I&amp;rsquo;ll add you to the glorious list of people who found the solution to my challenge (see below).
-Rules I guarantee you the original message:
- contains only lower case ASCII letters (abcdefghijklmnopqrstuvwxyz) has the same spaces as in the encrypted message.</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve got a little challenge for you.&lt;/p&gt;</description>
     </item>
     
   </channel>

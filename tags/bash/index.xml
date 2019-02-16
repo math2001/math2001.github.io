@@ -6,7 +6,7 @@
     <description>Recent content in bash on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
     <lastBuildDate>Sun, 04 Feb 2018 15:07:11 +1100</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +18,10 @@
       <pubDate>Sun, 04 Feb 2018 15:07:11 +1100</pubDate>
       
       <guid>https://math2001.github.io/post/the-last-terminal-title/</guid>
-      <description>I use tmux, and in the tabs, it displays the terminal&amp;rsquo;s title, which is just done by this 2 lines in your .tmux.conf:
-setw -g window-status-current-format &amp;#39; #{pane_title} &amp;#39; setw -g window-status-format &amp;#39; #{pane_title} &amp;#39; What should you display in the tabs in your opinion? For me, it&amp;rsquo;s obvious: the last command that I ran, and the location. Now, we can&amp;rsquo;t display the whole path, but just the current folder name does perfectly the job.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://math2001.github.io/img/tmux-title.png&#34; alt=&#34;ls@asyncio   vim@math2001.github.io   git@dotfiles&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I use tmux, and in the tabs title, it displays the terminal&amp;rsquo;s title, which is
+just done by this 2 lines in your &lt;code&gt;.tmux.conf&lt;/code&gt; &lt;/p&gt;</description>
     </item>
     
     <item>
@@ -44,9 +46,7 @@ you some scripting.&lt;/p&gt;
 
 &lt;p&gt;What does it do? It &amp;ldquo;finds&amp;rdquo; files. By default, it outputs their path relative to
 where you ran &lt;code&gt;find&lt;/code&gt;. But, in addition of providing you with advanced &amp;ldquo;filters&amp;rdquo;
-it actually allows you to run commands on each of those files.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;rsquo;s get started!&lt;/p&gt;</description>
+it actually allows you to run commands on each of those files.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -55,8 +55,9 @@ it actually allows you to run commands on each of those files.&lt;/p&gt;
       <pubDate>Sat, 23 Sep 2017 11:23:45 +1000</pubDate>
       
       <guid>https://math2001.github.io/post/hugo-deploying-github-pages/</guid>
-      <description>When you want to deploy a static website built with the fantastic Hugo on GitHub pages, you don&amp;rsquo;t have 100 of possibilities. A clean one, and an easy one 😄.
-The easy one is to build your website to the docs folder. It&amp;rsquo;s not super clean though since the source code is on the same branch as the built code. It doesn&amp;rsquo;t make diffing super great, gives a long output when you commit, you have to build at every single commit to keep consistent.</description>
+      <description>&lt;p&gt;When you want to deploy a static website built with the fantastic &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt; on
+GitHub pages, you don&amp;rsquo;t have 100 of possibilities. A clean one, and an easy one
+😄.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -65,12 +66,8 @@ The easy one is to build your website to the docs folder. It&amp;rsquo;s not sup
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/change-shell-run-external-command-vim/</guid>
-      <description>On windows, the cmd sucks. But if you have sh installed from git-for-windows for example, you can tell vim to run external commands :!.
-Add this to your .vimrc
-set shell=shset shellcmdflag=-c Now, vim won&amp;rsquo;t run external commands like this
-cmd /c &amp;#34;your command&amp;#34; But like this:
-sh -c &amp;#34;your command&amp;#34; So, you can now run Unix commands from VIM.
-To learn more: :help &#39;shell&#39;</description>
+      <description>&lt;p&gt;On windows, the cmd sucks. But if you have sh installed from git-for-windows
+for example, you can tell vim to run external commands &lt;code&gt;:!&lt;/code&gt; using this &lt;code&gt;sh&lt;/code&gt;!.&lt;/p&gt;</description>
     </item>
     
   </channel>

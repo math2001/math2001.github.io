@@ -6,7 +6,7 @@
     <description>Recent content in filetype on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
     <lastBuildDate>Fri, 28 Sep 2018 15:25:33 +1000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/filetype/index.xml" rel="self" type="application/rss+xml" />
@@ -18,12 +18,8 @@
       <pubDate>Fri, 28 Sep 2018 15:25:33 +1000</pubDate>
       
       <guid>https://math2001.github.io/post/vim-filetype-specific-settings/</guid>
-      <description>If you want to run some vim script for a specific file type, don&amp;rsquo;t make an auto command. They get messy really quickly.
-Just edit ~/.vim/ftplugin/&amp;lt;filetype&amp;gt;.vim.
- ftplugin stands for file type plugin
- To get the file type of the current file, just do:
-:set filetype? It&amp;rsquo;ll be automatically sourced when you open a file of that specific type.
-Edit matching file Most of the time, you&amp;rsquo;ll find yourself wanting to edit the ftplugin file of the current filetype.</description>
+      <description>&lt;p&gt;If you want to run some vim script for a specific file type, don&amp;rsquo;t make an
+auto command, they get messy really quickly. Instead, you should use &lt;code&gt;ftplugin&lt;/code&gt;. &lt;/p&gt;</description>
     </item>
     
   </channel>

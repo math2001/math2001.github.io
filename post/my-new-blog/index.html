@@ -12,16 +12,17 @@
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/my-new-blog/">
     <meta property="og:description" content="Hello everyone!
-My name&rsquo;s Mathieu Paturel - @math2001 - and I love coding.
-I&rsquo;m French (from Provence, if you know where that is), but my family and I moved 2 years ago to Australia so that we could learn to speak fluently English (without this disgusting accent 😄).
-How did I discovered coding It all started with the basic &ldquo;programming language&rdquo; (notice the quotes 😄). My farther taught me the very basic of programming (and it was pretty much all you could do with this language I&rsquo;d 😆).">
+
+My name&rsquo;s Mathieu Paturel - @math2001 - and I love coding. I&rsquo;m French (from
+Provence, if you know where that is), but my family and I moved 2 years ago to
+Australia so that we could learn to speak fluently English (without this
+disgusting accent 😄).">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
     <title>My new blog - Math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
-  --monospace: Menlo, Inconsolata, consolas, monospace;
-  --monospace-secondary: Inconsolata, consolas, monospace;
+  --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
   --font-mute: #888;
@@ -53,12 +54,24 @@ body {
   color: #333;
   line-height: 1.5;
 }
-
 h1, h2 {
   letter-spacing: 2px;
-  font-weight: normal;
+  font-weight: 100;
 }
 
+h3, h4 {
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+h3 { font-size: 140%; }
+h4 { font-size: 120%; }
+
+h1 > small, h2 > small, h3 > small {
+  font-size: 70%;
+  opacity: .8;
+  font-weight: normal;
+}
 
 .wrapper {
   flex: 1 0 auto;
@@ -69,7 +82,21 @@ main {
   margin-bottom: 20px;
 }
 
-.tags, .categories { font-family: var(--monospace-secondary); }
+.tags { font-family: var(--monospace); }
+
+.page-content :not(pre) > code,
+.list-summary code {
+  background-color: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+.page-content kbd,
+.list-summary kbd {
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
 
 .tags {
   list-style: none;
@@ -87,35 +114,6 @@ main {
 .tags a:hover {
   border-color: #aaa;
   color: #555;
-}
-
-.categories {
-  padding: 0;
-  list-style: none;
-}
-
-.categories a::after,
-.categories a::before {
-  content: "{";
-  margin-right: 5px;
-  display: inline-block;
-  color: #888;
-}
-
-.categories a::after {
-  content: "}";
-  margin: 0;
-  margin-left: 5px;
-}
-
-.categories a {
-  color: var(--color);
-  text-decoration: none;
-}
-
-.categories a:hover {
-  color: #000;
-  text-decoration: underline;
 }
 
 footer {
@@ -195,6 +193,10 @@ footer {
   text-align: center;
 }
 
+.align-right {
+  text-align: right;
+}
+
 .footer-bottom::before {
   content: '';
   width: 200px;
@@ -223,12 +225,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   margin-left: 10px;
 }
 
-.page-categories {
-  margin-top: 0;
-}
-
-.page-categories, .page-tags,
-.page-categories li, .page-tags li {
+.page-tags,
+.page-tags li {
   display: inline-block;
 }
 
@@ -295,6 +293,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   margin-top: 40px;
 }
 
+.page-date {
+  color: hsla(230, 4%, 48%, 1);
+  font-style: italic;
+}
+
 /* content */
 
 .page-content .highlight {
@@ -306,24 +309,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   padding: 10px 20px;
 }
 
-.page-content :not(pre) > code {
-  background-color: var(--code-bg);
-  padding: 2px 5px;
-  border-radius: 2px;
-}
-
 .page-content blockquote {
   border-left: 6px solid #ddd;
   margin-left: 0;
   padding-left: 10px;
   color: #aaa;
-}
-
-.page-content kbd {
-  color: #666;
-  border: 1px solid #ccc;
-  padding: 1px 5px;
-  border-radius: 2px;
 }
 
 .page-content table {
@@ -437,36 +427,36 @@ header a {
     
 <div class="page-top">
     <h1 class="page-title">My new blog</h1>
-    <ul class="page-categories categories">
-        <li><a href="/categories/about">About</a></li>
-    </ul>
-    
+
+    <p class="page-date">9 September 2017</p>
+
     <ul class="page-tags tags">
+        <li><a href="/tags/about">about</a></li>
         <li><a href="/tags/new">new</a></li>
         <li><a href="/tags/static-website">static website</a></li>
     </ul>
 
     
 
-</div><section class="page-content">
+</div><section class="page-content"><p>Hello everyone!</p>
 
-<p>Hello everyone!</p>
-
-<p>My name&rsquo;s Mathieu Paturel - <code>@math2001</code> - and I love coding.</p>
-
-<p>I&rsquo;m French (from Provence, if you know where that is), but my family and I moved 2 years ago to
-Australia so that we could learn to speak fluently English (without this disgusting accent 😄).</p>
+<p>My name&rsquo;s Mathieu Paturel - <code>@math2001</code> - and I love coding. I&rsquo;m French (from
+Provence, if you know where that is), but my family and I moved 2 years ago to
+Australia so that we could learn to speak fluently English (without this
+disgusting accent 😄).</p>
 
 <h3 id="how-did-i-discovered-coding">How did I discovered coding</h3>
 
-<p>It all started with the basic &ldquo;programming language&rdquo; (notice the quotes 😄). My farther taught
-me the very basic of programming (and it was pretty much all you could do with this language I&rsquo;d
-😆). The farthest I went with this is making a little program that would ask test you on the
-tables of multiplications.</p>
+<p>It all started with the basic &ldquo;programming language&rdquo; (notice the quotes
+😄). My farther taught me the very basic of programming (and it was pretty
+much all you could do with this language I&rsquo;d 😆). The farthest I went
+with this is making a little program that would ask test you on the tables of
+multiplications.</p>
 
-<p>It was interesting, but honestly, it wasn&rsquo;t too fun. The fun started when my uncle showed my Python
-(❤️). We made a game with <code>pygame</code>. I said <q>We</q>, but it was more &ldquo;he&rdquo;. He was typing, I
-was following along, thinking I was understanding most of it.</p>
+<p>It was interesting, but honestly, it wasn&rsquo;t too fun. The fun started when my
+uncle showed my Python (❤️). We made a game with <code>pygame</code>. I said
+<q>We</q>, but it was more &ldquo;he&rdquo;. He was typing, I was following along, thinking
+I was understanding most of it.</p>
 
 <p>But when he said:</p>
 
@@ -474,69 +464,77 @@ was following along, thinking I was understanding most of it.</p>
 <p>All right, your turn now!</p>
 </blockquote>
 
-<p>I realized I didn&rsquo;t remember much, I had no idea what to do (to make a simple program that would
-draw lines around the corners of the screens)&hellip;</p>
+<p>I realized I didn&rsquo;t remember much, I had no idea what to do (to make a simple
+program that would draw lines around the corners of the screens)&hellip;</p>
 
-<p>Then, we moved to Australia. My farther had to look for a job, and it pretty hard. It took him 8
-month. During this time, we couldn&rsquo;t go to the Australian school, since because we were just
-visitors, the cost was pretty high (something like $500 per week and per children, which is $1500
-per week). We were living on our savings, so we stayed at home, only doing remote French school
-(called CNED, really bad&hellip;). It was only partial, since we were meant to go the Australian school
-too. So, it would took us around half a day every day. The rest was free time.</p>
+<p>Then, we moved to Australia. My farther had to look for a job, and it pretty
+hard. It took him 8 month. During this time, we couldn&rsquo;t go to the Australian
+school, since because we were just visitors, the cost was pretty high (something
+like $500 per week and per children, which is $1500 per week). We were living on
+our savings, so we stayed at home, only doing remote French school (called CNED,
+really bad&hellip;). It was only partial, since we were meant to go the Australian
+school too. So, it would took us around half a day every day. The rest was free
+time.</p>
 
-<p>So, since I didn&rsquo;t what to do, I started looking at Python again, making some little games.</p>
+<p>So, since I didn&rsquo;t what to do, I started looking at Python again, making some
+little games.</p>
 
-<p>Of course, I had some issues, some thing I didn&rsquo;t know how to do. So, what did I do? Looked it up on
-the internet. The problem was that it was pretty hard, since we had to go to the library to get a
-miserably slow connection.</p>
+<p>Of course, I had some issues, some thing I didn&rsquo;t know how to do. So, what did I
+do? Looked it up on the internet. The problem was that it was pretty hard, since
+we had to go to the library to get a miserably slow connection.</p>
 
-<p>All I was aware of was the <code>help</code> function of python. That&rsquo;s it. I had no idea about the Python
-documentation, or any other resources. All I could do was look at the programs my uncle left me, and
-kind of &ldquo;guess&rdquo;. Lucky I was using Python and not JavaScript or PHP 😄.</p>
+<p>All I was aware of was the <code>help</code> function of python. That&rsquo;s it. I had no idea
+about the Python documentation, or any other resources. All I could do was look
+at the programs my uncle left me, and kind of &ldquo;guess&rdquo;. Lucky I was using Python
+and not JavaScript or PHP 😄.</p>
 
-<p>And one website&rsquo;s forum kept coming up: <a href="https://openclassrooms.com" target="_blank">openclassrooms.com</a>. It&rsquo;s a
-French one (although their now making some courses in English). I discovered that they had a course
+<p>And one website&rsquo;s forum kept coming up:
+<a href="https://openclassrooms.com" target="_blank">openclassrooms.com</a>. It&rsquo;s a French one (although
+their now making some courses in English). I discovered that they had a course
 about <code>pygame</code> and python. I read them, and kept making some little games.</p>
 
-<p>One day, my uncle send me an email saying that I should look at <code>flask</code> to make some little
-websites. Luckily, they had a course about this on OpenClassrooms. But one of the requirement was
-to know <code>html</code>, which I didn&rsquo;t. Of course, they had a course about it. I read it, started loving web
-dev, forgot Flask and followed the author with the course he recommended next: PHP and MySql.</p>
+<p>One day, my uncle send me an email saying that I should look at <code>flask</code> to make
+some little websites. Luckily, they had a course about this on OpenClassrooms.
+But one of the requirement was to know <code>html</code>, which I didn&rsquo;t. Of course, they
+had a course about it. I read it, started loving web dev, forgot Flask and
+followed the author with the course he recommended next: PHP and MySql.</p>
 
-<p>While still making some little games with Python, some little websites with PHP, I learned git
-(with a course on OpenClassrooms of course). This was a pretty big step. It didn&rsquo;t appear like it
-<em>straight away</em>, but when I look back, I&rsquo;m pretty sure it is, and for one reason:</p>
+<p>While still making some little games with Python, some little websites with PHP,
+I learned git (with a course on OpenClassrooms of course). This was a pretty big
+step. It didn&rsquo;t appear like it <em>straight away</em>, but when I look back, I&rsquo;m pretty
+sure it is, and for one reason:</p>
 
 <p><a href="https://github.com" target="_blank">GitHub</a></p>
 
 <p>It took me a while to figure out the basics, though.</p>
 
-<p>I started making some plugins for Sublime Text. I was much more comfortable with python. My first
-plugin was a kind of a failure, I haven&rsquo;t deleted <a href="https://github.com/math2001/snippet-lister" target="_blank">the repo</a> just for fun.</p>
+<p>I started making some plugins for Sublime Text. I was much more comfortable with
+python. My first plugin was a kind of a failure, I haven&rsquo;t deleted
+<a href="https://github.com/math2001/snippet-lister" target="_blank">the repo</a> just for fun.</p>
 
-<p>The plugin was working, but when I send the PR to get on package control, I didn&rsquo;t understand the
-maintainer&rsquo;s response (I really didn&rsquo;t speak properly English at the time). I thought he rejected
-the PR I read the answer from the email notification, I didn&rsquo;t understood that I could edit the
-code and edit it, I didn&rsquo;t really get concept of Pull Request (I just followed the step by step
-guide in the Package Control&rsquo;s documentation). I never answered anything back (I don&rsquo;t even remember
-seeing the ping from the maintainer). The result being that the PR was closed. 😞</p>
+<p>The plugin was working, but when I send the PR to get on package control, I
+didn&rsquo;t understand the maintainer&rsquo;s response (I really didn&rsquo;t speak properly
+English at the time). I thought he rejected the PR I read the answer from the
+email notification, I didn&rsquo;t understood that I could edit the code and edit it,
+I didn&rsquo;t really get concept of Pull Request (I just followed the step by step
+guide in the Package Control&rsquo;s documentation). I never answered anything back (I
+don&rsquo;t even remember seeing the ping from the maintainer). The result being that
+the PR was closed. 😞</p>
 
-<p>But anyway&hellip; I made some other plugins later on, I had a better understanding of GitHub, and some
-of <a href="https://packagecontrol.io/browse/authors/math2001" target="_blank">my plugins</a> are now on Package Control.</p>
+<p>But anyway&hellip; I made some other plugins later on, I had a better understanding
+of GitHub, and some of <a href="https://packagecontrol.io/browse/authors/math2001" target="_blank">my plugins</a> are now on Package Control.</p>
 
-<p>You might be wondering why this is relevant. Well, my Sublime Text plugins were the first repository
-I shared with other people.</p>
+<p>You might be wondering why this is relevant. Well, my Sublime Text plugins were
+the first repository I shared with other people.</p>
 
-<p>It&rsquo;s from here that I started to have a decent workflow, read the documentations, learn some new
-cool stuff.</p>
+<p>It&rsquo;s from here that I started to have a decent workflow, read the
+documentations, learn some new cool stuff.</p>
 
 <p>So, now, here I am. I created this new blog to share what I know.</p>
 
-<p>Hopefully you&rsquo;ll enjoy the content!</p>
-</section>
+<p>Hopefully you&rsquo;ll enjoy the content!</p></section>
 
 <div class="page-bottom">
-    <p class="page-date">Published on Saturday 9 September 2017</p>
     <ul class="page-share-list">
         <li>
             <a href="https://twitter.com/intent/tweet?text=My&#43;new&#43;blog&amp;url=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fmy-new-blog%2F" target="_blank"
@@ -569,8 +567,6 @@ cool stuff.</p>
             <h4 class="footer-split-title">Browse by</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
-            
-                <li><a href="/categories">Categories</a></li>
             </ul>
         </div>
         <div class="footer-split">
@@ -590,7 +586,7 @@ cool stuff.</p>
     </div>
     <div class="footer-bottom">
         <p>
-            © Mathieu Paturel 2017.
+            © Mathieu Paturel 2017-2019.
             
             Code over at <a href="https://github.com/math2001/math2001.github.io"><code>math2001/math2001.github.io</code></a>.
             

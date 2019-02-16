@@ -6,7 +6,7 @@
     <description>Recent content in zen on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
     <lastBuildDate>Wed, 13 Sep 2017 14:18:22 +1000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/zen/index.xml" rel="self" type="application/rss+xml" />
@@ -18,11 +18,12 @@
       <pubDate>Wed, 13 Sep 2017 14:18:22 +1000</pubDate>
       
       <guid>https://math2001.github.io/post/my-zen/</guid>
-      <description>Python is by far my favorite language (I even wish we spoke it 😄).
-One thing I found funny about it, and in the same time really good, is its zen.
-They&amp;rsquo;re basically guidelines.
-So, today, dans un élan d&amp;rsquo;inspiration, I decided to write my own. Here it is:
-Keep it simple. Lazyness is a quality. Learn to use your tools efficiently. Get inspired by great things. Do one thing, and do it well.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://python.org&#34; target=&#34;_blank&#34;&gt;Python&lt;/a&gt; is by far my favorite language (I even wish we
+[spoke it 😄). One thing I found funny about it, and in the same time
+really good, is &lt;a href=&#34;https://python.org/dev/peps/pep-0020/&#34; target=&#34;_blank&#34;&gt;its zen&lt;/a&gt;; they&amp;rsquo;re
+basically guidelines.&lt;/p&gt;
+
+&lt;p&gt;So, today, &lt;em&gt;dans un élan d&amp;rsquo;inspiration&lt;/em&gt;, I decided to write my own.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -6,7 +6,7 @@
     <description>Recent content in fzf on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
     <lastBuildDate>Fri, 28 Sep 2018 11:47:21 +1000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/fzf/index.xml" rel="self" type="application/rss+xml" />
@@ -18,9 +18,9 @@
       <pubDate>Fri, 28 Sep 2018 11:47:21 +1000</pubDate>
       
       <guid>https://math2001.github.io/post/vim-jump-to-function-definition/</guid>
-      <description>One of the features I miss from Sublime Text is the Goto Anything. In vim, by default, you have :e **/bit and then tab, and it gets annoying pretty quickly. Thankfully, there&amp;rsquo;s fzf (with fzf.vim).
-But although it provides a fairly long list of commands, it doesn&amp;rsquo;t allow us to jump to function definitions (which is one of the main function of the Goto Anything).
-fzf for the win There&amp;rsquo;s no question, fzf as done a really good job at being easily extensible.</description>
+      <description>&lt;p&gt;One of the features I miss from Sublime Text is the Goto Anything. In vim, by
+default, you have &lt;code&gt;:e **/bit&lt;/code&gt; and then tab, and it gets annoying pretty
+quickly. Thankfully, there&amp;rsquo;s &lt;a href=&#34;https://github.com/junegunn/fzf&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;fzf&lt;/code&gt;&lt;/a&gt; (with &lt;a href=&#34;https://github.com/junegunn/fzf.vim&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;fzf.vim&lt;/code&gt;&lt;/a&gt;).&lt;/p&gt;</description>
     </item>
     
   </channel>

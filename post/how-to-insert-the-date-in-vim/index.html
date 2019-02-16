@@ -11,16 +11,14 @@
     <meta property="og:title" content="How to insert the date in Vim?">
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/how-to-insert-the-date-in-vim/">
-    <meta property="og:description" content="First off, I really don&rsquo;t recommend you use the strftime() function vim has, since, as it says in the help message (:help strftime)
- The accepted {format} depends on your system, thus this is not portable!
- So, a somewhat better solution is to use the date shell command. Yes, it seems even less portable, but at least you know for sure if it&rsquo;s going to work or not (with strftime(), I don&rsquo;t know if vim could get mixed up about the OS when you use a simulate a Unix environment in your terminal)">
+    <meta property="og:description" content="First off, I really don&rsquo;t recommend you use the strftime() function vim has,
+since, as it says in the help message (:help strftime)">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
     <title>How to insert the date in Vim? - Math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
-  --monospace: Menlo, Inconsolata, consolas, monospace;
-  --monospace-secondary: Inconsolata, consolas, monospace;
+  --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
   --font-mute: #888;
@@ -52,12 +50,24 @@ body {
   color: #333;
   line-height: 1.5;
 }
-
 h1, h2 {
   letter-spacing: 2px;
-  font-weight: normal;
+  font-weight: 100;
 }
 
+h3, h4 {
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+h3 { font-size: 140%; }
+h4 { font-size: 120%; }
+
+h1 > small, h2 > small, h3 > small {
+  font-size: 70%;
+  opacity: .8;
+  font-weight: normal;
+}
 
 .wrapper {
   flex: 1 0 auto;
@@ -68,7 +78,21 @@ main {
   margin-bottom: 20px;
 }
 
-.tags, .categories { font-family: var(--monospace-secondary); }
+.tags { font-family: var(--monospace); }
+
+.page-content :not(pre) > code,
+.list-summary code {
+  background-color: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+.page-content kbd,
+.list-summary kbd {
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
 
 .tags {
   list-style: none;
@@ -86,35 +110,6 @@ main {
 .tags a:hover {
   border-color: #aaa;
   color: #555;
-}
-
-.categories {
-  padding: 0;
-  list-style: none;
-}
-
-.categories a::after,
-.categories a::before {
-  content: "{";
-  margin-right: 5px;
-  display: inline-block;
-  color: #888;
-}
-
-.categories a::after {
-  content: "}";
-  margin: 0;
-  margin-left: 5px;
-}
-
-.categories a {
-  color: var(--color);
-  text-decoration: none;
-}
-
-.categories a:hover {
-  color: #000;
-  text-decoration: underline;
 }
 
 footer {
@@ -194,6 +189,10 @@ footer {
   text-align: center;
 }
 
+.align-right {
+  text-align: right;
+}
+
 .footer-bottom::before {
   content: '';
   width: 200px;
@@ -222,12 +221,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   margin-left: 10px;
 }
 
-.page-categories {
-  margin-top: 0;
-}
-
-.page-categories, .page-tags,
-.page-categories li, .page-tags li {
+.page-tags,
+.page-tags li {
   display: inline-block;
 }
 
@@ -294,6 +289,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   margin-top: 40px;
 }
 
+.page-date {
+  color: hsla(230, 4%, 48%, 1);
+  font-style: italic;
+}
+
 /* content */
 
 .page-content .highlight {
@@ -305,24 +305,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   padding: 10px 20px;
 }
 
-.page-content :not(pre) > code {
-  background-color: var(--code-bg);
-  padding: 2px 5px;
-  border-radius: 2px;
-}
-
 .page-content blockquote {
   border-left: 6px solid #ddd;
   margin-left: 0;
   padding-left: 10px;
   color: #aaa;
-}
-
-.page-content kbd {
-  color: #666;
-  border: 1px solid #ccc;
-  padding: 1px 5px;
-  border-radius: 2px;
 }
 
 .page-content table {
@@ -436,11 +423,11 @@ header a {
     
 <div class="page-top">
     <h1 class="page-title">How to insert the date in Vim?</h1>
-    <ul class="page-categories categories">
-        <li><a href="/categories/cool-feature">cool feature</a></li>
-    </ul>
-    
+
+    <p class="page-date">20 August 2017</p>
+
     <ul class="page-tags tags">
+        <li><a href="/tags/tip">tip</a></li>
         <li><a href="/tags/vim">vim</a></li>
         <li><a href="/tags/date">date</a></li>
         <li><a href="/tags/strftime">strftime</a></li>
@@ -477,11 +464,9 @@ Sunday <span class="m">20</span> August <span class="m">2017</span> @ <span clas
 <p>And, you&rsquo;ll get the date inserted automatically.</p>
 
 <p>If you want to customize the format of the date, I&rsquo;d recommend using a tool like
-<a href="https://strftime.net" target="_blank">strftime.net</a>.</p>
-</section>
+<a href="https://strftime.net" target="_blank">strftime.net</a>.</p></section>
 
 <div class="page-bottom">
-    <p class="page-date">Published on Sunday 20 August 2017</p>
     <ul class="page-share-list">
         <li>
             <a href="https://twitter.com/intent/tweet?text=How&#43;to&#43;insert&#43;the&#43;date&#43;in&#43;Vim%3F&amp;url=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fhow-to-insert-the-date-in-vim%2F" target="_blank"
@@ -514,8 +499,6 @@ Sunday <span class="m">20</span> August <span class="m">2017</span> @ <span clas
             <h4 class="footer-split-title">Browse by</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
-            
-                <li><a href="/categories">Categories</a></li>
             </ul>
         </div>
         <div class="footer-split">
@@ -535,7 +518,7 @@ Sunday <span class="m">20</span> August <span class="m">2017</span> @ <span clas
     </div>
     <div class="footer-bottom">
         <p>
-            © Mathieu Paturel 2017.
+            © Mathieu Paturel 2017-2019.
             
             Code over at <a href="https://github.com/math2001/math2001.github.io"><code>math2001/math2001.github.io</code></a>.
             

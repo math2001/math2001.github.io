@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
     
 	<atom:link href="https://math2001.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>about</title>
+      <link>https://math2001.github.io/tags/about/</link>
+      <pubDate>Sat, 09 Sep 2017 19:43:23 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/tags/about/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>alphabet</title>
@@ -84,6 +93,15 @@
     </item>
     
     <item>
+      <title>challenge</title>
+      <link>https://math2001.github.io/tags/challenge/</link>
+      <pubDate>Fri, 25 May 2018 22:32:29 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/tags/challenge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>chrome</title>
       <link>https://math2001.github.io/tags/chrome/</link>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
@@ -98,6 +116,24 @@
       <pubDate>Fri, 25 May 2018 22:32:29 +1000</pubDate>
       
       <guid>https://math2001.github.io/tags/cipher/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cli</title>
+      <link>https://math2001.github.io/tags/cli/</link>
+      <pubDate>Wed, 27 Sep 2017 11:18:56 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/tags/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code aesthetic</title>
+      <link>https://math2001.github.io/tags/code-aesthetic/</link>
+      <pubDate>Wed, 13 Sep 2017 14:18:22 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/tags/code-aesthetic/</guid>
       <description></description>
     </item>
     
@@ -156,11 +192,11 @@
     </item>
     
     <item>
-      <title>doc</title>
-      <link>https://math2001.github.io/tags/doc/</link>
+      <title>documentation</title>
+      <link>https://math2001.github.io/tags/documentation/</link>
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://math2001.github.io/tags/doc/</guid>
+      <guid>https://math2001.github.io/tags/documentation/</guid>
       <description></description>
     </item>
     
@@ -237,6 +273,15 @@
     </item>
     
     <item>
+      <title>howto</title>
+      <link>https://math2001.github.io/tags/howto/</link>
+      <pubDate>Sun, 08 Oct 2017 17:18:21 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/tags/howto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>hugo</title>
       <link>https://math2001.github.io/tags/hugo/</link>
       <pubDate>Sat, 23 Sep 2017 11:23:45 +1000</pubDate>
@@ -260,6 +305,15 @@
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/tags/map/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mathematics</title>
+      <link>https://math2001.github.io/tags/mathematics/</link>
+      <pubDate>Fri, 15 Feb 2019 11:12:47 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/tags/mathematics/</guid>
       <description></description>
     </item>
     
@@ -329,18 +383,9 @@
     <item>
       <title>performances</title>
       <link>https://math2001.github.io/tags/performances/</link>
-      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://math2001.github.io/tags/performances/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>perfs</title>
-      <link>https://math2001.github.io/tags/perfs/</link>
       <pubDate>Mon, 21 May 2018 17:59:22 +1000</pubDate>
       
-      <guid>https://math2001.github.io/tags/perfs/</guid>
+      <guid>https://math2001.github.io/tags/performances/</guid>
       <description></description>
     </item>
     
@@ -377,6 +422,15 @@
       <pubDate>Fri, 13 Oct 2017 16:14:21 +1100</pubDate>
       
       <guid>https://math2001.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>resources</title>
+      <link>https://math2001.github.io/tags/resources/</link>
+      <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tags/resources/</guid>
       <description></description>
     </item>
     
@@ -498,20 +552,20 @@
     </item>
     
     <item>
+      <title>tip</title>
+      <link>https://math2001.github.io/tags/tip/</link>
+      <pubDate>Tue, 02 Oct 2018 08:41:38 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/tags/tip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>tmux</title>
       <link>https://math2001.github.io/tags/tmux/</link>
       <pubDate>Tue, 02 Oct 2018 08:41:38 +1000</pubDate>
       
       <guid>https://math2001.github.io/tags/tmux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>variable</title>
-      <link>https://math2001.github.io/tags/variable/</link>
-      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://math2001.github.io/tags/variable/</guid>
       <description></description>
     </item>
     
@@ -530,6 +584,15 @@
       <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/tags/vimscript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web development</title>
+      <link>https://math2001.github.io/tags/web-development/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/tags/web-development/</guid>
       <description></description>
     </item>
     

@@ -6,7 +6,7 @@
     <description>Recent content in terminal on Math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Mathieu Paturel 2017</copyright>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
     <lastBuildDate>Tue, 02 Oct 2018 08:41:38 +1000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
@@ -27,8 +27,10 @@
       <pubDate>Sun, 04 Feb 2018 15:07:11 +1100</pubDate>
       
       <guid>https://math2001.github.io/post/the-last-terminal-title/</guid>
-      <description>I use tmux, and in the tabs, it displays the terminal&amp;rsquo;s title, which is just done by this 2 lines in your .tmux.conf:
-setw -g window-status-current-format &amp;#39; #{pane_title} &amp;#39; setw -g window-status-format &amp;#39; #{pane_title} &amp;#39; What should you display in the tabs in your opinion? For me, it&amp;rsquo;s obvious: the last command that I ran, and the location. Now, we can&amp;rsquo;t display the whole path, but just the current folder name does perfectly the job.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://math2001.github.io/img/tmux-title.png&#34; alt=&#34;ls@asyncio   vim@math2001.github.io   git@dotfiles&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I use tmux, and in the tabs title, it displays the terminal&amp;rsquo;s title, which is
+just done by this 2 lines in your &lt;code&gt;.tmux.conf&lt;/code&gt; &lt;/p&gt;</description>
     </item>
     
   </channel>

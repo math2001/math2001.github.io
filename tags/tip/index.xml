@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tip on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/tags/tip/</link>
+    <description>Recent content in tip on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
+    <lastBuildDate>Tue, 02 Oct 2018 08:41:38 +1000</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/tags/tip/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tmux Zoom</title>
+      <link>https://math2001.github.io/post/tmux-zoom/</link>
+      <pubDate>Tue, 02 Oct 2018 08:41:38 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/tmux-zoom/</guid>
+      <description>When you have multiple panes open in tmux, just press prefix z to toggle zoom mode. When activated, only the current pane will be shown. 😉</description>
+    </item>
+    
+    <item>
+      <title>Vim file type specific settings</title>
+      <link>https://math2001.github.io/post/vim-filetype-specific-settings/</link>
+      <pubDate>Fri, 28 Sep 2018 15:25:33 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/vim-filetype-specific-settings/</guid>
+      <description>&lt;p&gt;If you want to run some vim script for a specific file type, don&amp;rsquo;t make an
+auto command, they get messy really quickly. Instead, you should use &lt;code&gt;ftplugin&lt;/code&gt;. &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Jump to function definition in vim</title>
+      <link>https://math2001.github.io/post/vim-jump-to-function-definition/</link>
+      <pubDate>Fri, 28 Sep 2018 11:47:21 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/vim-jump-to-function-definition/</guid>
+      <description>&lt;p&gt;One of the features I miss from Sublime Text is the Goto Anything. In vim, by
+default, you have &lt;code&gt;:e **/bit&lt;/code&gt; and then tab, and it gets annoying pretty
+quickly. Thankfully, there&amp;rsquo;s &lt;a href=&#34;https://github.com/junegunn/fzf&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;fzf&lt;/code&gt;&lt;/a&gt; (with &lt;a href=&#34;https://github.com/junegunn/fzf.vim&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;fzf.vim&lt;/code&gt;&lt;/a&gt;).&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>So vim got slow</title>
+      <link>https://math2001.github.io/post/so-vim-became-slow/</link>
+      <pubDate>Mon, 21 May 2018 17:59:22 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/so-vim-became-slow/</guid>
+      <description>&lt;p&gt;You know that feeling? You press in a key, and you have to wait like 0.5 seconds
+to see it appear on screen. You try to run &lt;code&gt;vim --clean&lt;/code&gt; and everything&amp;rsquo;s back
+to &amp;ldquo;normal&amp;rdquo;. How do you find &lt;em&gt;quickly&lt;/em&gt; the cause of this horrible disaster 😄 &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The Last Terminal Title</title>
+      <link>https://math2001.github.io/post/the-last-terminal-title/</link>
+      <pubDate>Sun, 04 Feb 2018 15:07:11 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/post/the-last-terminal-title/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://math2001.github.io/img/tmux-title.png&#34; alt=&#34;ls@asyncio   vim@math2001.github.io   git@dotfiles&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I use tmux, and in the tabs title, it displays the terminal&amp;rsquo;s title, which is
+just done by this 2 lines in your &lt;code&gt;.tmux.conf&lt;/code&gt; &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vim Line Completion</title>
+      <link>https://math2001.github.io/post/vim-line-completion/</link>
+      <pubDate>Wed, 27 Sep 2017 12:55:56 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/vim-line-completion/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://math2001.github.io/img/vim-ctrl-x_ctrl-l.gif&#34; alt=&#34;demo of ctrl-x_ctrl+l in insert mode in vim&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Do you know what kind of completion this is? &lt;strong&gt;Line&lt;/strong&gt; completion. It looks for
+every lines that starts with the same text (it doesn&amp;rsquo;t take into consideration
+the indication), and completes it for you! Awesome right? &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bash&#39;s fc command</title>
+      <link>https://math2001.github.io/post/bashs-fc-command/</link>
+      <pubDate>Tue, 26 Sep 2017 18:03:22 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/bashs-fc-command/</guid>
+      <description>&lt;p&gt;When editing long commands in your terminal (you know, the one that wraps
+😉), sometimes you&amp;rsquo;d be better of using your actual editor (like vim or
+Sublime). And guess what? Bash let&amp;rsquo;s you do that! 🎉&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bash&#39;s find command</title>
+      <link>https://math2001.github.io/post/bashs-find-command/</link>
+      <pubDate>Sun, 24 Sep 2017 07:51:15 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/bashs-find-command/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;find&lt;/code&gt; command in bash is quite powerful, and knowing the basics might save
+you some scripting.&lt;/p&gt;
+
+&lt;p&gt;What does it do? It &amp;ldquo;finds&amp;rdquo; files. By default, it outputs their path relative to
+where you ran &lt;code&gt;find&lt;/code&gt;. But, in addition of providing you with advanced &amp;ldquo;filters&amp;rdquo;
+it actually allows you to run commands on each of those files.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The confirm option</title>
+      <link>https://math2001.github.io/post/confirm-option-vim/</link>
+      <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/post/confirm-option-vim/</guid>
+      <description>&lt;p&gt;This is probably one of my favorite option in VIM. Just add this to your &lt;code&gt;.vimrc&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;set confirm&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Change shell used to run external command</title>
+      <link>https://math2001.github.io/post/change-shell-run-external-command-vim/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/post/change-shell-run-external-command-vim/</guid>
+      <description>&lt;p&gt;On windows, the cmd sucks. But if you have sh installed from git-for-windows
+for example, you can tell vim to run external commands &lt;code&gt;:!&lt;/code&gt; using this &lt;code&gt;sh&lt;/code&gt;!.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Current buffer only mapping</title>
+      <link>https://math2001.github.io/post/current-buffer-only-mapping-vim/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/post/current-buffer-only-mapping-vim/</guid>
+      <description>&lt;p&gt;If you want to set a mapping only for the current buffer in VIM, it&amp;rsquo;s super
+simple: just use the &lt;code&gt;buffer&lt;/code&gt; special argument.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DynamicOpen function</title>
+      <link>https://math2001.github.io/post/dynamicopen-function-vim/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/post/dynamicopen-function-vim/</guid>
+      <description>&lt;p&gt;I really open my &lt;code&gt;.vimrc&lt;/code&gt; often. Too often to have to type &lt;code&gt;:e ~/.vimrc&lt;/code&gt; or
+&lt;code&gt;:tabe ~/.vimrc&lt;/code&gt; every time. Here&amp;rsquo;s little function that will open a file in a
+new tab if there isn&amp;rsquo;t enough room for a new split, and, you guessed it, in a
+new &lt;em&gt;vertical&lt;/em&gt; split if there is.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rerun last command with bang</title>
+      <link>https://math2001.github.io/post/rerun-last-command-bang-vim/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/post/rerun-last-command-bang-vim/</guid>
+      <description>&lt;p&gt;Put this code in your vimrc to re run the previous command but with the bang
+(&lt;code&gt;!&lt;/code&gt;) by just typing &lt;code&gt;:Please&lt;/code&gt;. &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Silent command-line mapping</title>
+      <link>https://math2001.github.io/post/silent-command-line-mapping/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/post/silent-command-line-mapping/</guid>
+      <description>&lt;p&gt;If you want to set a mapping to run something that is echoed into the command
+line (something starting with &lt;code&gt;:&lt;/code&gt; or &lt;code&gt;/&lt;/code&gt; for example) to &lt;em&gt;not&lt;/em&gt; be displayed, you
+can use the special argument &lt;code&gt;silent&lt;/code&gt;. &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How do I get the ASCII value of a character?</title>
+      <link>https://math2001.github.io/post/get-ascii-value-character-vim/</link>
+      <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/post/get-ascii-value-character-vim/</guid>
+      <description>To get the ASCII value of the character under the cursor, just press ga (or run :ascii).
+It&amp;rsquo;ll print it in three format: in decimal, hexadecimal and octal.
+So, when your cursor is on an arrow and that you press ga: →, you&amp;rsquo;ll see at the bottom:
+&amp;lt;→&amp;gt; 8594, Hex: 2192, Octal: 20622  Mnemonic: Get ASCII value. ­ from :help :ascii
+ </description>
+    </item>
+    
+    <item>
+      <title>Variable scopes in vim</title>
+      <link>https://math2001.github.io/post/variable-scopes-vim/</link>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/post/variable-scopes-vim/</guid>
+      <description>&lt;p&gt;An interesting feature of vim script is variable scoping. Here&amp;rsquo;s a copy-paste
+from the documentation, just in case you never saw it before.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vim digraphs</title>
+      <link>https://math2001.github.io/post/vim-digraphs/</link>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/post/vim-digraphs/</guid>
+      <description>&lt;p&gt;Ever wanted to write fancy symbols in your code or your documentation, like the
+copyright symbol for example (©). Do you know how much time it took me to insert
+this symbol? Less than a second&amp;hellip; Do you know how much time it would have took
+you? Well, depending on your internet connection, it might be about 10 seconds.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vim help index</title>
+      <link>https://math2001.github.io/post/vim-help-index/</link>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/post/vim-help-index/</guid>
+      <description>&lt;p&gt;A very strong point of vim is its documentation. There&amp;rsquo;s just so much of it!!
+So, &lt;strong&gt;use it&lt;/strong&gt; &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to insert the date in Vim?</title>
+      <link>https://math2001.github.io/post/how-to-insert-the-date-in-vim/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/post/how-to-insert-the-date-in-vim/</guid>
+      <description>&lt;p&gt;First off, I really don&amp;rsquo;t recommend you use the &lt;code&gt;strftime()&lt;/code&gt; function vim has,
+since, as it says in the help message (&lt;code&gt;:help strftime&lt;/code&gt;)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The string module in Python</title>
+      <link>https://math2001.github.io/post/string-module-python/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://math2001.github.io/post/string-module-python/</guid>
+      <description>&lt;p&gt;If you want every letter in the alphabet in python, don&amp;rsquo;t write them all out
+manually.. &lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

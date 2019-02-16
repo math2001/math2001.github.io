@@ -3,13 +3,13 @@
 }
 
 .terms-content {
-  width: 500px;
+  width: 960px;
   max-width: 100%;
   margin: auto;
-  columns: auto 10em;
+  columns: auto 13em;
+  padding: 0 20px;
 }
 
-.terms-tags,
-.terms-categories {
+.terms-tags {
   margin: 0;
 }

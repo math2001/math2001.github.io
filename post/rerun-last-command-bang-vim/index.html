@@ -11,16 +11,14 @@
     <meta property="og:title" content="Rerun last command with bang">
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/rerun-last-command-bang-vim/">
-    <meta property="og:description" content="Put this little vim script in your .vimrc to rerun the previous command with the bang (!) by just typing :Please.
-function! BangLastCommand()&#34; The last command that was run is stored in the register `:` (:registers) let lastcommand = split(@:, &#39; &#39;) let command = lastcommand[0] . &#39;! &#39; . join(lastcommand[1:], &#39; &#39;) execute command endfunctioncommand! Please call BangLastCommand() So, now, if you do:
-:e ~/.vimrc And you get an error because the current file has to be save, something like:">
+    <meta property="og:description" content="Put this code in your vimrc to re run the previous command but with the bang
+(!) by just typing :Please. ">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
     <title>Rerun last command with bang - Math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
-  --monospace: Menlo, Inconsolata, consolas, monospace;
-  --monospace-secondary: Inconsolata, consolas, monospace;
+  --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
   --font-mute: #888;
@@ -52,12 +50,24 @@ body {
   color: #333;
   line-height: 1.5;
 }
-
 h1, h2 {
   letter-spacing: 2px;
-  font-weight: normal;
+  font-weight: 100;
 }
 
+h3, h4 {
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+h3 { font-size: 140%; }
+h4 { font-size: 120%; }
+
+h1 > small, h2 > small, h3 > small {
+  font-size: 70%;
+  opacity: .8;
+  font-weight: normal;
+}
 
 .wrapper {
   flex: 1 0 auto;
@@ -68,7 +78,21 @@ main {
   margin-bottom: 20px;
 }
 
-.tags, .categories { font-family: var(--monospace-secondary); }
+.tags { font-family: var(--monospace); }
+
+.page-content :not(pre) > code,
+.list-summary code {
+  background-color: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+.page-content kbd,
+.list-summary kbd {
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
 
 .tags {
   list-style: none;
@@ -86,35 +110,6 @@ main {
 .tags a:hover {
   border-color: #aaa;
   color: #555;
-}
-
-.categories {
-  padding: 0;
-  list-style: none;
-}
-
-.categories a::after,
-.categories a::before {
-  content: "{";
-  margin-right: 5px;
-  display: inline-block;
-  color: #888;
-}
-
-.categories a::after {
-  content: "}";
-  margin: 0;
-  margin-left: 5px;
-}
-
-.categories a {
-  color: var(--color);
-  text-decoration: none;
-}
-
-.categories a:hover {
-  color: #000;
-  text-decoration: underline;
 }
 
 footer {
@@ -194,6 +189,10 @@ footer {
   text-align: center;
 }
 
+.align-right {
+  text-align: right;
+}
+
 .footer-bottom::before {
   content: '';
   width: 200px;
@@ -222,12 +221,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   margin-left: 10px;
 }
 
-.page-categories {
-  margin-top: 0;
-}
-
-.page-categories, .page-tags,
-.page-categories li, .page-tags li {
+.page-tags,
+.page-tags li {
   display: inline-block;
 }
 
@@ -294,6 +289,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   margin-top: 40px;
 }
 
+.page-date {
+  color: hsla(230, 4%, 48%, 1);
+  font-style: italic;
+}
+
 /* content */
 
 .page-content .highlight {
@@ -305,24 +305,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   padding: 10px 20px;
 }
 
-.page-content :not(pre) > code {
-  background-color: var(--code-bg);
-  padding: 2px 5px;
-  border-radius: 2px;
-}
-
 .page-content blockquote {
   border-left: 6px solid #ddd;
   margin-left: 0;
   padding-left: 10px;
   color: #aaa;
-}
-
-.page-content kbd {
-  color: #666;
-  border: 1px solid #ccc;
-  padding: 1px 5px;
-  border-radius: 2px;
 }
 
 .page-content table {
@@ -436,11 +423,11 @@ header a {
     
 <div class="page-top">
     <h1 class="page-title">Rerun last command with bang</h1>
-    <ul class="page-categories categories">
-        <li><a href="/categories/cool-feature">cool feature</a></li>
-    </ul>
-    
+
+    <p class="page-date">27 August 2017</p>
+
     <ul class="page-tags tags">
+        <li><a href="/tags/tip">tip</a></li>
         <li><a href="/tags/vim">vim</a></li>
         <li><a href="/tags/vimscript">vimscript</a></li>
         <li><a href="/tags/bang">bang</a></li>
@@ -448,8 +435,8 @@ header a {
 
     
 
-</div><section class="page-content"><p>Put this little vim script in your <code>.vimrc</code> to rerun the previous command with
-the bang (<code>!</code>) by just typing <code>:Please</code>.</p>
+</div><section class="page-content"><p>Put this code in your vimrc to re run the previous command but with the bang
+(<code>!</code>) by just typing <code>:Please</code>. </p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">function</span><span class="p">!</span> <span class="nx">BangLastCommand</span><span class="p">()</span><span class="c">
 </span><span class="c">    &#34; The last command that was run is stored in the register `:` (:registers)</span><span class="err">
 </span><span class="err"></span>    <span class="k">let</span> <span class="nx">lastcommand</span> <span class="p">=</span> <span class="nx">split</span><span class="p">(</span>@<span class="p">:,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span><span class="err">
@@ -474,11 +461,9 @@ has to start with a capitale letter. Here are a few suggestion:</p>
 <li><code>:Please!</code>: <code>command! -bang Sudo call s:RerunBangLastCommand()</code></li>
 </ul>
 
-<p>Have fun!</p>
-</section>
+<p>Have fun!</p></section>
 
 <div class="page-bottom">
-    <p class="page-date">Published on Sunday 27 August 2017</p>
     <ul class="page-share-list">
         <li>
             <a href="https://twitter.com/intent/tweet?text=Rerun&#43;last&#43;command&#43;with&#43;bang&amp;url=https%3A%2F%2Fmath2001.github.io%2Fpost%2Frerun-last-command-bang-vim%2F" target="_blank"
@@ -511,8 +496,6 @@ has to start with a capitale letter. Here are a few suggestion:</p>
             <h4 class="footer-split-title">Browse by</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
-            
-                <li><a href="/categories">Categories</a></li>
             </ul>
         </div>
         <div class="footer-split">
@@ -532,7 +515,7 @@ has to start with a capitale letter. Here are a few suggestion:</p>
     </div>
     <div class="footer-bottom">
         <p>
-            © Mathieu Paturel 2017.
+            © Mathieu Paturel 2017-2019.
             
             Code over at <a href="https://github.com/math2001/math2001.github.io"><code>math2001/math2001.github.io</code></a>.
             

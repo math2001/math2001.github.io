@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>code aesthetic on Math2001&#39;s blog</title>
+    <link>https://math2001.github.io/tags/code-aesthetic/</link>
+    <description>Recent content in code aesthetic on Math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Mathieu Paturel 2017-2019</copyright>
+    <lastBuildDate>Wed, 13 Sep 2017 14:18:22 +1000</lastBuildDate>
+    
+	<atom:link href="https://math2001.github.io/tags/code-aesthetic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My Zen</title>
+      <link>https://math2001.github.io/post/my-zen/</link>
+      <pubDate>Wed, 13 Sep 2017 14:18:22 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/post/my-zen/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://python.org&#34; target=&#34;_blank&#34;&gt;Python&lt;/a&gt; is by far my favorite language (I even wish we
+[spoke it 😄). One thing I found funny about it, and in the same time
+really good, is &lt;a href=&#34;https://python.org/dev/peps/pep-0020/&#34; target=&#34;_blank&#34;&gt;its zen&lt;/a&gt;; they&amp;rsquo;re
+basically guidelines.&lt;/p&gt;
+
+&lt;p&gt;So, today, &lt;em&gt;dans un élan d&amp;rsquo;inspiration&lt;/em&gt;, I decided to write my own.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

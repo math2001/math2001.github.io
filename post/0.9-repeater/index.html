@@ -11,18 +11,14 @@
     <meta property="og:title" content="0.9 Repeater">
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/0.9-repeater/">
-    <meta property="og:description" content="Today I learned something a bit weird in mathematics, which I find quiet funny. Here it is:
- Write 0.9 repeater (0.999&hellip;) in the form of a fraction
- This can be done using an equation, have a look:
-$$ \begin{aligned} n &amp;= 0.999&hellip; 10n &amp;= 9.999&hellip; 10n - n &amp;= 9 9n &amp;= 9 n &amp;= 1 \end{aligned} $$
-So, 0.9 repeater is equal to 1. When I saw this, I thought I made a mistake somewhere, but I didn&rsquo;t, and here&rsquo;s how I &ldquo;explain&rdquo; it (to myself at least).">
+    <meta property="og:description" content="Today I learned something a bit weird in mathematics, which I find quiet funny
+and interesting.">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
     <title>0.9 Repeater - Math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
-  --monospace: Menlo, Inconsolata, consolas, monospace;
-  --monospace-secondary: Inconsolata, consolas, monospace;
+  --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
   --color: #333;
   --font-mute: hsla(214, 3%, 59%, 1);
   --font-mute: #888;
@@ -54,12 +50,24 @@ body {
   color: #333;
   line-height: 1.5;
 }
-
 h1, h2 {
   letter-spacing: 2px;
-  font-weight: normal;
+  font-weight: 100;
 }
 
+h3, h4 {
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+h3 { font-size: 140%; }
+h4 { font-size: 120%; }
+
+h1 > small, h2 > small, h3 > small {
+  font-size: 70%;
+  opacity: .8;
+  font-weight: normal;
+}
 
 .wrapper {
   flex: 1 0 auto;
@@ -70,7 +78,21 @@ main {
   margin-bottom: 20px;
 }
 
-.tags, .categories { font-family: var(--monospace-secondary); }
+.tags { font-family: var(--monospace); }
+
+.page-content :not(pre) > code,
+.list-summary code {
+  background-color: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+.page-content kbd,
+.list-summary kbd {
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
 
 .tags {
   list-style: none;
@@ -88,35 +110,6 @@ main {
 .tags a:hover {
   border-color: #aaa;
   color: #555;
-}
-
-.categories {
-  padding: 0;
-  list-style: none;
-}
-
-.categories a::after,
-.categories a::before {
-  content: "{";
-  margin-right: 5px;
-  display: inline-block;
-  color: #888;
-}
-
-.categories a::after {
-  content: "}";
-  margin: 0;
-  margin-left: 5px;
-}
-
-.categories a {
-  color: var(--color);
-  text-decoration: none;
-}
-
-.categories a:hover {
-  color: #000;
-  text-decoration: underline;
 }
 
 footer {
@@ -196,6 +189,10 @@ footer {
   text-align: center;
 }
 
+.align-right {
+  text-align: right;
+}
+
 .footer-bottom::before {
   content: '';
   width: 200px;
@@ -224,12 +221,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   margin-left: 10px;
 }
 
-.page-categories {
-  margin-top: 0;
-}
-
-.page-categories, .page-tags,
-.page-categories li, .page-tags li {
+.page-tags,
+.page-tags li {
   display: inline-block;
 }
 
@@ -296,6 +289,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   margin-top: 40px;
 }
 
+.page-date {
+  color: hsla(230, 4%, 48%, 1);
+  font-style: italic;
+}
+
 /* content */
 
 .page-content .highlight {
@@ -307,24 +305,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   padding: 10px 20px;
 }
 
-.page-content :not(pre) > code {
-  background-color: var(--code-bg);
-  padding: 2px 5px;
-  border-radius: 2px;
-}
-
 .page-content blockquote {
   border-left: 6px solid #ddd;
   margin-left: 0;
   padding-left: 10px;
   color: #aaa;
-}
-
-.page-content kbd {
-  color: #666;
-  border: 1px solid #ccc;
-  padding: 1px 5px;
-  border-radius: 2px;
 }
 
 .page-content table {
@@ -438,18 +423,18 @@ header a {
     
 <div class="page-top">
     <h1 class="page-title">0.9 Repeater</h1>
-    <ul class="page-categories categories">
-        <li><a href="/categories/mathematics">mathematics</a></li>
-    </ul>
-    
+
+    <p class="page-date">2 February 2018</p>
+
     <ul class="page-tags tags">
+        <li><a href="/tags/mathematics">mathematics</a></li>
         <li><a href="/tags/funny">funny</a></li>
     </ul>
 
     
 
-</div><section class="page-content"><p>Today I learned something a bit weird in mathematics, which I find quiet funny.
-Here it is:</p>
+</div><section class="page-content"><p>Today I learned something a bit weird in mathematics, which I find quiet funny
+and interesting.</p>
 
 <blockquote>
 <p>Write 0.9 repeater (0.999&hellip;) in the form of a fraction</p>
@@ -473,11 +458,9 @@ somewhere, but I didn&rsquo;t, and here&rsquo;s how I &ldquo;explain&rdquo; it (
 <p>As the nines keep going, the number gets closer to 1, right? Well,
 because they go on infinitely, they &ldquo;eventually&rdquo; reach 1.</p>
 
-<p>Funny, right? Feels like saying 1 = 2&hellip;</p>
-</section>
+<p>Funny, right? Feels like saying 1 = 2&hellip;</p></section>
 
 <div class="page-bottom">
-    <p class="page-date">Published on Friday 2 February 2018</p>
     <ul class="page-share-list">
         <li>
             <a href="https://twitter.com/intent/tweet?text=0.9&#43;Repeater&amp;url=https%3A%2F%2Fmath2001.github.io%2Fpost%2F0.9-repeater%2F" target="_blank"
@@ -510,8 +493,6 @@ because they go on infinitely, they &ldquo;eventually&rdquo; reach 1.</p>
             <h4 class="footer-split-title">Browse by</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
-            
-                <li><a href="/categories">Categories</a></li>
             </ul>
         </div>
         <div class="footer-split">
@@ -531,7 +512,7 @@ because they go on infinitely, they &ldquo;eventually&rdquo; reach 1.</p>
     </div>
     <div class="footer-bottom">
         <p>
-            © Mathieu Paturel 2017.
+            © Mathieu Paturel 2017-2019.
             
             Code over at <a href="https://github.com/math2001/math2001.github.io"><code>math2001/math2001.github.io</code></a>.
             
