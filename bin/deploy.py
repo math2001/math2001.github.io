@@ -53,14 +53,15 @@ IGNORE = ['.git', 'themes', 'README.md', '.gitignore']
 for file in os.listdir(root):
     if file in IGNORE:
         continue
-    print(f'Removing {file}')
     if os.path.isdir(file):
         shutil.rmtree(file)
     else:
         os.unlink(file)
 
-print(f'Copying from {tempdir} to {root}')
-copytree(tempdir, root)
+print(f'Moving from {tempdir} to {root}')
+for file in os.listdir(tempdir):
+    print('moving', repr(file))
+    shutil.move(os.path.join(tempdir, file), root)
 
 run(['git', 'add', '.'])
 run(['git', 'commit', '-m', f'Automatic build source: {commithash}'])
