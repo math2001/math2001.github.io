@@ -2,7 +2,7 @@
 title: Motion and calculus
 slug: motion-and-calculus
 date: 2019-02-15T11:12:47+11:00
-tags: [mathematics, calculus, physics, newtown]
+tags: [mathematics, calculus, physics, newton]
 ---
 
 If you studied physics, one of the first things you probably did was graph the
