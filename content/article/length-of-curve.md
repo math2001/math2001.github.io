@@ -2,6 +2,8 @@
 title: Length of a curve
 slug: length-of-a-curve
 date: 2019-02-14T21:31:45+11:00
+aliases:
+  - /post/length-of-a-curve
 tags: [mathematics, calculus]
 ---
 

@@ -2,6 +2,8 @@
 title: Bash's find command
 slug: bashs-find-command
 date: 2017-09-24T07:51:15+10:00
+aliases:
+  - /post/bashs-find-command
 tags: [tip, bash, find, file manupilation]
 ---
 
@@ -272,7 +274,7 @@ Of course, the ability to do that depends on the command, but `find` gives you
 the possibility of doing that in your `-exec` actions.
 
 Note: It'll automatically adapt to the maximum command line length of your
-system. 
+system.
 
 In order to do that, you have to use `{} +`, like so:
 
