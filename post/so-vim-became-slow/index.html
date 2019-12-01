@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.50" />
+    <meta name="generator" content="Hugo 0.60.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -12,11 +12,11 @@
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/so-vim-became-slow/">
     <meta property="og:description" content="You know that feeling? You press in a key, and you have to wait like 0.5 seconds
-to see it appear on screen. You try to run vim --clean and everything&rsquo;s back
-to &ldquo;normal&rdquo;. How do you find quickly the cause of this horrible disaster 😄 ">
+to see it appear on screen. You try to run vim --clean and everything&#39;s back
+to &ldquo;normal&rdquo;. How do you find quickly the cause of this horrible disaster 😄">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>So vim got slow - Math2001&#39;s blog</title><style>
+    <title>So vim got slow - math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
@@ -66,7 +66,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  opacity: .8;
+  color: var(--font-mute);
   font-weight: normal;
 }
 
@@ -381,6 +381,7 @@ header a {
 }
 
 </style>
+    
 
 </head>
 <body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
@@ -406,22 +407,19 @@ header a {
 </symbol></svg>
 <div class="wrapper"><header>
         <div class="header-inner">
-            <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+            <h2 class="header-brand"><a href="/">math2001&#39;s blog</a></h2>
             <nav class="header-nav">
                 <ul>
                     
-                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
+                    <li class="header-nav-item"><a href="/article/">Articles</a></li>
                     
-                    <li class="header-nav-item"><a href="/project/">Projects</a></li>
+                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
                     
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    
-        <span id="show-header" class="show-header"></span>
-    
 <div class="page-top">
     <h1 class="page-title">So vim got slow</h1>
 
@@ -437,32 +435,26 @@ header a {
     
 
 </div><section class="page-content"><p>You know that feeling? You press in a key, and you have to wait like 0.5 seconds
-to see it appear on screen. You try to run <code>vim --clean</code> and everything&rsquo;s back
-to &ldquo;normal&rdquo;. How do you find <em>quickly</em> the cause of this horrible disaster 😄 </p>
-
+to see it appear on screen. You try to run <code>vim --clean</code> and everything's back
+to &ldquo;normal&rdquo;. How do you find <em>quickly</em> the cause of this horrible disaster 😄</p>
 <p>As you expected, it is caused by a/some plugin(s) and/or you vimrc. Have fun
 debugging that. You probably know the bulk force: disable every plugin, and
-enable them once at a time to know which one&rsquo;s slow.</p>
-
-<p>If you want my opinion: that&rsquo;s a huge waste of time.</p>
-
+enable them once at a time to know which one's slow.</p>
+<p>If you want my opinion: that's a huge waste of time.</p>
 <p>Vim comes with a&hellip; <strong>profiler</strong>! That means, you can profiles VimScript code
 (which is what plugins and what your vimrc is made out of). So, you can just
-profile everything, and see what take a long time to run. Here&rsquo;s how:</p>
-
+profile everything, and see what take a long time to run. Here's how:</p>
 <p>You open vim, type in:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vimscript" data-lang="vimscript">:profile start profile.log
+<pre><code class="language-vimscript" data-lang="vimscript">:profile start profile.log
 :profile func *
-:profile file *</code></pre></div>
-<p>You do the slow things (it can be just typing, running a function, etc), and
+:profile file *
+</code></pre><p>You do the slow things (it can be just typing, running a function, etc), and
 then:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vimscript" data-lang="vimscript">:profile pause</code></pre></div>
-<p>And quit (<code>:qa</code>)</p>
-
+<pre><code class="language-vimscript" data-lang="vimscript">:profile pause
+</code></pre><p>And quit (<code>:qa</code>)</p>
 <p>Now open up <code>profile.log</code> (it might be fairly long), and go to the bottom.</p>
-
-<p>It&rsquo;ll look something like this:</p>
-<div class="highlight"><pre class="chroma">FUNCTIONS SORTED ON SELF TIME¬
+<p>It'll look something like this:</p>
+<pre><code>FUNCTIONS SORTED ON SELF TIME¬
 count  total (s)   self (s)  function¬
  6231   2.111606   1.448172  FoldFunctions()¬
  6231              0.623322  NextNonBlankLine()¬
@@ -483,25 +475,21 @@ count  total (s)   self (s)  function¬
     1   0.001655   0.000910  &lt;SNR&gt;12_LoadIndent()¬
     1   0.002176   0.000697  &lt;SNR&gt;56_DisablePostamble()¬
    12              0.000553  &lt;SNR&gt;14_fzf_call()¬
-    1   0.112732   0.000545  &lt;SNR&gt;14_common_sink()¬</pre></div>
-<p>And now, you should see something that sorts functions based on how long they
-took. You can now determine from which plugin/script that was (if you&rsquo;re not
+    1   0.112732   0.000545  &lt;SNR&gt;14_common_sink()¬
+</code></pre><p>And now, you should see something that sorts functions based on how long they
+took. You can now determine from which plugin/script that was (if you're not
 sure, a big fat <code>grep functionname -R</code> in your <code>.vim</code> directory should tell
-you), and you&rsquo;ll know which plugins slowing you down!</p>
-
+you), and you'll know which plugins slowing you down!</p>
 <p>Have fun!</p>
-
 <h4 id="details">Details</h4>
-
 <p>If you want, you can of course go into a bit more details and see which
 statements were slow in each function by scrolling back up in the <code>profile.log</code>
 file ;)</p>
-
 <h4 id="nice-little-commands">Nice little commands</h4>
-
 <p>Put that in your <code>.vimrc</code> ;)</p>
-<div class="highlight"><pre class="chroma"><code class="language-vimscript" data-lang="vimscript">command! ProfileMe :profile start profile.log &lt;bar&gt; profile func * &lt;bar&gt; profile file *
-command! ProfileStop :profile pause</code></pre></div></section>
+<pre><code class="language-vimscript" data-lang="vimscript">command! ProfileMe :profile start profile.log &lt;bar&gt; profile func * &lt;bar&gt; profile file *
+command! ProfileStop :profile pause
+</code></pre></section>
 
 <div class="page-bottom">
     <ul class="page-share-list">
@@ -530,12 +518,17 @@ command! ProfileStop :profile pause</code></pre></div></section>
     <div class="footer-splits">
         <div class="footer-split">
             <h4 class="footer-split-title">About me</h4>
-            French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃
+            French, lives in Australia, and gives computer instructions so they don't
+get bored. 😃
         </div>
         <div class="footer-split">
-            <h4 class="footer-split-title">Browse by</h4>
+            <h4 class="footer-split-title">Browse</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
+            
+                <li><a href="/article">Articles</a></li>
+            
+                <li><a href="/post">Posts</a></li>
             </ul>
         </div>
         <div class="footer-split">

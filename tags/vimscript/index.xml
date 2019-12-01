@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vimscript on Math2001&#39;s blog</title>
+    <title>vimscript on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/vimscript/</link>
-    <description>Recent content in vimscript on Math2001&#39;s blog</description>
+    <description>Recent content in vimscript on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -18,7 +18,7 @@
       <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/great-resources-for-vim-users/</guid>
-      <description>&lt;p&gt;If you&amp;rsquo;re a VIM user, have a look at these resources, they&amp;rsquo;re pretty good (you
+      <description>&lt;p&gt;If you&#39;re a VIM user, have a look at these resources, they&#39;re pretty good (you
 probably will know some, if not all of them)&lt;/p&gt;</description>
     </item>
     
@@ -29,8 +29,8 @@ probably will know some, if not all of them)&lt;/p&gt;</description>
       
       <guid>https://math2001.github.io/post/dynamicopen-function-vim/</guid>
       <description>&lt;p&gt;I really open my &lt;code&gt;.vimrc&lt;/code&gt; often. Too often to have to type &lt;code&gt;:e ~/.vimrc&lt;/code&gt; or
-&lt;code&gt;:tabe ~/.vimrc&lt;/code&gt; every time. Here&amp;rsquo;s little function that will open a file in a
-new tab if there isn&amp;rsquo;t enough room for a new split, and, you guessed it, in a
+&lt;code&gt;:tabe ~/.vimrc &lt;/code&gt; every time. Here&#39;s little function that will open a file in a
+new tab if there isn&#39;t enough room for a new split, and, you guessed it, in a
 new &lt;em&gt;vertical&lt;/em&gt; split if there is.&lt;/p&gt;</description>
     </item>
     
@@ -41,7 +41,7 @@ new &lt;em&gt;vertical&lt;/em&gt; split if there is.&lt;/p&gt;</description>
       
       <guid>https://math2001.github.io/post/rerun-last-command-bang-vim/</guid>
       <description>&lt;p&gt;Put this code in your vimrc to re run the previous command but with the bang
-(&lt;code&gt;!&lt;/code&gt;) by just typing &lt;code&gt;:Please&lt;/code&gt;. &lt;/p&gt;</description>
+(&lt;code&gt;!&lt;/code&gt;) by just typing &lt;code&gt;:Please&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -50,7 +50,7 @@ new &lt;em&gt;vertical&lt;/em&gt; split if there is.&lt;/p&gt;</description>
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/variable-scopes-vim/</guid>
-      <description>&lt;p&gt;An interesting feature of vim script is variable scoping. Here&amp;rsquo;s a copy-paste
+      <description>&lt;p&gt;An interesting feature of vim script is variable scoping. Here&#39;s a copy-paste
 from the documentation, just in case you never saw it before.&lt;/p&gt;</description>
     </item>
     

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>profile on Math2001&#39;s blog</title>
+    <title>profile on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/profile/</link>
-    <description>Recent content in profile on Math2001&#39;s blog</description>
+    <description>Recent content in profile on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -19,8 +19,8 @@
       
       <guid>https://math2001.github.io/post/so-vim-became-slow/</guid>
       <description>&lt;p&gt;You know that feeling? You press in a key, and you have to wait like 0.5 seconds
-to see it appear on screen. You try to run &lt;code&gt;vim --clean&lt;/code&gt; and everything&amp;rsquo;s back
-to &amp;ldquo;normal&amp;rdquo;. How do you find &lt;em&gt;quickly&lt;/em&gt; the cause of this horrible disaster 😄 &lt;/p&gt;</description>
+to see it appear on screen. You try to run &lt;code&gt;vim --clean&lt;/code&gt; and everything&#39;s back
+to &amp;ldquo;normal&amp;rdquo;. How do you find &lt;em&gt;quickly&lt;/em&gt; the cause of this horrible disaster 😄&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>svg on Math2001&#39;s blog</title>
+    <title>svg on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/svg/</link>
-    <description>Recent content in svg on Math2001&#39;s blog</description>
+    <description>Recent content in svg on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -20,18 +20,18 @@
       <guid>https://math2001.github.io/post/combine-svgs/</guid>
       <description>&lt;p&gt;If you want your website to be fast, you should limit the number of http
 requests. A great way of doing that is combining your images. If you use SVGS
-for your icons and stuff like that, here&amp;rsquo;s how you can combine all your icon in
+for your icons and stuff like that, here&#39;s how you can combine all your icon in
 one big file, and use them in your website!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Live Svg</title>
-      <link>https://math2001.github.io/project/live-svg/</link>
+      <link>https://math2001.github.io/post/live-svg/</link>
       <pubDate>Fri, 22 Sep 2017 18:31:15 +1000</pubDate>
       
-      <guid>https://math2001.github.io/project/live-svg/</guid>
+      <guid>https://math2001.github.io/post/live-svg/</guid>
       <description>&lt;p&gt;SVGs are awesome. They allow you to make some infinitely resizable images.
-Sometimes, you want to make a complex image, so you use something &lt;a href=&#34;https://inkscape.org&#34; target=&#34;_blank&#34;&gt;Inkscape&lt;/a&gt;,
+Sometimes, you want to make a complex image, so you use something &lt;a href=&#34;https://inkscape.org&#34;&gt;Inkscape&lt;/a&gt;,
 but sometimes, you just want to make a simple one, so you take a deep breath and
 away you go to write a SVG by hand!&lt;/p&gt;</description>
     </item>

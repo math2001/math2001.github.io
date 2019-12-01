@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>bit-manipulation on Math2001&#39;s blog</title>
+    <title>bit-manipulation on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/bit-manipulation/</link>
-    <description>Recent content in bit-manipulation on Math2001&#39;s blog</description>
+    <description>Recent content in bit-manipulation on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -18,13 +18,11 @@
       <pubDate>Fri, 13 Oct 2017 16:14:21 +1100</pubDate>
       
       <guid>https://math2001.github.io/post/so-binary-numbers-are-useful/</guid>
-      <description>&lt;p&gt;Do you know what binary numbers are? They&amp;rsquo;re just a way of counting with just 2
+      <description>&lt;p&gt;Do you know what binary numbers are? They&#39;re just a way of counting with just 2
 numbers: 0 and 1. For example, &lt;code&gt;9&lt;/code&gt; is in binary &lt;code&gt;1001&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;This is the format your computer uses to do everything, at a very low level.
-Either there is some current, or there isn&amp;rsquo;t. And then, it interprets these
+Either there is some current, or there isn&#39;t. And then, it interprets these
 numbers, and becomes what it is.&lt;/p&gt;
-
 &lt;p&gt;So, what the heck could be the use of binary numbers to us, simple programmers
 who write some code with all these different symbols, letters, and numbers?
 🤔&lt;/p&gt;</description>

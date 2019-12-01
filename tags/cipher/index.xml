@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cipher on Math2001&#39;s blog</title>
+    <title>cipher on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/cipher/</link>
-    <description>Recent content in cipher on Math2001&#39;s blog</description>
+    <description>Recent content in cipher on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -18,7 +18,7 @@
       <pubDate>Fri, 25 May 2018 22:32:29 +1000</pubDate>
       
       <guid>https://math2001.github.io/post/challenge-1-translate-back/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve got a little challenge for you.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&#39;ve got a little challenge for you.&lt;/p&gt;</description>
     </item>
     
   </channel>

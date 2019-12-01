@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.50" />
+    <meta name="generator" content="Hugo 0.60.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -11,19 +11,17 @@
     <meta property="og:title" content="So binary numbers are useful?">
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/so-binary-numbers-are-useful/">
-    <meta property="og:description" content="Do you know what binary numbers are? They&rsquo;re just a way of counting with just 2
+    <meta property="og:description" content="Do you know what binary numbers are? They&#39;re just a way of counting with just 2
 numbers: 0 and 1. For example, 9 is in binary 1001.
-
 This is the format your computer uses to do everything, at a very low level.
-Either there is some current, or there isn&rsquo;t. And then, it interprets these
+Either there is some current, or there isn&#39;t. And then, it interprets these
 numbers, and becomes what it is.
-
 So, what the heck could be the use of binary numbers to us, simple programmers
 who write some code with all these different symbols, letters, and numbers?
 🤔">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>So binary numbers are useful? - Math2001&#39;s blog</title><style>
+    <title>So binary numbers are useful? - math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
@@ -73,7 +71,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  opacity: .8;
+  color: var(--font-mute);
   font-weight: normal;
 }
 
@@ -388,6 +386,7 @@ header a {
 }
 
 </style>
+    
 
 </head>
 <body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
@@ -413,22 +412,19 @@ header a {
 </symbol></svg>
 <div class="wrapper"><header>
         <div class="header-inner">
-            <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+            <h2 class="header-brand"><a href="/">math2001&#39;s blog</a></h2>
             <nav class="header-nav">
                 <ul>
                     
-                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
+                    <li class="header-nav-item"><a href="/article/">Articles</a></li>
                     
-                    <li class="header-nav-item"><a href="/project/">Projects</a></li>
+                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
                     
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    
-        <span id="show-header" class="show-header"></span>
-    
 <div class="page-top">
     <h1 class="page-title">So binary numbers are useful?</h1>
 
@@ -443,68 +439,48 @@ header a {
 
     
 
-</div><section class="page-content"><p>Do you know what binary numbers are? They&rsquo;re just a way of counting with just 2
+</div><section class="page-content"><p>Do you know what binary numbers are? They're just a way of counting with just 2
 numbers: 0 and 1. For example, <code>9</code> is in binary <code>1001</code>.</p>
-
 <p>This is the format your computer uses to do everything, at a very low level.
-Either there is some current, or there isn&rsquo;t. And then, it interprets these
+Either there is some current, or there isn't. And then, it interprets these
 numbers, and becomes what it is.</p>
-
 <p>So, what the heck could be the use of binary numbers to us, simple programmers
 who write some code with all these different symbols, letters, and numbers?
 🤔</p>
-
 <p>One use case I stumbled upon a few days ago (I was making a little Sublime Text
 plugin, textwidth) was passing multiple flags just through a number. Basically,
-you&rsquo;d give the function a cursor position, and it&rsquo;d tell you if you were at the
+you'd give the function a cursor position, and it'd tell you if you were at the
 end of a word, at the end of a line, at an opening bracket, etc&hellip;</p>
-
-<p>This made me realize that you can pass a lot more information than we&rsquo;d think
+<p>This made me realize that you can pass a lot more information than we'd think
 through a simple number.</p>
-
-<p>Sound&rsquo;s interesting? Let&rsquo;s get going. 🚀</p>
-
+<p>Sound's interesting? Let's get going. 🚀</p>
 <h3 id="binary-base-2-and-regular-numbers-base-10">Binary (base 2) and regular numbers (base 10)</h3>
-
 <p>(If you already know how to count in binary, then you can skip this section)</p>
-
-<p>Regular numbers as I&rsquo;ll call them, are in base 10, meaning we have 10 different
+<p>Regular numbers as I'll call them, are in base 10, meaning we have 10 different
 figures (0, 1, 2, 3, 4, 5, 6, 7, 8 and 9) to represent them. Base 2 just uses
 the first 2 figures (0 and 1).</p>
-
 <p>Note: an other common base is base 16, or hexadecimal. The figures are (0, 1, 2,
 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e and f). So, for example, 15 is in hexadecimal
 <code>e</code>.</p>
-
 <blockquote>
 <p>What?! How the heck are we suppose to count with only 2 numbers?</p>
 </blockquote>
-
-<p>It&rsquo;s fairly simple once you get it. But first we must understand how we <em>count
+<p>It's fairly simple once you get it. But first we must understand how we <em>count
 with regular numbers</em>.</p>
-
-<p>If I ask you what is the result of <code>5 + 1</code>, you&rsquo;ll just tell me <code>6</code>. You just
+<p>If I ask you what is the result of <code>5 + 1</code>, you'll just tell me <code>6</code>. You just
 <em>increased</em> the last figure by one.</p>
-
 <p>But what if I tell you to do <code>9 + 1</code>?</p>
-
-<p>There isn&rsquo;t any figure after <code>9</code>, so you have to replace it with a 0, and
-increase the number <em>before</em> it. In this case, it&rsquo;s a 0 (it&rsquo;s implied here, 09
+<p>There isn't any figure after <code>9</code>, so you have to replace it with a 0, and
+increase the number <em>before</em> it. In this case, it's a 0 (it's implied here, 09
 is the same as 9). This gives you 10.</p>
-
 <p>And, as long as you get a 9, you repeat the same operation: replace it with a 0,
 and increase the number before it. Check for <code>29 + 1</code> or <code>99 + 1</code> if you want.</p>
-
 <p>The exact same thing happens for binary numbers (and any numbers in any base)!</p>
-
-<p>What is the result of <code>1 + 1</code> in binary? There isn&rsquo;t any figure after <code>1</code>,
+<p>What is the result of <code>1 + 1</code> in binary? There isn't any figure after <code>1</code>,
 therefore, you replace it with a <code>0</code> and increase the number before it, which
 gives you <code>10</code>.</p>
-
 <p>In binary again, <code>10 + 1</code> gives you <code>11</code>, and <code>11 + 1</code> gives you <code>100</code>.</p>
-
-<h5 id="regular-binary-some-examples">Regular → binary, some examples</h5>
-
+<h5 id="regular--binary-some-examples">Regular → binary, some examples</h5>
 <table>
 <thead>
 <tr>
@@ -512,143 +488,109 @@ gives you <code>10</code>.</p>
 <th>Binary</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>0</td>
 <td>0</td>
 </tr>
-
 <tr>
 <td>1</td>
 <td>1</td>
 </tr>
-
 <tr>
 <td>2</td>
 <td>10</td>
 </tr>
-
 <tr>
 <td>3</td>
 <td>11</td>
 </tr>
-
 <tr>
 <td>4</td>
 <td>100</td>
 </tr>
-
 <tr>
 <td>5</td>
 <td>101</td>
 </tr>
-
 <tr>
 <td>6</td>
 <td>110</td>
 </tr>
-
 <tr>
 <td>7</td>
 <td>111</td>
 </tr>
-
 <tr>
 <td>8</td>
 <td>1000</td>
 </tr>
-
 <tr>
 <td>9</td>
 <td>1001</td>
 </tr>
-
 <tr>
 <td>10</td>
 <td>1010</td>
 </tr>
 </tbody>
 </table>
-
 <p>Note: each figure on a binary number is called a <em>bit</em>.</p>
-
 <h4 id="binary-to-regular-an-other-story">Binary to regular, an other story</h4>
-
 <p>What if you want to convert binary to a regular number. Right now, what is the
 regular number for <code>100101</code>? 🤔</p>
-
-<p>Pretty tough, hey? 😄 You&rsquo;d have to convert every regular number its binary
-version and see which one matches, which isn&rsquo;t efficient at all. Instead, here&rsquo;s
+<p>Pretty tough, hey? 😄 You'd have to convert every regular number its binary
+version and see which one matches, which isn't efficient at all. Instead, here's
 a better way to do it.</p>
-
 <p>First, we must understand that every bit as a value. The last number is worth 1,
 and every other number is worth the double of the value of the number on its right.</p>
-<div class="highlight"><pre class="chroma">100101
+<pre><code>100101
      ^ worth 1
     ^ worth 2 (2 x 1)
    ^ worth 4 (2 x 2)
   ^ worth 8 (2 x 4)
  ^ worth 16 (2 x 8)
-^ worth 32 (2 x 16)</pre></div>
-<p>Get it? Let&rsquo;s move on then.</p>
-
+^ worth 32 (2 x 16)
+</code></pre><p>Get it? Let's move on then.</p>
 <blockquote>
 <p>The value of a binary number is the sum of each value of the bit that are equal to 1</p>
 </blockquote>
-
-<p>It&rsquo;s easier to read from right to left in this case, it makes it simpler to know
-what is the value of the bit we&rsquo;re at, since it&rsquo;s just the double of the
+<p>It's easier to read from right to left in this case, it makes it simpler to know
+what is the value of the bit we're at, since it's just the double of the
 previous one.</p>
-
-<p>So, let&rsquo;s decode <code>100101</code>. Our sum is currently 0.</p>
-
+<p>So, let's decode <code>100101</code>. Our sum is currently 0.</p>
 <p>The last number being a 1, we add its value (1) to the sum. Our sum is
 currently 1.</p>
-
-<p>The previous number being a 0, we don&rsquo;t do anything.</p>
-
+<p>The previous number being a 0, we don't do anything.</p>
 <p>The previous number being a 1, we add its value (4) to the sum. Our sum is now
 5.</p>
-
 <p>The 2 previous numbers being 0, we ignore both of them.</p>
-
 <p>The previous number being a 1, we add its value (32) to the sum. Our sum is now
 1 + 4 + 32, which is 37.</p>
-
 <p>So, <code>100101</code> is equal to 37.</p>
-
 <h3 id="operators">Operators</h3>
-
 <p>What makes binary numbers useful to us is that you can make some operation with
-them (called <em>bitwise</em> operations). In this post, I&rsquo;ll use Python because it&rsquo;s
+them (called <em>bitwise</em> operations). In this post, I'll use Python because it's
 awesome, but pretty much every programming language should be able to do this.</p>
-
-<p>The 2 operators I&rsquo;m about to show you use 2 numbers, and does some operations of
+<p>The 2 operators I'm about to show you use 2 numbers, and does some operations of
 the <em>binary form</em> of the number.</p>
-
 <h4 id="the-and-bitwise-operator">The &ldquo;and&rdquo; bitwise operator</h4>
-
-<p>It&rsquo;s basically the regular <code>and</code> operator for every bit in our numbers.</p>
-<div class="highlight"><pre class="chroma">First:  10111001
+<p>It's basically the regular <code>and</code> operator for every bit in our numbers.</p>
+<pre><code>First:  10111001
 Second: 01011010
-Result: 00011000</pre></div>
-<p>In simple words, it adds a 1 to the result if both current bits are a 1 too,
+Result: 00011000
+</code></pre><p>In simple words, it adds a 1 to the result if both current bits are a 1 too,
 otherwise, it adds a 0.</p>
-
 <h4 id="the-or-bitwise-operator">The &ldquo;or&rdquo; bitwise operator</h4>
-
-<p>You guessed it, it&rsquo;s the equivalent of the <code>or</code> operator for every bit in our
+<p>You guessed it, it's the equivalent of the <code>or</code> operator for every bit in our
 numbers.</p>
-<div class="highlight"><pre class="chroma">First:  10111001
+<pre><code>First:  10111001
 Second: 01011010
-Result: 11111011</pre></div>
-<p>In simple words, it adds a 1 to the result if at least one bit is 1, otherwise a
+Result: 11111011
+</code></pre><p>In simple words, it adds a 1 to the result if at least one bit is 1, otherwise a
 0.</p>
-
 <h4 id="python-way">Python way</h4>
-
-<p>In python, here&rsquo;s what it&rsquo;d look like:</p>
+<p>In python, here's what it'd look like:</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">first</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">second</span> <span class="o">=</span> <span class="mi">2</span>
 
@@ -657,94 +599,81 @@ Result: 11111011</pre></div>
 <span class="k">print</span><span class="p">(</span><span class="n">second</span> <span class="o">==</span> <span class="mb">0b10</span><span class="p">)</span> <span class="c1"># True</span>
 
 <span class="c1"># converting numbers into a binary form</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">first</span><span class="p">))</span> <span class="c1"># 0b1</span>
-<span class="k">print</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">second</span><span class="p">))</span> <span class="c1"># 0b10</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">first</span><span class="p">)</span><span class="p">)</span> <span class="c1"># 0b1</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">second</span><span class="p">)</span><span class="p">)</span> <span class="c1"># 0b10</span>
 
 <span class="c1"># bitwise operators &#34;and&#34;</span>
 <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">&amp;</span> <span class="n">second</span><span class="p">)</span> <span class="c1"># 0b00, or 0</span>
-<span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">|</span> <span class="n">second</span><span class="p">)</span> <span class="c1"># 0b11, or 3</span></code></pre></div>
-<h3 id="the-use">The use?</h3>
-
+<span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">|</span> <span class="n">second</span><span class="p">)</span> <span class="c1"># 0b11, or 3</span>
+</code></pre></div><h3 id="the-use">The use?</h3>
 <blockquote>
-<p>Ok, thanks, but what&rsquo;s the use of this??</p>
+<p>Ok, thanks, but what's the use of this??</p>
 </blockquote>
-
 <p>Flags.</p>
-
 <p>For example, you want to write a function that takes a number and tells you if
 the number is a multiple of 2, 3, 5 and 7.</p>
-
 <p>With some carefully chosen numbers, and the bitwise operators <code>or</code> and <code>and</code>,
 your function can return a simple number, and the end user would be able to tell
 which numbers can divide the number he called your function with.</p>
-
 <h4 id="the-idea">The idea</h4>
-
 <p>The idea is to give a meaning to every bit. If the number I give you is <code>0101</code>, and I tell
 you that if the second bite is 1, then the number is dividable by 2, and that if the
-fourth bit is 1, the number is dividable by 5, you&rsquo;ll know that the number you gave is a
+fourth bit is 1, the number is dividable by 5, you'll know that the number you gave is a
 dividable both by 2 and 5.</p>
-
-<p>And guess what: it&rsquo;s the <code>or</code> and <code>and</code> bitwise that allow you to do that.</p>
-
+<p>And guess what: it's the <code>or</code> and <code>and</code> bitwise that allow you to do that.</p>
 <p>You have to combine a set of number that will each &ldquo;active&rdquo; (set to 1) a
 specific bit.</p>
-
 <p>So, which numbers could we combine (using the <code>or</code> bitwise operator) in any
 order so that we could tell which one was used? These ones (in binary form):</p>
-<div class="highlight"><pre class="chroma">   1
+<pre><code>   1
   10
  100
 1000
-...</pre></div>
-<p>Do you understand? If you combine <code>1</code> with <code>100</code> using the <code>or</code> bitwise
-operator, you&rsquo;ll get <code>101</code>, and you&rsquo;ll know that you used <code>100</code> and <code>1</code>.</p>
-
-<p>Do you recognize the relation between those numbers? They&rsquo;re the double of the previous
+...
+</code></pre><p>Do you understand? If you combine <code>1</code> with <code>100</code> using the <code>or</code> bitwise
+operator, you'll get <code>101</code>, and you'll know that you used <code>100</code> and <code>1</code>.</p>
+<p>Do you recognize the relation between those numbers? They're the double of the previous
 one, each time: 1, 2, 4, 8, etc&hellip;</p>
-
 <h4 id="our-little-example">Our little example</h4>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">DIVIDABLE_BY_2</span> <span class="o">=</span> <span class="mb">0b0001</span> <span class="c1"># we don&#39;t actually need all these extra 0</span>
 <span class="n">DIVIDABLE_BY_3</span> <span class="o">=</span> <span class="mb">0b0010</span>
 <span class="n">DIVIDABLE_BY_5</span> <span class="o">=</span> <span class="mb">0b0100</span>
 <span class="n">DIVIDABLE_BY_7</span> <span class="o">=</span> <span class="mb">0b1000</span>
 
-<span class="k">def</span> <span class="nf">classify</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">classify</span><span class="p">(</span><span class="n">number</span><span class="p">)</span><span class="p">:</span>
     <span class="c1"># same as 0, but it makes it understandable that we&#39;re going to use bit</span>
     <span class="n">result</span> <span class="o">=</span> <span class="mb">0b0</span>
     <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="c1"># the number is dividable by 2 (the rest of the division is equal to 0)</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">|</span> <span class="n">DIVIDABLE_BY_2</span>
-    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="n">result</span> <span class="o">|=</span> <span class="n">DIVIDABLE_BY_3</span>
-    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="n">result</span> <span class="o">|=</span> <span class="n">DIVIDABLE_BY_5</span>
-    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="n">result</span> <span class="o">|=</span> <span class="n">DIVIDABLE_BY_7</span>
-    <span class="k">return</span> <span class="n">result</span></code></pre></div>
-<p>Let&rsquo;s see what we get:</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">classify</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
-<span class="s1">&#39;0b0110&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">classify</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="s1">&#39;0b0010&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">classify</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">7</span><span class="p">)</span>
-<span class="s1">&#39;0b1111&#39;</span></code></pre></div>
-<p>And now, we can use the <code>and</code> bitwise operator to check if the returned value
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="n">result</span> <span class="o">|</span><span class="o">=</span> <span class="n">DIVIDABLE_BY_3</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="n">result</span> <span class="o">|</span><span class="o">=</span> <span class="n">DIVIDABLE_BY_5</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="n">result</span> <span class="o">|</span><span class="o">=</span> <span class="n">DIVIDABLE_BY_7</span>
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div><p>Let's see what we get:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;</span><span class="o">&gt;</span> <span class="n">classify</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="sa"></span><span class="s1">&#39;</span><span class="s1">0b0110</span><span class="s1">&#39;</span>
+<span class="o">&gt;&gt;</span><span class="o">&gt;</span> <span class="n">classify</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="sa"></span><span class="s1">&#39;</span><span class="s1">0b0010</span><span class="s1">&#39;</span>
+<span class="o">&gt;&gt;</span><span class="o">&gt;</span> <span class="n">classify</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">7</span><span class="p">)</span>
+<span class="sa"></span><span class="s1">&#39;</span><span class="s1">0b1111</span><span class="s1">&#39;</span>
+</code></pre></div><p>And now, we can use the <code>and</code> bitwise operator to check if the returned value
 matches with a number.</p>
-
-<p>If no bit matches, it&rsquo;ll return <code>0b0000</code>, which will be 0, and once converted to
-a boolean, will be <code>False</code>. Otherwise, it&rsquo;ll return an other number, which we
-don&rsquo;t care about (it&rsquo;ll be converted to <code>True</code>, since it will be different from
+<p>If no bit matches, it'll return <code>0b0000</code>, which will be 0, and once converted to
+a boolean, will be <code>False</code>. Otherwise, it'll return an other number, which we
+don't care about (it'll be converted to <code>True</code>, since it will be different from
 0).</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">classification</span> <span class="o">=</span> <span class="n">classify</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="n">classification</span> <span class="o">&amp;</span> <span class="n">DIVIDABLE_BY_2</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;</span><span class="o">&gt;</span> <span class="n">classification</span> <span class="o">=</span> <span class="n">classify</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span><span class="o">&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="n">classification</span> <span class="o">&amp;</span> <span class="n">DIVIDABLE_BY_2</span><span class="p">)</span>
 <span class="bp">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="n">classification</span> <span class="o">&amp;</span> <span class="n">DIVIDABLE_BY_3</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span><span class="o">&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="n">classification</span> <span class="o">&amp;</span> <span class="n">DIVIDABLE_BY_3</span><span class="p">)</span>
 <span class="bp">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="n">classification</span> <span class="o">&amp;</span> <span class="n">DIVIDABLE_BY_5</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span><span class="o">&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="n">classification</span> <span class="o">&amp;</span> <span class="n">DIVIDABLE_BY_5</span><span class="p">)</span>
 <span class="bp">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="n">classification</span> <span class="o">&amp;</span> <span class="n">DIVIDABLE_BY_7</span><span class="p">)</span>
-<span class="bp">False</span></code></pre></div>
-<p>It might be a bit confusing, so <em>play with it</em>:</p>
-
-<script src="//repl.it/embed/M99I/1.js"></script></section>
+<span class="o">&gt;&gt;</span><span class="o">&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="n">classification</span> <span class="o">&amp;</span> <span class="n">DIVIDABLE_BY_7</span><span class="p">)</span>
+<span class="bp">False</span>
+</code></pre></div><p>It might be a bit confusing, so <em>play with it</em>:</p>
+<!-- raw HTML omitted --></section>
 
 <div class="page-bottom">
     <ul class="page-share-list">
@@ -773,12 +702,17 @@ don&rsquo;t care about (it&rsquo;ll be converted to <code>True</code>, since it 
     <div class="footer-splits">
         <div class="footer-split">
             <h4 class="footer-split-title">About me</h4>
-            French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃
+            French, lives in Australia, and gives computer instructions so they don't
+get bored. 😃
         </div>
         <div class="footer-split">
-            <h4 class="footer-split-title">Browse by</h4>
+            <h4 class="footer-split-title">Browse</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
+            
+                <li><a href="/article">Articles</a></li>
+            
+                <li><a href="/post">Posts</a></li>
             </ul>
         </div>
         <div class="footer-split">

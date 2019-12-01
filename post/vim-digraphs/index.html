@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.50" />
+    <meta name="generator" content="Hugo 0.60.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -17,7 +17,7 @@ this symbol? Less than a second&hellip; Do you know how much time it would have 
 you? Well, depending on your internet connection, it might be about 10 seconds.">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Vim digraphs - Math2001&#39;s blog</title><style>
+    <title>Vim digraphs - math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
@@ -67,7 +67,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  opacity: .8;
+  color: var(--font-mute);
   font-weight: normal;
 }
 
@@ -382,6 +382,7 @@ header a {
 }
 
 </style>
+    
 
 </head>
 <body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
@@ -407,22 +408,19 @@ header a {
 </symbol></svg>
 <div class="wrapper"><header>
         <div class="header-inner">
-            <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+            <h2 class="header-brand"><a href="/">math2001&#39;s blog</a></h2>
             <nav class="header-nav">
                 <ul>
                     
-                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
+                    <li class="header-nav-item"><a href="/article/">Articles</a></li>
                     
-                    <li class="header-nav-item"><a href="/project/">Projects</a></li>
+                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
                     
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    
-        <span id="show-header" class="show-header"></span>
-    
 <div class="page-top">
     <h1 class="page-title">Vim digraphs</h1>
 
@@ -440,26 +438,20 @@ header a {
 copyright symbol for example (©). Do you know how much time it took me to insert
 this symbol? Less than a second&hellip; Do you know how much time it would have took
 you? Well, depending on your internet connection, it might be about 10 seconds.</p>
-
-<p>So, how did I do that? I just pressed <kbd>ctr+k</kbd>+<kbd>Co</kbd> (in insert
+<p>So, how did I do that? I just pressed <!-- raw HTML omitted -->ctr+k<!-- raw HTML omitted -->+<!-- raw HTML omitted -->Co<!-- raw HTML omitted --> (in insert
 mode).</p>
-
-<p><kbd>ctrl+k</kbd> <em>in insert mode</em> listens for a shortcut, which will then insert
+<p><!-- raw HTML omitted -->ctrl+k<!-- raw HTML omitted --> <em>in insert mode</em> listens for a shortcut, which will then insert
 the corresponding symbol.</p>
-
 <p>How do you know which one it is? Just look for it in the <code>:digraphs</code> list!</p>
-
 <p>You can also define your own digraph:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">digraph</span> .. …</code></pre></div>
-<p>You can also specify the decimal value of the symbol, like so:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">diagraph</span> .. <span class="m">8230</span></code></pre></div>
-<p>You might be wondering how you get the value&hellip; Well, have a look at this: <tiplink to="vim-ascii.md"></tiplink></p>
-
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">digraph</span> .. …<span class="err">
+</span></code></pre></div><p>You can also specify the decimal value of the symbol, like so:</p>
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">diagraph</span> .. <span class="m">8230</span><span class="err">
+</span></code></pre></div><p>You might be wondering how you get the value&hellip; Well, have a look at this: <!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <h2 id="little-cheat-sheet">Little cheat sheet</h2>
-
-<p>Because I&rsquo;m nice (😄), I made a little list of the ones you might be likely
+<p>Because I'm nice (😄), I made a little list of the ones you might be likely
 to use:</p>
-<div class="highlight"><pre class="chroma">Abbreviation → Symbol 
+<pre><code>Abbreviation → Symbol 
 Co → ©
 TM → ™
 -&gt; → →
@@ -473,16 +465,17 @@ TM → ™
 Eu → €
 $$ → £
 RT → √
--- → ­</pre></div>
-<h3 id="if-you-re-french">If you&rsquo;re french</h3>
-<div class="highlight"><pre class="chroma">Abbreviation → Symbol
+-- → ­
+</code></pre>
+<h3 id="if-youre-french">If you're french</h3>
+<pre><code>Abbreviation → Symbol
 e! → è
-e&#39; → é
+e' → é
 e&gt; → ê
-e&#34; → ë
-oe → œ</pre></div>
+e&quot; → ë
+oe → œ
+</code></pre>
 <p>Note: use upper cased abbreviation to get upper cased symbols</p>
-
 <p>To learn more: <code>:help digraphs</code></p></section>
 
 <div class="page-bottom">
@@ -512,12 +505,17 @@ oe → œ</pre></div>
     <div class="footer-splits">
         <div class="footer-split">
             <h4 class="footer-split-title">About me</h4>
-            French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃
+            French, lives in Australia, and gives computer instructions so they don't
+get bored. 😃
         </div>
         <div class="footer-split">
-            <h4 class="footer-split-title">Browse by</h4>
+            <h4 class="footer-split-title">Browse</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
+            
+                <li><a href="/article">Articles</a></li>
+            
+                <li><a href="/post">Posts</a></li>
             </ul>
         </div>
         <div class="footer-split">

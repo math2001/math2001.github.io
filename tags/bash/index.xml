@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>bash on Math2001&#39;s blog</title>
+    <title>bash on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/bash/</link>
-    <description>Recent content in bash on Math2001&#39;s blog</description>
+    <description>Recent content in bash on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -18,10 +18,9 @@
       <pubDate>Sun, 04 Feb 2018 15:07:11 +1100</pubDate>
       
       <guid>https://math2001.github.io/post/the-last-terminal-title/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://math2001.github.io/img/tmux-title.png&#34; alt=&#34;ls@asyncio   vim@math2001.github.io   git@dotfiles&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I use tmux, and in the tabs title, it displays the terminal&amp;rsquo;s title, which is
-just done by this 2 lines in your &lt;code&gt;.tmux.conf&lt;/code&gt; &lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://math2001.github.io/img/tmux-title.png&#34; alt=&#34;ls@asyncio      git@dotfiles&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I use tmux, and in the tabs title, it displays the terminal&#39;s title, which is
+just done by this 2 lines in your &lt;code&gt;.tmux.conf&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,19 +30,18 @@ just done by this 2 lines in your &lt;code&gt;.tmux.conf&lt;/code&gt; &lt;/p&gt;
       
       <guid>https://math2001.github.io/post/bashs-fc-command/</guid>
       <description>&lt;p&gt;When editing long commands in your terminal (you know, the one that wraps
-😉), sometimes you&amp;rsquo;d be better of using your actual editor (like vim or
-Sublime). And guess what? Bash let&amp;rsquo;s you do that! 🎉&lt;/p&gt;</description>
+😉), sometimes you&#39;d be better of using your actual editor (like vim or
+Sublime). And guess what? Bash let&#39;s you do that! 🎉&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Bash&#39;s find command</title>
-      <link>https://math2001.github.io/post/bashs-find-command/</link>
+      <link>https://math2001.github.io/article/bashs-find-command/</link>
       <pubDate>Sun, 24 Sep 2017 07:51:15 +1000</pubDate>
       
-      <guid>https://math2001.github.io/post/bashs-find-command/</guid>
+      <guid>https://math2001.github.io/article/bashs-find-command/</guid>
       <description>&lt;p&gt;The &lt;code&gt;find&lt;/code&gt; command in bash is quite powerful, and knowing the basics might save
 you some scripting.&lt;/p&gt;
-
 &lt;p&gt;What does it do? It &amp;ldquo;finds&amp;rdquo; files. By default, it outputs their path relative to
 where you ran &lt;code&gt;find&lt;/code&gt;. But, in addition of providing you with advanced &amp;ldquo;filters&amp;rdquo;
 it actually allows you to run commands on each of those files.&lt;/p&gt;</description>
@@ -55,8 +53,8 @@ it actually allows you to run commands on each of those files.&lt;/p&gt;</descri
       <pubDate>Sat, 23 Sep 2017 11:23:45 +1000</pubDate>
       
       <guid>https://math2001.github.io/post/hugo-deploying-github-pages/</guid>
-      <description>&lt;p&gt;When you want to deploy a static website built with the fantastic &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt; on
-GitHub pages, you don&amp;rsquo;t have 100 of possibilities. A clean one, and an easy one
+      <description>&lt;p&gt;When you want to deploy a static website built with the fantastic &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; on
+GitHub pages, you don&#39;t have 100 of possibilities. A clean one, and an easy one
 😄.&lt;/p&gt;</description>
     </item>
     

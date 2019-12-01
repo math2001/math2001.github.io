@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>howto on Math2001&#39;s blog</title>
+    <title>howto on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/howto/</link>
-    <description>Recent content in howto on Math2001&#39;s blog</description>
+    <description>Recent content in howto on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -20,7 +20,7 @@
       <guid>https://math2001.github.io/post/combine-svgs/</guid>
       <description>&lt;p&gt;If you want your website to be fast, you should limit the number of http
 requests. A great way of doing that is combining your images. If you use SVGS
-for your icons and stuff like that, here&amp;rsquo;s how you can combine all your icon in
+for your icons and stuff like that, here&#39;s how you can combine all your icon in
 one big file, and use them in your website!&lt;/p&gt;</description>
     </item>
     
@@ -30,8 +30,8 @@ one big file, and use them in your website!&lt;/p&gt;</description>
       <pubDate>Sat, 23 Sep 2017 11:23:45 +1000</pubDate>
       
       <guid>https://math2001.github.io/post/hugo-deploying-github-pages/</guid>
-      <description>&lt;p&gt;When you want to deploy a static website built with the fantastic &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt; on
-GitHub pages, you don&amp;rsquo;t have 100 of possibilities. A clean one, and an easy one
+      <description>&lt;p&gt;When you want to deploy a static website built with the fantastic &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; on
+GitHub pages, you don&#39;t have 100 of possibilities. A clean one, and an easy one
 😄.&lt;/p&gt;</description>
     </item>
     

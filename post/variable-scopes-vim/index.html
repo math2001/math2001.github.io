@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.50" />
+    <meta name="generator" content="Hugo 0.60.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -11,11 +11,11 @@
     <meta property="og:title" content="Variable scopes in vim">
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/variable-scopes-vim/">
-    <meta property="og:description" content="An interesting feature of vim script is variable scoping. Here&rsquo;s a copy-paste
+    <meta property="og:description" content="An interesting feature of vim script is variable scoping. Here&#39;s a copy-paste
 from the documentation, just in case you never saw it before.">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Variable scopes in vim - Math2001&#39;s blog</title><style>
+    <title>Variable scopes in vim - math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
@@ -65,7 +65,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  opacity: .8;
+  color: var(--font-mute);
   font-weight: normal;
 }
 
@@ -380,6 +380,7 @@ header a {
 }
 
 </style>
+    
 
 </head>
 <body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
@@ -405,22 +406,19 @@ header a {
 </symbol></svg>
 <div class="wrapper"><header>
         <div class="header-inner">
-            <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+            <h2 class="header-brand"><a href="/">math2001&#39;s blog</a></h2>
             <nav class="header-nav">
                 <ul>
                     
-                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
+                    <li class="header-nav-item"><a href="/article/">Articles</a></li>
                     
-                    <li class="header-nav-item"><a href="/project/">Projects</a></li>
+                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
                     
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    
-        <span id="show-header" class="show-header"></span>
-    
 <div class="page-top">
     <h1 class="page-title">Variable scopes in vim</h1>
 
@@ -435,9 +433,9 @@ header a {
 
     
 
-</div><section class="page-content"><p>An interesting feature of vim script is variable scoping. Here&rsquo;s a copy-paste
+</div><section class="page-content"><p>An interesting feature of vim script is variable scoping. Here's a copy-paste
 from the documentation, just in case you never saw it before.</p>
-<div class="highlight"><pre class="chroma">There are several name spaces for variables.  Which one is to be used is
+<pre><code>There are several name spaces for variables.  Which one is to be used is
 specified by what is prepended:
 
                  (nothing) In a function: local to a function; otherwise: global
@@ -446,19 +444,19 @@ window-variable    w:      Local to the current window.
 tabpage-variable   t:      Local to the current tab page.
 global-variable    g:      Global.
 local-variable     l:      Local to a function.
-script-variable    s:      Local to a :source&#39;ed Vim script.
+script-variable    s:      Local to a :source'ed Vim script.
 function-argument  a:      Function argument (only inside a function).
-vim-variable       v:      Global, predefined by Vim.</pre></div>
-<p><em>From</em> <code>:help internal-variables</code>.</p>
-
-<p>So, for example, in your <code>~/.vimrc</code>, unless you&rsquo;re in a function, you shouldn&rsquo;t
-prefix plugin&rsquo;s options let&rsquo;s say with <code>g:</code>, you can just write the variable
+vim-variable       v:      Global, predefined by Vim.
+</code></pre><p><em>From</em> <code>:help internal-variables</code>.</p>
+<p>So, for example, in your <code>~/.vimrc</code>, unless you're in a function, you shouldn't
+prefix plugin's options let's say with <code>g:</code>, you can just write the variable
 name.</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34; no</span><span class="err">
-</span><span class="err"></span><span class="k">let</span> <span class="nx">g</span><span class="p">:</span><span class="nx">indent_guides_auto_colors</span> <span class="p">=</span> <span class="m">0</span><span class="c">
-</span><span class="c">
-</span><span class="c">&#34; yes</span><span class="err">
-</span><span class="err"></span><span class="k">let</span> <span class="nx">indent_guides_auto_colors</span> <span class="p">=</span> <span class="m">0</span></code></pre></div></section>
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34; no</span><span class="err">
+</span><span class="err"></span><span class="k">let</span> <span class="nx">g</span>:<span class="nx">indent_guides_auto_colors</span> <span class="p">=</span> <span class="m">0</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; yes</span><span class="err">
+</span><span class="err"></span><span class="k">let</span> <span class="nx">indent_guides_auto_colors</span> <span class="p">=</span> <span class="m">0</span><span class="err">
+</span></code></pre></div></section>
 
 <div class="page-bottom">
     <ul class="page-share-list">
@@ -487,12 +485,17 @@ name.</p>
     <div class="footer-splits">
         <div class="footer-split">
             <h4 class="footer-split-title">About me</h4>
-            French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃
+            French, lives in Australia, and gives computer instructions so they don't
+get bored. 😃
         </div>
         <div class="footer-split">
-            <h4 class="footer-split-title">Browse by</h4>
+            <h4 class="footer-split-title">Browse</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
+            
+                <li><a href="/article">Articles</a></li>
+            
+                <li><a href="/post">Posts</a></li>
             </ul>
         </div>
         <div class="footer-split">

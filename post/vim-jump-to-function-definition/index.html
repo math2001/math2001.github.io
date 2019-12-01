@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.50" />
+    <meta name="generator" content="Hugo 0.60.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -13,10 +13,10 @@
     <meta property="og:url" content="https://math2001.github.io/post/vim-jump-to-function-definition/">
     <meta property="og:description" content="One of the features I miss from Sublime Text is the Goto Anything. In vim, by
 default, you have :e **/bit and then tab, and it gets annoying pretty
-quickly. Thankfully, there&rsquo;s fzf (with fzf.vim).">
+quickly. Thankfully, there&#39;s fzf (with fzf.vim).">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Jump to function definition in vim - Math2001&#39;s blog</title><style>
+    <title>Jump to function definition in vim - math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
@@ -66,7 +66,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  opacity: .8;
+  color: var(--font-mute);
   font-weight: normal;
 }
 
@@ -381,6 +381,7 @@ header a {
 }
 
 </style>
+    
 
 </head>
 <body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
@@ -406,22 +407,19 @@ header a {
 </symbol></svg>
 <div class="wrapper"><header>
         <div class="header-inner">
-            <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+            <h2 class="header-brand"><a href="/">math2001&#39;s blog</a></h2>
             <nav class="header-nav">
                 <ul>
                     
-                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
+                    <li class="header-nav-item"><a href="/article/">Articles</a></li>
                     
-                    <li class="header-nav-item"><a href="/project/">Projects</a></li>
+                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
                     
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    
-        <span id="show-header" class="show-header"></span>
-    
 <div class="page-top">
     <h1 class="page-title">Jump to function definition in vim</h1>
 
@@ -438,26 +436,20 @@ header a {
 
 </div><section class="page-content"><p>One of the features I miss from Sublime Text is the Goto Anything. In vim, by
 default, you have <code>:e **/bit</code> and then tab, and it gets annoying pretty
-quickly. Thankfully, there&rsquo;s <a href="https://github.com/junegunn/fzf" target="_blank"><code>fzf</code></a> (with <a href="https://github.com/junegunn/fzf.vim" target="_blank"><code>fzf.vim</code></a>).</p>
-
-<p>But although it provides a fairly long list of commands, it doesn&rsquo;t allow us to
+quickly. Thankfully, there's <a href="https://github.com/junegunn/fzf"><code>fzf</code></a> (with <a href="https://github.com/junegunn/fzf.vim"><code>fzf.vim</code></a>).</p>
+<p>But although it provides a fairly long list of commands, it doesn't allow us to
 <em>jump to function definitions</em> (which is one of the main function of the Goto
 Anything).</p>
-
 <h2 id="fzf-for-the-win"><code>fzf</code> for the win</h2>
-
-<p>There&rsquo;s no question, <code>fzf</code> as done a really good job at being easily extensible.
-So, using a bit of vimscript, we&rsquo;ll get a nice Go to definition prompt in vim!</p>
-
+<p>There's no question, <code>fzf</code> as done a really good job at being easily extensible.
+So, using a bit of vimscript, we'll get a nice Go to definition prompt in vim!</p>
 <p>With the autoload function <code>fzf#run</code>, we are able to give a shell command
-that will get a list of options, and it&rsquo;ll display it for us, calling a simple
+that will get a list of options, and it'll display it for us, calling a simple
 callback when the user chooses an option.</p>
-
 <p>And <code>ag</code> (a <em>very</em> fast version of grep) is going to find the all the function
 definitions in our project.</p>
-
 <p>For example, for a go project:</p>
-<div class="highlight"><pre class="chroma">$ ag --go -s &#34;^func &#34; | tee
+<pre><code>$ ag --go -s &quot;^func &quot; | tee
 main.go:21:func index(w http.ResponseWriter, r *http.Request) {
 main.go:44:func initAPI(r *mux.Router) {
 main.go:50:func main() {
@@ -468,146 +460,136 @@ resp/resp.go:37:func InternalError(w http.ResponseWriter, r *http.Request) error
 resp/resp.go:42:func Encode(w http.ResponseWriter, r *http.Request, e interface{}) error {
 services/db/db.go:17:func escape(s string) string {
 services/db/db.go:35:func (cfg Config) String() string {
-...</pre></div>
-<ul>
+...
+</code></pre><ul>
 <li><code>--go</code> searches only through go files</li>
 <li><code>-s</code> makes it case sensitive</li>
-<li><code>&quot;^func &quot;</code> finds all the lines where we&rsquo;re defining a function</li>
+<li><code>&quot;^func &quot;</code> finds all the lines where we're defining a function</li>
 </ul>
-
-<p>And we pipe it through <code>tee</code> (which just spits what it&rsquo;s given back out) to see
-what <code>ag</code> outputs when it&rsquo;s writing to a pipe, and not to a terminal (if it was,
+<p>And we pipe it through <code>tee</code> (which just spits what it's given back out) to see
+what <code>ag</code> outputs when it's writing to a pipe, and not to a terminal (if it was,
 <code>ag</code> would add colors and a formatting for humans).</p>
-
-<p>We can&rsquo;t give this to <code>fzf</code> though, we need a find a way to &lsquo;hide&rsquo; the ugly
+<p>We can't give this to <code>fzf</code> though, we need a find a way to &lsquo;hide&rsquo; the ugly
 path/line number at the beginning from the user (so that he only searches by
 function names).</p>
-<div class="highlight"><pre class="chroma"># from this
+<pre><code># from this
 filename:line:rest
 # get this
-filename:line searchable</pre></div>
-<p>where <code>searchable</code> is the interesting, clean part of the function signature.</p>
-
+filename:line searchable
+</code></pre><p>where <code>searchable</code> is the interesting, clean part of the function signature.</p>
 <h2 id="awk-to-the-rescue"><code>awk</code> to the rescue</h2>
-
-<p>I&rsquo;m not going to go into any details in this post, but with <code>awk</code>, we can do
+<p>I'm not going to go into any details in this post, but with <code>awk</code>, we can do
 this.</p>
-
-<p>A quick note on awk though: it&rsquo;s extremely powerful (you can do everything
-<code>grep</code> and <code>sed</code> can do), and it&rsquo;s really fast. Use it when you&rsquo;re chaining
+<p>A quick note on awk though: it's extremely powerful (you can do everything
+<code>grep</code> and <code>sed</code> can do), and it's really fast. Use it when you're chaining
 commands.</p>
-
 <p>The magic command:</p>
-<div class="highlight"><pre class="chroma">awk -F : &#39;{ gsub(/^func | {$/, &#34;&#34;, $3); printf &#34;%s:%s %s\n&#34;, $1, $2, $3 }&#39;</pre></div>
-<p>Quick explanation:</p>
-
+<pre><code>awk -F : '{ gsub(/^func | {$/, &quot;&quot;, $3); printf &quot;%s:%s %s\n&quot;, $1, $2, $3 }'
+</code></pre><p>Quick explanation:</p>
 <ul>
-<li><code>-F :</code> says that instead of using spaces as field separators, we&rsquo;re going to
+<li><code>-F :</code> says that instead of using spaces as field separators, we're going to
 use colons.</li>
-<li><code>gsub(...)</code> removes (replaces with nothing) the <code>func</code> and trailing <code>{</code> parts
+<li><code>gsub(...)</code> removes (replaces with nothing) the <code>func</code> and trailing <code> {</code> parts
 in the third field. This makes the function signature clean and user-friendly.</li>
 <li><code>printf</code> prints <code>$1:$2 $3</code> where <code>$1</code> is the first field, <code>$2</code> is the second
 field, etc&hellip;</li>
 </ul>
-
 <p>This gives us a list of formatted lines like this:</p>
-<div class="highlight"><pre class="chroma">filename:line signature</pre></div>
-<p>Now, we can give this to <code>fzf</code>, and tell it to display only from the second
+<pre><code>filename:line signature
+</code></pre><p>Now, we can give this to <code>fzf</code>, and tell it to display only from the second
 field and on (using the <code>--with-nth</code> option). And, remember, this one uses
-spaces as a field separator.  Therefore, it&rsquo;ll only print the function&rsquo;s
+spaces as a field separator.  Therefore, it'll only print the function's
 signature.</p>
-<div class="highlight"><pre class="chroma">filename:line signature
+<pre><code>filename:line signature
 ^-----------^ ^-------^
 |             |
 |             | this is the second field
 |
-| this is the first field</pre></div>
-<h4 id="the-callback">The callback</h4>
-
+| this is the first field
+</code></pre><h4 id="the-callback">The callback</h4>
 <p>Now, this is just vimscript.</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">let</span> <span class="nx">g</span><span class="p">:</span><span class="nx">fzf_default_action</span> <span class="p">=</span> {<span class="err">
-</span><span class="err"></span>    \ <span class="s1">&#39;ctrl-t&#39;</span><span class="p">:</span> <span class="s1">&#39;tab split&#39;</span><span class="p">,</span><span class="err">
-</span><span class="err"></span>    \ <span class="s1">&#39;ctrl-x&#39;</span><span class="p">:</span> <span class="s1">&#39;split&#39;</span><span class="p">,</span><span class="err">
-</span><span class="err"></span>    \ <span class="s1">&#39;ctrl-v&#39;</span><span class="p">:</span> <span class="s1">&#39;vsplit&#39;</span>}<span class="c">
-</span><span class="c">
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">fzf_default_action</span> <span class="p">=</span> {<span class="err">
+</span><span class="err"></span>	\ <span class="s1">&#39;ctrl-t&#39;</span>: <span class="s1">&#39;tab split&#39;</span><span class="p">,</span><span class="err">
+</span><span class="err"></span>	\ <span class="s1">&#39;ctrl-x&#39;</span>: <span class="s1">&#39;split&#39;</span><span class="p">,</span><span class="err">
+</span><span class="err"></span>	\ <span class="s1">&#39;ctrl-v&#39;</span>: <span class="s1">&#39;vsplit&#39;</span>}<span class="err">
+</span><span class="err"></span><span class="c">
 </span><span class="c">&#34; returns the user action dict if it exists, otherwise, the default one</span><span class="err">
-</span><span class="err"></span><span class="k">function</span><span class="p">!</span> <span class="nx">s</span><span class="p">:</span><span class="nx">fzf_action</span><span class="p">()</span><span class="err">
-</span><span class="err"></span>    <span class="k">if</span> <span class="nx">exists</span><span class="p">(</span><span class="s1">&#39;g:fzf_action&#39;</span><span class="p">)</span><span class="err">
-</span><span class="err"></span>        <span class="nx">return</span> <span class="nx">g</span><span class="p">:</span><span class="nx">fzf_action</span><span class="err">
-</span><span class="err"></span>    <span class="k">else</span><span class="err">
-</span><span class="err"></span>        <span class="nx">return</span> {<span class="err">
-</span><span class="err"></span>        \ <span class="s1">&#39;ctrl-v&#39;</span><span class="p">:</span> <span class="s1">&#39;tab split&#39;</span><span class="p">,</span><span class="err">
-</span><span class="err"></span>        \ <span class="s1">&#39;ctrl-x&#39;</span><span class="p">:</span> <span class="s1">&#39;split&#39;</span><span class="p">,</span><span class="err">
-</span><span class="err"></span>        \ <span class="s1">&#39;ctrl-t&#39;</span><span class="p">:</span> <span class="s1">&#39;vsplit&#39;</span>}<span class="err">
-</span><span class="err"></span>    <span class="k">endif</span><span class="err">
-</span><span class="err"></span><span class="k">endfunction</span><span class="c">
-</span><span class="c">
-</span><span class="c">&#34; the callback that is called with one array of length 2:
-</span><span class="c">&#34; args = [ action, line ]
-</span><span class="c">&#34; where the action is the keystroke that the user pressed to select the
-</span><span class="c">&#34; line (ctrl+x, ctrl+v, etc). If he just pressed enter, it&#39;s an empty string.
-</span><span class="c">&#34; And the second argument line is the line he selected.
-</span><span class="c">&#34; The array is empty (length 0) if the user cancelled</span><span class="err">
-</span><span class="err"></span><span class="k">function</span><span class="p">!</span> <span class="nx">s</span><span class="p">:</span><span class="nx">fzf_open_file</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span><span class="c">
-</span><span class="c">    &#34; the user pressed ctrl-c, and cancelled</span><span class="err">
-</span><span class="err"></span>    <span class="k">if</span> <span class="nx">len</span><span class="p">(</span><span class="nx">a</span><span class="p">:</span><span class="nx">args</span><span class="p">)</span> <span class="p">==</span> <span class="m">0</span><span class="err">
-</span><span class="err"></span>        <span class="nx">return</span><span class="err">
-</span><span class="err"></span>    <span class="k">endif</span><span class="err">
-</span><span class="err"></span>    <span class="k">let</span> [<span class="nx">action</span><span class="p">,</span> <span class="nx">line</span>] <span class="p">=</span> <span class="nx">a</span><span class="p">:</span><span class="nx">args</span><span class="c">
-</span><span class="c">    &#34; The line is like this: path/to/filename.go:line ...
-</span><span class="c">    &#34; we want the filename, and the line.</span><span class="err">
-</span><span class="err"></span>    <span class="k">let</span> [<span class="nx">filename</span>; <span class="nx">rest</span>] <span class="p">=</span> <span class="nx">split</span><span class="p">(</span><span class="nx">line</span><span class="p">,</span><span class="c"> &#34;:&#34;)</span><span class="err">
-</span><span class="err"></span>    <span class="k">let</span> [<span class="nx">line</span>; <span class="nx">rest</span>] <span class="p">=</span> <span class="nx">split</span><span class="p">(</span><span class="nx">join</span><span class="p">(</span><span class="nx">rest</span><span class="p">),</span><span class="c"> &#34; &#34;)
-</span><span class="c">
-</span><span class="c">    &#34; the get(...) get&#39;s the action to run, depending on what the user pressed
-</span><span class="c">    &#34; the format is &#34;action +line filename&#34;. This automatically jumps to the
-</span><span class="c">    &#34; right line</span><span class="err">
-</span><span class="err"></span>    <span class="nx">exec</span> <span class="nx">get</span><span class="p">(</span><span class="nx">s</span><span class="p">:</span><span class="nx">fzf_action</span><span class="p">(),</span> <span class="nx">action</span><span class="p">,</span> <span class="s1">&#39;edit&#39;</span><span class="p">)</span>.<span class="c">&#34; +&#34;.line.&#34; &#34;.filename</span><span class="err">
+</span><span class="err"></span><span class="k">function</span><span class="p">!</span> <span class="nx">s</span>:<span class="nx">fzf_action</span><span class="p">(</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>	<span class="k">if</span> <span class="nx">exists</span><span class="p">(</span><span class="s1">&#39;g:fzf_action&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>		<span class="nx">return</span> <span class="nx">g</span>:<span class="nx">fzf_action</span><span class="err">
+</span><span class="err"></span>	<span class="k">else</span><span class="err">
+</span><span class="err"></span>		<span class="nx">return</span> {<span class="err">
+</span><span class="err"></span>		\ <span class="s1">&#39;ctrl-v&#39;</span>: <span class="s1">&#39;tab split&#39;</span><span class="p">,</span><span class="err">
+</span><span class="err"></span>		\ <span class="s1">&#39;ctrl-x&#39;</span>: <span class="s1">&#39;split&#39;</span><span class="p">,</span><span class="err">
+</span><span class="err"></span>		\ <span class="s1">&#39;ctrl-t&#39;</span>: <span class="s1">&#39;vsplit&#39;</span>}<span class="err">
+</span><span class="err"></span>	<span class="k">endif</span><span class="err">
 </span><span class="err"></span><span class="k">endfunction</span><span class="err">
-</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; the callback that is called with one array of length 2:</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; args = [ action, line ]</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; where the action is the keystroke that the user pressed to select the</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; line (ctrl+x, ctrl+v, etc). If he just pressed enter, it&#39;s an empty string.</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; And the second argument line is the line he selected.</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; The array is empty (length 0) if the user cancelled</span><span class="err">
+</span><span class="err"></span><span class="k">function</span><span class="p">!</span> <span class="nx">s</span>:<span class="nx">fzf_open_file</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="c">	&#34; the user pressed ctrl-c, and cancelled</span><span class="err">
+</span><span class="err"></span>	<span class="k">if</span> <span class="nx">len</span><span class="p">(</span><span class="nx">a</span>:<span class="nx">args</span><span class="p">)</span> <span class="p">=</span><span class="p">=</span> <span class="m">0</span><span class="err">
+</span><span class="err"></span>		<span class="nx">return</span><span class="err">
+</span><span class="err"></span>	<span class="k">endif</span><span class="err">
+</span><span class="err"></span>	<span class="k">let</span> [<span class="nx">action</span><span class="p">,</span> <span class="nx">line</span>] <span class="p">=</span> <span class="nx">a</span>:<span class="nx">args</span><span class="err">
+</span><span class="err"></span><span class="c">	&#34; The line is like this: path/to/filename.go:line ...</span><span class="err">
+</span><span class="err"></span><span class="c">	&#34; we want the filename, and the line.</span><span class="err">
+</span><span class="err"></span>	<span class="k">let</span> [<span class="nx">filename</span>; <span class="nx">rest</span>] <span class="p">=</span> <span class="nx">split</span><span class="p">(</span><span class="nx">line</span><span class="p">,</span> <span class="s2">&#34;:&#34;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>	<span class="k">let</span> [<span class="nx">line</span>; <span class="nx">rest</span>] <span class="p">=</span> <span class="nx">split</span><span class="p">(</span><span class="nx">join</span><span class="p">(</span><span class="nx">rest</span><span class="p">)</span><span class="p">,</span> <span class="s2">&#34; &#34;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">	&#34; the get(...) get&#39;s the action to run, depending on what the user pressed</span><span class="err">
+</span><span class="err"></span><span class="c">	&#34; the format is &#34;action +line filename&#34;. This automatically jumps to the</span><span class="err">
+</span><span class="err"></span><span class="c">	&#34; right line</span><span class="err">
+</span><span class="err"></span>	<span class="nx">exec</span> <span class="nx">get</span><span class="p">(</span><span class="nx">s</span>:<span class="nx">fzf_action</span><span class="p">(</span><span class="p">)</span><span class="p">,</span> <span class="nx">action</span><span class="p">,</span> <span class="s1">&#39;edit&#39;</span><span class="p">)</span>.<span class="s2">&#34; +&#34;</span>.<span class="nx">line</span>.<span class="s2">&#34; &#34;</span>.<span class="nx">filename</span><span class="err">
+</span><span class="err"></span><span class="k">endfunction</span><span class="err">
+</span><span class="err"></span><span class="err">
 </span><span class="err"></span><span class="k">function</span><span class="p">!</span> <span class="nx">FzfJumpDef</span><span class="p">(</span><span class="nx">lang</span><span class="p">)</span> <span class="nx">abort</span><span class="err">
-</span><span class="err"></span>    <span class="k">if</span> <span class="nx">a</span><span class="p">:</span><span class="nx">lang</span> <span class="p">==</span> <span class="s1">&#39;go&#39;</span><span class="c">
-</span><span class="c">        &#34; gets all the lines starting with &#39;func &#39; in .go files</span><span class="err">
-</span><span class="err"></span>        <span class="k">let</span> <span class="nx">l</span><span class="p">:</span><span class="nx">command</span> <span class="p">=</span> <span class="s1">&#39;ag --go -s &#34;^func &#34; &#39;</span><span class="c">
-</span><span class="c">        &#34; formats the output
-</span><span class="c">        &#34; seperator is : (not space)</span><span class="err">
-</span><span class="err"></span>        <span class="k">let</span> <span class="nx">l</span><span class="p">:</span><span class="nx">command</span> .<span class="p">=</span> <span class="s1">&#39;| awk -F : &#39;</span><span class="err">
-</span><span class="err"></span>        <span class="k">let</span> <span class="nx">l</span><span class="p">:</span><span class="nx">command</span> .<span class="p">=</span><span class="c"> &#34;&#39;{ &#34;
-</span><span class="c">        &#34; removes the func and the trailling in the third field {</span><span class="err">
-</span><span class="err"></span>        <span class="k">let</span> <span class="nx">l</span><span class="p">:</span><span class="nx">command</span> .<span class="p">=</span><span class="c"> &#34;gsub(/ {$/, \&#34;\&#34;, $3);&#34;
-</span><span class="c">        &#34; prints $1:$2 $3</span><span class="err">
-</span><span class="err"></span>        <span class="k">let</span> <span class="nx">l</span><span class="p">:</span><span class="nx">command</span> .<span class="p">=</span> <span class="s1">&#39;printf &#34;%s:%s %s\n&#34;, $1, $2, $3&#39;</span><span class="err">
-</span><span class="err"></span>        <span class="k">let</span> <span class="nx">l</span><span class="p">:</span><span class="nx">command</span> .<span class="p">=</span><span class="c"> &#34; }&#39;&#34;</span><span class="err">
-</span><span class="err"></span>        <span class="k">let</span> <span class="nx">l</span><span class="p">:</span><span class="nx">prefix_length</span> <span class="p">=</span> <span class="m">1</span><span class="err">
-</span><span class="err"></span>    <span class="k">else</span><span class="err">
-</span><span class="err"></span>        <span class="nx">throw</span><span class="c"> &#34;Lang &#34;.lang.&#34; unknown&#34;</span><span class="err">
-</span><span class="err"></span>    <span class="k">endif</span><span class="c">
-</span><span class="c">    &#34; l:command is the command that will fetch all the lines
-</span><span class="c">    &#34; the option --with-nth=2.. hides the first field from the user, but is
-</span><span class="c">    &#34; still given to the callback function
-</span><span class="c">    &#34; so, here, we hide the filename and line.
-</span><span class="c">    &#34; the --expect bit allows the user to press ctrl+t to open in a new tab for
-</span><span class="c">    &#34; example (defined by g:fzf_action)
-</span><span class="c">    &#34; the --nth option allows text to be displayed, but not selected. We use
-</span><span class="c">    &#34; this to show the &#34;func &#34;.</span><span class="err">
-</span><span class="err"></span>    <span class="nx">echom</span> <span class="nx">l</span><span class="p">:</span><span class="nx">command</span><span class="err">
-</span><span class="err"></span>    <span class="nx">call</span> <span class="nx">fzf</span>#<span class="nx">run</span><span class="p">(</span><span class="nx">fzf</span>#<span class="nx">wrap</span><span class="p">(</span>{<span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="nx">l</span><span class="p">:</span><span class="nx">command</span><span class="p">,</span><span class="err">
-</span><span class="err"></span>    \ <span class="s1">&#39;options&#39;</span><span class="p">:</span> <span class="s1">&#39;--with-nth=2.. --expect=&#39;</span>.<span class="nx">join</span><span class="p">(</span><span class="nx">keys</span><span class="p">(</span><span class="nx">s</span><span class="p">:</span><span class="nx">fzf_action</span><span class="p">()),</span> <span class="s1">&#39;,&#39;</span><span class="p">)</span>.<span class="err">
-</span><span class="err"></span>        \<span class="s1">&#39; --nth=&#39;</span>.<span class="nx">l</span><span class="p">:</span><span class="nx">prefix_length</span>.<span class="s1">&#39;..&#39;</span><span class="p">,</span><span class="err">
-</span><span class="err"></span>    \ <span class="s1">&#39;sink*&#39;</span><span class="p">:</span> <span class="nx">funcref</span><span class="p">(</span><span class="s1">&#39;s:fzf_open_file&#39;</span><span class="p">)</span>}<span class="p">))</span><span class="err">
-</span><span class="err"></span><span class="k">endfunction</span></code></pre></div>
-<p>So, if you paste this in your <code>.vimrc</code>, you&rsquo;ll be able to call the function like
+</span><span class="err"></span>	<span class="k">if</span> <span class="nx">a</span>:<span class="nx">lang</span> <span class="p">=</span><span class="p">=</span> <span class="s1">&#39;go&#39;</span><span class="err">
+</span><span class="err"></span><span class="c">		&#34; gets all the lines starting with &#39;func &#39; in .go files</span><span class="err">
+</span><span class="err"></span>		<span class="k">let</span> <span class="nx">l</span>:<span class="nx">command</span> <span class="p">=</span> <span class="s1">&#39;ag --go -s &#34;^func &#34; &#39;</span><span class="err">
+</span><span class="err"></span><span class="c">		&#34; formats the output</span><span class="err">
+</span><span class="err"></span><span class="c">		&#34; seperator is : (not space)</span><span class="err">
+</span><span class="err"></span>		<span class="k">let</span> <span class="nx">l</span>:<span class="nx">command</span> .<span class="p">=</span> <span class="s1">&#39;| awk -F : &#39;</span><span class="err">
+</span><span class="err"></span>		<span class="k">let</span> <span class="nx">l</span>:<span class="nx">command</span> .<span class="p">=</span> <span class="s2">&#34;&#39;{ &#34;</span><span class="err">
+</span><span class="err"></span><span class="c">		&#34; removes the func and the trailling in the third field {</span><span class="err">
+</span><span class="err"></span>		<span class="k">let</span> <span class="nx">l</span>:<span class="nx">command</span> .<span class="p">=</span> <span class="s2">&#34;gsub(/ {$/, \&#34;\&#34;, $3);&#34;</span><span class="err">
+</span><span class="err"></span><span class="c">		&#34; prints $1:$2 $3</span><span class="err">
+</span><span class="err"></span>		<span class="k">let</span> <span class="nx">l</span>:<span class="nx">command</span> .<span class="p">=</span> <span class="s1">&#39;printf &#34;%s:%s %s\n&#34;, $1, $2, $3&#39;</span><span class="err">
+</span><span class="err"></span>		<span class="k">let</span> <span class="nx">l</span>:<span class="nx">command</span> .<span class="p">=</span> <span class="s2">&#34; }&#39;&#34;</span><span class="err">
+</span><span class="err"></span>		<span class="k">let</span> <span class="nx">l</span>:<span class="nx">prefix_length</span> <span class="p">=</span> <span class="m">1</span><span class="err">
+</span><span class="err"></span>	<span class="k">else</span><span class="err">
+</span><span class="err"></span>		<span class="nx">throw</span> <span class="s2">&#34;Lang &#34;</span>.<span class="nx">lang</span>.<span class="s2">&#34; unknown&#34;</span><span class="err">
+</span><span class="err"></span>	<span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="c">	&#34; l:command is the command that will fetch all the lines</span><span class="err">
+</span><span class="err"></span><span class="c">	&#34; the option --with-nth=2.. hides the first field from the user, but is</span><span class="err">
+</span><span class="err"></span><span class="c">	&#34; still given to the callback function</span><span class="err">
+</span><span class="err"></span><span class="c">	&#34; so, here, we hide the filename and line.</span><span class="err">
+</span><span class="err"></span><span class="c">	&#34; the --expect bit allows the user to press ctrl+t to open in a new tab for</span><span class="err">
+</span><span class="err"></span><span class="c">	&#34; example (defined by g:fzf_action)</span><span class="err">
+</span><span class="err"></span><span class="c">	&#34; the --nth option allows text to be displayed, but not selected. We use</span><span class="err">
+</span><span class="err"></span><span class="c">	&#34; this to show the &#34;func &#34;.</span><span class="err">
+</span><span class="err"></span>	<span class="nx">echom</span> <span class="nx">l</span>:<span class="nx">command</span><span class="err">
+</span><span class="err"></span>	<span class="nx">call</span> <span class="nx">fzf</span>#<span class="nx">run</span><span class="p">(</span><span class="nx">fzf</span>#<span class="nx">wrap</span><span class="p">(</span>{<span class="s1">&#39;source&#39;</span>: <span class="nx">l</span>:<span class="nx">command</span><span class="p">,</span><span class="err">
+</span><span class="err"></span>	\ <span class="s1">&#39;options&#39;</span>: <span class="s1">&#39;--with-nth=2.. --expect=&#39;</span>.<span class="nx">join</span><span class="p">(</span><span class="nx">keys</span><span class="p">(</span><span class="nx">s</span>:<span class="nx">fzf_action</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">)</span>.<span class="err">
+</span><span class="err"></span>		\<span class="s1">&#39; --nth=&#39;</span>.<span class="nx">l</span>:<span class="nx">prefix_length</span>.<span class="s1">&#39;..&#39;</span><span class="p">,</span><span class="err">
+</span><span class="err"></span>	\ <span class="s1">&#39;sink*&#39;</span>: <span class="nx">funcref</span><span class="p">(</span><span class="s1">&#39;s:fzf_open_file&#39;</span><span class="p">)</span>}<span class="p">)</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="k">endfunction</span><span class="err">
+</span><span class="err"></span><span class="err">
+</span></code></pre></div><p>So, if you paste this in your <code>.vimrc</code>, you'll be able to call the function like
 this:</p>
-<div class="highlight"><pre class="chroma">:call FzfJumpDef(&#39;go&#39;)</pre></div>
-<p>And it&rsquo;ll open the &ldquo;browser&rdquo; and you&rsquo;ll be able to jump to function definition.</p>
-
-<p>Of course, typing this is every time a pain, so I&rsquo;d recommend setting a shortcut
+<pre><code>:call FzfJumpDef('go')
+</code></pre><p>And it'll open the &ldquo;browser&rdquo; and you'll be able to jump to function definition.</p>
+<p>Of course, typing this is every time a pain, so I'd recommend setting a shortcut
 for every go file that triggers this function, as <a href="/post/vim-filetype-specific-settings">explained in this
 post</a>.  Spoiler:</p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34; ~/.vim/ftplugin/go.vim</span><span class="err">
-</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">buffer</span><span class="p">&gt;</span> <span class="nx">M</span> <span class="p">:</span><span class="nx">call</span> <span class="nx">FzfJumpDef</span><span class="p">(</span><span class="s1">&#39;go&#39;</span><span class="p">)&lt;</span><span class="nx">CR</span><span class="p">&gt;</span></code></pre></div>
-<p>And press <kbd>shift+m</kbd> to open the prompt.</p>
-
+</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">buffer</span><span class="p">&gt;</span> <span class="nx">M</span> :<span class="nx">call</span> <span class="nx">FzfJumpDef</span><span class="p">(</span><span class="s1">&#39;go&#39;</span><span class="p">)</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>And press <!-- raw HTML omitted -->shift+m<!-- raw HTML omitted --> to open the prompt.</p>
 <p>Enjoy 😄</p></section>
 
 <div class="page-bottom">
@@ -637,12 +619,17 @@ post</a>.  Spoiler:</p>
     <div class="footer-splits">
         <div class="footer-split">
             <h4 class="footer-split-title">About me</h4>
-            French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃
+            French, lives in Australia, and gives computer instructions so they don't
+get bored. 😃
         </div>
         <div class="footer-split">
-            <h4 class="footer-split-title">Browse by</h4>
+            <h4 class="footer-split-title">Browse</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
+            
+                <li><a href="/article">Articles</a></li>
+            
+                <li><a href="/post">Posts</a></li>
             </ul>
         </div>
         <div class="footer-split">

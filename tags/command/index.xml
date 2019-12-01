@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>command on Math2001&#39;s blog</title>
+    <title>command on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/command/</link>
-    <description>Recent content in command on Math2001&#39;s blog</description>
+    <description>Recent content in command on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -20,7 +20,7 @@
       <guid>https://math2001.github.io/post/silent-command-line-mapping/</guid>
       <description>&lt;p&gt;If you want to set a mapping to run something that is echoed into the command
 line (something starting with &lt;code&gt;:&lt;/code&gt; or &lt;code&gt;/&lt;/code&gt; for example) to &lt;em&gt;not&lt;/em&gt; be displayed, you
-can use the special argument &lt;code&gt;silent&lt;/code&gt;. &lt;/p&gt;</description>
+can use the special argument &lt;code&gt;silent&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>

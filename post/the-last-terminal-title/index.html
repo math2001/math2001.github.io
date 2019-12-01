@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.50" />
+    <meta name="generator" content="Hugo 0.60.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -12,12 +12,11 @@
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/the-last-terminal-title/">
     <meta property="og:description" content="
-
-I use tmux, and in the tabs title, it displays the terminal&rsquo;s title, which is
-just done by this 2 lines in your .tmux.conf ">
+I use tmux, and in the tabs title, it displays the terminal&#39;s title, which is
+just done by this 2 lines in your .tmux.conf">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>The Last Terminal Title - Math2001&#39;s blog</title><style>
+    <title>The Last Terminal Title - math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
@@ -67,7 +66,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  opacity: .8;
+  color: var(--font-mute);
   font-weight: normal;
 }
 
@@ -382,6 +381,7 @@ header a {
 }
 
 </style>
+    
 
 </head>
 <body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
@@ -407,22 +407,19 @@ header a {
 </symbol></svg>
 <div class="wrapper"><header>
         <div class="header-inner">
-            <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+            <h2 class="header-brand"><a href="/">math2001&#39;s blog</a></h2>
             <nav class="header-nav">
                 <ul>
                     
-                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
+                    <li class="header-nav-item"><a href="/article/">Articles</a></li>
                     
-                    <li class="header-nav-item"><a href="/project/">Projects</a></li>
+                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
                     
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    
-        <span id="show-header" class="show-header"></span>
-    
 <div class="page-top">
     <h1 class="page-title">The Last Terminal Title</h1>
 
@@ -436,56 +433,48 @@ header a {
 
     
 
-</div><section class="page-content"><p><img src="/img/tmux-title.png" alt="ls@asyncio   vim@math2001.github.io   git@dotfiles" /></p>
-
-<p>I use tmux, and in the tabs title, it displays the terminal&rsquo;s title, which is
-just done by this 2 lines in your <code>.tmux.conf</code> </p>
-<div class="highlight"><pre class="chroma">setw -g window-status-current-format &#39; #{pane_title} &#39;
-setw -g window-status-format &#39; #{pane_title} &#39;</pre></div>
-<p>What should you display in the tabs in your opinion? For me, it&rsquo;s obvious: the
-last command that I ran, and the location. Now, we can&rsquo;t display the whole path,
-but just the current folder name does perfectly the job. It&rsquo;d be something like
+</div><section class="page-content"><p><img src="/img/tmux-title.png" alt="ls@asyncio      git@dotfiles"></p>
+<p>I use tmux, and in the tabs title, it displays the terminal's title, which is
+just done by this 2 lines in your <code>.tmux.conf</code></p>
+<pre><code>setw -g window-status-current-format ' #{pane_title} '
+setw -g window-status-format ' #{pane_title} '
+</code></pre><p>What should you display in the tabs in your opinion? For me, it's obvious: the
+last command that I ran, and the location. Now, we can't display the whole path,
+but just the current folder name does perfectly the job. It'd be something like
 <code>vim@math2001.github.io</code>.</p>
-
-<p>And I tried this a fair while ago, but didn&rsquo;t succeed (it was super slow,
+<p>And I tried this a fair while ago, but didn't succeed (it was super slow,
 because you have to re-compute it every time).</p>
-
 <p>But, today, I find a super simple (and fast) solution.</p>
-
 <h3 id="the-last-command">The last command</h3>
-
-<p>To get the last command, we use bash&rsquo;s history, like so:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">history</span> <span class="p">|</span> awk <span class="s1">&#39;{END print $2}&#39;</span></code></pre></div>
-<p>This might look a bit complex if you don&rsquo;t know awk, but all it does is take the
+<p>To get the last command, we use bash's history, like so:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">history</span> <span class="p">|</span> awk <span class="s1">&#39;{END print $2}&#39;</span>
+</code></pre></div><p>This might look a bit complex if you don't know awk, but all it does is take the
 history of commands, take the last line only (because of the <code>END</code>), and print
 the second word (the second field for the purists 😄), which is the
 command.</p>
-
 <h3 id="the-location">The location</h3>
-
 <p>Now, we want the folder name, which we can easily get from the environment
 variable <code>$PWD</code>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">~/some/place $ <span class="nb">echo</span> <span class="si">${</span><span class="nv">PWD</span><span class="p">/*</span><span class="se">\/</span><span class="p">/</span><span class="si">}</span>
-place</code></pre></div>
-<p>This is fairly simple: the <code>*</code> matches any character, and because there is a <code>/</code>
+place
+</code></pre></div><p>This is fairly simple: the <code>*</code> matches any character, and because there is a <code>/</code>
 after it (which we have to escape), it only stops when it finds a forward slash.
 Because by default <code>*</code> is greedy (meaning it wants to match as many character as
 possible), it leaves us with the current folder name.</p>
-
 <h3 id="into-our-bashrc">Into our <code>.bashrc</code></h3>
-
-<p>Now, here&rsquo;s how you plug it in your <code>.bashrc</code>:</p>
+<p>Now, here's how you plug it in your <code>.bashrc</code>:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">function</span> window_title <span class="o">{</span>
-    <span class="nb">echo</span> -ne <span class="s2">&#34;\033]0;</span><span class="k">$(</span><span class="nb">history</span> <span class="p">|</span> awk <span class="s1">&#39;END {print $2}&#39;</span><span class="k">)</span><span class="s2">@</span><span class="si">${</span><span class="nv">PWD</span><span class="p">/*</span><span class="se">\/</span><span class="p">/</span><span class="si">}</span><span class="s2">\007&#34;</span>
+    <span class="nb">echo</span> -ne <span class="s2">&#34;</span><span class="s2">\033]0;</span><span class="k">$(</span><span class="nb">history</span> <span class="p">|</span> awk <span class="s1">&#39;END {print $2}&#39;</span><span class="k">)</span><span class="s2">@</span><span class="si">${</span><span class="nv">PWD</span><span class="p">/*</span><span class="se">\/</span><span class="p">/</span><span class="si">}</span><span class="s2">\007</span><span class="s2">&#34;</span>
 <span class="o">}</span>
 
 <span class="k">function</span> my_custom_prompt <span class="o">{</span>
     window_title
-    <span class="c1"># your prompt code
-</span><span class="c1"></span><span class="o">}</span>
+    <span class="c1"># your prompt code</span>
+<span class="o">}</span>
 
 <span class="nv">PROMPT_COMMAND</span><span class="o">=</span>my_custom_prompt
-window_title</code></pre></div></section>
+window_title
+</code></pre></div></section>
 
 <div class="page-bottom">
     <ul class="page-share-list">
@@ -514,12 +503,17 @@ window_title</code></pre></div></section>
     <div class="footer-splits">
         <div class="footer-split">
             <h4 class="footer-split-title">About me</h4>
-            French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃
+            French, lives in Australia, and gives computer instructions so they don't
+get bored. 😃
         </div>
         <div class="footer-split">
-            <h4 class="footer-split-title">Browse by</h4>
+            <h4 class="footer-split-title">Browse</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
+            
+                <li><a href="/article">Articles</a></li>
+            
+                <li><a href="/post">Posts</a></li>
             </ul>
         </div>
         <div class="footer-split">

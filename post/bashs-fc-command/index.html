@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.50" />
+    <meta name="generator" content="Hugo 0.60.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -12,11 +12,11 @@
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/bashs-fc-command/">
     <meta property="og:description" content="When editing long commands in your terminal (you know, the one that wraps
-😉), sometimes you&rsquo;d be better of using your actual editor (like vim or
-Sublime). And guess what? Bash let&rsquo;s you do that! 🎉">
+😉), sometimes you&#39;d be better of using your actual editor (like vim or
+Sublime). And guess what? Bash let&#39;s you do that! 🎉">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Bash&#39;s fc command - Math2001&#39;s blog</title><style>
+    <title>Bash&#39;s fc command - math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
@@ -66,7 +66,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  opacity: .8;
+  color: var(--font-mute);
   font-weight: normal;
 }
 
@@ -381,6 +381,7 @@ header a {
 }
 
 </style>
+    
 
 </head>
 <body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
@@ -406,22 +407,19 @@ header a {
 </symbol></svg>
 <div class="wrapper"><header>
         <div class="header-inner">
-            <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+            <h2 class="header-brand"><a href="/">math2001&#39;s blog</a></h2>
             <nav class="header-nav">
                 <ul>
                     
-                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
+                    <li class="header-nav-item"><a href="/article/">Articles</a></li>
                     
-                    <li class="header-nav-item"><a href="/project/">Projects</a></li>
+                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
                     
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    
-        <span id="show-header" class="show-header"></span>
-    
 <div class="page-top">
     <h1 class="page-title">Bash&#39;s fc command</h1>
 
@@ -436,14 +434,11 @@ header a {
     
 
 </div><section class="page-content"><p>When editing long commands in your terminal (you know, the one that wraps
-😉), sometimes you&rsquo;d be better of using your actual editor (like vim or
-Sublime). And guess what? Bash let&rsquo;s you do that! 🎉</p>
-
-<p>First, you need to set your <code>$EDITOR</code> environment variable. It&rsquo;s just a little
+😉), sometimes you'd be better of using your actual editor (like vim or
+Sublime). And guess what? Bash let's you do that! 🎉</p>
+<p>First, you need to set your <code>$EDITOR</code> environment variable. It's just a little
 <code>export EDITOR=&lt;cmd&gt;</code> in your <code>.bashrc</code>.</p>
-
 <p>Here are the command you need to replace <code>&lt;cmd&gt;</code> with for different editors:</p>
-
 <table>
 <thead>
 <tr>
@@ -451,53 +446,41 @@ Sublime). And guess what? Bash let&rsquo;s you do that! 🎉</p>
 <th>Command</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>vim</td>
 <td><code>vim</code></td>
 </tr>
-
 <tr>
 <td>Sublime Text</td>
 <td><code>subl -w -n</code></td>
 </tr>
-
 <tr>
 <td>Atom</td>
 <td><code>atom --wait</code></td>
 </tr>
 </tbody>
 </table>
-
-<p>If you use <code>vim</code>, just replace <code>&lt;cmd&gt;</code> with <code>vim</code>. For Sublime Text, it&rsquo;d be
+<p>If you use <code>vim</code>, just replace <code>&lt;cmd&gt;</code> with <code>vim</code>. For Sublime Text, it'd be
 <code>subl -n -w</code>.</p>
-
-<p>You&rsquo;ll need to restart your terminal or <code>source ~/.bashrc</code></p>
-
-<p>To check that it&rsquo;s right:</p>
+<p>You'll need to restart your terminal or <code>source ~/.bashrc</code></p>
+<p>To check that it's right:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">~/some/where $ <span class="nb">echo</span> <span class="nv">$EDITOR</span>
-&lt;cmd&gt;</code></pre></div>
-<h3 id="edit-current-command">Edit current command</h3>
-
-<p>Now, let&rsquo;s say you started writing a chain of command like this</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">~/some/where $ ps -A <span class="p">|</span> grep ssh-agent <span class="p">|</span> grep </code></pre></div>
-<p>But then you realize you&rsquo;d like to write this in your editor, with all your
+&lt;cmd&gt;
+</code></pre></div><h3 id="edit-current-command">Edit current command</h3>
+<p>Now, let's say you started writing a chain of command like this</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">~/some/where $ ps -A <span class="p">|</span> grep ssh-agent <span class="p">|</span> grep 
+</code></pre></div><p>But then you realize you'd like to write this in your editor, with all your
 shortcuts and everything.</p>
-
-<p>Just press <kbd>ctrl+x+e</kbd>!</p>
-
+<p>Just press <!-- raw HTML omitted -->ctrl+x+e<!-- raw HTML omitted -->!</p>
 <p>Now, you editor opens up with the bit of command already typed in already there
 in your editor.</p>
-
 <p>And now, as soon as you save and quit your editor, the command will be run!</p>
-
 <h3 id="edit-previous-command">Edit previous command</h3>
-
 <p>If you want to write the command you run just before in your editor, just do
 this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">~/some/where $ fc</code></pre></div>
-<p>Same thing, as soon as you&rsquo;ll save and quit your editor, it&rsquo;ll run the command.</p></section>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">~/some/where $ <span class="nb">fc</span>
+</code></pre></div><p>Same thing, as soon as you'll save and quit your editor, it'll run the command.</p></section>
 
 <div class="page-bottom">
     <ul class="page-share-list">
@@ -526,12 +509,17 @@ this:</p>
     <div class="footer-splits">
         <div class="footer-split">
             <h4 class="footer-split-title">About me</h4>
-            French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃
+            French, lives in Australia, and gives computer instructions so they don't
+get bored. 😃
         </div>
         <div class="footer-split">
-            <h4 class="footer-split-title">Browse by</h4>
+            <h4 class="footer-split-title">Browse</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
+            
+                <li><a href="/article">Articles</a></li>
+            
+                <li><a href="/post">Posts</a></li>
             </ul>
         </div>
         <div class="footer-split">

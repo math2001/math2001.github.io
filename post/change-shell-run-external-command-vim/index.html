@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.50" />
+    <meta name="generator" content="Hugo 0.60.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -15,7 +15,7 @@
 for example, you can tell vim to run external commands :! using this sh!.">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Change shell used to run external command - Math2001&#39;s blog</title><style>
+    <title>Change shell used to run external command - math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
@@ -65,7 +65,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  opacity: .8;
+  color: var(--font-mute);
   font-weight: normal;
 }
 
@@ -380,6 +380,7 @@ header a {
 }
 
 </style>
+    
 
 </head>
 <body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
@@ -405,22 +406,19 @@ header a {
 </symbol></svg>
 <div class="wrapper"><header>
         <div class="header-inner">
-            <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+            <h2 class="header-brand"><a href="/">math2001&#39;s blog</a></h2>
             <nav class="header-nav">
                 <ul>
                     
-                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
+                    <li class="header-nav-item"><a href="/article/">Articles</a></li>
                     
-                    <li class="header-nav-item"><a href="/project/">Projects</a></li>
+                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
                     
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    
-        <span id="show-header" class="show-header"></span>
-    
 <div class="page-top">
     <h1 class="page-title">Change shell used to run external command</h1>
 
@@ -439,16 +437,16 @@ header a {
 
 </div><section class="page-content"><p>On windows, the cmd sucks. But if you have sh installed from git-for-windows
 for example, you can tell vim to run external commands <code>:!</code> using this <code>sh</code>!.</p>
-
 <p>Add this to your <code>.vimrc</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">shell</span><span class="p">=</span><span class="nx">sh</span><span class="err">
-</span><span class="err"></span><span class="nx">set</span> <span class="nx">shellcmdflag</span><span class="p">=-</span><span class="nx">c</span></code></pre></div>
-<p>Now, vim won&rsquo;t run external commands like this</p>
-<div class="highlight"><pre class="chroma">cmd /c &#34;your command&#34;</pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">set</span> <span class="nx">shell</span><span class="p">=</span><span class="nx">sh</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">shellcmdflag</span><span class="p">=</span><span class="p">-</span><span class="nx">c</span><span class="err">
+</span></code></pre></div><p>Now, vim won't run external commands like this</p>
+<pre><code>cmd /c &quot;your command&quot;
+</code></pre>
 <p>But like this:</p>
-<div class="highlight"><pre class="chroma">sh -c &#34;your command&#34;</pre></div>
+<pre><code>sh -c &quot;your command&quot;
+</code></pre>
 <p>So, you can now run Unix commands from VIM.</p>
-
 <p>To learn more: <code>:help 'shell'</code></p></section>
 
 <div class="page-bottom">
@@ -478,12 +476,17 @@ for example, you can tell vim to run external commands <code>:!</code> using thi
     <div class="footer-splits">
         <div class="footer-split">
             <h4 class="footer-split-title">About me</h4>
-            French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃
+            French, lives in Australia, and gives computer instructions so they don't
+get bored. 😃
         </div>
         <div class="footer-split">
-            <h4 class="footer-split-title">Browse by</h4>
+            <h4 class="footer-split-title">Browse</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
+            
+                <li><a href="/article">Articles</a></li>
+            
+                <li><a href="/post">Posts</a></li>
             </ul>
         </div>
         <div class="footer-split">

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>bang on Math2001&#39;s blog</title>
+    <title>bang on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/bang/</link>
-    <description>Recent content in bang on Math2001&#39;s blog</description>
+    <description>Recent content in bang on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -19,7 +19,7 @@
       
       <guid>https://math2001.github.io/post/rerun-last-command-bang-vim/</guid>
       <description>&lt;p&gt;Put this code in your vimrc to re run the previous command but with the bang
-(&lt;code&gt;!&lt;/code&gt;) by just typing &lt;code&gt;:Please&lt;/code&gt;. &lt;/p&gt;</description>
+(&lt;code&gt;!&lt;/code&gt;) by just typing &lt;code&gt;:Please&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>

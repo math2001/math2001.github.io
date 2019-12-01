@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.50" />
+    <meta name="generator" content="Hugo 0.60.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -13,10 +13,10 @@
     <meta property="og:url" content="https://math2001.github.io/post/motion-and-calculus/">
     <meta property="og:description" content="If you studied physics, one of the first things you probably did was graph the
 &ldquo;motion&rdquo; of objects. That is the displacement, velocity, and acceleration at
-an instant t. Didn&rsquo;t it remind you of a mathematical concept? ">
+an instant t. Didn&#39;t it remind you of a mathematical concept?">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Motion and calculus - Math2001&#39;s blog</title><style>
+    <title>Motion and calculus - math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
@@ -66,7 +66,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  opacity: .8;
+  color: var(--font-mute);
   font-weight: normal;
 }
 
@@ -381,6 +381,7 @@ header a {
 }
 
 </style>
+    
 
 </head>
 <body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
@@ -406,22 +407,19 @@ header a {
 </symbol></svg>
 <div class="wrapper"><header>
         <div class="header-inner">
-            <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+            <h2 class="header-brand"><a href="/">math2001&#39;s blog</a></h2>
             <nav class="header-nav">
                 <ul>
                     
-                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
+                    <li class="header-nav-item"><a href="/article/">Articles</a></li>
                     
-                    <li class="header-nav-item"><a href="/project/">Projects</a></li>
+                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
                     
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    
-        <span id="show-header" class="show-header"></span>
-    
 <div class="page-top">
     <h1 class="page-title">Motion and calculus</h1>
 
@@ -438,82 +436,57 @@ header a {
 
 </div><section class="page-content"><p>If you studied physics, one of the first things you probably did was graph the
 &ldquo;motion&rdquo; of objects. That is the displacement, velocity, and acceleration at
-an instant <em>t</em>. Didn&rsquo;t it remind you of a mathematical concept? </p>
-
+an instant <em>t</em>. Didn't it remind you of a mathematical concept?</p>
 <h4 id="observation">Observation</h4>
-
-<p>Let&rsquo;s say we have an object whos displacement is such that:</p>
-
+<p>Let's say we have an object whos displacement is such that:</p>
 <p>$$
 s(t) = t^2 \quad \text{where t is the time}
 $$</p>
-
-<p>If we graphed this function, we&rsquo;d get a parabola:</p>
-
-<iframe src="https://www.desmos.com/calculator/kyuoometzc?embed" class='desmos' frameborder="0"></iframe>
-
-<p>Now, let&rsquo;s graph its velocity. You can do it manually, but if you try to feel it,
-you&rsquo;ll see that since as the time goes by the displacement keeps on increasing
+<p>If we graphed this function, we'd get a parabola:</p>
+<!-- raw HTML omitted -->
+<p>Now, let's graph its velocity. You can do it manually, but if you try to feel it,
+you'll see that since as the time goes by the displacement keeps on increasing
 faster and faster, the velocity could increase linearly. The velocity of that
 object at an instant $t$ could be given by:</p>
-
 <p>$$
 v(t) = t
 $$</p>
-
 <p>Which would look something like this:</p>
-
-<iframe src="https://www.desmos.com/calculator/w5fy20gttr?embed" class='desmos' frameborder="0"></iframe>
-
+<!-- raw HTML omitted -->
 <p>What if we graphed the acceleration? Since the velocity is increasing at a
 constant rate, the acceleration must be constant, something like:</p>
-
 <p>$$
 v(t) = 1
 $$</p>
-
-<iframe src="https://www.desmos.com/calculator/klppykcplt?embed" class='desmos' frameborder="0"></iframe>
-
-<p>Now, doesn&rsquo;t that make you think of a derivating the function $v$? Everytime,
+<!-- raw HTML omitted -->
+<p>Now, doesn't that make you think of a derivating the function $v$? Everytime,
 the function is one degree lower.</p>
-
 <h3 id="the-meaning">The meaning</h3>
-
 <h4 id="the-derivative">The derivative</h4>
-
 <p>Say we graphed the displacement of a ball with time on x-axis and displacement
 on the y-axis. What would be the meaning of the gradient at any point?</p>
-
 <p>$$
 m = \frac{rise}{run} = \frac{displacement}{time}
 $$</p>
-
 <p>The rise over the run is a displacement over some time, which is a velocity. And
 it makes sense! The gradient (which is the rate of change) of any point on this
 displacement/time graph gives us the <em>velocity</em> (which is the change of position
-per unit time, ie. how quickly it&rsquo;s changing position, its <em>rate</em>).</p>
-
+per unit time, ie. how quickly it's changing position, its <em>rate</em>).</p>
 <p>Now, from a velocity/time graph, the gradient gives us the change in velocity,
 which is called <em>acceleration</em>.</p>
-
 <h4 id="the-integral">The integral</h4>
-
 <p>What if you want to go the other way? From a velocity/time graph, the
 displacement is given by the area under the curve.</p>
-
-<p>If you&rsquo;re not convinced, it&rsquo;s easier to think of a simple example where the
+<p>If you're not convinced, it's easier to think of a simple example where the
 velocity is constant (a straight flat line). If you want to know by how much
-an object traveled knowing it&rsquo;s speed (2 m/s) and the time it took (5 s), you&rsquo;d
+an object traveled knowing it's speed (2 m/s) and the time it took (5 s), you'd
 just multiply (2 * 5 = 10 m). Now, this happens to be area under the graph
 (width * height). And with a bit of thinking, you can convince yourself that
-this isn&rsquo;t a coincidence.</p>
-
+this isn't a coincidence.</p>
 <p>Can you see that this also works for an acceleration/time graph (it gives you
 the velocity).</p>
-
-<p>So, the derivative of a function let&rsquo;s you go from displacement to velocity to
-acceleration, and the integral let&rsquo;s you go the other way.</p>
-
+<p>So, the derivative of a function let's you go from displacement to velocity to
+acceleration, and the integral let's you go the other way.</p>
 <p>No wonder Newton was into calculus&hellip;</p></section>
 
 <div class="page-bottom">
@@ -543,12 +516,17 @@ acceleration, and the integral let&rsquo;s you go the other way.</p>
     <div class="footer-splits">
         <div class="footer-split">
             <h4 class="footer-split-title">About me</h4>
-            French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃
+            French, lives in Australia, and gives computer instructions so they don't
+get bored. 😃
         </div>
         <div class="footer-split">
-            <h4 class="footer-split-title">Browse by</h4>
+            <h4 class="footer-split-title">Browse</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
+            
+                <li><a href="/article">Articles</a></li>
+            
+                <li><a href="/post">Posts</a></li>
             </ul>
         </div>
         <div class="footer-split">

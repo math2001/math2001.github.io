@@ -1,6 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://math2001.github.io/tags/firefox/</loc>
+    <lastmod>2019-11-29T09:07:19+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/post/firefox-implementing-feature-from-comment/</loc>
+    <lastmod>2019-11-29T09:07:19+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/</loc>
+    <lastmod>2019-11-29T09:07:19+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/</loc>
+    <lastmod>2019-11-29T09:07:19+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/post/building-a-nice-cli-for-git/</loc>
+    <lastmod>2019-11-28T22:04:22+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/outloud-thoughts/</loc>
+    <lastmod>2019-11-28T22:04:22+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/calculus/</loc>
+    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/mathematics/</loc>
+    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
+  </url>
   
   <url>
     <loc>https://math2001.github.io/post/motion-and-calculus/</loc>
@@ -8,8 +48,38 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/post/length-of-a-curve/</loc>
+    <loc>https://math2001.github.io/tags/newton/</loc>
+    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/physics/</loc>
+    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/article/</loc>
     <lastmod>2019-02-14T21:31:45+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/article/length-of-a-curve/</loc>
+    <lastmod>2019-02-14T21:31:45+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/terminal/</loc>
+    <lastmod>2018-10-02T08:41:38+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/tip/</loc>
+    <lastmod>2018-10-02T08:41:38+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/tmux/</loc>
+    <lastmod>2018-10-02T08:41:38+10:00</lastmod>
   </url>
   
   <url>
@@ -18,8 +88,28 @@
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/filetype/</loc>
+    <lastmod>2018-09-28T15:25:33+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/vim/</loc>
+    <lastmod>2018-09-28T15:25:33+10:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/post/vim-filetype-specific-settings/</loc>
     <lastmod>2018-09-28T15:25:33+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/fzf/</loc>
+    <lastmod>2018-09-28T11:47:21+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/go/</loc>
+    <lastmod>2018-09-28T11:47:21+10:00</lastmod>
   </url>
   
   <url>
@@ -28,13 +118,38 @@
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/challenge/</loc>
+    <lastmod>2018-05-25T22:32:29+10:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/post/challenge-1-translate-back/</loc>
     <lastmod>2018-05-25T22:32:29+10:00</lastmod>
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/cipher/</loc>
+    <lastmod>2018-05-25T22:32:29+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/performances/</loc>
+    <lastmod>2018-05-21T17:59:22+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/profile/</loc>
+    <lastmod>2018-05-21T17:59:22+10:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/post/so-vim-became-slow/</loc>
     <lastmod>2018-05-21T17:59:22+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/bash/</loc>
+    <lastmod>2018-02-04T15:07:11+11:00</lastmod>
   </url>
   
   <url>
@@ -48,8 +163,33 @@
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/funny/</loc>
+    <lastmod>2018-02-02T17:41:26+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/binary/</loc>
+    <lastmod>2017-10-13T16:14:21+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/bit-manipulation/</loc>
+    <lastmod>2017-10-13T16:14:21+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/python/</loc>
+    <lastmod>2017-10-13T16:14:21+11:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/post/so-binary-numbers-are-useful/</loc>
     <lastmod>2017-10-13T16:14:21+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/css/</loc>
+    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
   </url>
   
   <url>
@@ -58,12 +198,52 @@
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/howto/</loc>
+    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/nodejs/</loc>
+    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/svg/</loc>
+    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/svgstore/</loc>
+    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/completion/</loc>
+    <lastmod>2017-09-27T12:55:56+10:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/post/vim-line-completion/</loc>
     <lastmod>2017-09-27T12:55:56+10:00</lastmod>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/project/itp-insert-template-please/</loc>
+    <loc>https://math2001.github.io/tags/cli/</loc>
+    <lastmod>2017-09-27T11:18:56+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/post/itp-insert-template-please/</loc>
+    <lastmod>2017-09-27T11:18:56+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/javascript/</loc>
+    <lastmod>2017-09-27T11:18:56+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/template/</loc>
     <lastmod>2017-09-27T11:18:56+10:00</lastmod>
   </url>
   
@@ -73,7 +253,22 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/post/bashs-find-command/</loc>
+    <loc>https://math2001.github.io/tags/editor/</loc>
+    <lastmod>2017-09-26T18:03:22+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/article/bashs-find-command/</loc>
+    <lastmod>2017-09-24T07:51:15+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/file-manupilation/</loc>
+    <lastmod>2017-09-24T07:51:15+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/find/</loc>
     <lastmod>2017-09-24T07:51:15+10:00</lastmod>
   </url>
   
@@ -83,7 +278,27 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/project/live-svg/</loc>
+    <loc>https://math2001.github.io/tags/github-pages/</loc>
+    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/hugo/</loc>
+    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/static-site/</loc>
+    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/post/live-svg/</loc>
+    <lastmod>2017-09-22T18:31:15+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/preview/</loc>
     <lastmod>2017-09-22T18:31:15+10:00</lastmod>
   </url>
   
@@ -93,12 +308,42 @@
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/code-aesthetic/</loc>
+    <lastmod>2017-09-13T14:18:22+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/conventions/</loc>
+    <lastmod>2017-09-13T14:18:22+10:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/post/my-zen/</loc>
     <lastmod>2017-09-13T14:18:22+10:00</lastmod>
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/zen/</loc>
+    <lastmod>2017-09-13T14:18:22+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/about/</loc>
+    <lastmod>2017-09-09T19:43:23+10:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/post/my-new-blog/</loc>
+    <lastmod>2017-09-09T19:43:23+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/new/</loc>
+    <lastmod>2017-09-09T19:43:23+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/static-website/</loc>
     <lastmod>2017-09-09T19:43:23+10:00</lastmod>
   </url>
   
@@ -108,12 +353,42 @@
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/option/</loc>
+    <lastmod>2017-09-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/resources/</loc>
+    <lastmod>2017-09-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/post/confirm-option-vim/</loc>
     <lastmod>2017-09-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/vimscript/</loc>
+    <lastmod>2017-09-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/bang/</loc>
+    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/buffer/</loc>
+    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/post/change-shell-run-external-command-vim/</loc>
+    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/command/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -128,7 +403,22 @@
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/map/</loc>
+    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/post/rerun-last-command-bang-vim/</loc>
+    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/sh/</loc>
+    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/shell/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -138,13 +428,43 @@
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/windows/</loc>
+    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/post/difference-vim-options-readonly-modifiable/</loc>
+    <lastmod>2017-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/ascii/</loc>
     <lastmod>2017-08-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://math2001.github.io/post/get-ascii-value-character-vim/</loc>
     <lastmod>2017-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/options/</loc>
+    <lastmod>2017-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/documentation/</loc>
+    <lastmod>2017-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/scopes/</loc>
+    <lastmod>2017-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/symbols/</loc>
+    <lastmod>2017-08-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -163,7 +483,37 @@
   </url>
   
   <url>
+    <loc>https://math2001.github.io/tags/alphabet/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/chrome/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/date/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/devtools/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/post/how-to-insert-the-date-in-vim/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/module/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/tags/network/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -173,432 +523,32 @@
   </url>
   
   <url>
-    <loc>https://math2001.github.io/post/string-module-python/</loc>
-    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/</loc>
-    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/project/</loc>
-    <lastmod>2017-09-27T11:18:56+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/about/</loc>
-    <lastmod>2017-09-09T19:43:23+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/alphabet/</loc>
-    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/ascii/</loc>
-    <lastmod>2017-08-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/bang/</loc>
-    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/bash/</loc>
-    <lastmod>2018-02-04T15:07:11+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/binary/</loc>
-    <lastmod>2017-10-13T16:14:21+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/bit-manipulation/</loc>
-    <lastmod>2017-10-13T16:14:21+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/buffer/</loc>
-    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/calculus/</loc>
-    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/challenge/</loc>
-    <lastmod>2018-05-25T22:32:29+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/chrome/</loc>
-    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/cipher/</loc>
-    <lastmod>2018-05-25T22:32:29+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/cli/</loc>
-    <lastmod>2017-09-27T11:18:56+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/code-aesthetic/</loc>
-    <lastmod>2017-09-13T14:18:22+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/command/</loc>
-    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/completion/</loc>
-    <lastmod>2017-09-27T12:55:56+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/conventions/</loc>
-    <lastmod>2017-09-13T14:18:22+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/css/</loc>
-    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/date/</loc>
-    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/devtools/</loc>
-    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/documentation/</loc>
-    <lastmod>2017-08-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/editor/</loc>
-    <lastmod>2017-09-26T18:03:22+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/file-manupilation/</loc>
-    <lastmod>2017-09-24T07:51:15+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/filetype/</loc>
-    <lastmod>2018-09-28T15:25:33+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/find/</loc>
-    <lastmod>2017-09-24T07:51:15+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/funny/</loc>
-    <lastmod>2018-02-02T17:41:26+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/fzf/</loc>
-    <lastmod>2018-09-28T11:47:21+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/github-pages/</loc>
-    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/go/</loc>
-    <lastmod>2018-09-28T11:47:21+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/howto/</loc>
-    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/hugo/</loc>
-    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/javascript/</loc>
-    <lastmod>2017-09-27T11:18:56+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/map/</loc>
-    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/mathematics/</loc>
-    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/module/</loc>
-    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/network/</loc>
-    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/new/</loc>
-    <lastmod>2017-09-09T19:43:23+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/newton/</loc>
-    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/nodejs/</loc>
-    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/option/</loc>
-    <lastmod>2017-09-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/options/</loc>
-    <lastmod>2017-08-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/performances/</loc>
-    <lastmod>2018-05-21T17:59:22+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/physics/</loc>
-    <lastmod>2019-02-15T11:12:47+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/preview/</loc>
-    <lastmod>2017-09-22T18:31:15+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/profile/</loc>
-    <lastmod>2018-05-21T17:59:22+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/python/</loc>
-    <lastmod>2017-10-13T16:14:21+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/resources/</loc>
-    <lastmod>2017-09-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/scopes/</loc>
-    <lastmod>2017-08-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/sh/</loc>
-    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/shell/</loc>
-    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/static-site/</loc>
-    <lastmod>2017-09-23T11:23:45+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/static-website/</loc>
-    <lastmod>2017-09-09T19:43:23+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://math2001.github.io/tags/strftime/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://math2001.github.io/tags/string/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/svg/</loc>
-    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/svgstore/</loc>
-    <lastmod>2017-10-08T17:18:21+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/symbols/</loc>
-    <lastmod>2017-08-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/template/</loc>
-    <lastmod>2017-09-27T11:18:56+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/terminal/</loc>
-    <lastmod>2018-10-02T08:41:38+10:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://math2001.github.io/tags/testing/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tags/tip/</loc>
-    <lastmod>2018-10-02T08:41:38+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/tmux/</loc>
-    <lastmod>2018-10-02T08:41:38+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/vim/</loc>
-    <lastmod>2018-09-28T15:25:33+10:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/vimscript/</loc>
-    <lastmod>2017-09-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://math2001.github.io/post/string-module-python/</loc>
+    <lastmod>2017-08-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://math2001.github.io/tags/web-development/</loc>
     <lastmod>2017-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://math2001.github.io/tags/windows/</loc>
-    <lastmod>2017-08-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/tags/zen/</loc>
-    <lastmod>2017-09-13T14:18:22+10:00</lastmod>
-    <priority>0</priority>
+    <loc>https://math2001.github.io/categories/</loc>
   </url>
   
 </urlset>

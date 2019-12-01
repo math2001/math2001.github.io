@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.50" />
+    <meta name="generator" content="Hugo 0.60.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -11,11 +11,11 @@
     <meta property="og:title" content="Vim file type specific settings">
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/vim-filetype-specific-settings/">
-    <meta property="og:description" content="If you want to run some vim script for a specific file type, don&rsquo;t make an
-auto command, they get messy really quickly. Instead, you should use ftplugin. ">
+    <meta property="og:description" content="If you want to run some vim script for a specific file type, don&#39;t make an
+auto command, they get messy really quickly. Instead, you should use ftplugin.">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Vim file type specific settings - Math2001&#39;s blog</title><style>
+    <title>Vim file type specific settings - math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
@@ -65,7 +65,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  opacity: .8;
+  color: var(--font-mute);
   font-weight: normal;
 }
 
@@ -380,6 +380,7 @@ header a {
 }
 
 </style>
+    
 
 </head>
 <body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
@@ -405,22 +406,19 @@ header a {
 </symbol></svg>
 <div class="wrapper"><header>
         <div class="header-inner">
-            <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+            <h2 class="header-brand"><a href="/">math2001&#39;s blog</a></h2>
             <nav class="header-nav">
                 <ul>
                     
-                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
+                    <li class="header-nav-item"><a href="/article/">Articles</a></li>
                     
-                    <li class="header-nav-item"><a href="/project/">Projects</a></li>
+                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
                     
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    
-        <span id="show-header" class="show-header"></span>
-    
 <div class="page-top">
     <h1 class="page-title">Vim file type specific settings</h1>
 
@@ -434,33 +432,28 @@ header a {
 
     
 
-</div><section class="page-content"><p>If you want to run some vim script for a specific file type, don&rsquo;t make an
-auto command, they get messy really quickly. Instead, you should use <code>ftplugin</code>. </p>
-
+</div><section class="page-content"><p>If you want to run some vim script for a specific file type, don't make an
+auto command, they get messy really quickly. Instead, you should use <code>ftplugin</code>.</p>
 <p>Just edit <code>~/.vim/ftplugin/&lt;filetype&gt;.vim</code>.</p>
-
 <blockquote>
 <p><code>ftplugin</code> stands for file type plugin</p>
 </blockquote>
-
 <p>To get the file type of the current file, just do:</p>
-<div class="highlight"><pre class="chroma">:set filetype?</pre></div>
-<p>It&rsquo;ll be automatically sourced when you open a file of that specific type.</p>
-
+<pre><code>:set filetype?
+</code></pre><p>It'll be automatically sourced when you open a file of that specific type.</p>
 <h3 id="edit-matching-file">Edit matching file</h3>
-
-<p>Most of the time, you&rsquo;ll find yourself wanting to edit the ftplugin file of the
-current filetype. So, here&rsquo;s a quick command to do this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">command</span><span class="p">!</span> <span class="p">-</span><span class="nx">nargs</span><span class="p">=</span>? <span class="nx">Ftedit</span> <span class="nx">execute</span><span class="c"> &#34;tabe ~/.vim/ftplugin/&#34; . (&#34;&lt;args&gt;&#34; == &#34;&#34; ? &amp;filetype : &#34;&lt;args&gt;&#34;) . &#34;.vim&#34;</span></code></pre></div>
-<p>If you just type <code>:Ftedit</code>, it&rsquo;ll open the ftplugin of the <em>current</em> file.
-But it you give it an argument, it&rsquo;ll open the one with the given name.</p>
-<div class="highlight"><pre class="chroma">:set filetype?
+<p>Most of the time, you'll find yourself wanting to edit the ftplugin file of the
+current filetype. So, here's a quick command to do this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">command</span><span class="p">!</span> <span class="p">-</span><span class="nx">nargs</span><span class="p">=</span>? <span class="nx">Ftedit</span> <span class="nx">execute</span> <span class="s2">&#34;tabe ~/.vim/ftplugin/&#34;</span> . <span class="p">(</span><span class="s2">&#34;&lt;args&gt;&#34;</span> <span class="p">=</span><span class="p">=</span> <span class="s2">&#34;&#34;</span> ? &amp;<span class="nx">filetype</span> : <span class="s2">&#34;&lt;args&gt;&#34;</span><span class="p">)</span> . <span class="s2">&#34;.vim&#34;</span><span class="err">
+</span></code></pre></div><p>If you just type <code>:Ftedit</code>, it'll open the ftplugin of the <em>current</em> file.
+But it you give it an argument, it'll open the one with the given name.</p>
+<pre><code>:set filetype?
 python
 :Ftedit
-&#34; opens ~/.vim/ftplugin/python.vim
+&quot; opens ~/.vim/ftplugin/python.vim
 :Ftedit vim
-&#34; opens ~/.vim/ftplugin/vim.vim</pre></div>
-<p>Enjoy 😄</p></section>
+&quot; opens ~/.vim/ftplugin/vim.vim
+</code></pre><p>Enjoy 😄</p></section>
 
 <div class="page-bottom">
     <ul class="page-share-list">
@@ -489,12 +482,17 @@ python
     <div class="footer-splits">
         <div class="footer-split">
             <h4 class="footer-split-title">About me</h4>
-            French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃
+            French, lives in Australia, and gives computer instructions so they don't
+get bored. 😃
         </div>
         <div class="footer-split">
-            <h4 class="footer-split-title">Browse by</h4>
+            <h4 class="footer-split-title">Browse</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
+            
+                <li><a href="/article">Articles</a></li>
+            
+                <li><a href="/post">Posts</a></li>
             </ul>
         </div>
         <div class="footer-split">

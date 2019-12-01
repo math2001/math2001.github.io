@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vim on Math2001&#39;s blog</title>
+    <title>vim on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/vim/</link>
-    <description>Recent content in vim on Math2001&#39;s blog</description>
+    <description>Recent content in vim on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -18,8 +18,8 @@
       <pubDate>Fri, 28 Sep 2018 15:25:33 +1000</pubDate>
       
       <guid>https://math2001.github.io/post/vim-filetype-specific-settings/</guid>
-      <description>&lt;p&gt;If you want to run some vim script for a specific file type, don&amp;rsquo;t make an
-auto command, they get messy really quickly. Instead, you should use &lt;code&gt;ftplugin&lt;/code&gt;. &lt;/p&gt;</description>
+      <description>&lt;p&gt;If you want to run some vim script for a specific file type, don&#39;t make an
+auto command, they get messy really quickly. Instead, you should use &lt;code&gt;ftplugin&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -30,7 +30,7 @@ auto command, they get messy really quickly. Instead, you should use &lt;code&gt
       <guid>https://math2001.github.io/post/vim-jump-to-function-definition/</guid>
       <description>&lt;p&gt;One of the features I miss from Sublime Text is the Goto Anything. In vim, by
 default, you have &lt;code&gt;:e **/bit&lt;/code&gt; and then tab, and it gets annoying pretty
-quickly. Thankfully, there&amp;rsquo;s &lt;a href=&#34;https://github.com/junegunn/fzf&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;fzf&lt;/code&gt;&lt;/a&gt; (with &lt;a href=&#34;https://github.com/junegunn/fzf.vim&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;fzf.vim&lt;/code&gt;&lt;/a&gt;).&lt;/p&gt;</description>
+quickly. Thankfully, there&#39;s &lt;a href=&#34;https://github.com/junegunn/fzf&#34;&gt;&lt;code&gt;fzf&lt;/code&gt;&lt;/a&gt; (with &lt;a href=&#34;https://github.com/junegunn/fzf.vim&#34;&gt;&lt;code&gt;fzf.vim&lt;/code&gt;&lt;/a&gt;).&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,8 +40,8 @@ quickly. Thankfully, there&amp;rsquo;s &lt;a href=&#34;https://github.com/junegu
       
       <guid>https://math2001.github.io/post/so-vim-became-slow/</guid>
       <description>&lt;p&gt;You know that feeling? You press in a key, and you have to wait like 0.5 seconds
-to see it appear on screen. You try to run &lt;code&gt;vim --clean&lt;/code&gt; and everything&amp;rsquo;s back
-to &amp;ldquo;normal&amp;rdquo;. How do you find &lt;em&gt;quickly&lt;/em&gt; the cause of this horrible disaster 😄 &lt;/p&gt;</description>
+to see it appear on screen. You try to run &lt;code&gt;vim --clean&lt;/code&gt; and everything&#39;s back
+to &amp;ldquo;normal&amp;rdquo;. How do you find &lt;em&gt;quickly&lt;/em&gt; the cause of this horrible disaster 😄&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -50,11 +50,10 @@ to &amp;ldquo;normal&amp;rdquo;. How do you find &lt;em&gt;quickly&lt;/em&gt; th
       <pubDate>Wed, 27 Sep 2017 12:55:56 +1000</pubDate>
       
       <guid>https://math2001.github.io/post/vim-line-completion/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://math2001.github.io/img/vim-ctrl-x_ctrl-l.gif&#34; alt=&#34;demo of ctrl-x_ctrl+l in insert mode in vim&#34; /&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;img src=&#34;https://math2001.github.io/img/vim-ctrl-x_ctrl-l.gif&#34; alt=&#34;demo of ctrl-x_ctrl+l in insert mode in vim&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Do you know what kind of completion this is? &lt;strong&gt;Line&lt;/strong&gt; completion. It looks for
-every lines that starts with the same text (it doesn&amp;rsquo;t take into consideration
-the indication), and completes it for you! Awesome right? &lt;/p&gt;</description>
+every lines that starts with the same text (it doesn&#39;t take into consideration
+the indication), and completes it for you! Awesome right?&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -63,7 +62,7 @@ the indication), and completes it for you! Awesome right? &lt;/p&gt;</descriptio
       <pubDate>Sun, 03 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/great-resources-for-vim-users/</guid>
-      <description>&lt;p&gt;If you&amp;rsquo;re a VIM user, have a look at these resources, they&amp;rsquo;re pretty good (you
+      <description>&lt;p&gt;If you&#39;re a VIM user, have a look at these resources, they&#39;re pretty good (you
 probably will know some, if not all of them)&lt;/p&gt;</description>
     </item>
     
@@ -74,8 +73,8 @@ probably will know some, if not all of them)&lt;/p&gt;</description>
       
       <guid>https://math2001.github.io/post/confirm-option-vim/</guid>
       <description>&lt;p&gt;This is probably one of my favorite option in VIM. Just add this to your &lt;code&gt;.vimrc&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;set confirm&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;pre&gt;&lt;code&gt;set confirm
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -94,7 +93,7 @@ for example, you can tell vim to run external commands &lt;code&gt;:!&lt;/code&g
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/current-buffer-only-mapping-vim/</guid>
-      <description>&lt;p&gt;If you want to set a mapping only for the current buffer in VIM, it&amp;rsquo;s super
+      <description>&lt;p&gt;If you want to set a mapping only for the current buffer in VIM, it&#39;s super
 simple: just use the &lt;code&gt;buffer&lt;/code&gt; special argument.&lt;/p&gt;</description>
     </item>
     
@@ -105,8 +104,8 @@ simple: just use the &lt;code&gt;buffer&lt;/code&gt; special argument.&lt;/p&gt;
       
       <guid>https://math2001.github.io/post/dynamicopen-function-vim/</guid>
       <description>&lt;p&gt;I really open my &lt;code&gt;.vimrc&lt;/code&gt; often. Too often to have to type &lt;code&gt;:e ~/.vimrc&lt;/code&gt; or
-&lt;code&gt;:tabe ~/.vimrc&lt;/code&gt; every time. Here&amp;rsquo;s little function that will open a file in a
-new tab if there isn&amp;rsquo;t enough room for a new split, and, you guessed it, in a
+&lt;code&gt;:tabe ~/.vimrc &lt;/code&gt; every time. Here&#39;s little function that will open a file in a
+new tab if there isn&#39;t enough room for a new split, and, you guessed it, in a
 new &lt;em&gt;vertical&lt;/em&gt; split if there is.&lt;/p&gt;</description>
     </item>
     
@@ -117,7 +116,7 @@ new &lt;em&gt;vertical&lt;/em&gt; split if there is.&lt;/p&gt;</description>
       
       <guid>https://math2001.github.io/post/rerun-last-command-bang-vim/</guid>
       <description>&lt;p&gt;Put this code in your vimrc to re run the previous command but with the bang
-(&lt;code&gt;!&lt;/code&gt;) by just typing &lt;code&gt;:Please&lt;/code&gt;. &lt;/p&gt;</description>
+(&lt;code&gt;!&lt;/code&gt;) by just typing &lt;code&gt;:Please&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -128,7 +127,7 @@ new &lt;em&gt;vertical&lt;/em&gt; split if there is.&lt;/p&gt;</description>
       <guid>https://math2001.github.io/post/silent-command-line-mapping/</guid>
       <description>&lt;p&gt;If you want to set a mapping to run something that is echoed into the command
 line (something starting with &lt;code&gt;:&lt;/code&gt; or &lt;code&gt;/&lt;/code&gt; for example) to &lt;em&gt;not&lt;/em&gt; be displayed, you
-can use the special argument &lt;code&gt;silent&lt;/code&gt;. &lt;/p&gt;</description>
+can use the special argument &lt;code&gt;silent&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -148,8 +147,8 @@ vim?&lt;/p&gt;</description>
       
       <guid>https://math2001.github.io/post/get-ascii-value-character-vim/</guid>
       <description>To get the ASCII value of the character under the cursor, just press ga (or run :ascii).
-It&amp;rsquo;ll print it in three format: in decimal, hexadecimal and octal.
-So, when your cursor is on an arrow and that you press ga: →, you&amp;rsquo;ll see at the bottom:
+It&#39;ll print it in three format: in decimal, hexadecimal and octal.
+So, when your cursor is on an arrow and that you press ga: →, you&#39;ll see at the bottom:
 &amp;lt;→&amp;gt; 8594, Hex: 2192, Octal: 20622  Mnemonic: Get ASCII value. ­ from :help :ascii
  </description>
     </item>
@@ -160,7 +159,7 @@ So, when your cursor is on an arrow and that you press ga: →, you&amp;rsquo;ll
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/variable-scopes-vim/</guid>
-      <description>&lt;p&gt;An interesting feature of vim script is variable scoping. Here&amp;rsquo;s a copy-paste
+      <description>&lt;p&gt;An interesting feature of vim script is variable scoping. Here&#39;s a copy-paste
 from the documentation, just in case you never saw it before.&lt;/p&gt;</description>
     </item>
     
@@ -182,8 +181,8 @@ you? Well, depending on your internet connection, it might be about 10 seconds.&
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/vim-help-index/</guid>
-      <description>&lt;p&gt;A very strong point of vim is its documentation. There&amp;rsquo;s just so much of it!!
-So, &lt;strong&gt;use it&lt;/strong&gt; &lt;/p&gt;</description>
+      <description>&lt;p&gt;A very strong point of vim is its documentation. There&#39;s just so much of it!!
+So, &lt;strong&gt;use it&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -192,7 +191,7 @@ So, &lt;strong&gt;use it&lt;/strong&gt; &lt;/p&gt;</description>
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/how-to-insert-the-date-in-vim/</guid>
-      <description>&lt;p&gt;First off, I really don&amp;rsquo;t recommend you use the &lt;code&gt;strftime()&lt;/code&gt; function vim has,
+      <description>&lt;p&gt;First off, I really don&#39;t recommend you use the &lt;code&gt;strftime()&lt;/code&gt; function vim has,
 since, as it says in the help message (&lt;code&gt;:help strftime&lt;/code&gt;)&lt;/p&gt;</description>
     </item>
     

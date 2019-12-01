@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>newton on Math2001&#39;s blog</title>
+    <title>newton on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/newton/</link>
-    <description>Recent content in newton on Math2001&#39;s blog</description>
+    <description>Recent content in newton on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -20,7 +20,7 @@
       <guid>https://math2001.github.io/post/motion-and-calculus/</guid>
       <description>&lt;p&gt;If you studied physics, one of the first things you probably did was graph the
 &amp;ldquo;motion&amp;rdquo; of objects. That is the displacement, velocity, and acceleration at
-an instant &lt;em&gt;t&lt;/em&gt;. Didn&amp;rsquo;t it remind you of a mathematical concept? &lt;/p&gt;</description>
+an instant &lt;em&gt;t&lt;/em&gt;. Didn&#39;t it remind you of a mathematical concept?&lt;/p&gt;</description>
     </item>
     
   </channel>

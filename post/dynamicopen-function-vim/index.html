@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.50" />
+    <meta name="generator" content="Hugo 0.60.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -12,12 +12,12 @@
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/dynamicopen-function-vim/">
     <meta property="og:description" content="I really open my .vimrc often. Too often to have to type :e ~/.vimrc or
-:tabe ~/.vimrc every time. Here&rsquo;s little function that will open a file in a
-new tab if there isn&rsquo;t enough room for a new split, and, you guessed it, in a
+:tabe ~/.vimrc  every time. Here&#39;s little function that will open a file in a
+new tab if there isn&#39;t enough room for a new split, and, you guessed it, in a
 new vertical split if there is.">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>DynamicOpen function - Math2001&#39;s blog</title><style>
+    <title>DynamicOpen function - math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
@@ -67,7 +67,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  opacity: .8;
+  color: var(--font-mute);
   font-weight: normal;
 }
 
@@ -382,6 +382,7 @@ header a {
 }
 
 </style>
+    
 
 </head>
 <body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
@@ -407,22 +408,19 @@ header a {
 </symbol></svg>
 <div class="wrapper"><header>
         <div class="header-inner">
-            <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+            <h2 class="header-brand"><a href="/">math2001&#39;s blog</a></h2>
             <nav class="header-nav">
                 <ul>
                     
-                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
+                    <li class="header-nav-item"><a href="/article/">Articles</a></li>
                     
-                    <li class="header-nav-item"><a href="/project/">Projects</a></li>
+                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
                     
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    
-        <span id="show-header" class="show-header"></span>
-    
 <div class="page-top">
     <h1 class="page-title">DynamicOpen function</h1>
 
@@ -437,20 +435,19 @@ header a {
     
 
 </div><section class="page-content"><p>I really open my <code>.vimrc</code> often. Too often to have to type <code>:e ~/.vimrc</code> or
-<code>:tabe ~/.vimrc</code> every time. Here&rsquo;s little function that will open a file in a
-new tab if there isn&rsquo;t enough room for a new split, and, you guessed it, in a
+<code>:tabe ~/.vimrc </code> every time. Here's little function that will open a file in a
+new tab if there isn't enough room for a new split, and, you guessed it, in a
 new <em>vertical</em> split if there is.</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">function</span><span class="p">!</span> <span class="nx">DynamicOpen</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span><span class="err">
-</span><span class="err"></span>    <span class="k">if</span> <span class="nx">winwidth</span><span class="p">(</span><span class="nx">win_getid</span><span class="p">())</span> <span class="p">&gt;</span> <span class="m">160</span><span class="err">
-</span><span class="err"></span>        <span class="nx">execute</span><span class="c"> &#34;vsplit &#34;.a:file</span><span class="err">
-</span><span class="err"></span>    <span class="k">else</span><span class="err">
-</span><span class="err"></span>        <span class="nx">execute</span><span class="c"> &#34;tabe &#34;.a:file</span><span class="err">
-</span><span class="err"></span>    <span class="k">endif</span><span class="err">
-</span><span class="err"></span><span class="k">endfunction</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">leader</span><span class="p">&gt;</span><span class="nx">ev</span> <span class="p">:</span><span class="nx">call</span> <span class="nx">DynamicOpen</span><span class="p">(</span>$<span class="nx">MYVIMRC</span><span class="p">)&lt;</span><span class="nx">CR</span><span class="p">&gt;</span></code></pre></div>
-<p>It just checks with width of the current window.</p>
-
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">function</span><span class="p">!</span> <span class="nx">DynamicOpen</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>    <span class="k">if</span> <span class="nx">winwidth</span><span class="p">(</span><span class="nx">win_getid</span><span class="p">(</span><span class="p">)</span><span class="p">)</span> <span class="p">&gt;</span> <span class="m">160</span><span class="err">
+</span><span class="err"></span>        <span class="nx">execute</span> <span class="s2">&#34;vsplit &#34;</span>.<span class="nx">a</span>:<span class="nx">file</span><span class="err">
+</span><span class="err"></span>    <span class="k">else</span><span class="err">
+</span><span class="err"></span>        <span class="nx">execute</span> <span class="s2">&#34;tabe &#34;</span>.<span class="nx">a</span>:<span class="nx">file</span><span class="err">
+</span><span class="err"></span>    <span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="k">endfunction</span><span class="err">
+</span><span class="err"></span><span class="err">
+</span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">leader</span><span class="p">&gt;</span><span class="nx">ev</span> :<span class="nx">call</span> <span class="nx">DynamicOpen</span><span class="p">(</span>$<span class="nx">MYVIMRC</span><span class="p">)</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>It just checks with width of the current window.</p>
 <p>More infos: <code>:help window-functions</code></p></section>
 
 <div class="page-bottom">
@@ -480,12 +477,17 @@ new <em>vertical</em> split if there is.</p>
     <div class="footer-splits">
         <div class="footer-split">
             <h4 class="footer-split-title">About me</h4>
-            French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃
+            French, lives in Australia, and gives computer instructions so they don't
+get bored. 😃
         </div>
         <div class="footer-split">
-            <h4 class="footer-split-title">Browse by</h4>
+            <h4 class="footer-split-title">Browse</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
+            
+                <li><a href="/article">Articles</a></li>
+            
+                <li><a href="/post">Posts</a></li>
             </ul>
         </div>
         <div class="footer-split">

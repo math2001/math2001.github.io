@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.50" />
+    <meta name="generator" content="Hugo 0.60.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -12,11 +12,11 @@
     <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
     <meta property="og:url" content="https://math2001.github.io/post/hugo-deploying-github-pages/">
     <meta property="og:description" content="When you want to deploy a static website built with the fantastic Hugo on
-GitHub pages, you don&rsquo;t have 100 of possibilities. A clean one, and an easy one
+GitHub pages, you don&#39;t have 100 of possibilities. A clean one, and an easy one
 😄.">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>Deploying a hugo site on GitHub pages - Math2001&#39;s blog</title><style>
+    <title>Deploying a hugo site on GitHub pages - math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
@@ -66,7 +66,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  opacity: .8;
+  color: var(--font-mute);
   font-weight: normal;
 }
 
@@ -381,6 +381,7 @@ header a {
 }
 
 </style>
+    
 
 </head>
 <body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
@@ -406,22 +407,19 @@ header a {
 </symbol></svg>
 <div class="wrapper"><header>
         <div class="header-inner">
-            <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+            <h2 class="header-brand"><a href="/">math2001&#39;s blog</a></h2>
             <nav class="header-nav">
                 <ul>
                     
-                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
+                    <li class="header-nav-item"><a href="/article/">Articles</a></li>
                     
-                    <li class="header-nav-item"><a href="/project/">Projects</a></li>
+                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
                     
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    
-        <span id="show-header" class="show-header"></span>
-    
 <div class="page-top">
     <h1 class="page-title">Deploying a hugo site on GitHub pages</h1>
 
@@ -437,48 +435,38 @@ header a {
 
     
 
-</div><section class="page-content"><p>When you want to deploy a static website built with the fantastic <a href="https://gohugo.io" target="_blank">Hugo</a> on
-GitHub pages, you don&rsquo;t have 100 of possibilities. A clean one, and an easy one
+</div><section class="page-content"><p>When you want to deploy a static website built with the fantastic <a href="https://gohugo.io">Hugo</a> on
+GitHub pages, you don't have 100 of possibilities. A clean one, and an easy one
 😄.</p>
-
-<p>The easy one is to build your website to the <code>docs</code> folder. It&rsquo;s not super clean
-though since the source code is on the same branch as the built code. It doesn&rsquo;t
+<p>The easy one is to build your website to the <code>docs</code> folder. It's not super clean
+though since the source code is on the same branch as the built code. It doesn't
 make diffing super great, gives a long output when you commit, you have to build
 at every single commit to keep consistent.</p>
-
-<p>You got it, I don&rsquo;t like it.</p>
-
+<p>You got it, I don't like it.</p>
 <p>So, the other solution is to build it on the <code>gh-pages</code> branch. I could do it
-manually every time, but wasting my time isn&rsquo;t my thing&hellip; 😄 No, I wanted
-to build something like <a href="https://www.mkdocs.org" target="_blank">mkdocs</a> has:</p>
-<div class="highlight"><pre class="chroma">mkdocs gh-deploy</pre></div>
+manually every time, but wasting my time isn't my thing&hellip; 😄 No, I wanted
+to build something like <a href="https://www.mkdocs.org">mkdocs</a> has:</p>
+<pre><code>mkdocs gh-deploy
+</code></pre>
 <p>And boom, it builds your website to an other branch (in this case <code>gh-pages</code>),
 commit, and push.</p>
-
 <p>So, I tripped a few times along the way of making this little script (life tip:
 if you <code>rm</code> files automatically, make sure at least 3 times that no files in a
-<code>.git</code> folder gets delete 😉, you&rsquo;d loose <strong>everything</strong>)</p>
-
+<code>.git</code> folder gets delete 😉, you'd loose <strong>everything</strong>)</p>
 <h3 id="installation">Installation</h3>
-
-<p>Just download <a href="https://GitHub.com/math2001/math2001.GitHub.io/blob/dev/deploy.sh" target="_blank">this
+<p>Just download <a href="https://GitHub.com/math2001/math2001.GitHub.io/blob/dev/deploy.sh">this
 script</a>.</p>
-
 <h3 id="usage">Usage</h3>
-
 <p>In your hugo config, add a <code>publishBranch</code> key with the name of the branch you
 want. It should be a string.</p>
-
-<p>Then, you just need run the script you just downloaded, and it&rsquo;ll build, commit,
+<p>Then, you just need run the script you just downloaded, and it'll build, commit,
 and push for you!</p>
-
-<hr />
-
+<hr>
 <p>This script does some weird stuff due to git submodules not coping very well with
-branches in the parent repository. When you <code>checkout</code>, the submodules don&rsquo;t get
+branches in the parent repository. When you <code>checkout</code>, the submodules don't get
 removed/added, you need to do it manually. If you have submodules in your
-website&rsquo;s sources elsewhere than in your theme folders (<code>themes</code> by default),
-you&rsquo;ll need to tweak this script a bit.</p></section>
+website's sources elsewhere than in your theme folders (<code>themes</code> by default),
+you'll need to tweak this script a bit.</p></section>
 
 <div class="page-bottom">
     <ul class="page-share-list">
@@ -507,12 +495,17 @@ you&rsquo;ll need to tweak this script a bit.</p></section>
     <div class="footer-splits">
         <div class="footer-split">
             <h4 class="footer-split-title">About me</h4>
-            French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃
+            French, lives in Australia, and gives computer instructions so they don't
+get bored. 😃
         </div>
         <div class="footer-split">
-            <h4 class="footer-split-title">Browse by</h4>
+            <h4 class="footer-split-title">Browse</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
+            
+                <li><a href="/article">Articles</a></li>
+            
+                <li><a href="/post">Posts</a></li>
             </ul>
         </div>
         <div class="footer-split">

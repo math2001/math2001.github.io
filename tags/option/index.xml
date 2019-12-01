@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>option on Math2001&#39;s blog</title>
+    <title>option on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/option/</link>
-    <description>Recent content in option on Math2001&#39;s blog</description>
+    <description>Recent content in option on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -19,8 +19,8 @@
       
       <guid>https://math2001.github.io/post/confirm-option-vim/</guid>
       <description>&lt;p&gt;This is probably one of my favorite option in VIM. Just add this to your &lt;code&gt;.vimrc&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;set confirm&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;pre&gt;&lt;code&gt;set confirm
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>

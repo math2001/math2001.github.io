@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta name="generator" content="Hugo 0.50" />
+    <meta name="generator" content="Hugo 0.60.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -16,7 +16,7 @@ set confirm
 ">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>The confirm option - Math2001&#39;s blog</title><style>
+    <title>The confirm option - math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
@@ -66,7 +66,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  opacity: .8;
+  color: var(--font-mute);
   font-weight: normal;
 }
 
@@ -381,6 +381,7 @@ header a {
 }
 
 </style>
+    
 
 </head>
 <body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
@@ -406,22 +407,19 @@ header a {
 </symbol></svg>
 <div class="wrapper"><header>
         <div class="header-inner">
-            <h2 class="header-brand"><a href="/">Math2001&#39;s blog</a></h2>
+            <h2 class="header-brand"><a href="/">math2001&#39;s blog</a></h2>
             <nav class="header-nav">
                 <ul>
                     
-                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
+                    <li class="header-nav-item"><a href="/article/">Articles</a></li>
                     
-                    <li class="header-nav-item"><a href="/project/">Projects</a></li>
+                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
                     
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-    
-        <span id="show-header" class="show-header"></span>
-    
 <div class="page-top">
     <h1 class="page-title">The confirm option</h1>
 
@@ -436,22 +434,21 @@ header a {
     
 
 </div><section class="page-content"><p>This is probably one of my favorite option in VIM. Just add this to your <code>.vimrc</code>:</p>
-<div class="highlight"><pre class="chroma">set confirm</pre></div>
-<p></p>
-
+<pre><code>set confirm
+</code></pre>
 <p>This will affect different command in VIM: instead of just failing (and telling
-you to use force if you want to overwrite), it&rsquo;ll show a confirm &ldquo;popup&rdquo; at the
-bottom and you&rsquo;ll be good to do.</p>
-
+you to use force if you want to overwrite), it'll show a confirm &ldquo;popup&rdquo; at the
+bottom and you'll be good to do.</p>
 <h3 id="quick-example">Quick example</h3>
-
-<p>When you want to quit a file that isn&rsquo;t saved, here&rsquo;s what you get:</p>
-<div class="highlight"><pre class="chroma">E37: No write since last change (add ! to override)</pre></div>
+<p>When you want to quit a file that isn't saved, here's what you get:</p>
+<pre><code>E37: No write since last change (add ! to override)
+</code></pre>
 <p>With the <code>confirm</code> option on, you get</p>
-<div class="highlight"><pre class="chroma">Save changes to &#34;tips/vim-confirm.md&#34;?
-[Y]es, (N)o, (C)ancel:</pre></div>
-<p>You just need to press the corresponding letter (not even <kbd>enter</kbd>), and
-you&rsquo;ll be good to go!</p></section>
+<pre><code>Save changes to &quot;tips/vim-confirm.md&quot;?
+[Y]es, (N)o, (C)ancel:
+</code></pre>
+<p>You just need to press the corresponding letter (not even <!-- raw HTML omitted -->enter<!-- raw HTML omitted -->), and
+you'll be good to go!</p></section>
 
 <div class="page-bottom">
     <ul class="page-share-list">
@@ -480,12 +477,17 @@ you&rsquo;ll be good to go!</p></section>
     <div class="footer-splits">
         <div class="footer-split">
             <h4 class="footer-split-title">About me</h4>
-            French, lives in Australia, and gives computer instructions so they don&rsquo;t get bored. 😃
+            French, lives in Australia, and gives computer instructions so they don't
+get bored. 😃
         </div>
         <div class="footer-split">
-            <h4 class="footer-split-title">Browse by</h4>
+            <h4 class="footer-split-title">Browse</h4>
             <ul>
                 <li><a href="/tags">Tags</a></li>
+            
+                <li><a href="/article">Articles</a></li>
+            
+                <li><a href="/post">Posts</a></li>
             </ul>
         </div>
         <div class="footer-split">

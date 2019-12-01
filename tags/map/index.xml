@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>map on Math2001&#39;s blog</title>
+    <title>map on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/map/</link>
-    <description>Recent content in map on Math2001&#39;s blog</description>
+    <description>Recent content in map on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -18,7 +18,7 @@
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/current-buffer-only-mapping-vim/</guid>
-      <description>&lt;p&gt;If you want to set a mapping only for the current buffer in VIM, it&amp;rsquo;s super
+      <description>&lt;p&gt;If you want to set a mapping only for the current buffer in VIM, it&#39;s super
 simple: just use the &lt;code&gt;buffer&lt;/code&gt; special argument.&lt;/p&gt;</description>
     </item>
     
@@ -30,7 +30,7 @@ simple: just use the &lt;code&gt;buffer&lt;/code&gt; special argument.&lt;/p&gt;
       <guid>https://math2001.github.io/post/silent-command-line-mapping/</guid>
       <description>&lt;p&gt;If you want to set a mapping to run something that is echoed into the command
 line (something starting with &lt;code&gt;:&lt;/code&gt; or &lt;code&gt;/&lt;/code&gt; for example) to &lt;em&gt;not&lt;/em&gt; be displayed, you
-can use the special argument &lt;code&gt;silent&lt;/code&gt;. &lt;/p&gt;</description>
+can use the special argument &lt;code&gt;silent&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>

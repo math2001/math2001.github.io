@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>about on Math2001&#39;s blog</title>
+    <title>about on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/about/</link>
-    <description>Recent content in about on Math2001&#39;s blog</description>
+    <description>Recent content in about on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -19,8 +19,7 @@
       
       <guid>https://math2001.github.io/post/my-new-blog/</guid>
       <description>&lt;p&gt;Hello everyone!&lt;/p&gt;
-
-&lt;p&gt;My name&amp;rsquo;s Mathieu Paturel - &lt;code&gt;@math2001&lt;/code&gt; - and I love coding. I&amp;rsquo;m French (from
+&lt;p&gt;My name&#39;s Mathieu Paturel - &lt;code&gt;@math2001&lt;/code&gt; - and I love coding. I&#39;m French (from
 Provence, if you know where that is), but my family and I moved 2 years ago to
 Australia so that we could learn to speak fluently English (without this
 disgusting accent 😄).&lt;/p&gt;</description>

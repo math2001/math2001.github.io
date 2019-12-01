@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>web development on Math2001&#39;s blog</title>
+    <title>web development on math2001&#39;s blog</title>
     <link>https://math2001.github.io/tags/web-development/</link>
-    <description>Recent content in web development on Math2001&#39;s blog</description>
+    <description>Recent content in web development on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
@@ -18,7 +18,7 @@
       <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://math2001.github.io/post/network-throttling/</guid>
-      <description>&lt;p&gt;Ever wanted to simulate a slow connection? Well, the chrome&amp;rsquo;s DevTools makes it
+      <description>&lt;p&gt;Ever wanted to simulate a slow connection? Well, the chrome&#39;s DevTools makes it
 very easy to do!&lt;/p&gt;</description>
     </item>
     
