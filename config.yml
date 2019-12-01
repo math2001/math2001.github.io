@@ -1,4 +1,4 @@
-title: "Math2001's blog"
+title: math2001's blog
 baseURL: https://math2001.github.io
 languageCode: en-us
 metaDataFormat: yaml
@@ -7,8 +7,6 @@ publishBranch: master
 newContentEditor: vim
 
 theme: fasty
-author:
-  math2001: Mathieu Paturel
 copyright: © Mathieu Paturel 2017-2019
 enableEmoji: true
 googleAnalytics: "UA-105735012-1"
@@ -28,7 +26,7 @@ params:
   avatar:
     vector: img/math2001.svg
     raster: img/math2001.png
-    alt: Math2001's logo
+    alt: Round logo with a M in it (math2001's logo)
   favicon: img/math2001.png
   social:
     - username: _math2001
@@ -46,31 +44,41 @@ params:
     - username: math2001
       name: youtube
       url: https://www.youtube.com/channel/UCi2O717lLg8ugD5KxAJTwAQ
-  description: |
-    :computer: My little open sourced home :tada:
-  bio: |
-    French, lives in Australia, and gives computer instructions so they don't get bored. :smiley:
-  githubcommentsrepo: math2001/math2001.github.io
+
+  footerbio: |
+    French, lives in Australia, and gives computer instructions so they don't
+    get bored. :smiley:
+
+  home:
+    name: Mathieu Paturel
+    avatar:
+      src: img/math2001.png
+      alt: Picture of Mathieu Paturel
+    bio: |
+      Bonjour! I'm a prospective university student. I've been programming
+      for about 4 years (self taught) [TODO: keep going]
+    closing: |
+      You are probably wondering what is the difference between a post, an
+      article and a project. Articles and projects are carefully crafted,
+      whereas posts are pretty much just me thinking out loud...
+    links:
+      - name: CV
+        url: /cv.pdf
+      - name: GitHub
+        url: https://github.com/math2001
+
+
 
 
 menu:
-  main:
-    - url: /post/
-      name: Posts
-      weight: 1
-    - url: /project/
-      name: Projects
-      weight: 5
-
-  home:
-    - url: /post/
-      name: Posts
-      weight: 1
-    - url: /project/
-      name: Projects
-      weight: 5
-
   footer:
     - name: Tags
       url: /tags
       weight: 1
+    - name: Articles
+      url: /article
+      weigth: 5
+    - name: Posts
+      url: /post
+      weigth: 10
+
