@@ -1,35 +1,13 @@
-main {
-  flex: 1 0 auto;
-}
-
-.home-content {
-  margin-top: 5%;
-}
-
-.home-header {
-  text-align: center;
-}
-
-.home-header-avatar {
-  vertical-align: middle;
-  display: inline-block;
-  width: 24px;
-  margin-right: 5px;
-}
-
-.home-header-title {
-  vertical-align: middle;
-  display: inline-block;
-}
-
 .home-about {
   text-align: center;
   width: 512px;
+  max-width: 100%;
   margin: auto;
 }
 
 .home-about-avatar {
   width: 192px;
+  max-width: 100%;
   display: block;
   margin: 12px auto;
 }
@@ -51,6 +29,7 @@ main {
   padding: 0 16px;
   display: inline-block;
 }
+
 .home-links ul:not(:last-child) {
   height: 100%;
   border-right: 3px solid var(--border-color);
@@ -78,5 +57,6 @@ main {
 .home-closing {
   text-align: center;
   width: 512px;
+  max-width: 100%;
   margin: auto;
 }

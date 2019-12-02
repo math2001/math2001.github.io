@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
+  <head>
     <meta name="generator" content="Hugo 0.60.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
     <meta name="twitter:creator" content="@_math2001">
 
     <meta property="og:title" content="How to combine svgs">
-    <meta property="og:image" content="https://math2001.github.io/img/math2001.png">
+    <meta property="og:image" content="https://math2001.github.io">
     <meta property="og:url" content="https://math2001.github.io/post/combine-svgs/">
     <meta property="og:description" content="If you want your website to be fast, you should limit the number of http
 requests. A great way of doing that is combining your images. If you use SVGS
@@ -41,10 +41,9 @@ a {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   font-family: Roboto Slab, Roboto, Calibri, Corbel, sans-serif;
   margin: 0;
+  padding: 0;
   background: var(--light-blue);
   background-color: #fff;
   height: 100%;
@@ -52,15 +51,15 @@ body {
   color: #333;
   line-height: 1.5;
 }
-h1, h2 {
-  letter-spacing: 2px;
+
+h1, h2, h3, h4 {
   font-weight: 100;
+  line-height: 1;
 }
 
-h3, h4 {
-  letter-spacing: 1px;
-  font-weight: 100;
-}
+h1, h2 { letter-spacing: 2px; }
+
+h3, h4 { letter-spacing: 1px; }
 
 h3 { font-size: 140%; }
 h4 { font-size: 120%; }
@@ -78,6 +77,7 @@ h1 > small, h2 > small, h3 > small {
 
 main {
   margin-bottom: 20px;
+  padding: 0 16px;
 }
 
 .tags { font-family: var(--monospace); }
@@ -210,6 +210,55 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
 </style><style>
+    .header {
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--border-color);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-brand {
+  margin: 12px 0;
+}
+
+.header-brand-logo {
+  width: 24px;
+  vertical-align: middle;
+}
+
+.header-brand-title {
+  vertical-align: middle;
+}
+
+.header-nav {
+  margin: 5px 0;
+}
+
+.header-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.header-nav-item {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.header-nav-item:first-of-type {
+  margin-left: 1px;
+}
+
+</style><style>
     .highlight .hll{background-color:#4f5b66}.highlight{background:#2b303b;color:#eff1f5}.highlight .c{color:#65737e}.highlight .err{color:#bf616a}.highlight .k{color:#b48ead}.highlight .l{color:#d08770}.highlight .n{color:#eff1f5}.highlight .o{color:#96b5b4}.highlight .p{color:#eff1f5}.highlight .cm{color:#65737e}.highlight .cp{color:#65737e}.highlight .c1{color:#65737e}.highlight .cs{color:#65737e}.highlight .gd{color:#bf616a}.highlight .ge{font-style:italic}.highlight .gh{color:#eff1f5;font-weight:700}.highlight .gi{color:#a3be8c}.highlight .gp{color:#65737e;font-weight:700}.highlight .gs{font-weight:700}.highlight .gu{color:#96b5b4;font-weight:700}.highlight .kc{color:#b48ead}.highlight .kd{color:#b48ead}.highlight .kn{color:#96b5b4}.highlight .kp{color:#b48ead}.highlight .kr{color:#b48ead}.highlight .kt{color:#ebcb8b}.highlight .ld{color:#a3be8c}.highlight .m{color:#d08770}.highlight .s{color:#a3be8c}.highlight .na{color:#8fa1b3}.highlight .nb{color:#eff1f5}.highlight .nc{color:#ebcb8b}.highlight .no{color:#bf616a}.highlight .nd{color:#96b5b4}.highlight .ni{color:#eff1f5}.highlight .ne{color:#bf616a}.highlight .nf{color:#8fa1b3}.highlight .nl{color:#eff1f5}.highlight .nn{color:#ebcb8b}.highlight .nx{color:#8fa1b3}.highlight .py{color:#eff1f5}.highlight .nt{color:#96b5b4}.highlight .nv{color:#bf616a}.highlight .ow{color:#96b5b4}.highlight .w{color:#eff1f5}.highlight .mf{color:#d08770}.highlight .mh{color:#d08770}.highlight .mi{color:#d08770}.highlight .mo{color:#d08770}.highlight .sb{color:#a3be8c}.highlight .sc{color:#eff1f5}.highlight .sd{color:#65737e}.highlight .s2{color:#a3be8c}.highlight .se{color:#d08770}.highlight .sh{color:#a3be8c}.highlight .si{color:#d08770}.highlight .sx{color:#a3be8c}.highlight .sr{color:#a3be8c}.highlight .s1{color:#a3be8c}.highlight .ss{color:#a3be8c}.highlight .bp{color:#eff1f5}.highlight .vc{color:#bf616a}.highlight .vg{color:#bf616a}.highlight .vi{color:#bf616a}.highlight .il{color:#d08770}
 
 </style><style>
@@ -334,58 +383,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   height: 500px;
   margin: auto;
 }
-</style><style>
-    header {
-  padding: 10px 15px;
-  border-bottom: 1px solid var(--border-color);
-}
-
-header a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.header-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
-}
-
-.header-brand,
-.header-nav {
-  text-align: center;
-  margin: 5px 0;
-}
-
-.header-brand {
-  white-space: nowrap;
-}
-
-.header-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-}
-
-.header-nav-item {
-  display: inline-block;
-  margin: 0 5px;
-}
-
-.header-nav-item:first-of-type {
-  margin-left: 1px;
-}
-
 </style>
-    
 
-</head>
-<body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
+  </head>
+  <body><svg style="position: absolute; width: 0; height: 0; overflow: hidden;"><defs/><symbol id="si-dev.to" viewBox="0 0 26.458332 26.458334">
   <path d="M0 0h26.458v26.458H0z"/>
   <path d="M1.062 13.23v6h2.12c2.344 0 3.32-.3 4.032-1.218.713-.9.826-1.688.75-5.252-.056-3.15-.093-3.414-.506-4.09-.713-1.162-1.5-1.443-4.145-1.443h-2.25zm4.333-3.583c.43.356.45.43.45 3.47 0 2.945-.02 3.132-.413 3.526-.32.3-.656.413-1.313.413l-.9.018-.06-3.902-.04-3.882h.92c.618 0 1.05.112 1.35.356zM9.71 7.715c-.376.487-.395.73-.395 5.552v5.045l.47.45c.43.45.543.47 3 .47h2.532v-2.045l-1.913-.056-1.932-.052V14.26l1.182-.056 1.163-.056v-2.044h-2.44V9.29h3.94V7.227H12.71c-2.607 0-2.626 0-3 .488zm7.67 2.175c.395 1.482 1.032 3.902 1.426 5.402.6 2.308.807 2.814 1.313 3.32.352.376.783.62 1.064.62.582 0 1.332-.582 1.595-1.257.187-.488 2.85-10.43 2.85-10.654 0-.052-.524-.09-1.16-.052l-1.18.057-1.05 4.033c-.66 2.55-1.09 3.902-1.166 3.658-.15-.468-2.007-7.614-2.007-7.708 0-.038-.546-.075-1.203-.075h-1.2z" fill="#fff"/>
 </symbol><symbol id="si-facebook" viewBox="0 0 266.89 266.89">
@@ -406,21 +407,22 @@ header a {
     <path d="M195.983 186.64v126.72L333.12 250z" fill="#fff" stroke-width="2.42"/>
   </g>
 </symbol></svg>
-<div class="wrapper"><header>
-        <div class="header-inner">
-            <h2 class="header-brand"><a href="/">math2001&#39;s blog</a></h2>
-            <nav class="header-nav">
-                <ul>
-                    
-                    <li class="header-nav-item"><a href="/article/">Articles</a></li>
-                    
-                    <li class="header-nav-item"><a href="/post/">Posts</a></li>
-                    
-                </ul>
-            </nav>
-        </div>
+<header class="header">
+      <h2 class="header-brand">
+        
+        <img src="/img/math2001.svg" alt="Round logo with a M in it (math2001&#39;s logo)" class="header-brand-logo">
+        
+        <a href="/" class="header-brand-title">math2001&#39;s blog</a>
+      </h2><nav class="header-nav">
+        <ul>
+          
+          <li class="header-nav-item"><a href="/article/">Articles</a></li>
+          
+          <li class="header-nav-item"><a href="/post/">Posts</a></li>
+          
+        </ul>
+      </nav>
     </header>
-    <main>
 <div class="page-top">
     <h1 class="page-title">How to combine svgs</h1>
 
@@ -500,8 +502,7 @@ write this into <code>combined.svg</code>.</p>
             </a>
         </li>
     </ul>
-</div>    </main>
-</div>
+</div></div>
 <footer>
     <div class="footer-splits">
         <div class="footer-split">

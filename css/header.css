@@ -1,31 +1,33 @@
-header {
+.header {
   padding: 10px 15px;
   border-bottom: 1px solid var(--border-color);
-}
-
-header a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.header-inner {
-  max-width: 960px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-content: center;
 }
 
-.header-brand,
-.header-nav {
-  text-align: center;
-  margin: 5px 0;
+.header a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .header-brand {
-  white-space: nowrap;
+  margin: 12px 0;
+}
+
+.header-brand-logo {
+  width: 24px;
+  vertical-align: middle;
+}
+
+.header-brand-title {
+  vertical-align: middle;
+}
+
+.header-nav {
+  margin: 5px 0;
 }
 
 .header-nav ul {
