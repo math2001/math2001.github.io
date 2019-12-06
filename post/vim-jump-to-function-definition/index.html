@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="generator" content="Hugo 0.61.0-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -20,12 +20,20 @@ quickly. Thankfully, there&#39;s fzf (with fzf.vim).">
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
-  --color: #333;
-  --font-mute: hsla(214, 3%, 59%, 1);
-  --font-mute: #888;
-  --purple: hsla(232, 59%, 58%, 1);
   --code-bg: #F3F3F3;
   --border-color: #EEE;
+  --content-width: 768px;
+
+  --primary0: hsl(232, 59%, 58%);
+  /* TODO when needed */
+  --primary1: hsl();
+  --primary2: hsl();
+
+  --grey0: hsl(214, 6%, 14%);
+  --grey1: hsl(214, 6%, 29%);
+  --grey2: hsl(214, 6%, 59%);
+  --grey3: hsl(214, 6%, 70%);
+  --grey4: hsl(214, 6%, 80%);
 }
 
 html {
@@ -35,20 +43,19 @@ html {
 
 * { box-sizing: border-box; }
 
-a {
-  color: var(--purple);
-}
-
 body {
   font-family: Roboto Slab, Roboto, Calibri, Corbel, sans-serif;
   margin: 0;
   padding: 0;
-  background: var(--light-blue);
-  background-color: #fff;
+  background-color: white;
   height: 100%;
   position: relative;
-  color: #333;
+  color: var(--grey0);
   line-height: 1.5;
+}
+
+a {
+  color: var(--primary0);
 }
 
 h1, h2, h3, h4 {
@@ -65,7 +72,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  color: var(--font-mute);
+  color: var(--grey2);
   font-weight: normal;
 }
 
@@ -78,8 +85,6 @@ main {
   margin-bottom: 20px;
   padding: 0 16px;
 }
-
-.tags { font-family: var(--monospace); }
 
 .page-content :not(pre) > code,
 .list-summary code {
@@ -101,16 +106,17 @@ main {
 }
 
 .tags a {
-  color: #888;
+  font-family: var(--monospace);
+  color: var(--grey2);
+  border: 1px solid var(--grey4);
   text-decoration: none;
-  border: 1px solid #ccc;
   padding: 1px 5px;
   font-size: 90%;
 }
 
 .tags a:hover {
-  border-color: #aaa;
-  color: #555;
+  color: var(--grey1);
+  border-color: var(--grey3);
 }
 
 footer {
@@ -202,17 +208,70 @@ footer {
   border-top: 1px solid var(--border-color);
 }
 
+/* Entries */
+
+
+.entry {
+  margin: 48px 0;
+}
+
+.entry-tags li {
+  display: inline-block;
+}
+
+.entry-title {
+  margin-bottom: 4px;
+}
+
+.entry-title a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: .2s all;
+  display: inline;
+}
+
+.entry-title a:hover {
+  color: var(--primary0);
+}
+
+.entry-tags {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.entry-summary {
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.entry-summary img {
+  max-width: 100%;
+}
+
+.entry-readmore {
+  text-align: right;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
 /* geektnt.com/how-to-remove-x-from-search-input-field-on-chrome-and-ie.html */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
+
 </style><style>
     .header {
   padding: 10px 15px;
   border-bottom: 1px solid var(--border-color);
   margin: 0 auto;
+}
+
+.header-inner {
+  margin: auto;
+  max-width: var(--content-width);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -292,7 +351,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 }
 
 .page-content {
-  width: 960px;
+  width: var(--content-width);
   max-width: 100%;
   margin: 20px auto;
   background: white;
@@ -407,20 +466,24 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   </g>
 </symbol></svg>
 <header class="header">
-      <h2 class="header-brand">
+      <div class="header-inner">
+        <h2 class="header-brand">
+          
+          <img src="/img/math2001.svg" alt="Round logo with a M in it (math2001&#39;s logo)" class="header-brand-logo">
+          
+          <a href="/" class="header-brand-title">math2001&#39;s blog</a>
+        </h2>
         
-        <img src="/img/math2001.svg" alt="Round logo with a M in it (math2001&#39;s logo)" class="header-brand-logo">
-        
-        <a href="/" class="header-brand-title">math2001&#39;s blog</a>
-      </h2><nav class="header-nav">
-        <ul>
-          
-          <li class="header-nav-item"><a href="/article/">Articles</a></li>
-          
-          <li class="header-nav-item"><a href="/post/">Posts</a></li>
-          
-        </ul>
-      </nav>
+        <nav class="header-nav">
+          <ul>
+            
+            <li class="header-nav-item"><a href="/article/">Articles</a></li>
+            
+            <li class="header-nav-item"><a href="/post/">Posts</a></li>
+            
+          </ul>
+        </nav>
+      </div>
     </header>
 <div class="page-top">
     <h1 class="page-title">Jump to function definition in vim</h1>
@@ -451,7 +514,7 @@ callback when the user chooses an option.</p>
 <p>And <code>ag</code> (a <em>very</em> fast version of grep) is going to find the all the function
 definitions in our project.</p>
 <p>For example, for a go project:</p>
-<pre><code>$ ag --go -s &quot;^func &quot; | tee
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ag --go -s &#34;^func &#34; | tee
 main.go:21:func index(w http.ResponseWriter, r *http.Request) {
 main.go:44:func initAPI(r *mux.Router) {
 main.go:50:func main() {
@@ -463,7 +526,7 @@ resp/resp.go:42:func Encode(w http.ResponseWriter, r *http.Request, e interface{
 services/db/db.go:17:func escape(s string) string {
 services/db/db.go:35:func (cfg Config) String() string {
 ...
-</code></pre><ul>
+</code></pre></div><ul>
 <li><code>--go</code> searches only through go files</li>
 <li><code>-s</code> makes it case sensitive</li>
 <li><code>&quot;^func &quot;</code> finds all the lines where we're defining a function</li>
@@ -474,11 +537,11 @@ what <code>ag</code> outputs when it's writing to a pipe, and not to a terminal 
 <p>We can't give this to <code>fzf</code> though, we need a find a way to &lsquo;hide&rsquo; the ugly
 path/line number at the beginning from the user (so that he only searches by
 function names).</p>
-<pre><code># from this
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># from this
 filename:line:rest
 # get this
 filename:line searchable
-</code></pre><p>where <code>searchable</code> is the interesting, clean part of the function signature.</p>
+</code></pre></div><p>where <code>searchable</code> is the interesting, clean part of the function signature.</p>
 <h2 id="awk-to-the-rescue"><code>awk</code> to the rescue</h2>
 <p>I'm not going to go into any details in this post, but with <code>awk</code>, we can do
 this.</p>
@@ -486,8 +549,8 @@ this.</p>
 <code>grep</code> and <code>sed</code> can do), and it's really fast. Use it when you're chaining
 commands.</p>
 <p>The magic command:</p>
-<pre><code>awk -F : '{ gsub(/^func | {$/, &quot;&quot;, $3); printf &quot;%s:%s %s\n&quot;, $1, $2, $3 }'
-</code></pre><p>Quick explanation:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">awk -F : &#39;{ gsub(/^func | {$/, &#34;&#34;, $3); printf &#34;%s:%s %s\n&#34;, $1, $2, $3 }&#39;
+</code></pre></div><p>Quick explanation:</p>
 <ul>
 <li><code>-F :</code> says that instead of using spaces as field separators, we're going to
 use colons.</li>
@@ -497,18 +560,18 @@ in the third field. This makes the function signature clean and user-friendly.</
 field, etc&hellip;</li>
 </ul>
 <p>This gives us a list of formatted lines like this:</p>
-<pre><code>filename:line signature
-</code></pre><p>Now, we can give this to <code>fzf</code>, and tell it to display only from the second
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">filename:line signature
+</code></pre></div><p>Now, we can give this to <code>fzf</code>, and tell it to display only from the second
 field and on (using the <code>--with-nth</code> option). And, remember, this one uses
 spaces as a field separator.  Therefore, it'll only print the function's
 signature.</p>
-<pre><code>filename:line signature
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">filename:line signature
 ^-----------^ ^-------^
 |             |
 |             | this is the second field
 |
 | this is the first field
-</code></pre><h4 id="the-callback">The callback</h4>
+</code></pre></div><h4 id="the-callback">The callback</h4>
 <p>Now, this is just vimscript.</p>
 <div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">fzf_default_action</span> <span class="p">=</span> {<span class="err">
 </span><span class="err"></span>	\ <span class="s1">&#39;ctrl-t&#39;</span>: <span class="s1">&#39;tab split&#39;</span><span class="p">,</span><span class="err">
@@ -584,8 +647,8 @@ signature.</p>
 </span><span class="err"></span><span class="err">
 </span></code></pre></div><p>So, if you paste this in your <code>.vimrc</code>, you'll be able to call the function like
 this:</p>
-<pre><code>:call FzfJumpDef('go')
-</code></pre><p>And it'll open the &ldquo;browser&rdquo; and you'll be able to jump to function definition.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">:call FzfJumpDef(&#39;go&#39;)
+</code></pre></div><p>And it'll open the &ldquo;browser&rdquo; and you'll be able to jump to function definition.</p>
 <p>Of course, typing this is every time a pain, so I'd recommend setting a shortcut
 for every go file that triggers this function, as <a href="/post/vim-filetype-specific-settings">explained in this
 post</a>.  Spoiler:</p>

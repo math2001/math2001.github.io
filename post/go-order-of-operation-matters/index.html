@@ -4,18 +4,18 @@
     <meta name="generator" content="Hugo 0.61.0-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="alternate" type="application/rss+xml" href="https://math2001.github.io/tags/find/index.xml" title="math2001's blog" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@_math2001">
     <meta name="twitter:creator" content="@_math2001">
 
-    <meta property="og:title" content="find">
+    <meta property="og:title" content="Go Order of Operation Matters">
     <meta property="og:image" content="https://math2001.github.io">
-    <meta property="og:url" content="https://math2001.github.io/tags/find/">
-    <meta property="og:description" content="">
+    <meta property="og:url" content="https://math2001.github.io/post/go-order-of-operation-matters/">
+    <meta property="og:description" content="In Go, two mathematically equivalent expression can yield different result
+based on the order in which you do things! Thanks rounding errors&hellip;">
 
     <link rel=icon type=image/png href='/img/math2001.png'>
-    <title>find - math2001&#39;s blog</title><style>
+    <title>Go Order of Operation Matters - math2001&#39;s blog</title><style>
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
@@ -316,23 +316,130 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 }
 
 </style><style>
-    .list-top {
+    .highlight .hll{background-color:#4f5b66}.highlight{background:#2b303b;color:#eff1f5}.highlight .c{color:#65737e}.highlight .err{color:#bf616a}.highlight .k{color:#b48ead}.highlight .l{color:#d08770}.highlight .n{color:#eff1f5}.highlight .o{color:#96b5b4}.highlight .p{color:#eff1f5}.highlight .cm{color:#65737e}.highlight .cp{color:#65737e}.highlight .c1{color:#65737e}.highlight .cs{color:#65737e}.highlight .gd{color:#bf616a}.highlight .ge{font-style:italic}.highlight .gh{color:#eff1f5;font-weight:700}.highlight .gi{color:#a3be8c}.highlight .gp{color:#65737e;font-weight:700}.highlight .gs{font-weight:700}.highlight .gu{color:#96b5b4;font-weight:700}.highlight .kc{color:#b48ead}.highlight .kd{color:#b48ead}.highlight .kn{color:#96b5b4}.highlight .kp{color:#b48ead}.highlight .kr{color:#b48ead}.highlight .kt{color:#ebcb8b}.highlight .ld{color:#a3be8c}.highlight .m{color:#d08770}.highlight .s{color:#a3be8c}.highlight .na{color:#8fa1b3}.highlight .nb{color:#eff1f5}.highlight .nc{color:#ebcb8b}.highlight .no{color:#bf616a}.highlight .nd{color:#96b5b4}.highlight .ni{color:#eff1f5}.highlight .ne{color:#bf616a}.highlight .nf{color:#8fa1b3}.highlight .nl{color:#eff1f5}.highlight .nn{color:#ebcb8b}.highlight .nx{color:#8fa1b3}.highlight .py{color:#eff1f5}.highlight .nt{color:#96b5b4}.highlight .nv{color:#bf616a}.highlight .ow{color:#96b5b4}.highlight .w{color:#eff1f5}.highlight .mf{color:#d08770}.highlight .mh{color:#d08770}.highlight .mi{color:#d08770}.highlight .mo{color:#d08770}.highlight .sb{color:#a3be8c}.highlight .sc{color:#eff1f5}.highlight .sd{color:#65737e}.highlight .s2{color:#a3be8c}.highlight .se{color:#d08770}.highlight .sh{color:#a3be8c}.highlight .si{color:#d08770}.highlight .sx{color:#a3be8c}.highlight .sr{color:#a3be8c}.highlight .s1{color:#a3be8c}.highlight .ss{color:#a3be8c}.highlight .bp{color:#eff1f5}.highlight .vc{color:#bf616a}.highlight .vg{color:#bf616a}.highlight .vi{color:#bf616a}.highlight .il{color:#d08770}
+
+</style><style>
+    .page-top {
+  padding: 0 10px;
   text-align: center;
 }
 
-.list-description {
-  color: var(--font-mute);
+.page-title {
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
-.list-entries {
+.page-tags,
+.page-tags li {
+  display: inline-block;
+}
+
+.page-tags {
+  text-align: center;
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.repository-star {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.page-warning {
+  text-align: center;
+}
+
+.page-content {
   width: var(--content-width);
   max-width: 100%;
-  margin: auto;
+  margin: 20px auto;
+  background: white;
+  text-align: justify;
+  padding: 10px 30px;
 }
 
-/* the style for entries is in common.css because it is also used on the home
- * page
- */
+.page-content hr {
+  border: none;
+  border-top: 4px solid hsla(192, 16%, 92%, 1);
+  margin: 30px auto;
+}
+
+.page-content img {
+  max-width: 100%;
+}
+
+.page-bottom {
+  text-align: center;
+  padding: 1px 0;
+}
+
+.page-share, .page-share-list {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page-share-list {
+  padding: 0;
+  list-style: none;
+}
+
+.page-share-list li {
+  display: inline-block;
+  margin: 5px;
+}
+
+.page-share-list svg {
+  width: 25px;
+  height: 25px;
+}
+
+.page-read-other {
+  margin-top: 40px;
+}
+
+.page-date {
+  color: hsla(230, 4%, 48%, 1);
+  font-style: italic;
+}
+
+/* content */
+
+.page-content .highlight {
+  font-family: var(--monospace);
+  font-size: .9em;
+}
+
+.page-content .highlight {
+  padding: 10px 20px;
+}
+
+.page-content blockquote {
+  border-left: 6px solid #ddd;
+  margin-left: 0;
+  padding-left: 10px;
+  color: #aaa;
+}
+
+.page-content table {
+  border-collapse: collapse;
+}
+
+.page-content td, th {
+  border: 1px solid #DDD;
+  padding: 2px 5px;
+}
+
+.page-content th {
+  font-weight: normal;
+  background-color: #F9F9F9;
+}
+
+.desmos {
+  display: block;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
 </style>
 
   </head>
@@ -377,57 +484,58 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
         </nav>
       </div>
     </header>
-<div class="list-top">
-    <h1>find <small>(1)</small></h1>
-    <div class="list-description"></div>
-</div>
+<div class="page-top">
+    <h1 class="page-title">Go Order of Operation Matters</h1>
 
-<section class="list-entries">
-  
-  
+    <p class="page-date">7 December 2019</p>
 
-<article class="entry">
-  <h3 class="entry-title">
-    <a href="/article/bashs-find-command/">Bash&#39;s find command</a>
-    <small class="entry-title-readingtime" title="1227 words">
-      (~ 6 min)
-    </small>
-  </h3>
-  <ul class="entry-tags tags">
-    
-    <li class="entry-tags-tag">
-      <a href="/tags/tip">tip</a>
-    </li>
-    
-    <li class="entry-tags-tag">
-      <a href="/tags/bash">bash</a>
-    </li>
-    
-    <li class="entry-tags-tag">
-      <a href="/tags/find">find</a>
-    </li>
-    
-    <li class="entry-tags-tag">
-      <a href="/tags/file-manupilation">file manupilation</a>
-    </li>
-    
-  </ul>
-  <div class="entry-summary">
-    <p>The <code>find</code> command in bash is quite powerful, and knowing the basics might save
-you some scripting.</p>
-<p>What does it do? It &ldquo;finds&rdquo; files. By default, it outputs their path relative to
-where you ran <code>find</code>. But, in addition of providing you with advanced &ldquo;filters&rdquo;
-it actually allows you to run commands on each of those files.</p>
-  </div>
-  
-  <p class="entry-readmore">
-    <a href="/article/bashs-find-command/">Keep reading this article →</a>
-  </p>
-  
-</article>
+    <ul class="page-tags tags">
+    </ul>
 
-  
-</section></div>
+    
+
+</div><section class="page-content"><p>In Go, two mathematically equivalent expression can yield different result
+based on the order in which you do things! Thanks rounding errors&hellip;</p>
+<p>For example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">// prints 0
+</span><span class="c1"></span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">// prints 5
+</span></code></pre></div><p>However, mathematically, they should both be 5 (we just moved the <code>/ 2</code> within
+a product).</p>
+<p>So why does go give different results? Both operations <code>/</code> and <code>*</code> have the
+same prevalence (unlike <code>+</code> and <code>/</code> for example, where the division would be
+evaluated first). Hence, they are evaluated from left to right.</p>
+<p>In the first case, <code>1 / 2</code> is evaluated, and then whatever that was is
+multiplied by <code>10</code>. Now, since both <code>1</code> and <code>2</code> are integers, go just gives
+back an <code>int</code>. Yet <code>0.5</code> can't be represented as an <code>int</code>, so it truncates the
+floating part and gives you <code>0</code>. <code>0 * 10</code> is still 0.</p>
+<p>You can figure out why the second case works.</p>
+<p>To counter that, you want to make sure that the operands are floats, so that go
+gives you floats back:</p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span> <span class="nx">does</span> <span class="nx">give</span> <span class="nx">you</span> <span class="mi">5</span>
+</code></pre></div></section>
+
+<div class="page-bottom">
+    <ul class="page-share-list">
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Go&#43;Order&#43;of&#43;Operation&#43;Matters&amp;url=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fgo-order-of-operation-matters%2F" target="_blank"
+                onclick="window.open(this.href, 'twitter-share', 'width=580,height=300');return false;">
+                <svg><use href="#si-twitter"></svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmath2001.github.io%2Fpost%2Fgo-order-of-operation-matters%2F" target="_blank"
+                onclick="window.open(this.href, 'facebook-share', 'width=580,height=300');return false;">
+                <svg><use href="#si-facebook"></svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://dev.to/new" target="_blank"
+                onclick="window.open(this.href, 'devto-share', 'width=580,height=300');return false;">
+                <svg><use href="#si-dev.to"></svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
 <footer>
     <div class="footer-splits">
         <div class="footer-split">

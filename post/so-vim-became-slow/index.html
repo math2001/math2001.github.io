@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="generator" content="Hugo 0.61.0-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -20,12 +20,20 @@ to &ldquo;normal&rdquo;. How do you find quickly the cause of this horrible disa
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
-  --color: #333;
-  --font-mute: hsla(214, 3%, 59%, 1);
-  --font-mute: #888;
-  --purple: hsla(232, 59%, 58%, 1);
   --code-bg: #F3F3F3;
   --border-color: #EEE;
+  --content-width: 768px;
+
+  --primary0: hsl(232, 59%, 58%);
+  /* TODO when needed */
+  --primary1: hsl();
+  --primary2: hsl();
+
+  --grey0: hsl(214, 6%, 14%);
+  --grey1: hsl(214, 6%, 29%);
+  --grey2: hsl(214, 6%, 59%);
+  --grey3: hsl(214, 6%, 70%);
+  --grey4: hsl(214, 6%, 80%);
 }
 
 html {
@@ -35,20 +43,19 @@ html {
 
 * { box-sizing: border-box; }
 
-a {
-  color: var(--purple);
-}
-
 body {
   font-family: Roboto Slab, Roboto, Calibri, Corbel, sans-serif;
   margin: 0;
   padding: 0;
-  background: var(--light-blue);
-  background-color: #fff;
+  background-color: white;
   height: 100%;
   position: relative;
-  color: #333;
+  color: var(--grey0);
   line-height: 1.5;
+}
+
+a {
+  color: var(--primary0);
 }
 
 h1, h2, h3, h4 {
@@ -65,7 +72,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  color: var(--font-mute);
+  color: var(--grey2);
   font-weight: normal;
 }
 
@@ -78,8 +85,6 @@ main {
   margin-bottom: 20px;
   padding: 0 16px;
 }
-
-.tags { font-family: var(--monospace); }
 
 .page-content :not(pre) > code,
 .list-summary code {
@@ -101,16 +106,17 @@ main {
 }
 
 .tags a {
-  color: #888;
+  font-family: var(--monospace);
+  color: var(--grey2);
+  border: 1px solid var(--grey4);
   text-decoration: none;
-  border: 1px solid #ccc;
   padding: 1px 5px;
   font-size: 90%;
 }
 
 .tags a:hover {
-  border-color: #aaa;
-  color: #555;
+  color: var(--grey1);
+  border-color: var(--grey3);
 }
 
 footer {
@@ -202,17 +208,70 @@ footer {
   border-top: 1px solid var(--border-color);
 }
 
+/* Entries */
+
+
+.entry {
+  margin: 48px 0;
+}
+
+.entry-tags li {
+  display: inline-block;
+}
+
+.entry-title {
+  margin-bottom: 4px;
+}
+
+.entry-title a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: .2s all;
+  display: inline;
+}
+
+.entry-title a:hover {
+  color: var(--primary0);
+}
+
+.entry-tags {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.entry-summary {
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.entry-summary img {
+  max-width: 100%;
+}
+
+.entry-readmore {
+  text-align: right;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
 /* geektnt.com/how-to-remove-x-from-search-input-field-on-chrome-and-ie.html */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
+
 </style><style>
     .header {
   padding: 10px 15px;
   border-bottom: 1px solid var(--border-color);
   margin: 0 auto;
+}
+
+.header-inner {
+  margin: auto;
+  max-width: var(--content-width);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -292,7 +351,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 }
 
 .page-content {
-  width: 960px;
+  width: var(--content-width);
   max-width: 100%;
   margin: 20px auto;
   background: white;
@@ -407,20 +466,24 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   </g>
 </symbol></svg>
 <header class="header">
-      <h2 class="header-brand">
+      <div class="header-inner">
+        <h2 class="header-brand">
+          
+          <img src="/img/math2001.svg" alt="Round logo with a M in it (math2001&#39;s logo)" class="header-brand-logo">
+          
+          <a href="/" class="header-brand-title">math2001&#39;s blog</a>
+        </h2>
         
-        <img src="/img/math2001.svg" alt="Round logo with a M in it (math2001&#39;s logo)" class="header-brand-logo">
-        
-        <a href="/" class="header-brand-title">math2001&#39;s blog</a>
-      </h2><nav class="header-nav">
-        <ul>
-          
-          <li class="header-nav-item"><a href="/article/">Articles</a></li>
-          
-          <li class="header-nav-item"><a href="/post/">Posts</a></li>
-          
-        </ul>
-      </nav>
+        <nav class="header-nav">
+          <ul>
+            
+            <li class="header-nav-item"><a href="/article/">Articles</a></li>
+            
+            <li class="header-nav-item"><a href="/post/">Posts</a></li>
+            
+          </ul>
+        </nav>
+      </div>
     </header>
 <div class="page-top">
     <h1 class="page-title">So vim got slow</h1>
@@ -447,16 +510,16 @@ enable them once at a time to know which one's slow.</p>
 (which is what plugins and what your vimrc is made out of). So, you can just
 profile everything, and see what take a long time to run. Here's how:</p>
 <p>You open vim, type in:</p>
-<pre><code class="language-vimscript" data-lang="vimscript">:profile start profile.log
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">:profile start profile.log
 :profile func *
 :profile file *
-</code></pre><p>You do the slow things (it can be just typing, running a function, etc), and
+</code></pre></div><p>You do the slow things (it can be just typing, running a function, etc), and
 then:</p>
-<pre><code class="language-vimscript" data-lang="vimscript">:profile pause
-</code></pre><p>And quit (<code>:qa</code>)</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">:profile pause
+</code></pre></div><p>And quit (<code>:qa</code>)</p>
 <p>Now open up <code>profile.log</code> (it might be fairly long), and go to the bottom.</p>
 <p>It'll look something like this:</p>
-<pre><code>FUNCTIONS SORTED ON SELF TIME¬
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">FUNCTIONS SORTED ON SELF TIME¬
 count  total (s)   self (s)  function¬
  6231   2.111606   1.448172  FoldFunctions()¬
  6231              0.623322  NextNonBlankLine()¬
@@ -478,7 +541,7 @@ count  total (s)   self (s)  function¬
     1   0.002176   0.000697  &lt;SNR&gt;56_DisablePostamble()¬
    12              0.000553  &lt;SNR&gt;14_fzf_call()¬
     1   0.112732   0.000545  &lt;SNR&gt;14_common_sink()¬
-</code></pre><p>And now, you should see something that sorts functions based on how long they
+</code></pre></div><p>And now, you should see something that sorts functions based on how long they
 took. You can now determine from which plugin/script that was (if you're not
 sure, a big fat <code>grep functionname -R</code> in your <code>.vim</code> directory should tell
 you), and you'll know which plugins slowing you down!</p>
@@ -489,9 +552,9 @@ statements were slow in each function by scrolling back up in the <code>profile.
 file ;)</p>
 <h4 id="nice-little-commands">Nice little commands</h4>
 <p>Put that in your <code>.vimrc</code> ;)</p>
-<pre><code class="language-vimscript" data-lang="vimscript">command! ProfileMe :profile start profile.log &lt;bar&gt; profile func * &lt;bar&gt; profile file *
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">command! ProfileMe :profile start profile.log &lt;bar&gt; profile func * &lt;bar&gt; profile file *
 command! ProfileStop :profile pause
-</code></pre></section>
+</code></pre></div></section>
 
 <div class="page-bottom">
     <ul class="page-share-list">

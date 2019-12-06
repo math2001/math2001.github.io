@@ -2,6 +2,11 @@
   padding: 10px 15px;
   border-bottom: 1px solid var(--border-color);
   margin: 0 auto;
+}
+
+.header-inner {
+  margin: auto;
+  max-width: var(--content-width);
   display: flex;
   align-items: center;
   flex-wrap: wrap;

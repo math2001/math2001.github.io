@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="generator" content="Hugo 0.61.0-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -22,12 +22,20 @@ it actually allows you to run commands on each of those files.">
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
-  --color: #333;
-  --font-mute: hsla(214, 3%, 59%, 1);
-  --font-mute: #888;
-  --purple: hsla(232, 59%, 58%, 1);
   --code-bg: #F3F3F3;
   --border-color: #EEE;
+  --content-width: 768px;
+
+  --primary0: hsl(232, 59%, 58%);
+  /* TODO when needed */
+  --primary1: hsl();
+  --primary2: hsl();
+
+  --grey0: hsl(214, 6%, 14%);
+  --grey1: hsl(214, 6%, 29%);
+  --grey2: hsl(214, 6%, 59%);
+  --grey3: hsl(214, 6%, 70%);
+  --grey4: hsl(214, 6%, 80%);
 }
 
 html {
@@ -37,20 +45,19 @@ html {
 
 * { box-sizing: border-box; }
 
-a {
-  color: var(--purple);
-}
-
 body {
   font-family: Roboto Slab, Roboto, Calibri, Corbel, sans-serif;
   margin: 0;
   padding: 0;
-  background: var(--light-blue);
-  background-color: #fff;
+  background-color: white;
   height: 100%;
   position: relative;
-  color: #333;
+  color: var(--grey0);
   line-height: 1.5;
+}
+
+a {
+  color: var(--primary0);
 }
 
 h1, h2, h3, h4 {
@@ -67,7 +74,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  color: var(--font-mute);
+  color: var(--grey2);
   font-weight: normal;
 }
 
@@ -80,8 +87,6 @@ main {
   margin-bottom: 20px;
   padding: 0 16px;
 }
-
-.tags { font-family: var(--monospace); }
 
 .page-content :not(pre) > code,
 .list-summary code {
@@ -103,16 +108,17 @@ main {
 }
 
 .tags a {
-  color: #888;
+  font-family: var(--monospace);
+  color: var(--grey2);
+  border: 1px solid var(--grey4);
   text-decoration: none;
-  border: 1px solid #ccc;
   padding: 1px 5px;
   font-size: 90%;
 }
 
 .tags a:hover {
-  border-color: #aaa;
-  color: #555;
+  color: var(--grey1);
+  border-color: var(--grey3);
 }
 
 footer {
@@ -204,17 +210,70 @@ footer {
   border-top: 1px solid var(--border-color);
 }
 
+/* Entries */
+
+
+.entry {
+  margin: 48px 0;
+}
+
+.entry-tags li {
+  display: inline-block;
+}
+
+.entry-title {
+  margin-bottom: 4px;
+}
+
+.entry-title a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: .2s all;
+  display: inline;
+}
+
+.entry-title a:hover {
+  color: var(--primary0);
+}
+
+.entry-tags {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.entry-summary {
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.entry-summary img {
+  max-width: 100%;
+}
+
+.entry-readmore {
+  text-align: right;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
 /* geektnt.com/how-to-remove-x-from-search-input-field-on-chrome-and-ie.html */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
+
 </style><style>
     .header {
   padding: 10px 15px;
   border-bottom: 1px solid var(--border-color);
   margin: 0 auto;
+}
+
+.header-inner {
+  margin: auto;
+  max-width: var(--content-width);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -294,7 +353,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 }
 
 .page-content {
-  width: 960px;
+  width: var(--content-width);
   max-width: 100%;
   margin: 20px auto;
   background: white;
@@ -409,20 +468,24 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   </g>
 </symbol></svg>
 <header class="header">
-      <h2 class="header-brand">
+      <div class="header-inner">
+        <h2 class="header-brand">
+          
+          <img src="/img/math2001.svg" alt="Round logo with a M in it (math2001&#39;s logo)" class="header-brand-logo">
+          
+          <a href="/" class="header-brand-title">math2001&#39;s blog</a>
+        </h2>
         
-        <img src="/img/math2001.svg" alt="Round logo with a M in it (math2001&#39;s logo)" class="header-brand-logo">
-        
-        <a href="/" class="header-brand-title">math2001&#39;s blog</a>
-      </h2><nav class="header-nav">
-        <ul>
-          
-          <li class="header-nav-item"><a href="/article/">Articles</a></li>
-          
-          <li class="header-nav-item"><a href="/post/">Posts</a></li>
-          
-        </ul>
-      </nav>
+        <nav class="header-nav">
+          <ul>
+            
+            <li class="header-nav-item"><a href="/article/">Articles</a></li>
+            
+            <li class="header-nav-item"><a href="/post/">Posts</a></li>
+            
+          </ul>
+        </nav>
+      </div>
     </header>
 <div class="page-top">
     <h1 class="page-title">Bash&#39;s find command</h1>
@@ -445,7 +508,7 @@ where you ran <code>find</code>. But, in addition of providing you with advanced
 it actually allows you to run commands on each of those files.</p>
 <h3 id="the-basics">The basics</h3>
 <p>With this structure:</p>
-<pre><code>.
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">.
 ├── app
 │   ├── index.html
 │   ├── app.js
@@ -454,7 +517,7 @@ it actually allows you to run commands on each of those files.</p>
     ├── app.js
     ├── index.html
     └── style.css
-</code></pre><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find
 .
 ./app
 ./app/app.js
@@ -476,7 +539,7 @@ app/style/style.css
 </code></pre></div><h3 id="tests-filters">Tests (filters)</h3>
 <p>Some of <code>find</code>'s power comes from it's ability to <em>filter</em> which files and
 folder it &ldquo;selects&rdquo;. They are called <em>tests</em>. So, here are some of them:</p>
-<h4 id="type"><code>-type</code></h4>
+<h4 id="-type"><code>-type</code></h4>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -type f
 ./app/app.js
 ./app/index.html
@@ -489,7 +552,7 @@ $ find -type d
 ./app
 ./dist
 </code></pre></div><p>Here, the filter is <code>-type</code>. You guessed it, <code>-type f</code> selects files, and <code>-type d</code> selects directories. <a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html#Type">More about <code>-type</code></a></p>
-<h4 id="name"><code>-name</code></h4>
+<h4 id="-name"><code>-name</code></h4>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -name <span class="s2">&#34;*.js&#34;</span>
 ./app/app.js
 ./dist/app.js
@@ -499,7 +562,7 @@ $ find -iname <span class="s2">&#34;*.JS&#34;</span>
 ./dist/app.js
 </code></pre></div><p><code>-name</code> takes a glob. The <code>-iname</code> variant is case insensitive. <a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html#Base-Name-Patterns">More about
 <code>-name</code></a></p>
-<h4 id="path"><code>-path</code></h4>
+<h4 id="-path"><code>-path</code></h4>
 <p>This is the exact same as name, except that it doesn't only apply on the
 filename, but the whole path (the path that would be outputted). Unlike <code>-path</code>
 though, <code>*</code> will match both <code>/</code> and leading dots in filename</p>
@@ -511,14 +574,14 @@ though, <code>*</code> will match both <code>/</code> and leading dots in filena
 matches the current file (<code>-name &quot;*.js&quot;</code> returns true for <code>app.js</code>, but not
 <code>index.html</code>).  You can conjugate everything with operators.</p>
 <p>Every operators only applies to the next expression. So, <code>expr1 or expr2 and expr3</code> is the same as <code>(expr1 or expr2) and expr3</code>.</p>
-<h4 id="and"><code>-and</code></h4>
+<h4 id="-and"><code>-and</code></h4>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -name <span class="s2">&#34;*.js&#34;</span> -type f
 ./app/app.js
 ./dist/app.js
 </code></pre></div><p>Pretty straight forward, right? You select items that finish with <code>.js</code> <em>and</em>
 that are file. You can guess the operator <code>-and</code> is the default one. Therefore
 <code>find -name &quot;*.js&quot; -and -type f</code> is the exact same!</p>
-<h4 id="or"><code>-or</code></h4>
+<h4 id="-or"><code>-or</code></h4>
 <p>What if you want <code>.js</code> and <code>.css</code> files? You can use the <code>-or</code> operator:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -name <span class="s2">&#34;*.js&#34;</span> -or -name <span class="s2">&#34;*.css&#34;</span> -type f
 ./app/app.js
@@ -526,7 +589,7 @@ that are file. You can guess the operator <code>-and</code> is the default one. 
 ./dist/app.js
 ./dist/style.css
 </code></pre></div><p>Again, this is the same as <code>find -name &quot;*.js&quot; -or -name &quot;*.css&quot; -and -type f</code>.</p>
-<h4 id="not"><code>-not</code></h4>
+<h4 id="-not"><code>-not</code></h4>
 <p>If you want every files that do <em>not</em> end with <code>.js</code>, you can do:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ find -not -name <span class="s2">&#34;*.js&#34;</span> -type f
 ./app/index.html
@@ -548,16 +611,16 @@ finishes by <code>.js</code> or any directories.</p>
 <h4 id="comma-">Comma <code>,</code></h4>
 <p>Separates 2 expressions: it evaluates both of them, but only returns the value
 of the second one.</p>
-<pre><code>$ find -name &quot;whatever&quot; , -name &quot;*.html&quot;
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ find -name &#34;whatever&#34; , -name &#34;*.html&#34;
 ./app/index.html
 ./dist/index.html
-</code></pre><h4 id="aliases">Aliases</h4>
+</code></pre></div><h4 id="aliases">Aliases</h4>
 <p>You can use some aliases, although I don't recommend doing so, they aren't as
 clear:</p>
-<pre><code>-o = -or
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">-o = -or
 -a = -and
-! = -not (you'll need to escape it though, like so \!)
-</code></pre><p><a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html#Combining-Primaries-With-Operators">More about operators</a></p>
+! = -not (you&#39;ll need to escape it though, like so \!)
+</code></pre></div><p><a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html#Combining-Primaries-With-Operators">More about operators</a></p>
 <h3 id="actions">Actions</h3>
 <p>Now, printing out the filenames if fun, doing some stuff with them is even
 better! And guess why it actually prints out the filenames: because the default
@@ -571,7 +634,7 @@ action is <code>-print</code>!</p>
 ./dist/style.css
 </code></pre></div><p>It's exactly what you'd expect, right?</p>
 <p>Note: Just as the tests, actions <strong>return a value</strong> too. Remember this.</p>
-<h4 id="delete"><code>-delete</code></h4>
+<h4 id="-delete"><code>-delete</code></h4>
 <p><code>-delete</code> is a pretty useful action. Guess what it does: deletes files (watch
 out though: it doesn't throw what it deletes to the bin, it <em>actually</em> deletes
 them, like <code>rm</code>).</p>
@@ -581,7 +644,7 @@ them, like <code>rm</code>).</p>
 </code></pre></div><p>Gone! Every temp files are gone!</p>
 <p>What I recommend you do before this is run just <code>find -name &quot;*~&quot;</code> so that you
 see which file are going to be deleted.</p>
-<h4 id="exec"><code>-exec</code></h4>
+<h4 id="-exec"><code>-exec</code></h4>
 <p>If you want to do some more complex things though, you might want to use the
 action <code>-exec</code>.</p>
 <p>This action takes an undefined number of parameters representing a command that
@@ -611,17 +674,17 @@ line length of your system allows.</p>
 <p>Note that <code>{} +</code> has to be at the <em>end</em> of the command. <a href="https://www.gnu.org/software/findutils/manual/html_mono/find.html#Multiple-Files">More about
 optimizing</a></p>
 <h3 id="tips-and-tricks">Tips and tricks</h3>
-<h4 id="maxdepth"><code>-maxdepth</code></h4>
+<h4 id="-maxdepth"><code>-maxdepth</code></h4>
 <blockquote>
 <p>Descend at most levels (a non-negative integer) levels of directories below
 the command line arguments. ‘-maxdepth 0’ means only apply the tests and
 actions to the command line arguments.</p>
 </blockquote>
-<h4 id="depth"><code>-depth</code></h4>
+<h4 id="-depth"><code>-depth</code></h4>
 <p>The <code>-depth</code> option makes <code>find</code> list folders&rsquo; <em>content</em> before itself.</p>
 <p>Note: the <code>-delete</code> action implies <code>-depth</code></p>
 <p>Examples are shown in the <code>-prune</code> explanation.</p>
-<h4 id="prune"><code>-prune</code></h4>
+<h4 id="-prune"><code>-prune</code></h4>
 <p>The <code>-prune</code> action allows you to prevent <code>find</code> from going into a directory
 that matches some tests. Weirdly enough though, it returns <code>true</code> when it found
 a directory to ignore. For example:</p>

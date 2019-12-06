@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="generator" content="Hugo 0.61.0-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="alternate" type="application/rss+xml" href="https://math2001.github.io/tags/bash/index.xml" title="math2001's blog" />
@@ -19,12 +19,20 @@
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
-  --color: #333;
-  --font-mute: hsla(214, 3%, 59%, 1);
-  --font-mute: #888;
-  --purple: hsla(232, 59%, 58%, 1);
   --code-bg: #F3F3F3;
   --border-color: #EEE;
+  --content-width: 768px;
+
+  --primary0: hsl(232, 59%, 58%);
+  /* TODO when needed */
+  --primary1: hsl();
+  --primary2: hsl();
+
+  --grey0: hsl(214, 6%, 14%);
+  --grey1: hsl(214, 6%, 29%);
+  --grey2: hsl(214, 6%, 59%);
+  --grey3: hsl(214, 6%, 70%);
+  --grey4: hsl(214, 6%, 80%);
 }
 
 html {
@@ -34,20 +42,19 @@ html {
 
 * { box-sizing: border-box; }
 
-a {
-  color: var(--purple);
-}
-
 body {
   font-family: Roboto Slab, Roboto, Calibri, Corbel, sans-serif;
   margin: 0;
   padding: 0;
-  background: var(--light-blue);
-  background-color: #fff;
+  background-color: white;
   height: 100%;
   position: relative;
-  color: #333;
+  color: var(--grey0);
   line-height: 1.5;
+}
+
+a {
+  color: var(--primary0);
 }
 
 h1, h2, h3, h4 {
@@ -64,7 +71,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  color: var(--font-mute);
+  color: var(--grey2);
   font-weight: normal;
 }
 
@@ -77,8 +84,6 @@ main {
   margin-bottom: 20px;
   padding: 0 16px;
 }
-
-.tags { font-family: var(--monospace); }
 
 .page-content :not(pre) > code,
 .list-summary code {
@@ -100,16 +105,17 @@ main {
 }
 
 .tags a {
-  color: #888;
+  font-family: var(--monospace);
+  color: var(--grey2);
+  border: 1px solid var(--grey4);
   text-decoration: none;
-  border: 1px solid #ccc;
   padding: 1px 5px;
   font-size: 90%;
 }
 
 .tags a:hover {
-  border-color: #aaa;
-  color: #555;
+  color: var(--grey1);
+  border-color: var(--grey3);
 }
 
 footer {
@@ -201,17 +207,70 @@ footer {
   border-top: 1px solid var(--border-color);
 }
 
+/* Entries */
+
+
+.entry {
+  margin: 48px 0;
+}
+
+.entry-tags li {
+  display: inline-block;
+}
+
+.entry-title {
+  margin-bottom: 4px;
+}
+
+.entry-title a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: .2s all;
+  display: inline;
+}
+
+.entry-title a:hover {
+  color: var(--primary0);
+}
+
+.entry-tags {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.entry-summary {
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.entry-summary img {
+  max-width: 100%;
+}
+
+.entry-readmore {
+  text-align: right;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
 /* geektnt.com/how-to-remove-x-from-search-input-field-on-chrome-and-ie.html */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
+
 </style><style>
     .header {
   padding: 10px 15px;
   border-bottom: 1px solid var(--border-color);
   margin: 0 auto;
+}
+
+.header-inner {
+  margin: auto;
+  max-width: var(--content-width);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -265,54 +324,15 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   color: var(--font-mute);
 }
 
-.list-window {
-  width: 750px;
+.list-entries {
+  width: var(--content-width);
+  max-width: 100%;
   margin: auto;
-  max-width: 100%;
 }
 
-.list-list {
-  outline: none;
-  padding: 0;
-  list-style: none;
-  padding: 0 10px;
-}
-
-.list-content {
-  padding: 0px;
-/*  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-*/
-  display: block;
-}
-
-
-.list-content-tags li {
-  display: inline-block;
-}
-
-.list-link {
-  color: inherit;
-  text-decoration: none;
-  display: inline-block;
-  transition: .2s all;
-  display: inline;
-}
-
-.list-link:hover {
-  color: var(--purple)
-}
-
-.list-summary {
-  margin-top: 20px;
-  text-align: justify;
-}
-
-.list-summary img {
-  max-width: 100%;
-}
+/* the style for entries is in common.css because it is also used on the home
+ * page
+ */
 </style>
 
   </head>
@@ -338,143 +358,243 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   </g>
 </symbol></svg>
 <header class="header">
-      <h2 class="header-brand">
+      <div class="header-inner">
+        <h2 class="header-brand">
+          
+          <img src="/img/math2001.svg" alt="Round logo with a M in it (math2001&#39;s logo)" class="header-brand-logo">
+          
+          <a href="/" class="header-brand-title">math2001&#39;s blog</a>
+        </h2>
         
-        <img src="/img/math2001.svg" alt="Round logo with a M in it (math2001&#39;s logo)" class="header-brand-logo">
-        
-        <a href="/" class="header-brand-title">math2001&#39;s blog</a>
-      </h2><nav class="header-nav">
-        <ul>
-          
-          <li class="header-nav-item"><a href="/article/">Articles</a></li>
-          
-          <li class="header-nav-item"><a href="/post/">Posts</a></li>
-          
-        </ul>
-      </nav>
+        <nav class="header-nav">
+          <ul>
+            
+            <li class="header-nav-item"><a href="/article/">Articles</a></li>
+            
+            <li class="header-nav-item"><a href="/post/">Posts</a></li>
+            
+          </ul>
+        </nav>
+      </div>
     </header>
 <div class="list-top">
     <h1>bash <small>(5)</small></h1>
     <div class="list-description"></div>
 </div>
 
-<div class="list-window">
-    <ul class="list-list">
-        
-        <li class="list-content">
-              <h3 class='list-title'><a class=list-link href="/post/the-last-terminal-title/">
-                  The Last Terminal Title</a>
-                  <small class="list-content-reading-time"
-                      title="293 words">(~ 2 min)</small>
-              </h3>
-              <ul class="list-content-tags tags">
-                  <li><a href="/tags/tip">tip</a></li>
-                  <li><a href="/tags/bash">bash</a></li>
-                  <li><a href="/tags/terminal">terminal</a></li>
-              </ul>
-              <div class="list-summary"><p><img src="/img/tmux-title.png" alt="ls@asyncio      git@dotfiles"></p>
+<section class="list-entries">
+  
+  
+
+<article class="entry">
+  <h3 class="entry-title">
+    <a href="/post/the-last-terminal-title/">The Last Terminal Title</a>
+    <small class="entry-title-readingtime" title="293 words">
+      (~ 2 min)
+    </small>
+  </h3>
+  <ul class="entry-tags tags">
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/tip">tip</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/bash">bash</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/terminal">terminal</a>
+    </li>
+    
+  </ul>
+  <div class="entry-summary">
+    <p><img src="/img/tmux-title.png" alt="ls@asyncio      git@dotfiles"></p>
 <p>I use tmux, and in the tabs title, it displays the terminal's title, which is
-just done by this 2 lines in your <code>.tmux.conf</code></p></div>
-              
-              <p class='align-right'>
-                  <a class="list-readmore" href="/post/the-last-terminal-title/">Read more →</a>
-              </p>
-              
-        </li>
-        
-        <li class="list-content">
-              <h3 class='list-title'><a class=list-link href="/post/bashs-fc-command/">
-                  Bash&#39;s fc command</a>
-                  <small class="list-content-reading-time"
-                      title="232 words">(~ 2 min)</small>
-              </h3>
-              <ul class="list-content-tags tags">
-                  <li><a href="/tags/tip">tip</a></li>
-                  <li><a href="/tags/bash">bash</a></li>
-                  <li><a href="/tags/editor">editor</a></li>
-              </ul>
-              <div class="list-summary"><p>When editing long commands in your terminal (you know, the one that wraps
+just done by this 2 lines in your <code>.tmux.conf</code></p>
+  </div>
+  
+  <p class="entry-readmore">
+    <a href="/post/the-last-terminal-title/">Keep reading this post →</a>
+  </p>
+  
+</article>
+
+  
+  
+
+<article class="entry">
+  <h3 class="entry-title">
+    <a href="/post/bashs-fc-command/">Bash&#39;s fc command</a>
+    <small class="entry-title-readingtime" title="232 words">
+      (~ 2 min)
+    </small>
+  </h3>
+  <ul class="entry-tags tags">
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/tip">tip</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/bash">bash</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/editor">editor</a>
+    </li>
+    
+  </ul>
+  <div class="entry-summary">
+    <p>When editing long commands in your terminal (you know, the one that wraps
 😉), sometimes you'd be better of using your actual editor (like vim or
-Sublime). And guess what? Bash let's you do that! 🎉</p></div>
-              
-              <p class='align-right'>
-                  <a class="list-readmore" href="/post/bashs-fc-command/">Read more →</a>
-              </p>
-              
-        </li>
-        
-        <li class="list-content">
-              <h3 class='list-title'><a class=list-link href="/article/bashs-find-command/">
-                  Bash&#39;s find command</a>
-                  <small class="list-content-reading-time"
-                      title="1227 words">(~ 6 min)</small>
-              </h3>
-              <ul class="list-content-tags tags">
-                  <li><a href="/tags/tip">tip</a></li>
-                  <li><a href="/tags/bash">bash</a></li>
-                  <li><a href="/tags/find">find</a></li>
-                  <li><a href="/tags/file-manupilation">file manupilation</a></li>
-              </ul>
-              <div class="list-summary"><p>The <code>find</code> command in bash is quite powerful, and knowing the basics might save
+Sublime). And guess what? Bash let's you do that! 🎉</p>
+  </div>
+  
+  <p class="entry-readmore">
+    <a href="/post/bashs-fc-command/">Keep reading this post →</a>
+  </p>
+  
+</article>
+
+  
+  
+
+<article class="entry">
+  <h3 class="entry-title">
+    <a href="/article/bashs-find-command/">Bash&#39;s find command</a>
+    <small class="entry-title-readingtime" title="1227 words">
+      (~ 6 min)
+    </small>
+  </h3>
+  <ul class="entry-tags tags">
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/tip">tip</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/bash">bash</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/find">find</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/file-manupilation">file manupilation</a>
+    </li>
+    
+  </ul>
+  <div class="entry-summary">
+    <p>The <code>find</code> command in bash is quite powerful, and knowing the basics might save
 you some scripting.</p>
 <p>What does it do? It &ldquo;finds&rdquo; files. By default, it outputs their path relative to
 where you ran <code>find</code>. But, in addition of providing you with advanced &ldquo;filters&rdquo;
-it actually allows you to run commands on each of those files.</p></div>
-              
-              <p class='align-right'>
-                  <a class="list-readmore" href="/article/bashs-find-command/">Read more →</a>
-              </p>
-              
-        </li>
-        
-        <li class="list-content">
-              <h3 class='list-title'><a class=list-link href="/post/hugo-deploying-github-pages/">
-                  Deploying a hugo site on GitHub pages</a>
-                  <small class="list-content-reading-time"
-                      title="290 words">(~ 2 min)</small>
-              </h3>
-              <ul class="list-content-tags tags">
-                  <li><a href="/tags/howto">howto</a></li>
-                  <li><a href="/tags/hugo">hugo</a></li>
-                  <li><a href="/tags/static-site">static site</a></li>
-                  <li><a href="/tags/bash">bash</a></li>
-                  <li><a href="/tags/github-pages">github-pages</a></li>
-              </ul>
-              <div class="list-summary"><p>When you want to deploy a static website built with the fantastic <a href="https://gohugo.io">Hugo</a> on
+it actually allows you to run commands on each of those files.</p>
+  </div>
+  
+  <p class="entry-readmore">
+    <a href="/article/bashs-find-command/">Keep reading this article →</a>
+  </p>
+  
+</article>
+
+  
+  
+
+<article class="entry">
+  <h3 class="entry-title">
+    <a href="/post/hugo-deploying-github-pages/">Deploying a hugo site on GitHub pages</a>
+    <small class="entry-title-readingtime" title="290 words">
+      (~ 2 min)
+    </small>
+  </h3>
+  <ul class="entry-tags tags">
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/howto">howto</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/hugo">hugo</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/static-site">static site</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/bash">bash</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/github-pages">github-pages</a>
+    </li>
+    
+  </ul>
+  <div class="entry-summary">
+    <p>When you want to deploy a static website built with the fantastic <a href="https://gohugo.io">Hugo</a> on
 GitHub pages, you don't have 100 of possibilities. A clean one, and an easy one
-😄.</p></div>
-              
-              <p class='align-right'>
-                  <a class="list-readmore" href="/post/hugo-deploying-github-pages/">Read more →</a>
-              </p>
-              
-        </li>
-        
-        <li class="list-content">
-              <h3 class='list-title'><a class=list-link href="/post/change-shell-run-external-command-vim/">
-                  Change shell used to run external command</a>
-                  <small class="list-content-reading-time"
-                      title="69 words">(~ 1 min)</small>
-              </h3>
-              <ul class="list-content-tags tags">
-                  <li><a href="/tags/tip">tip</a></li>
-                  <li><a href="/tags/vim">vim</a></li>
-                  <li><a href="/tags/shell">shell</a></li>
-                  <li><a href="/tags/bash">bash</a></li>
-                  <li><a href="/tags/windows">windows</a></li>
-                  <li><a href="/tags/sh">sh</a></li>
-              </ul>
-              <div class="list-summary"><p>On windows, the cmd sucks. But if you have sh installed from git-for-windows
-for example, you can tell vim to run external commands <code>:!</code> using this <code>sh</code>!.</p></div>
-              
-              <p class='align-right'>
-                  <a class="list-readmore" href="/post/change-shell-run-external-command-vim/">Read more →</a>
-              </p>
-              
-        </li>
-        
-    </ul>
-</div></div>
+😄.</p>
+  </div>
+  
+  <p class="entry-readmore">
+    <a href="/post/hugo-deploying-github-pages/">Keep reading this post →</a>
+  </p>
+  
+</article>
+
+  
+  
+
+<article class="entry">
+  <h3 class="entry-title">
+    <a href="/post/change-shell-run-external-command-vim/">Change shell used to run external command</a>
+    <small class="entry-title-readingtime" title="69 words">
+      (~ 1 min)
+    </small>
+  </h3>
+  <ul class="entry-tags tags">
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/tip">tip</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/vim">vim</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/shell">shell</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/bash">bash</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/windows">windows</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/sh">sh</a>
+    </li>
+    
+  </ul>
+  <div class="entry-summary">
+    <p>On windows, the cmd sucks. But if you have sh installed from git-for-windows
+for example, you can tell vim to run external commands <code>:!</code> using this <code>sh</code>!.</p>
+  </div>
+  
+  <p class="entry-readmore">
+    <a href="/post/change-shell-run-external-command-vim/">Keep reading this post →</a>
+  </p>
+  
+</article>
+
+  
+</section></div>
 <footer>
     <div class="footer-splits">
         <div class="footer-split">

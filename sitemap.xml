@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://math2001.github.io/post/go-order-of-operation-matters/</loc>
+    <lastmod>2019-12-07T10:00:06+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://math2001.github.io/</loc>
+    <lastmod>2019-12-07T10:00:06+11:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://math2001.github.io/tags/firefox/</loc>
     <lastmod>2019-11-29T09:07:19+11:00</lastmod>
   </url>
   
   <url>
     <loc>https://math2001.github.io/post/firefox-implementing-feature-from-comment/</loc>
-    <lastmod>2019-11-29T09:07:19+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://math2001.github.io/</loc>
     <lastmod>2019-11-29T09:07:19+11:00</lastmod>
   </url>
   

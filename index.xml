@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
-    <lastBuildDate>Fri, 29 Nov 2019 09:07:19 +1100</lastBuildDate>
+    <lastBuildDate>Sat, 07 Dec 2019 10:00:06 +1100</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go Order of Operation Matters</title>
+      <link>https://math2001.github.io/post/go-order-of-operation-matters/</link>
+      <pubDate>Sat, 07 Dec 2019 10:00:06 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/post/go-order-of-operation-matters/</guid>
+      <description>&lt;p&gt;In Go, two mathematically equivalent expression can yield different result
+based on the order in which you do things! Thanks rounding errors&amp;hellip;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Firefox Implementing Feature From Comment</title>

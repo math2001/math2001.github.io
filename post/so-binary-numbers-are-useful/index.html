@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="generator" content="Hugo 0.61.0-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
@@ -25,12 +25,20 @@ who write some code with all these different symbols, letters, and numbers?
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
-  --color: #333;
-  --font-mute: hsla(214, 3%, 59%, 1);
-  --font-mute: #888;
-  --purple: hsla(232, 59%, 58%, 1);
   --code-bg: #F3F3F3;
   --border-color: #EEE;
+  --content-width: 768px;
+
+  --primary0: hsl(232, 59%, 58%);
+  /* TODO when needed */
+  --primary1: hsl();
+  --primary2: hsl();
+
+  --grey0: hsl(214, 6%, 14%);
+  --grey1: hsl(214, 6%, 29%);
+  --grey2: hsl(214, 6%, 59%);
+  --grey3: hsl(214, 6%, 70%);
+  --grey4: hsl(214, 6%, 80%);
 }
 
 html {
@@ -40,20 +48,19 @@ html {
 
 * { box-sizing: border-box; }
 
-a {
-  color: var(--purple);
-}
-
 body {
   font-family: Roboto Slab, Roboto, Calibri, Corbel, sans-serif;
   margin: 0;
   padding: 0;
-  background: var(--light-blue);
-  background-color: #fff;
+  background-color: white;
   height: 100%;
   position: relative;
-  color: #333;
+  color: var(--grey0);
   line-height: 1.5;
+}
+
+a {
+  color: var(--primary0);
 }
 
 h1, h2, h3, h4 {
@@ -70,7 +77,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  color: var(--font-mute);
+  color: var(--grey2);
   font-weight: normal;
 }
 
@@ -83,8 +90,6 @@ main {
   margin-bottom: 20px;
   padding: 0 16px;
 }
-
-.tags { font-family: var(--monospace); }
 
 .page-content :not(pre) > code,
 .list-summary code {
@@ -106,16 +111,17 @@ main {
 }
 
 .tags a {
-  color: #888;
+  font-family: var(--monospace);
+  color: var(--grey2);
+  border: 1px solid var(--grey4);
   text-decoration: none;
-  border: 1px solid #ccc;
   padding: 1px 5px;
   font-size: 90%;
 }
 
 .tags a:hover {
-  border-color: #aaa;
-  color: #555;
+  color: var(--grey1);
+  border-color: var(--grey3);
 }
 
 footer {
@@ -207,17 +213,70 @@ footer {
   border-top: 1px solid var(--border-color);
 }
 
+/* Entries */
+
+
+.entry {
+  margin: 48px 0;
+}
+
+.entry-tags li {
+  display: inline-block;
+}
+
+.entry-title {
+  margin-bottom: 4px;
+}
+
+.entry-title a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: .2s all;
+  display: inline;
+}
+
+.entry-title a:hover {
+  color: var(--primary0);
+}
+
+.entry-tags {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.entry-summary {
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.entry-summary img {
+  max-width: 100%;
+}
+
+.entry-readmore {
+  text-align: right;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
 /* geektnt.com/how-to-remove-x-from-search-input-field-on-chrome-and-ie.html */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
+
 </style><style>
     .header {
   padding: 10px 15px;
   border-bottom: 1px solid var(--border-color);
   margin: 0 auto;
+}
+
+.header-inner {
+  margin: auto;
+  max-width: var(--content-width);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -297,7 +356,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 }
 
 .page-content {
-  width: 960px;
+  width: var(--content-width);
   max-width: 100%;
   margin: 20px auto;
   background: white;
@@ -412,20 +471,24 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   </g>
 </symbol></svg>
 <header class="header">
-      <h2 class="header-brand">
+      <div class="header-inner">
+        <h2 class="header-brand">
+          
+          <img src="/img/math2001.svg" alt="Round logo with a M in it (math2001&#39;s logo)" class="header-brand-logo">
+          
+          <a href="/" class="header-brand-title">math2001&#39;s blog</a>
+        </h2>
         
-        <img src="/img/math2001.svg" alt="Round logo with a M in it (math2001&#39;s logo)" class="header-brand-logo">
-        
-        <a href="/" class="header-brand-title">math2001&#39;s blog</a>
-      </h2><nav class="header-nav">
-        <ul>
-          
-          <li class="header-nav-item"><a href="/article/">Articles</a></li>
-          
-          <li class="header-nav-item"><a href="/post/">Posts</a></li>
-          
-        </ul>
-      </nav>
+        <nav class="header-nav">
+          <ul>
+            
+            <li class="header-nav-item"><a href="/article/">Articles</a></li>
+            
+            <li class="header-nav-item"><a href="/post/">Posts</a></li>
+            
+          </ul>
+        </nav>
+      </div>
     </header>
 <div class="page-top">
     <h1 class="page-title">So binary numbers are useful?</h1>
@@ -546,14 +609,14 @@ version and see which one matches, which isn't efficient at all. Instead, here's
 a better way to do it.</p>
 <p>First, we must understand that every bit as a value. The last number is worth 1,
 and every other number is worth the double of the value of the number on its right.</p>
-<pre><code>100101
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">100101
      ^ worth 1
     ^ worth 2 (2 x 1)
    ^ worth 4 (2 x 2)
   ^ worth 8 (2 x 4)
  ^ worth 16 (2 x 8)
 ^ worth 32 (2 x 16)
-</code></pre><p>Get it? Let's move on then.</p>
+</code></pre></div><p>Get it? Let's move on then.</p>
 <blockquote>
 <p>The value of a binary number is the sum of each value of the bit that are equal to 1</p>
 </blockquote>
@@ -578,18 +641,18 @@ awesome, but pretty much every programming language should be able to do this.</
 the <em>binary form</em> of the number.</p>
 <h4 id="the-and-bitwise-operator">The &ldquo;and&rdquo; bitwise operator</h4>
 <p>It's basically the regular <code>and</code> operator for every bit in our numbers.</p>
-<pre><code>First:  10111001
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">First:  10111001
 Second: 01011010
 Result: 00011000
-</code></pre><p>In simple words, it adds a 1 to the result if both current bits are a 1 too,
+</code></pre></div><p>In simple words, it adds a 1 to the result if both current bits are a 1 too,
 otherwise, it adds a 0.</p>
 <h4 id="the-or-bitwise-operator">The &ldquo;or&rdquo; bitwise operator</h4>
 <p>You guessed it, it's the equivalent of the <code>or</code> operator for every bit in our
 numbers.</p>
-<pre><code>First:  10111001
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">First:  10111001
 Second: 01011010
 Result: 11111011
-</code></pre><p>In simple words, it adds a 1 to the result if at least one bit is 1, otherwise a
+</code></pre></div><p>In simple words, it adds a 1 to the result if at least one bit is 1, otherwise a
 0.</p>
 <h4 id="python-way">Python way</h4>
 <p>In python, here's what it'd look like:</p>
@@ -627,12 +690,12 @@ dividable both by 2 and 5.</p>
 specific bit.</p>
 <p>So, which numbers could we combine (using the <code>or</code> bitwise operator) in any
 order so that we could tell which one was used? These ones (in binary form):</p>
-<pre><code>   1
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">   1
   10
  100
 1000
 ...
-</code></pre><p>Do you understand? If you combine <code>1</code> with <code>100</code> using the <code>or</code> bitwise
+</code></pre></div><p>Do you understand? If you combine <code>1</code> with <code>100</code> using the <code>or</code> bitwise
 operator, you'll get <code>101</code>, and you'll know that you used <code>100</code> and <code>1</code>.</p>
 <p>Do you recognize the relation between those numbers? They're the double of the previous
 one, each time: 1, 2, 4, 8, etc&hellip;</p>

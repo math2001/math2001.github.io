@@ -42,16 +42,22 @@
 
 .home-last-entries {
   max-width: 100%;
-  width: 978px;
+  width: 1280px;
   margin: auto;
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.home-entry {
-  max-width: 384px;
+.entry {
+  max-width: 464px;
+  /* we need 0 vertical margin, because we are in a flex (entries), so that
+   * means that margins add up (spacing between entries 48 + 48), unlike in
+   * regular flows
+   */
+  margin: 0;
+  padding: 0 16px;
 }
 
 .home-closing {

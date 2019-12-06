@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta name="generator" content="Hugo 0.60.1" />
+    <meta name="generator" content="Hugo 0.61.0-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="alternate" type="application/rss+xml" href="https://math2001.github.io/tags/fzf/index.xml" title="math2001's blog" />
@@ -19,12 +19,20 @@
     :root {
   --light-blue: hsla(195, 55%, 98%, 1);
   --monospace: Fira Code, Fira Mono, Menlo, Inconsolata, consolas, monospace;
-  --color: #333;
-  --font-mute: hsla(214, 3%, 59%, 1);
-  --font-mute: #888;
-  --purple: hsla(232, 59%, 58%, 1);
   --code-bg: #F3F3F3;
   --border-color: #EEE;
+  --content-width: 768px;
+
+  --primary0: hsl(232, 59%, 58%);
+  /* TODO when needed */
+  --primary1: hsl();
+  --primary2: hsl();
+
+  --grey0: hsl(214, 6%, 14%);
+  --grey1: hsl(214, 6%, 29%);
+  --grey2: hsl(214, 6%, 59%);
+  --grey3: hsl(214, 6%, 70%);
+  --grey4: hsl(214, 6%, 80%);
 }
 
 html {
@@ -34,20 +42,19 @@ html {
 
 * { box-sizing: border-box; }
 
-a {
-  color: var(--purple);
-}
-
 body {
   font-family: Roboto Slab, Roboto, Calibri, Corbel, sans-serif;
   margin: 0;
   padding: 0;
-  background: var(--light-blue);
-  background-color: #fff;
+  background-color: white;
   height: 100%;
   position: relative;
-  color: #333;
+  color: var(--grey0);
   line-height: 1.5;
+}
+
+a {
+  color: var(--primary0);
 }
 
 h1, h2, h3, h4 {
@@ -64,7 +71,7 @@ h4 { font-size: 120%; }
 
 h1 > small, h2 > small, h3 > small {
   font-size: 70%;
-  color: var(--font-mute);
+  color: var(--grey2);
   font-weight: normal;
 }
 
@@ -77,8 +84,6 @@ main {
   margin-bottom: 20px;
   padding: 0 16px;
 }
-
-.tags { font-family: var(--monospace); }
 
 .page-content :not(pre) > code,
 .list-summary code {
@@ -100,16 +105,17 @@ main {
 }
 
 .tags a {
-  color: #888;
+  font-family: var(--monospace);
+  color: var(--grey2);
+  border: 1px solid var(--grey4);
   text-decoration: none;
-  border: 1px solid #ccc;
   padding: 1px 5px;
   font-size: 90%;
 }
 
 .tags a:hover {
-  border-color: #aaa;
-  color: #555;
+  color: var(--grey1);
+  border-color: var(--grey3);
 }
 
 footer {
@@ -201,17 +207,70 @@ footer {
   border-top: 1px solid var(--border-color);
 }
 
+/* Entries */
+
+
+.entry {
+  margin: 48px 0;
+}
+
+.entry-tags li {
+  display: inline-block;
+}
+
+.entry-title {
+  margin-bottom: 4px;
+}
+
+.entry-title a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: .2s all;
+  display: inline;
+}
+
+.entry-title a:hover {
+  color: var(--primary0);
+}
+
+.entry-tags {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.entry-summary {
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.entry-summary img {
+  max-width: 100%;
+}
+
+.entry-readmore {
+  text-align: right;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
 /* geektnt.com/how-to-remove-x-from-search-input-field-on-chrome-and-ie.html */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
+
 </style><style>
     .header {
   padding: 10px 15px;
   border-bottom: 1px solid var(--border-color);
   margin: 0 auto;
+}
+
+.header-inner {
+  margin: auto;
+  max-width: var(--content-width);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -265,54 +324,15 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   color: var(--font-mute);
 }
 
-.list-window {
-  width: 750px;
+.list-entries {
+  width: var(--content-width);
+  max-width: 100%;
   margin: auto;
-  max-width: 100%;
 }
 
-.list-list {
-  outline: none;
-  padding: 0;
-  list-style: none;
-  padding: 0 10px;
-}
-
-.list-content {
-  padding: 0px;
-/*  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-*/
-  display: block;
-}
-
-
-.list-content-tags li {
-  display: inline-block;
-}
-
-.list-link {
-  color: inherit;
-  text-decoration: none;
-  display: inline-block;
-  transition: .2s all;
-  display: inline;
-}
-
-.list-link:hover {
-  color: var(--purple)
-}
-
-.list-summary {
-  margin-top: 20px;
-  text-align: justify;
-}
-
-.list-summary img {
-  max-width: 100%;
-}
+/* the style for entries is in common.css because it is also used on the home
+ * page
+ */
 </style>
 
   </head>
@@ -338,53 +358,74 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   </g>
 </symbol></svg>
 <header class="header">
-      <h2 class="header-brand">
+      <div class="header-inner">
+        <h2 class="header-brand">
+          
+          <img src="/img/math2001.svg" alt="Round logo with a M in it (math2001&#39;s logo)" class="header-brand-logo">
+          
+          <a href="/" class="header-brand-title">math2001&#39;s blog</a>
+        </h2>
         
-        <img src="/img/math2001.svg" alt="Round logo with a M in it (math2001&#39;s logo)" class="header-brand-logo">
-        
-        <a href="/" class="header-brand-title">math2001&#39;s blog</a>
-      </h2><nav class="header-nav">
-        <ul>
-          
-          <li class="header-nav-item"><a href="/article/">Articles</a></li>
-          
-          <li class="header-nav-item"><a href="/post/">Posts</a></li>
-          
-        </ul>
-      </nav>
+        <nav class="header-nav">
+          <ul>
+            
+            <li class="header-nav-item"><a href="/article/">Articles</a></li>
+            
+            <li class="header-nav-item"><a href="/post/">Posts</a></li>
+            
+          </ul>
+        </nav>
+      </div>
     </header>
 <div class="list-top">
     <h1>fzf <small>(1)</small></h1>
     <div class="list-description"></div>
 </div>
 
-<div class="list-window">
-    <ul class="list-list">
-        
-        <li class="list-content">
-              <h3 class='list-title'><a class=list-link href="/post/vim-jump-to-function-definition/">
-                  Jump to function definition in vim</a>
-                  <small class="list-content-reading-time"
-                      title="1012 words">(~ 5 min)</small>
-              </h3>
-              <ul class="list-content-tags tags">
-                  <li><a href="/tags/tip">tip</a></li>
-                  <li><a href="/tags/go">go</a></li>
-                  <li><a href="/tags/vim">vim</a></li>
-                  <li><a href="/tags/fzf">fzf</a></li>
-              </ul>
-              <div class="list-summary"><p>One of the features I miss from Sublime Text is the Goto Anything. In vim, by
+<section class="list-entries">
+  
+  
+
+<article class="entry">
+  <h3 class="entry-title">
+    <a href="/post/vim-jump-to-function-definition/">Jump to function definition in vim</a>
+    <small class="entry-title-readingtime" title="1012 words">
+      (~ 5 min)
+    </small>
+  </h3>
+  <ul class="entry-tags tags">
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/tip">tip</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/go">go</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/vim">vim</a>
+    </li>
+    
+    <li class="entry-tags-tag">
+      <a href="/tags/fzf">fzf</a>
+    </li>
+    
+  </ul>
+  <div class="entry-summary">
+    <p>One of the features I miss from Sublime Text is the Goto Anything. In vim, by
 default, you have <code>:e **/bit</code> and then tab, and it gets annoying pretty
-quickly. Thankfully, there's <a href="https://github.com/junegunn/fzf"><code>fzf</code></a> (with <a href="https://github.com/junegunn/fzf.vim"><code>fzf.vim</code></a>).</p></div>
-              
-              <p class='align-right'>
-                  <a class="list-readmore" href="/post/vim-jump-to-function-definition/">Read more →</a>
-              </p>
-              
-        </li>
-        
-    </ul>
-</div></div>
+quickly. Thankfully, there's <a href="https://github.com/junegunn/fzf"><code>fzf</code></a> (with <a href="https://github.com/junegunn/fzf.vim"><code>fzf.vim</code></a>).</p>
+  </div>
+  
+  <p class="entry-readmore">
+    <a href="/post/vim-jump-to-function-definition/">Keep reading this post →</a>
+  </p>
+  
+</article>
+
+  
+</section></div>
 <footer>
     <div class="footer-splits">
         <div class="footer-split">
