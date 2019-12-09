@@ -1,6 +1,6 @@
 title: math2001's blog
 baseURL: https://math2001.github.io
-languageCode: en-us
+languageCode: en-au
 metaDataFormat: yaml
 preserveTaxonomyNames: true
 publishBranch: master
@@ -9,19 +9,11 @@ newContentEditor: vim
 theme: fasty
 copyright: © Mathieu Paturel 2017-2019
 enableEmoji: true
-pygmentsUseClasses: true
-pygmentsCodefences: true
-pygmentsCodefencesGuessSyntax: true
 
 blackfriday:
   hrefTargetBlank: true
 
 params:
-  disableSearch: true # not available yet
-
-  github_username: math2001
-  twitter_username: _math2001
-
   themefolderpath: themes/fasty
   sitecode: math2001/math2001.github.io
   logo:
@@ -68,9 +60,6 @@ params:
         url: /cv.pdf
       - name: GitHub
         url: https://github.com/math2001
-
-
-
 
 menu:
   footer:
