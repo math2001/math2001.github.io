@@ -349,25 +349,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   text-align: center;
 }
 
-.page-content {
-  width: var(--content-width);
-  max-width: 100%;
-  margin: 20px auto;
-  background: white;
-  text-align: justify;
-  padding: 10px 30px;
-}
-
-.page-content hr {
-  border: none;
-  border-top: 4px solid hsla(192, 16%, 92%, 1);
-  margin: 30px auto;
-}
-
-.page-content img {
-  max-width: 100%;
-}
-
 .page-bottom {
   text-align: center;
   padding: 1px 0;
@@ -404,6 +385,33 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
 /* content */
 
+.page-content {
+  width: var(--content-width);
+  max-width: 100%;
+  margin: 20px auto;
+  background: white;
+  text-align: justify;
+  padding: 10px 30px;
+}
+
+.page-content hr {
+  border: none;
+  border-top: 4px solid hsla(192, 16%, 92%, 1);
+  margin: 30px auto;
+}
+
+.page-content img {
+  max-width: 100%;
+}
+
+.page-content figcaption {
+  /* FIXME: use common palette! */
+  margin-top: 24px;
+  color: hsl(214, 6%, 40%);
+  font-style: italic;
+  text-align: center;
+}
+
 .page-content .highlight {
   font-family: var(--monospace);
   font-size: .9em;
@@ -436,7 +444,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 
 .desmos {
   display: block;
-  width: 500px;
+  width: 100%;
   height: 500px;
   margin: auto;
 }
@@ -610,23 +618,25 @@ loadCSS([
 ])
 </script>
 
-<script>
-    function gtag_callback() {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'UA-105735012-1');
+<script>
+    if (!location.href.includes('localhost')) {
+        console.log("send tracking!")
+        ;(function(f, a, t, h, o, m){
+            a[h]=a[h]||function(){
+                (a[h].q=a[h].q||[]).push(arguments)
+            };
+            o=f.createElement('script'),
+                m=f.getElementsByTagName('script')[0];
+            o.async=1; o.src=t; o.id='fathom-script';
+            m.parentNode.insertBefore(o,m)
+        })(document, window, '//math2001-fathom.herokuapp.com/tracker.js', 'fathom');
+        fathom('set', 'siteId', 'WAYNG');
+        fathom('trackPageview');
     }
-    (function () {
-        if (!document.cookie.includes('InternalTraffic=true') && location.hostname != 'localhost') {
-            const script = document.createElement('script')
-            script.src = "https://www.googletagmanager.com/gtag/js?id=UA-105735012-1"
-            script.onload = gtag_callback
-            document.body.appendChild(script)
-        }
-    })()
 </script>
+
+
 
 
 
