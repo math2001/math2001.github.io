@@ -13,6 +13,10 @@ enableEmoji: true
 blackfriday:
   hrefTargetBlank: true
 
+markup:
+  highlight:
+    codeFences: false
+
 params:
   themefolderpath: themes/fasty
   sitecode: math2001/math2001.github.io
