@@ -64,11 +64,10 @@ Usage:
 ```go
 err := km.MyFunction() // may return ErrAlreadyLoggedIn or ErrNoKeysfile
 if errors.Is(err, ErrPrivCorrupted) { // the error has been tagged
-    log.Fatal("be careful!!")
+    log.Fatal("be careful! Potential attack: %s", err)
 } else if err != nil {
     log.Fatalf("running my function: %s", err)
 }
-
 ```
 
 Here, `errors.Is` will unwrap the error chain and if it finds an
