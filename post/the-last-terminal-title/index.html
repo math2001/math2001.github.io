@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-au">
   <head>
     <meta name="generator" content="Hugo 0.61.0-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@_math2001">
-    <meta name="twitter:creator" content="@_math2001">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
 
     <meta property="og:title" content="The Last Terminal Title">
     <meta property="og:image" content="https://math2001.github.io">
@@ -317,9 +317,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 }
 
 </style><style>
-    .highlight .hll{background-color:#4f5b66}.highlight{background:#2b303b;color:#eff1f5}.highlight .c{color:#65737e}.highlight .err{color:#bf616a}.highlight .k{color:#b48ead}.highlight .l{color:#d08770}.highlight .n{color:#eff1f5}.highlight .o{color:#96b5b4}.highlight .p{color:#eff1f5}.highlight .cm{color:#65737e}.highlight .cp{color:#65737e}.highlight .c1{color:#65737e}.highlight .cs{color:#65737e}.highlight .gd{color:#bf616a}.highlight .ge{font-style:italic}.highlight .gh{color:#eff1f5;font-weight:700}.highlight .gi{color:#a3be8c}.highlight .gp{color:#65737e;font-weight:700}.highlight .gs{font-weight:700}.highlight .gu{color:#96b5b4;font-weight:700}.highlight .kc{color:#b48ead}.highlight .kd{color:#b48ead}.highlight .kn{color:#96b5b4}.highlight .kp{color:#b48ead}.highlight .kr{color:#b48ead}.highlight .kt{color:#ebcb8b}.highlight .ld{color:#a3be8c}.highlight .m{color:#d08770}.highlight .s{color:#a3be8c}.highlight .na{color:#8fa1b3}.highlight .nb{color:#eff1f5}.highlight .nc{color:#ebcb8b}.highlight .no{color:#bf616a}.highlight .nd{color:#96b5b4}.highlight .ni{color:#eff1f5}.highlight .ne{color:#bf616a}.highlight .nf{color:#8fa1b3}.highlight .nl{color:#eff1f5}.highlight .nn{color:#ebcb8b}.highlight .nx{color:#8fa1b3}.highlight .py{color:#eff1f5}.highlight .nt{color:#96b5b4}.highlight .nv{color:#bf616a}.highlight .ow{color:#96b5b4}.highlight .w{color:#eff1f5}.highlight .mf{color:#d08770}.highlight .mh{color:#d08770}.highlight .mi{color:#d08770}.highlight .mo{color:#d08770}.highlight .sb{color:#a3be8c}.highlight .sc{color:#eff1f5}.highlight .sd{color:#65737e}.highlight .s2{color:#a3be8c}.highlight .se{color:#d08770}.highlight .sh{color:#a3be8c}.highlight .si{color:#d08770}.highlight .sx{color:#a3be8c}.highlight .sr{color:#a3be8c}.highlight .s1{color:#a3be8c}.highlight .ss{color:#a3be8c}.highlight .bp{color:#eff1f5}.highlight .vc{color:#bf616a}.highlight .vg{color:#bf616a}.highlight .vi{color:#bf616a}.highlight .il{color:#d08770}
-
-</style><style>
     .page-top {
   padding: 0 10px;
   text-align: center;
@@ -392,7 +389,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   margin: 20px auto;
   background: white;
   text-align: justify;
-  padding: 10px 30px;
 }
 
 .page-content hr {
@@ -411,15 +407,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   color: hsl(214, 6%, 40%);
   font-style: italic;
   text-align: center;
-}
-
-.page-content .highlight {
-  font-family: var(--monospace);
-  font-size: .9em;
-}
-
-.page-content .highlight {
-  padding: 10px 20px;
 }
 
 .page-content blockquote {
@@ -443,7 +430,14 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
   background-color: #F9F9F9;
 }
 
-.desmos {
+.page-content pre {
+  /* FIXME: use color palette */
+  background: hsl(214, 6%, 90%);
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.page-content .desmos {
   display: block;
   width: 100%;
   height: 500px;
@@ -493,6 +487,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
         </nav>
       </div>
     </header>
+    <main>
 <div class="page-top">
     <h1 class="page-title">The Last Terminal Title</h1>
 
@@ -509,9 +504,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none;  }
 </div><section class="page-content"><p><img src="/img/tmux-title.png" alt="ls@asyncio      git@dotfiles"></p>
 <p>I use tmux, and in the tabs title, it displays the terminal's title, which is
 just done by this 2 lines in your <code>.tmux.conf</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">setw -g window-status-current-format &#39; #{pane_title} &#39;
-setw -g window-status-format &#39; #{pane_title} &#39;
-</code></pre></div><p>What should you display in the tabs in your opinion? For me, it's obvious: the
+<pre><code>setw -g window-status-current-format ' #{pane_title} '
+setw -g window-status-format ' #{pane_title} '
+</code></pre>
+<p>What should you display in the tabs in your opinion? For me, it's obvious: the
 last command that I ran, and the location. Now, we can't display the whole path,
 but just the current folder name does perfectly the job. It'd be something like
 <code>vim@math2001.github.io</code>.</p>
@@ -520,34 +516,36 @@ because you have to re-compute it every time).</p>
 <p>But, today, I find a super simple (and fast) solution.</p>
 <h3 id="the-last-command">The last command</h3>
 <p>To get the last command, we use bash's history, like so:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">history</span> <span class="p">|</span> awk <span class="s1">&#39;{END print $2}&#39;</span>
-</code></pre></div><p>This might look a bit complex if you don't know awk, but all it does is take the
+<pre><code class="language-bash">history | awk '{END print $2}'
+</code></pre>
+<p>This might look a bit complex if you don't know awk, but all it does is take the
 history of commands, take the last line only (because of the <code>END</code>), and print
 the second word (the second field for the purists 😄), which is the
 command.</p>
 <h3 id="the-location">The location</h3>
 <p>Now, we want the folder name, which we can easily get from the environment
 variable <code>$PWD</code>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">~/some/place $ <span class="nb">echo</span> <span class="si">${</span><span class="nv">PWD</span><span class="p">/*</span><span class="se">\/</span><span class="p">/</span><span class="si">}</span>
+<pre><code class="language-bash">~/some/place $ echo ${PWD/*\//}
 place
-</code></pre></div><p>This is fairly simple: the <code>*</code> matches any character, and because there is a <code>/</code>
+</code></pre>
+<p>This is fairly simple: the <code>*</code> matches any character, and because there is a <code>/</code>
 after it (which we have to escape), it only stops when it finds a forward slash.
 Because by default <code>*</code> is greedy (meaning it wants to match as many character as
 possible), it leaves us with the current folder name.</p>
 <h3 id="into-our-bashrc">Into our <code>.bashrc</code></h3>
 <p>Now, here's how you plug it in your <code>.bashrc</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">function</span> window_title <span class="o">{</span>
-    <span class="nb">echo</span> -ne <span class="s2">&#34;</span><span class="s2">\033]0;</span><span class="k">$(</span><span class="nb">history</span> <span class="p">|</span> awk <span class="s1">&#39;END {print $2}&#39;</span><span class="k">)</span><span class="s2">@</span><span class="si">${</span><span class="nv">PWD</span><span class="p">/*</span><span class="se">\/</span><span class="p">/</span><span class="si">}</span><span class="s2">\007</span><span class="s2">&#34;</span>
-<span class="o">}</span>
+<pre><code class="language-bash">function window_title {
+    echo -ne &quot;\033]0;$(history | awk 'END {print $2}')@${PWD/*\//}\007&quot;
+}
 
-<span class="k">function</span> my_custom_prompt <span class="o">{</span>
+function my_custom_prompt {
     window_title
-    <span class="c1"># your prompt code</span>
-<span class="o">}</span>
+    # your prompt code
+}
 
-<span class="nv">PROMPT_COMMAND</span><span class="o">=</span>my_custom_prompt
+PROMPT_COMMAND=my_custom_prompt
 window_title
-</code></pre></div></section>
+</code></pre></section>
 
 <div class="page-bottom">
     <ul class="page-share-list">
@@ -570,7 +568,7 @@ window_title
             </a>
         </li>
     </ul>
-</div></div>
+</div></main>
 <footer>
     <div class="footer-splits">
         <div class="footer-split">

@@ -5,7 +5,7 @@
     <link>https://math2001.github.io/tags/vim/</link>
     <description>Recent content in vim on math2001&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en-au</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
     <lastBuildDate>Fri, 28 Sep 2018 15:25:33 +1000</lastBuildDate>
     
@@ -149,7 +149,7 @@ vim?&lt;/p&gt;</description>
       <description>To get the ASCII value of the character under the cursor, just press ga (or run :ascii).
 It&#39;ll print it in three format: in decimal, hexadecimal and octal.
 So, when your cursor is on an arrow and that you press ga: →, you&#39;ll see at the bottom:
-&amp;lt;→&amp;gt; 8594, Hex: 2192, Octal: 20622  Mnemonic: Get ASCII value. ­ from :help :ascii
+&amp;lt;→&amp;gt; 8594, Hex: 2192, Octal: 20622   Mnemonic: Get ASCII value. ­ from :help :ascii
  </description>
     </item>
     
