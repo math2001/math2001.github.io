@@ -1,17 +1,19 @@
 ---
-title: Finding the equation of a curve formed by close lines
-slug: finding-the-equation-of-a-curve-formed-by-close-lines
+title: Finding the equation of a curve formed by lines
+slug: finding-the-equation-of-a-curve-formed-by-lines
 date: 2019-12-09T09:09:57+11:00
-tags: [mathematics, calculus]
+tags: [mathematics, calculus, pattern]
 maths: true
-draft: true
 ---
 
+![drawing with lines only that form curves](/img/curve-lines-drawing.jpg)
+
 My sister had to do some artwork for school, and she decided to make some
-curved shapes out of lines. It looks really cool, and making curves out of
-*just* lines, well, I find that pretty fancy. But I wondered what the curve
-actually was... A circle? A parabola? An ellipse?  Something
-different?<!--more-->
+curved shapes out of lines. It looks pretty cool (although it would have been
+even better with pencil I think, but she wouldn't listen, and I'm too lazy to
+do it myself right now), and making curves out of *just* lines, well, I find
+that pretty fancy. But I wondered what the curves actually were... Circles?
+Parabolas? Ellipses? Something different?<!--more-->
 
 Note: the artwork wasn't for her art subject, but for mathematics. They had
 to draw something that looked cool with patterns. How sweet!
@@ -19,7 +21,7 @@ to draw something that looked cool with patterns. How sweet!
 I drew something of the kind on [desmos][], according to the following rule:
 
 We take 2 perpendicular lines (the x-axis and the y-axis), and we define an
-distance $d$. The $i$th line , goes through two points: $(0, 1 - d \cdot i)$
+distance $d$. The $i$th line, goes through two points: $(0, 1 - d \cdot i)$
 and $(d \cdot i, 0)$.
 
 We want to keep every line between $0$ and $1$, therefore we let
@@ -138,12 +140,73 @@ And it works! It seems to match pretty nicely with lines on desmos, you can try
 it yourself just above!
 
 Now, I don't think that's a *proof*, because I did make a pretty big
-assumption: the highest line is tangent to the curve. Now that "makes sense" if
-you think about it, but I'm not sure how I could prove it rigorously... Some
-more thinking I guess :-)
+assumption: the highest line at any is x is tangent to the curve at that x. Now
+that "makes sense" if you think about it, but I'm not sure how I could prove it
+rigorously... Some more thinking I guess :-)
 
 Would you have done it another way? [Shoot me an email][email], I want to
 know!
+
+## So, what is it actually?
+
+Well, if you get rid of the square root (move it to one side, and square both
+sides), you get this:
+
+$$
+\begin{aligned}
+y^2+x^2-2xy-2x-2y+1=0
+\end{aligned}
+$$
+
+And it kind of looks like a tilted parabola, which I'm willing to accept
+because parabolas are symmetrical, and that pattern should be symmetrical too.
+In this case, the parabola seems to be symmetrical about the line $y=x$ (ie.
+it's tilted 45 degrees).
+
+I doubt this is the best way to show that it *actually* is a parabola, but I've
+"rotated" the equation 45 degrees anti-clockwise. The way I did that was by
+substituting in $x = r \cos(\theta + \frac{\pi}{4})$ and $y = r \sin(\theta +
+\frac{\pi}{4})$, expanded and substituted $r \cos(\theta) = x$ and $r
+\sin(\theta) = y$.
+
+Note that you don't actually need the $r $ scaling, but it
+just makes more sense in my head (every point $(x, y)$ is expressed as
+$(r \cos \alpha, r \sin \alpha)$, and then spin everything by
+increasing/decreasing $\alpha$, and switch back to $(x, y)$.
+
+$$
+2\sqrt{2}y=2x^2+1
+$$
+
+And that's indeed parabola...
+
+Note that you can do all that expanding work with a few lines of code (note
+that we do need to tell sympy to expand the trig functions and the expand
+everything to cancel out stuff, so that it can easily substitute back):
+
+    import sympy
+
+    x, y, r, theta = sympy.symbols("x, y, r, theta")
+
+    at45 = x ** 2 + y ** 2 - 2 * x * y - 2 * y - 2 * x + 1
+    vertical = at45.subs({
+        x: r * sympy.cos(theta - sympy.pi / 4),
+        y: r * sympy.sin(theta - sympy.pi / 4)
+    })
+    cartesian = sympy.expand_trig(vertical)
+    print(sympy.expand(cartesian).subs({
+        r * sympy.cos(theta): x,
+        r * sympy.sin(theta): y,
+    }))
+
+## What's next?
+
+Well, I want to generalize to different linear spacing between the two axies
+(ie $d$ is different for the x axis and the y axis), and for axies that aren't
+perpendicular. Hopefully I'll develop some intuition as to *why* this is a
+parabola... I feel it has to do with the reflection property (you throw
+anything at a parabola, parallel to its axis of symmetry, and it'll go through
+it's focus).
 
 [desmos]: https://desmos.com
 [email]: mailto:australie.p@gmail.com
