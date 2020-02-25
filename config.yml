@@ -51,10 +51,11 @@ params:
       src: img/math2001.png
       alt: Picture of Mathieu Paturel
     bio: |
-      Bonjour! I'm a prospective university student. I've been programming
-      for about 4 years (self taught). I know a fair bit about Python, though
-      I'm spending a lot more time writing Go these days... I also did a bit
-      of web development.
+      Bonjour! I'm a first year UNSW student, doing a double degree in
+      engineering (software engineering) and science (physics). I've been
+      programming for about 4 years (self taught). I know a fair bit about
+      Python, though I'm spending a lot more time writing Go these days...
+      I also did a bit of web development.
     closing: |
       You are probably wondering what is the difference between a post, an
       article and a project. Articles and projects are carefully crafted,
