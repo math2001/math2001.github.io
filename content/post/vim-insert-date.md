@@ -3,6 +3,7 @@ title: How to insert the date in Vim?
 slug: how-to-insert-the-date-in-vim
 tags: [tip, vim, date, strftime]
 date: 2017-08-20
+draft: true
 ---
 
 First off, I really don't recommend you use the `strftime()` function vim has,
@@ -45,4 +46,3 @@ And, you'll get the date inserted automatically.
 
 If you want to customize the format of the date, I'd recommend using a tool like
 [strftime.net](https://strftime.net).
-

@@ -3,12 +3,12 @@ title: Bash's fc command
 slug: bashs-fc-command
 date: 2017-09-26T18:03:22+10:00
 tags: [tip, bash, editor]
+draft: true
 ---
 
 When editing long commands in your terminal (you know, the one that wraps
 :wink:), sometimes you'd be better of using your actual editor (like vim or
 Sublime). And guess what? Bash let's you do that! :tada:<!--more-->
-
 
 First, you need to set your `$EDITOR` environment variable. It's just a little
 `export EDITOR=<cmd>` in your `.bashrc`.
@@ -16,7 +16,7 @@ First, you need to set your `$EDITOR` environment variable. It's just a little
 Here are the command you need to replace `<cmd>` with for different editors:
 
 | Editor       | Command       |
-|--------------|---------------|
+| ------------ | ------------- |
 | vim          | `vim`         |
 | Sublime Text | `subl -w -n`  |
 | Atom         | `atom --wait` |
@@ -38,7 +38,7 @@ To check that it's right:
 Now, let's say you started writing a chain of command like this
 
 ```bash
-~/some/where $ ps -A | grep ssh-agent | grep 
+~/some/where $ ps -A | grep ssh-agent | grep
 ```
 
 But then you realize you'd like to write this in your editor, with all your

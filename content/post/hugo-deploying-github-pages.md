@@ -2,6 +2,7 @@
 title: Deploying a hugo site on GitHub pages
 date: 2017-09-23T11:23:45+10:00
 tags: [howto, hugo, static site, bash, github-pages]
+draft: true
 ---
 
 When you want to deploy a static website built with the fantastic [Hugo][] on
@@ -49,5 +50,5 @@ removed/added, you need to do it manually. If you have submodules in your
 website's sources elsewhere than in your theme folders (`themes` by default),
 you'll need to tweak this script a bit.
 
-[Hugo]: https://gohugo.io
+[hugo]: https://gohugo.io
 [mkdocs]: https://www.mkdocs.org

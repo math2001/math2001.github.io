@@ -3,6 +3,7 @@ title: So binary numbers are useful?
 slug: so-binary-numbers-are-useful
 date: 2017-10-13T16:14:21+11:00
 tags: [binary, python, binary, bit-manipulation]
+draft: true
 ---
 
 Do you know what binary numbers are? They're just a way of counting with just 2
@@ -40,20 +41,20 @@ Note: an other common base is base 16, or hexadecimal. The figures are (0, 1, 2,
 
 > What?! How the heck are we suppose to count with only 2 numbers?
 
-It's fairly simple once you get it. But first we must understand how we *count
-with regular numbers*.
+It's fairly simple once you get it. But first we must understand how we _count
+with regular numbers_.
 
 If I ask you what is the result of `5 + 1`, you'll just tell me `6`. You just
-*increased* the last figure by one.
+_increased_ the last figure by one.
 
 But what if I tell you to do `9 + 1`?
 
 There isn't any figure after `9`, so you have to replace it with a 0, and
-increase the number *before* it. In this case, it's a 0 (it's implied here, 09
+increase the number _before_ it. In this case, it's a 0 (it's implied here, 09
 is the same as 9). This gives you 10.
 
 And, as long as you get a 9, you repeat the same operation: replace it with a 0,
-and increase the number before it. Check for `29 + 1` or `99 + 1` if you want.  
+and increase the number before it. Check for `29 + 1` or `99 + 1` if you want.
 
 The exact same thing happens for binary numbers (and any numbers in any base)!
 
@@ -61,25 +62,25 @@ What is the result of `1 + 1` in binary? There isn't any figure after `1`,
 therefore, you replace it with a `0` and increase the number before it, which
 gives you `10`.
 
-In binary again, `10 + 1` gives you `11`, and `11 + 1` gives you `100`. 
+In binary again, `10 + 1` gives you `11`, and `11 + 1` gives you `100`.
 
 ##### Regular → binary, some examples
 
 | Regular | Binary |
-|---------|--------|
-|       0 |      0 |
-|       1 |      1 |
-|       2 |     10 |
-|       3 |     11 |
-|       4 |    100 |
-|       5 |    101 |
-|       6 |    110 |
-|       7 |    111 |
-|       8 |   1000 |
-|       9 |   1001 |
-|      10 |   1010 |
+| ------- | ------ |
+| 0       | 0      |
+| 1       | 1      |
+| 2       | 10     |
+| 3       | 11     |
+| 4       | 100    |
+| 5       | 101    |
+| 6       | 110    |
+| 7       | 111    |
+| 8       | 1000   |
+| 9       | 1001   |
+| 10      | 1010   |
 
-Note: each figure on a binary number is called a *bit*.
+Note: each figure on a binary number is called a _bit_.
 
 #### Binary to regular, an other story
 
@@ -118,8 +119,7 @@ currently 1.
 
 The previous number being a 0, we don't do anything.
 
-The previous number being a 1, we add its value (4) to the sum. Our sum is now
-5.
+The previous number being a 1, we add its value (4) to the sum. Our sum is now 5.
 
 The 2 previous numbers being 0, we ignore both of them.
 
@@ -131,11 +131,11 @@ So, `100101` is equal to 37.
 ### Operators
 
 What makes binary numbers useful to us is that you can make some operation with
-them (called *bitwise* operations). In this post, I'll use Python because it's
+them (called _bitwise_ operations). In this post, I'll use Python because it's
 awesome, but pretty much every programming language should be able to do this.
 
 The 2 operators I'm about to show you use 2 numbers, and does some operations of
-the *binary form* of the number.
+the _binary form_ of the number.
 
 #### The "and" bitwise operator
 
@@ -161,8 +161,7 @@ Second: 01011010
 Result: 11111011
 ```
 
-In simple words, it adds a 1 to the result if at least one bit is 1, otherwise a
-0.
+In simple words, it adds a 1 to the result if at least one bit is 1, otherwise a 0.
 
 #### Python way
 
@@ -208,7 +207,7 @@ dividable both by 2 and 5.
 And guess what: it's the `or` and `and` bitwise that allow you to do that.
 
 You have to combine a set of number that will each "active" (set to 1) a
-specific bit. 
+specific bit.
 
 So, which numbers could we combine (using the `or` bitwise operator) in any
 order so that we could tell which one was used? These ones (in binary form):
@@ -278,6 +277,6 @@ True
 False
 ```
 
-It might be a bit confusing, so *play with it*:
+It might be a bit confusing, so _play with it_:
 
 <script src="//repl.it/embed/M99I/1.js"></script>

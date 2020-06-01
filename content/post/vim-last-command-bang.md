@@ -4,6 +4,7 @@ slug: rerun-last-command-bang-vim
 tags: [tip, vim, vimscript, bang]
 date: 2017-08-27
 place: In the car, on a snowy road
+draft: true
 ---
 
 Put this code in your vimrc to re run the previous command but with the bang
@@ -14,7 +15,7 @@ function! BangLastCommand()
     " The last command that was run is stored in the register `:` (:registers)
     let lastcommand = split(@:, ' ')
     let command = lastcommand[0] . '! ' . join(lastcommand[1:], ' ')
-    execute command 
+    execute command
 endfunction
 
 command! Please call BangLastCommand()

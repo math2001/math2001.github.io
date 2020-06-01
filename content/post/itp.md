@@ -4,13 +4,14 @@ slug: itp-insert-template-please
 date: 2017-09-27T11:18:56+10:00
 tags: [cli, nodejs, javascript, template]
 repository: itp
+draft: true
 ---
 
 I was getting pretty sick of typing the same `.gitignore`, copy/pasting my
 license, README and everything. <!--more-->
 
-So, I made a tiny template manager, called `itp`, for *Insert Template
-Please*.<!--more-->
+So, I made a tiny template manager, called `itp`, for _Insert Template
+Please_.<!--more-->
 
 ### Installation
 
@@ -51,5 +52,5 @@ You can have a look at my [dotfiles/templates][] to see some useful templates
 Hopefully it'll save you some time!
 
 [handlebars]: https://handlebarsjs.com/
-[README.md]: https://GitHub.com/math2001/itp/#variables
+[readme.md]: https://GitHub.com/math2001/itp/#variables
 [dotfiles/templates]: https://GitHub.com/math2001/dotfiles/tree/master/.templates

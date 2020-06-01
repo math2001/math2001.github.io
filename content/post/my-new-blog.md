@@ -2,6 +2,7 @@
 date: "2017-09-09T19:43:23+10:00"
 title: My new blog
 tags: [about, new, static website]
+draft: true
 ---
 
 Hello everyone!
@@ -65,7 +66,7 @@ followed the author with the course he recommended next: PHP and MySql.
 
 While still making some little games with Python, some little websites with PHP,
 I learned git (with a course on OpenClassrooms of course). This was a pretty big
-step. It didn't appear like it *straight away*, but when I look back, I'm pretty
+step. It didn't appear like it _straight away_, but when I look back, I'm pretty
 sure it is, and for one reason:
 
 [GitHub][]
@@ -100,4 +101,4 @@ Hopefully you'll enjoy the content!
 
 [snippetlister]: https://github.com/math2001/snippet-lister
 [my plugins]: https://packagecontrol.io/browse/authors/math2001
-[GitHub]: https://github.com
+[github]: https://github.com

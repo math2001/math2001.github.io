@@ -4,6 +4,7 @@ slug: variable-scopes-vim
 tags: [tip, vim, scopes, vimscript]
 date: "2017-08-25"
 place: In the car on the way to the snow!
+draft: true
 ---
 
 An interesting feature of vim script is variable scoping. Here's a copy-paste
@@ -24,7 +25,7 @@ function-argument  a:      Function argument (only inside a function).
 vim-variable       v:      Global, predefined by Vim.
 ```
 
-*From* `:help internal-variables`.
+_From_ `:help internal-variables`.
 
 So, for example, in your `~/.vimrc`, unless you're in a function, you shouldn't
 prefix plugin's options let's say with `g:`, you can just write the variable
@@ -37,4 +38,3 @@ let g:indent_guides_auto_colors = 0
 " yes
 let indent_guides_auto_colors = 0
 ```
-

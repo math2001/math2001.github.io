@@ -2,11 +2,12 @@
 title: "So vim got slow"
 date: 2018-05-21T17:59:22+10:00
 tags: [tip, vim, profile, performances]
+draft: true
 ---
 
 You know that feeling? You press in a key, and you have to wait like 0.5 seconds
 to see it appear on screen. You try to run `vim --clean` and everything's back
-to "normal". How do you find *quickly* the cause of this horrible disaster :smile: <!--more-->
+to "normal". How do you find _quickly_ the cause of this horrible disaster :smile: <!--more-->
 
 As you expected, it is caused by a/some plugin(s) and/or you vimrc. Have fun
 debugging that. You probably know the bulk force: disable every plugin, and

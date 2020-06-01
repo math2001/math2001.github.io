@@ -2,7 +2,8 @@
 title: Firefox Implementing Feature From Comment
 slug: firefox-implementing-feature-from-comment
 date: 2019-11-29T09:07:19+11:00
-tags: [ firefox ]
+tags: [firefox]
+draft: true
 ---
 
 That is so cool.
@@ -12,6 +13,5 @@ That is so cool.
 allowfullscreen
 style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
 </div>
-
 
 TODO: write a blog post coming about Firefox and duckduckgo

@@ -4,6 +4,7 @@ slug: change-shell-run-external-command-vim
 tags: [tip, vim, shell, bash, windows, sh]
 date: 2017-08-27
 place: In a car, with the 4 WD on
+draft: true
 ---
 
 On windows, the cmd sucks. But if you have sh installed from git-for-windows

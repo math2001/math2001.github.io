@@ -2,6 +2,7 @@
 title: My Zen
 date: 2017-09-13T14:18:22+10:00
 tags: [code aesthetic, python, zen, conventions]
+draft: true
 ---
 
 [Python](https://python.org) is by far my favorite language (I even wish we
@@ -9,7 +10,7 @@ tags: [code aesthetic, python, zen, conventions]
 really good, is [its zen](https://python.org/dev/peps/pep-0020/); they're
 basically guidelines.
 
-So, today, *dans un élan d'inspiration*, I decided to write my own.<!--more-->
+So, today, _dans un élan d'inspiration_, I decided to write my own.<!--more-->
 
 ```
 Keep it simple.

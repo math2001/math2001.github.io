@@ -3,6 +3,7 @@ title: "Challenge #1: Translate back"
 slug: challenge-1-translate-back
 date: 2018-05-25T22:32:29+10:00
 tags: [challenge, cipher]
+draft: true
 ---
 
 I've got a little challenge for you.<!--more-->
@@ -22,14 +23,14 @@ I guarantee you the original message:
 
 - contains only lower case ASCII letters (`abcdefghijklmnopqrstuvwxyz`)
 - has the same spaces as in the encrypted message. So you know that the first
-    word will have 2 letters, the second one as well, the third one 7, etc...
+  word will have 2 letters, the second one as well, the third one 7, etc...
 - can only translated to one string (the one I gave you)
 
 ### They found it!
 
 > The glorious and amazing people who had a crack and found the secret message!
 
-*No one yet. :cry:*
+_No one yet. :cry:_
 
 ### Solution
 

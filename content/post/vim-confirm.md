@@ -3,6 +3,7 @@ title: The confirm option
 slug: confirm-option-vim
 tags: [tip, vim, option]
 date: 2017-09-03
+draft: true
 ---
 
 This is probably one of my favorite option in VIM. Just add this to your `.vimrc`:
@@ -28,4 +29,3 @@ With the `confirm` option on, you get
 
 You just need to press the corresponding letter (not even <kbd>enter</kbd>), and
 you'll be good to go!
-

@@ -4,6 +4,7 @@ slug: vim-line-completion
 date: 2017-09-27T12:55:56+10:00
 tags: [tip, vim, completion]
 commentsissueid: 2
+draft: true
 ---
 
 ![demo of ctrl-x_ctrl+l in insert mode in vim](/img/vim-ctrl-x_ctrl-l.gif)
@@ -15,4 +16,3 @@ the indication), and completes it for you! Awesome right? <!--more-->
 And to do that, you just need to press this while you're in insert mode:
 
 <kbd>ctrl+x</kbd> and <kbd>ctrl+l</kbd>
-

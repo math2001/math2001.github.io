@@ -3,6 +3,7 @@ title: Vim file type specific settings
 slug: vim-filetype-specific-settings
 date: 2018-09-28T15:25:33+10:00
 tags: [tip, vim, filetype]
+draft: true
 ---
 
 If you want to run some vim script for a specific file type, don't make an
@@ -29,7 +30,7 @@ current filetype. So, here's a quick command to do this:
 command! -nargs=? Ftedit execute "tabe ~/.vim/ftplugin/" . ("<args>" == "" ? &filetype : "<args>") . ".vim"
 ```
 
-If you just type `:Ftedit`, it'll open the ftplugin of the *current* file.
+If you just type `:Ftedit`, it'll open the ftplugin of the _current_ file.
 But it you give it an argument, it'll open the one with the given name.
 
 ```

@@ -3,6 +3,7 @@ title: Jump to function definition in vim
 slug: vim-jump-to-function-definition
 date: 2018-09-28T11:47:21+10:00
 tags: [tip, go, vim, fzf]
+draft: true
 ---
 
 One of the features I miss from Sublime Text is the Goto Anything. In vim, by
@@ -10,7 +11,7 @@ default, you have `:e **/bit` and then tab, and it gets annoying pretty
 quickly. Thankfully, there's [`fzf`][fzf] (with [`fzf.vim`][fzf.vim]).<!--more-->
 
 But although it provides a fairly long list of commands, it doesn't allow us to
-*jump to function definitions* (which is one of the main function of the Goto
+_jump to function definitions_ (which is one of the main function of the Goto
 Anything).
 
 ## `fzf` for the win
@@ -22,7 +23,7 @@ With the autoload function `fzf#run`, we are able to give a shell command
 that will get a list of options, and it'll display it for us, calling a simple
 callback when the user chooses an option.
 
-And `ag` (a *very* fast version of grep) is going to find the all the function
+And `ag` (a _very_ fast version of grep) is going to find the all the function
 definitions in our project.
 
 For example, for a go project:
@@ -82,7 +83,7 @@ Quick explanation:
 
 - `-F :` says that instead of using spaces as field separators, we're going to
   use colons.
-- `gsub(...)` removes (replaces with nothing) the `func` and trailing ` {` parts
+- `gsub(...)` removes (replaces with nothing) the `func` and trailing `{` parts
   in the third field. This makes the function signature clean and user-friendly.
 - `printf` prints `$1:$2 $3` where `$1` is the first field, `$2` is the second
   field, etc...
@@ -95,7 +96,7 @@ filename:line signature
 
 Now, we can give this to `fzf`, and tell it to display only from the second
 field and on (using the `--with-nth` option). And, remember, this one uses
-spaces as a field separator.  Therefore, it'll only print the function's
+spaces as a field separator. Therefore, it'll only print the function's
 signature.
 
 ```
@@ -106,7 +107,6 @@ filename:line signature
 |
 | this is the first field
 ```
-
 
 #### The callback
 
@@ -198,7 +198,7 @@ And it'll open the "browser" and you'll be able to jump to function definition.
 
 Of course, typing this is every time a pain, so I'd recommend setting a shortcut
 for every go file that triggers this function, as [explained in this
-post][ftplugin].  Spoiler:
+post][ftplugin]. Spoiler:
 
 ```vim
 " ~/.vim/ftplugin/go.vim
