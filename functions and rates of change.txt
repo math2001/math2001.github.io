@@ -1,0 +1,53 @@
+Question:
+=========
+
+Secondly, functions and rates of change.
+
+Given a relationship, it doesn't give anymore information to introduce another equation which is just a rearrangement of the first one. For example:
+
+2x + 3y = 4 is just the same as saying 3y = 4 - 2x, solving both simultaneously gives 0=0 which isn't interesting.
+
+One thing that took me a while to accept/realize was that if two expressions are equivalent, then their rate of change must be equivalent too, right?
+
+So given x^2 = 3x-2, we can claim 2x = 3. But both can be brought back to just one relation, ie they are equivalent. Yet, from conservation of momentum and conservation of energy.
+
+sum[before](1/2mv^2) = sum[after](1/2mv^2)
+
+Differentiate in terms of v
+
+sum[before](mv) = sum[after](mv)
+
+(ie. both these relations are equivalent)
+
+But if we combine those two equation, then we can solve for the velocity of two objects rebounding "in an elastic collision" (not quite sure how you'd say that in proper English). In other words, the rate of change has some information that the original function didn't have. But we said that they were equivalent, since one could be deduced from the other.
+
+So I see two possibilities:
+
+- two relations don't have to be equivalent eventhough they may be derived from each other, or
+
+- two equivalent relations can contain different "sets of information"
+
+But I don't agree with either, though if I had to choose one, I would pick the first one because it's feels easier to "blame" calculus for this weirdness. Also I could be completely wrong and both could be true.
+
+Just to be clear, the way I mean "equivalent" in this case is that writing one relation is the same as writing the other. I think that's the actual definition, but maybe that's where my misunderstanding is coming from. I think this definition completely rules out the second possibility, but there's clearly something I don't understand, so I don't have the confidence to completely discard it.
+
+Funnily enough, you'd need some other relationship if we wanted to know the velocity of 3 objects after collision (I get this would be hard to do in real life, they would all have to rebound at exactly the same position, but the maths just considers those object to be points with mass and speed, it shouldn't have any problems right?). Would integrating conservation of energy be any useful? It just seems like a meaningless hack, especially since I don't understand why combining f(x) with f'(x) helps.
+
+Solution:
+=========
+
+Claiming that x^2 = 3x + 2 <=> 2x = 3 is wrong (for starters, one has two solution and the other has 1).
+
+when you equate two expression (before and after in this equation), you are asking for "under which circumstances is this true". So when you say:
+
+before(energy) = after(energy), you ask "under what circumstances is the energy before equal to the energy after"
+
+but when you do
+
+before(denergy/dvelocity) = after(denergy/dvelocity), you ask "under what circumstances is the rate of change of the energy before equal to the energy after", and that's a different question, because LHS and RHS *aren't the same expression*. In one case, you're asking when does the height line up, and in the other when does the gradient line up.
+
+So, to answer the question:
+
+Why does the rate of change of function bring information that the original function didn't "have" or expose? (conservation of energy/conservation of momentum)
+
+The key word is expose. The expression does have the information, you're just not asking for it.

@@ -1,0 +1,15 @@
+I have a genuine passion for the things I do, improvement is what drives me.
+
+I love programming, I've been teaching myself how to code for 4 years now. My most popular open source project is called MarkdownLivePreview, it's a Sublime Text plugin with over 100k installs (see on package control). I really enjoy how much there is to learn, and finding out about different ways of approaching different problems.
+
+Lately, I've been really interested in thinking about concurrent programs thanks to a friend I met at the Canberra Python User Group. He showed me the python library called trio. The concept of nursery really felt like a revelation to me, and I wrote the start a game server using this concept (github.com/math2001/nine43). I would love to discuss the structure of this program more in depth.
+
+I love physics and couldn't accept that my knowledge about this topic at the end of year 12 would would be all I ever knew, so I decided to keep studying physics at university (double degree).
+
+I really enjoy running, and have evolved from coming 15th at my school cross country in year 9 to making it to state in year 12.
+
+I'm French, we moved to Australia with my family to learn to speak English fluently. I'll let you be the judge of the reminiscent of my accent :)
+
+I really enjoy sharing what I know too, and I'm really looking forward to working extensively on problems with other people (we lived in a rural area, and I was the only one programming somewhat seriously). Nonetheless, I tutored French for 2 years in high school, and I'm now tutoring physics in Sydney. Another representative example (i'm math2001) https://github.com/math2001/FileManager/pull/58#issuecomment-575843968
+
+This paints a more precise picture of my character than what my CV does, though there wasn't much room for modesty :)

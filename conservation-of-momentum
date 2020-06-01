@@ -1,0 +1,29 @@
+Firstly, why is momentum conserved?
+
+It kind of makes sense that the "weighted sum" of the velocities should be conserved provided there is no net acceleration on the system (the no net force). But I've been struggling to justify the conservation of momentum to myself with something else than "it makes sense", so is it something which can be shown from more fundamental assumptions, or is it observed from experimental evidence?
+
+Secondly, why does the dKE/kv = mv
+
+I don't have any intuition justifying why the rate at which the kinetic changes as the velocity changes is equivalent to the momentum. The best I've got is this:
+
+A change in velocity means a change in momentum (since we assume that the mass is constant). Change in momentum <=> force, hence work done (assuming the object just moves in a straight line, ie displacement'(t)>0), therefore change in kinetic energy. This reasoning could however work if momentum was say the third derivative of conservation of energy, no?
+
+I can also see it from the proof of the work energy theorem, but although that makes me accept it "mathematically", the intuition isn't quite there yet:
+
+dW = d/dt(mv)ds
+
+dW = mv dv
+
+Since the work done is equal to the change in kinetic energy, then I can accept it. But it's not the best. Basically, I'm asking for different ways of thinking about momentum and kinetic energy that would help me *really* understand this, without having to rely on the mathematics. I don't think I have a clear understanding of what momentum and kinetic energy actually means. Without using any formulas (or saying things like that kinetic energy grows with the square of the velocity), what is the difference between KE and p?
+
+I ask this question because it just depends on a lot of things I don't *quite* understand. I doubt this is the most efficient way to spent my time if I just cared about smashing the exam, but I can't really resist thinking about this. Also, I certainly don't expect just one answer to just explain everything, and even if such answer existed and was posted in the next 5 mins, I probably wouldn't understand it straight away. I'd probably argue against it and then realize slowly that it was right. I think that what would be really helpful right now is explanations of where I made reasoning mistakes, but especially different ways of thinking about these kind of things (because that allows me to cross check in the future).
+
+So if you have a different way of thinking about anything I said, even if it does have some problems, feel free to help me out and post it :-)
+
+Just a summary of my questions:
+
+1. Why is momentum conserved? Can you justify it based on something else, or is it shown from evidence?
+
+2. What is an intuitive way of thinking about kinetic energy and momentum and their differences?
+
+Bonus: describe the collision of three points on a plane given their mass (constant) and initial speed.
