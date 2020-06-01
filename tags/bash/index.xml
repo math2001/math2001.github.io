@@ -7,32 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-au</language>
     <copyright>© Mathieu Paturel 2017-2019</copyright>
-    <lastBuildDate>Sun, 04 Feb 2018 15:07:11 +1100</lastBuildDate>
+    <lastBuildDate>Sun, 24 Sep 2017 07:51:15 +1000</lastBuildDate>
     
 	<atom:link href="https://math2001.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>The Last Terminal Title</title>
-      <link>https://math2001.github.io/post/the-last-terminal-title/</link>
-      <pubDate>Sun, 04 Feb 2018 15:07:11 +1100</pubDate>
-      
-      <guid>https://math2001.github.io/post/the-last-terminal-title/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://math2001.github.io/img/tmux-title.png&#34; alt=&#34;ls@asyncio      git@dotfiles&#34;&gt;&lt;/p&gt;
-&lt;p&gt;I use tmux, and in the tabs title, it displays the terminal&#39;s title, which is
-just done by this 2 lines in your &lt;code&gt;.tmux.conf&lt;/code&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Bash&#39;s fc command</title>
-      <link>https://math2001.github.io/post/bashs-fc-command/</link>
-      <pubDate>Tue, 26 Sep 2017 18:03:22 +1000</pubDate>
-      
-      <guid>https://math2001.github.io/post/bashs-fc-command/</guid>
-      <description>&lt;p&gt;When editing long commands in your terminal (you know, the one that wraps
-😉), sometimes you&#39;d be better of using your actual editor (like vim or
-Sublime). And guess what? Bash let&#39;s you do that! 🎉&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>Bash&#39;s find command</title>
@@ -45,27 +23,6 @@ you some scripting.&lt;/p&gt;
 &lt;p&gt;What does it do? It &amp;ldquo;finds&amp;rdquo; files. By default, it outputs their path relative to
 where you ran &lt;code&gt;find&lt;/code&gt;. But, in addition of providing you with advanced &amp;ldquo;filters&amp;rdquo;
 it actually allows you to run commands on each of those files.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Deploying a hugo site on GitHub pages</title>
-      <link>https://math2001.github.io/post/hugo-deploying-github-pages/</link>
-      <pubDate>Sat, 23 Sep 2017 11:23:45 +1000</pubDate>
-      
-      <guid>https://math2001.github.io/post/hugo-deploying-github-pages/</guid>
-      <description>&lt;p&gt;When you want to deploy a static website built with the fantastic &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; on
-GitHub pages, you don&#39;t have 100 of possibilities. A clean one, and an easy one
-😄.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Change shell used to run external command</title>
-      <link>https://math2001.github.io/post/change-shell-run-external-command-vim/</link>
-      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://math2001.github.io/post/change-shell-run-external-command-vim/</guid>
-      <description>&lt;p&gt;On windows, the cmd sucks. But if you have sh installed from git-for-windows
-for example, you can tell vim to run external commands &lt;code&gt;:!&lt;/code&gt; using this &lt;code&gt;sh&lt;/code&gt;!.&lt;/p&gt;</description>
     </item>
     
   </channel>

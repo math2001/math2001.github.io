@@ -24,17 +24,5 @@ for your icons and stuff like that, here&#39;s how you can combine all your icon
 one big file, and use them in your website!&lt;/p&gt;</description>
     </item>
     
-    <item>
-      <title>Live Svg</title>
-      <link>https://math2001.github.io/post/live-svg/</link>
-      <pubDate>Fri, 22 Sep 2017 18:31:15 +1000</pubDate>
-      
-      <guid>https://math2001.github.io/post/live-svg/</guid>
-      <description>&lt;p&gt;SVGs are awesome. They allow you to make some infinitely resizable images.
-Sometimes, you want to make a complex image, so you use something &lt;a href=&#34;https://inkscape.org&#34;&gt;Inkscape&lt;/a&gt;,
-but sometimes, you just want to make a simple one, so you take a deep breath and
-away you go to write a SVG by hand!&lt;/p&gt;</description>
-    </item>
-    
   </channel>
 </rss>
