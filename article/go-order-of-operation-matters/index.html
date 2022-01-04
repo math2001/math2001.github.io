@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-au">
+  <head>
+    <meta name="generator" content="Hugo 0.91.2" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+
+    <meta property="og:title" content="Go Order of Operation Matters">
+    <meta property="og:image" content="https://math2001.github.io">
+    <meta property="og:url" content="https://math2001.github.io/article/go-order-of-operation-matters/">
+    <meta property="og:description" content="In Go, two mathematically equivalent expression can yield different result
+based on the order in which you do things! Thanks rounding errors&hellip;">
+
+    <link rel=icon type=image/png href='/img/math2001.png'>
+    <title>Go Order of Operation Matters - math2001&#39;s blog</title>
+
+    <style>
+    body {
+  font-family: "DejaVu Sans Mono", "Roboto Mono", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 960px;
+  width: 560px;
+  text-align: justify;
+  margin: auto;
+  color: #18171a;
+}
+
+pre, code {
+  background-color: #ebe5f2;
+}
+
+pre {
+  padding: 8px;
+}
+
+code {
+  padding: 2px 4px;
+}
+
+pre code {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.entry-title {
+  margin-top: 32px;
+  margin-bottom: 0px;
+}
+
+.entry-title a {
+  color: #2b292d;
+}
+
+.entry-title small {
+  color: #6f5c75;
+}
+
+.entry-summary p:first-of-type {
+  margin-top: 4px;
+}
+
+.entry:first-of-type .entry-title {
+  margin-top: auto;
+}
+
+.page-date {
+  font-style: italic;
+}
+
+.page-content .desmos {
+  display: block;
+  width: 100%;
+  height: 500px;
+  margin: auto;
+}
+</style></head>
+  <body>
+    
+    <header>
+      <p>
+        <a href="/">Home</a>
+      </p>
+    </header>
+    
+    <main>
+<h1 class="page-title">Go Order of Operation Matters</h1>
+
+<p class="page-date">7 December 2019</p><section class="page-content"><p>In Go, two mathematically equivalent expression can yield different result
+based on the order in which you do things! Thanks rounding errors&hellip;</p>
+<p>For example:</p>
+<pre><code class="language-go">fmt.Println(1 / 2 * 10) // prints 0
+fmt.Println(1 * 10 / 2) // prints 5
+</code></pre>
+<p>However, mathematically, they should both be 5 (we just moved the <code>/ 2</code> within
+a product).</p>
+<p>So why does go give different results? Both operations <code>/</code> and <code>*</code> have the
+same prevalence (unlike <code>+</code> and <code>/</code> for example, where the division would be
+evaluated first). Hence, they are evaluated from left to right.</p>
+<p>In the first case, <code>1 / 2</code> is evaluated, and then whatever that was is
+multiplied by <code>10</code>. Now, since both <code>1</code> and <code>2</code> are integers, go just gives
+back an <code>int</code>. Yet <code>0.5</code> can&rsquo;t be represented as an <code>int</code>, so it truncates the
+floating part and gives you <code>0</code>. <code>0 * 10</code> is still 0.</p>
+<p>You can figure out why the second case works.</p>
+<p>To counter that, you want to make sure that the operands are floats, so that go
+gives you floats back:</p>
+<pre><code class="language-go">fmt.Println(1.0 / 2.0 * 10) does give you 5
+</code></pre></section></main>
+
+<script type="text/javascript">
+function loadCSS(stylesheets) {
+    let media, link
+    for (let stylesheet of stylesheets) {
+        media = stylesheet.media ? ' media="' + stylesheet.media + '"' : ''
+        link = '<link rel="stylesheet" type="text/css" href="'
+        if (stylesheet.href.startsWith('http')) link += stylesheet.href
+        else link += "/" + "css/" + stylesheet.href
+        link += '"' + media + '>'
+        document.head.innerHTML += link
+
+    }
+}
+
+loadCSS([
+    { href: 'phone.css', media: 'screen and (max-width: 600px)' },
+    { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
+])
+</script>
+
+
+<script>
+    if (!location.href.includes('localhost')) {
+        console.log("send tracking!")
+        ;(function(f, a, t, h, o, m){
+            a[h]=a[h]||function(){
+                (a[h].q=a[h].q||[]).push(arguments)
+            };
+            o=f.createElement('script'),
+                m=f.getElementsByTagName('script')[0];
+            o.async=1; o.src=t; o.id='fathom-script';
+            m.parentNode.insertBefore(o,m)
+        })(document, window, '//math2001-fathom.herokuapp.com/tracker.js', 'fathom');
+        fathom('set', 'siteId', 'WAYNG');
+        fathom('trackPageview');
+    }
+</script>
+
+
+
+
+
+</body>
+</html>

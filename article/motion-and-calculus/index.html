@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-au">
+  <head>
+    <meta name="generator" content="Hugo 0.91.2" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+
+    <meta property="og:title" content="Motion and calculus">
+    <meta property="og:image" content="https://math2001.github.io">
+    <meta property="og:url" content="https://math2001.github.io/article/motion-and-calculus/">
+    <meta property="og:description" content="If you studied physics, one of the first things you probably did was graph the
+&ldquo;motion&rdquo; of objects. That is the displacement, velocity, and acceleration at
+an instant t. Didn&rsquo;t it remind you of a mathematical concept?">
+
+    <link rel=icon type=image/png href='/img/math2001.png'>
+    <title>Motion and calculus - math2001&#39;s blog</title>
+
+    <style>
+    body {
+  font-family: "DejaVu Sans Mono", "Roboto Mono", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 960px;
+  width: 560px;
+  text-align: justify;
+  margin: auto;
+  color: #18171a;
+}
+
+pre, code {
+  background-color: #ebe5f2;
+}
+
+pre {
+  padding: 8px;
+}
+
+code {
+  padding: 2px 4px;
+}
+
+pre code {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.entry-title {
+  margin-top: 32px;
+  margin-bottom: 0px;
+}
+
+.entry-title a {
+  color: #2b292d;
+}
+
+.entry-title small {
+  color: #6f5c75;
+}
+
+.entry-summary p:first-of-type {
+  margin-top: 4px;
+}
+
+.entry:first-of-type .entry-title {
+  margin-top: auto;
+}
+
+.page-date {
+  font-style: italic;
+}
+
+.page-content .desmos {
+  display: block;
+  width: 100%;
+  height: 500px;
+  margin: auto;
+}
+</style></head>
+  <body>
+    
+    <header>
+      <p>
+        <a href="/">Home</a>
+      </p>
+    </header>
+    
+    <main>
+<h1 class="page-title">Motion and calculus</h1>
+
+<p class="page-date">15 February 2019</p><section class="page-content"><p>If you studied physics, one of the first things you probably did was graph the
+&ldquo;motion&rdquo; of objects. That is the displacement, velocity, and acceleration at
+an instant <em>t</em>. Didn&rsquo;t it remind you of a mathematical concept?</p>
+<h4 id="observation">Observation</h4>
+<p>Let&rsquo;s say we have an object whos displacement is such that:</p>
+<p>$$
+s(t) = t^2 \quad \text{where t is the time}
+$$</p>
+<p>If we graphed this function, we&rsquo;d get a parabola:</p>
+<!-- raw HTML omitted -->
+<p>Now, let&rsquo;s graph its velocity. You can do it manually, but if you try to feel it,
+you&rsquo;ll see that since as the time goes by the displacement keeps on increasing
+faster and faster, the velocity could increase linearly. The velocity of that
+object at an instant $t$ could be given by:</p>
+<p>$$
+v(t) = t
+$$</p>
+<p>Which would look something like this:</p>
+<!-- raw HTML omitted -->
+<p>What if we graphed the acceleration? Since the velocity is increasing at a
+constant rate, the acceleration must be constant, something like:</p>
+<p>$$
+v(t) = 1
+$$</p>
+<!-- raw HTML omitted -->
+<p>Now, doesn&rsquo;t that make you think of a derivating the function $v$? Everytime,
+the function is one degree lower.</p>
+<h3 id="the-meaning">The meaning</h3>
+<h4 id="the-derivative">The derivative</h4>
+<p>Say we graphed the displacement of a ball with time on x-axis and displacement
+on the y-axis. What would be the meaning of the gradient at any point?</p>
+<p>$$
+m = \frac{rise}{run} = \frac{displacement}{time}
+$$</p>
+<p>The rise over the run is a displacement over some time, which is a velocity. And
+it makes sense! The gradient (which is the rate of change) of any point on this
+displacement/time graph gives us the <em>velocity</em> (which is the change of position
+per unit time, ie. how quickly it&rsquo;s changing position, its <em>rate</em>).</p>
+<p>Now, from a velocity/time graph, the gradient gives us the change in velocity,
+which is called <em>acceleration</em>.</p>
+<h4 id="the-integral">The integral</h4>
+<p>What if you want to go the other way? From a velocity/time graph, the
+displacement is given by the area under the curve.</p>
+<p>If you&rsquo;re not convinced, it&rsquo;s easier to think of a simple example where the
+velocity is constant (a straight flat line). If you want to know by how much
+an object traveled knowing it&rsquo;s speed (2 m/s) and the time it took (5 s), you&rsquo;d
+just multiply (2 * 5 = 10 m). Now, this happens to be area under the graph
+(width * height). And with a bit of thinking, you can convince yourself that
+this isn&rsquo;t a coincidence.</p>
+<p>Can you see that this also works for an acceleration/time graph (it gives you
+the velocity).</p>
+<p>So, the derivative of a function let&rsquo;s you go from displacement to velocity to
+acceleration, and the integral let&rsquo;s you go the other way.</p>
+<p>No wonder Newton was into calculus&hellip;</p></section></main>
+
+<script type="text/javascript">
+function loadCSS(stylesheets) {
+    let media, link
+    for (let stylesheet of stylesheets) {
+        media = stylesheet.media ? ' media="' + stylesheet.media + '"' : ''
+        link = '<link rel="stylesheet" type="text/css" href="'
+        if (stylesheet.href.startsWith('http')) link += stylesheet.href
+        else link += "/" + "css/" + stylesheet.href
+        link += '"' + media + '>'
+        document.head.innerHTML += link
+
+    }
+}
+
+loadCSS([
+    { href: 'phone.css', media: 'screen and (max-width: 600px)' },
+    { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
+])
+</script>
+
+
+<script>
+    if (!location.href.includes('localhost')) {
+        console.log("send tracking!")
+        ;(function(f, a, t, h, o, m){
+            a[h]=a[h]||function(){
+                (a[h].q=a[h].q||[]).push(arguments)
+            };
+            o=f.createElement('script'),
+                m=f.getElementsByTagName('script')[0];
+            o.async=1; o.src=t; o.id='fathom-script';
+            m.parentNode.insertBefore(o,m)
+        })(document, window, '//math2001-fathom.herokuapp.com/tracker.js', 'fathom');
+        fathom('set', 'siteId', 'WAYNG');
+        fathom('trackPageview');
+    }
+</script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            throwOnError: true,
+            macros: {
+                '\\b': '\\\\',
+                '\\bb': '\\\\[3ex]',
+                '\\let': '\\text{let} \\space',
+                '\\dx': '\\space dx'
+            },
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\[", right: "\\]", display: false},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false}
+            ]
+        });
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-au">
+  <head>
+    <meta name="generator" content="Hugo 0.91.2" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+
+    <meta property="og:title" content="How to combine svgs">
+    <meta property="og:image" content="https://math2001.github.io">
+    <meta property="og:url" content="https://math2001.github.io/article/combine-svgs/">
+    <meta property="og:description" content="If you want your website to be fast, you should limit the number of http
+requests. A great way of doing that is combining your images. If you use SVGS
+for your icons and stuff like that, here&rsquo;s how you can combine all your icon in
+one big file, and use them in your website!">
+
+    <link rel=icon type=image/png href='/img/math2001.png'>
+    <title>How to combine svgs - math2001&#39;s blog</title>
+
+    <style>
+    body {
+  font-family: "DejaVu Sans Mono", "Roboto Mono", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 960px;
+  width: 560px;
+  text-align: justify;
+  margin: auto;
+  color: #18171a;
+}
+
+pre, code {
+  background-color: #ebe5f2;
+}
+
+pre {
+  padding: 8px;
+}
+
+code {
+  padding: 2px 4px;
+}
+
+pre code {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.entry-title {
+  margin-top: 32px;
+  margin-bottom: 0px;
+}
+
+.entry-title a {
+  color: #2b292d;
+}
+
+.entry-title small {
+  color: #6f5c75;
+}
+
+.entry-summary p:first-of-type {
+  margin-top: 4px;
+}
+
+.entry:first-of-type .entry-title {
+  margin-top: auto;
+}
+
+.page-date {
+  font-style: italic;
+}
+
+.page-content .desmos {
+  display: block;
+  width: 100%;
+  height: 500px;
+  margin: auto;
+}
+</style></head>
+  <body>
+    
+    <header>
+      <p>
+        <a href="/">Home</a>
+      </p>
+    </header>
+    
+    <main>
+<h1 class="page-title">How to combine svgs</h1>
+
+<p class="page-date">8 October 2017</p><section class="page-content"><p>If you want your website to be fast, you should limit the number of http
+requests. A great way of doing that is combining your images. If you use SVGS
+for your icons and stuff like that, here&rsquo;s how you can combine all your icon in
+one big file, and use them in your website!</p>
+<h3 id="how-it-works">How it works</h3>
+<p>A combined svg would look like this:</p>
+<pre><code class="language-xml">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+    &lt;symbol viewBox=&quot;0 0 20 20&quot; id='circle'&gt;
+        &lt;circle cx=&quot;10&quot; cy=&quot;10&quot; r=&quot;5&quot; fill=&quot;currentColor&quot; /&gt;
+    &lt;/symbol&gt;
+    &lt;symbol viewBox=&quot;0 0 100 100&quot;&gt;
+        &lt;ellipse cx=&quot;50&quot; cy=&quot;50&quot; rx=&quot;60&quot; ry=&quot;40&quot; fill=&quot;currentColor&quot; /&gt;
+    &lt;/symbol&gt;
+&lt;/svg&gt;
+</code></pre>
+<p>Here&rsquo;s how you use it in your web page:</p>
+<pre><code class="language-html">&lt;style&gt;
+p { color: #34495e; }
+p svg { width: 2em; vertical-align: middle; }
+&lt;/style&gt;
+&lt;p&gt;
+    Do you want to see what a circle looks like? Here's one:
+    &lt;svg&gt;&lt;use href=&quot;combined.svg#circle&quot;&gt;&lt;/svg&gt;
+&lt;/p&gt;
+</code></pre>
+<p>Which would give you something like this:</p>
+<!-- raw HTML omitted -->
+<h3 id="combining-your-svgs">Combining your SVGs</h3>
+<p>You could have fun doing by hand, but there are some tools out there that allow
+you to do that in super easily.</p>
+<p>You can combine your SVGs by using <code>gulp</code> or <code>grunt</code> using their <code>svgstore</code>
+plugin (<code>gulp-svgstore</code> and <code>grunt-svgstore</code>), but in this case, we&rsquo;ll just use
+a simple CLI.</p>
+<p>The CLI I use is called <a href="https://github.com/svgstore/svgstore-cli"><code>svgstore-cli</code></a>, and it&rsquo;s a simple npm package.</p>
+<pre><code class="language-sh">$ yarn global add svgstore-cli
+$ # or, if you want to wait for at least 3 hours 😄
+$ npm install --global svgstore-cli
+</code></pre>
+<p>Awesome! Now you have access to the <code>svgstore</code> command in your terminal.</p>
+<h4 id="heres-the-magical-comment-">Here&rsquo;s the magical comment 🎉</h4>
+<pre><code class="language-sh">$ svgstore svgs/*.svg &gt; combined.svg
+</code></pre>
+<p>This will load every <code>.svg</code> file in the <code>svgs</code> directory, <em>combine</em> them, and
+write this into <code>combined.svg</code>.</p>
+<p>And there you have it!</p></section></main>
+
+<script type="text/javascript">
+function loadCSS(stylesheets) {
+    let media, link
+    for (let stylesheet of stylesheets) {
+        media = stylesheet.media ? ' media="' + stylesheet.media + '"' : ''
+        link = '<link rel="stylesheet" type="text/css" href="'
+        if (stylesheet.href.startsWith('http')) link += stylesheet.href
+        else link += "/" + "css/" + stylesheet.href
+        link += '"' + media + '>'
+        document.head.innerHTML += link
+
+    }
+}
+
+loadCSS([
+    { href: 'phone.css', media: 'screen and (max-width: 600px)' },
+    { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
+])
+</script>
+
+
+<script>
+    if (!location.href.includes('localhost')) {
+        console.log("send tracking!")
+        ;(function(f, a, t, h, o, m){
+            a[h]=a[h]||function(){
+                (a[h].q=a[h].q||[]).push(arguments)
+            };
+            o=f.createElement('script'),
+                m=f.getElementsByTagName('script')[0];
+            o.async=1; o.src=t; o.id='fathom-script';
+            m.parentNode.insertBefore(o,m)
+        })(document, window, '//math2001-fathom.herokuapp.com/tracker.js', 'fathom');
+        fathom('set', 'siteId', 'WAYNG');
+        fathom('trackPageview');
+    }
+</script>
+
+
+
+
+
+</body>
+</html>

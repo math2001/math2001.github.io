@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>calculus on math2001&#39;s blog</title>
+    <link>https://math2001.github.io/tags/calculus/</link>
+    <description>Recent content in calculus on math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <copyright>© Mathieu Paturel 2017-2022</copyright>
+    <lastBuildDate>Mon, 09 Dec 2019 09:09:57 +1100</lastBuildDate><atom:link href="https://math2001.github.io/tags/calculus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Finding the equation of a curve formed by lines</title>
+      <link>https://math2001.github.io/article/finding-the-equation-of-a-curve-formed-by-lines/</link>
+      <pubDate>Mon, 09 Dec 2019 09:09:57 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/article/finding-the-equation-of-a-curve-formed-by-lines/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://math2001.github.io/img/curve-lines-drawing.jpg&#34; alt=&#34;drawing with lines only that form curves&#34;&gt;&lt;/p&gt;
+&lt;p&gt;My sister had to do some artwork for school, and she decided to make some
+curved shapes out of lines. It looks pretty cool (although it would have been
+even better with pencil I think, but she wouldn&amp;rsquo;t listen, and I&amp;rsquo;m too lazy to
+do it myself right now), and making curves out of &lt;em&gt;just&lt;/em&gt; lines, well, I find
+that pretty fancy. But I wondered what the curves actually were&amp;hellip; Circles?
+Parabolas? Ellipses? Something different?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Motion and calculus</title>
+      <link>https://math2001.github.io/article/motion-and-calculus/</link>
+      <pubDate>Fri, 15 Feb 2019 11:12:47 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/article/motion-and-calculus/</guid>
+      <description>&lt;p&gt;If you studied physics, one of the first things you probably did was graph the
+&amp;ldquo;motion&amp;rdquo; of objects. That is the displacement, velocity, and acceleration at
+an instant &lt;em&gt;t&lt;/em&gt;. Didn&amp;rsquo;t it remind you of a mathematical concept?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Length of a curve</title>
+      <link>https://math2001.github.io/article/length-of-a-curve/</link>
+      <pubDate>Thu, 14 Feb 2019 21:31:45 +1100</pubDate>
+      
+      <guid>https://math2001.github.io/article/length-of-a-curve/</guid>
+      <description>&lt;p&gt;After misunderstanding a question in physics, I thought I had to calculate the
+length of a curved trajectory (ie. the distance) instead of just the straight
+line (ie. the displacement). Turns out it was the easy option, but I now wanted
+to know how to get the length of a curve. I mean, it&amp;rsquo;d just be summing up
+an infinite number of straight lines, which is almost exactly what integration
+is&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

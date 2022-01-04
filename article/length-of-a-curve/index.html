@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-au">
+  <head>
+    <meta name="generator" content="Hugo 0.91.2" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+
+    <meta property="og:title" content="Length of a curve">
+    <meta property="og:image" content="https://math2001.github.io">
+    <meta property="og:url" content="https://math2001.github.io/article/length-of-a-curve/">
+    <meta property="og:description" content="After misunderstanding a question in physics, I thought I had to calculate the
+length of a curved trajectory (ie. the distance) instead of just the straight
+line (ie. the displacement). Turns out it was the easy option, but I now wanted
+to know how to get the length of a curve. I mean, it&rsquo;d just be summing up
+an infinite number of straight lines, which is almost exactly what integration
+is&hellip;">
+
+    <link rel=icon type=image/png href='/img/math2001.png'>
+    <title>Length of a curve - math2001&#39;s blog</title>
+
+    <style>
+    body {
+  font-family: "DejaVu Sans Mono", "Roboto Mono", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 960px;
+  width: 560px;
+  text-align: justify;
+  margin: auto;
+  color: #18171a;
+}
+
+pre, code {
+  background-color: #ebe5f2;
+}
+
+pre {
+  padding: 8px;
+}
+
+code {
+  padding: 2px 4px;
+}
+
+pre code {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.entry-title {
+  margin-top: 32px;
+  margin-bottom: 0px;
+}
+
+.entry-title a {
+  color: #2b292d;
+}
+
+.entry-title small {
+  color: #6f5c75;
+}
+
+.entry-summary p:first-of-type {
+  margin-top: 4px;
+}
+
+.entry:first-of-type .entry-title {
+  margin-top: auto;
+}
+
+.page-date {
+  font-style: italic;
+}
+
+.page-content .desmos {
+  display: block;
+  width: 100%;
+  height: 500px;
+  margin: auto;
+}
+</style></head>
+  <body>
+    
+    <header>
+      <p>
+        <a href="/">Home</a>
+      </p>
+    </header>
+    
+    <main>
+<h1 class="page-title">Length of a curve</h1>
+
+<p class="page-date">14 February 2019</p><section class="page-content"><p>After misunderstanding a question in physics, I thought I had to calculate the
+length of a curved trajectory (ie. the distance) instead of just the straight
+line (ie. the displacement). Turns out it was the easy option, but I now wanted
+to know how to get the length of a curve. I mean, it&rsquo;d just be summing up
+an infinite number of straight lines, which is almost exactly what integration
+is&hellip;</p>
+<p>If you know calculus, you know that there are 2 main concepts:</p>
+<ol>
+<li>The derivative of a function, which gives you the gradient at a point</li>
+<li>Integration, which gives you the area under the curve</li>
+</ol>
+<p>Now, these are perfectly cool by themselves, but they have some meaning. The
+gradient is the rate of change, and the area under the graph is the actual
+change (a <a href="/post/motion-and-calculus.md">quick example with motion</a>).
+I&rsquo;m struggling to come up with the meaning of the <em>length of the curve</em>
+though. But, it&rsquo;s fun and cool as well&hellip;</p>
+<h3 id="the-idea">The idea</h3>
+<p>Say you had to do it manually, how would it work? Well, I&rsquo;d draw lines each at
+the end of an other on the curve, and then add them all up, and that would give
+me an approximation. Obviously, the more lines there are, the more precise my
+approximation would be.</p>
+<!-- raw HTML omitted -->
+<p>Now, we can express this mathematically.</p>
+<p>$$
+\lim_{\delta x \to 0} \sum_{x=a}^b \sqrt{((x + \delta x) - x)^2 + (f(x + \delta x) - f(x))^2}
+$$</p>
+<p>Instead of having a finite amount of lines, I&rsquo;m just looking at what happens when
+the interval between each line&rsquo;s x-distance gets closer and closer to 0 (ie.
+the lines get smaller and smaller). It&rsquo;s just Pythagoras basically:</p>
+<p>$$
+d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+$$</p>
+<p>Now, this is nice, but we can&rsquo;t do much with this. If you were to compute it,
+you&rsquo;d still have to do it manually, and you&rsquo;d only get an approximation no matter
+how hard you tried.</p>
+<p>But, this does kind of look like an integral do me&hellip; I mean there&rsquo;s a
+$\lim_{\delta x \to 0}$, a sum, and $\delta x$. Remember:</p>
+<p>$$
+\begin{aligned}
+A &amp;= \lim_{\delta x \to 0} \sum_{x=a}^b f(x) \space \delta x \b
+&amp;= \int_a^b f(x) \dx
+\end{aligned}
+$$</p>
+<p>The whole trick is based on remembering first principles for the derivatives:</p>
+<p>$$
+\begin{aligned}
+\frac{dy}{dx} &amp;= \lim_{\delta x \to 0} \frac{f(x + \delta x) - f(x)}{\delta x} \b
+\lim_{\delta x \to 0} \delta x \frac{dy}{dx} &amp;= f(x + \delta x) - f(x)
+\end{aligned}
+$$</p>
+<p>Back to our original expression:</p>
+<p>$$
+\begin{aligned}
+\text{Length} &amp;= \lim_{\delta x \to 0} \sum_{x=a}^b \sqrt{((x + \delta x) - x)^2 + (f(x + \delta x) - f(x))^2} \b
+&amp;= \lim_{\delta x \to 0} \sum_{x=a}^b \sqrt{\delta x^2 + \biggr(\delta x \frac{dy}{dx}\biggr)^2} \b
+&amp;= \lim_{\delta x \to 0} \sum_{x=a}^b \sqrt{1 + \biggr(\frac{dy}{dx}\biggr)^2} \delta x \b
+&amp;= \int_{a}^b \sqrt{1 + \biggr(\frac{dy}{dx}\biggr)^2} \dx
+\end{aligned}
+$$</p>
+<p>Pretty cool hey? For any differentiable $f(x)$, the length of a curve between
+$a$ and $b$ is given by:</p>
+<p>$$
+L = \int_{a}^b \sqrt{1 + f^\prime (x)^2} \dx
+$$</p>
+<p>Here&rsquo;s a little desmos to play with the number of lines:</p>
+<!-- raw HTML omitted --></section></main>
+
+<script type="text/javascript">
+function loadCSS(stylesheets) {
+    let media, link
+    for (let stylesheet of stylesheets) {
+        media = stylesheet.media ? ' media="' + stylesheet.media + '"' : ''
+        link = '<link rel="stylesheet" type="text/css" href="'
+        if (stylesheet.href.startsWith('http')) link += stylesheet.href
+        else link += "/" + "css/" + stylesheet.href
+        link += '"' + media + '>'
+        document.head.innerHTML += link
+
+    }
+}
+
+loadCSS([
+    { href: 'phone.css', media: 'screen and (max-width: 600px)' },
+    { href: 'https://fonts.googleapis.com/css?family=Roboto+Slab' },
+])
+</script>
+
+
+<script>
+    if (!location.href.includes('localhost')) {
+        console.log("send tracking!")
+        ;(function(f, a, t, h, o, m){
+            a[h]=a[h]||function(){
+                (a[h].q=a[h].q||[]).push(arguments)
+            };
+            o=f.createElement('script'),
+                m=f.getElementsByTagName('script')[0];
+            o.async=1; o.src=t; o.id='fathom-script';
+            m.parentNode.insertBefore(o,m)
+        })(document, window, '//math2001-fathom.herokuapp.com/tracker.js', 'fathom');
+        fathom('set', 'siteId', 'WAYNG');
+        fathom('trackPageview');
+    }
+</script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            throwOnError: true,
+            macros: {
+                '\\b': '\\\\',
+                '\\bb': '\\\\[3ex]',
+                '\\let': '\\text{let} \\space',
+                '\\dx': '\\space dx'
+            },
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\[", right: "\\]", display: false},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false}
+            ]
+        });
+    });
+</script>
+
+
+</body>
+</html>

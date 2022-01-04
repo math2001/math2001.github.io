@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>file manupilation on math2001&#39;s blog</title>
+    <link>https://math2001.github.io/tags/file-manupilation/</link>
+    <description>Recent content in file manupilation on math2001&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <copyright>© Mathieu Paturel 2017-2022</copyright>
+    <lastBuildDate>Sun, 24 Sep 2017 07:51:15 +1000</lastBuildDate><atom:link href="https://math2001.github.io/tags/file-manupilation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bash&#39;s find command</title>
+      <link>https://math2001.github.io/article/bashs-find-command/</link>
+      <pubDate>Sun, 24 Sep 2017 07:51:15 +1000</pubDate>
+      
+      <guid>https://math2001.github.io/article/bashs-find-command/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;find&lt;/code&gt; command in bash is quite powerful, and knowing the basics might save
+you some scripting.&lt;/p&gt;
+&lt;p&gt;What does it do? It &amp;ldquo;finds&amp;rdquo; files. By default, it outputs their path relative to
+where you ran &lt;code&gt;find&lt;/code&gt;. But, in addition of providing you with advanced &amp;ldquo;filters&amp;rdquo;
+it actually allows you to run commands on each of those files.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
