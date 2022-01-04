@@ -6,8 +6,8 @@ preserveTaxonomyNames: true
 publishBranch: master
 newContentEditor: vim
 
-theme: fasty
-copyright: © Mathieu Paturel 2017-2019
+theme: raw
+copyright: © Mathieu Paturel 2017-2022
 enableEmoji: true
 
 blackfriday:
@@ -18,29 +18,12 @@ markup:
     codeFences: false
 
 params:
-  themefolderpath: themes/fasty
+  themefolderpath: themes/raw
   sitecode: math2001/math2001.github.io
   logo:
     src: /img/math2001.svg
     alt: Round logo with a M in it (math2001's logo)
   favicon: img/math2001.png
-  social:
-    - username: _math2001
-      name: twitter
-      url: https://twitter.com/_math2001
-    - username: math2001
-      name: github
-      url: https://github.com/math2001
-    - username: math2001
-      name: stackoverflow
-      url: https://stackoverflow.com/users/6164984/math2001
-    - username: math2001
-      name: dev.to
-      url: https://dev.com/math2001
-    - username: math2001
-      name: youtube
-      url: https://www.youtube.com/channel/UCi2O717lLg8ugD5KxAJTwAQ
-
   footerbio: |
     French, lives in Australia, and gives computer instructions so they don't
     get bored. :smiley:
@@ -51,15 +34,7 @@ params:
       src: img/math2001.png
       alt: Picture of Mathieu Paturel
     bio: |
-      Bonjour! I'm a first year UNSW student, doing a double degree in
-      engineering (software engineering) and science (physics). I've been
-      programming for about 4 years (self taught). I know a fair bit about
-      Python, though I'm spending a lot more time writing Go these days...
-      I also did a bit of web development.
-    closing: |
-      You are probably wondering what is the difference between a post, an
-      article and a project. Articles and projects are carefully crafted,
-      whereas posts are pretty much just me thinking out loud...
+      UNSW student, studying physics and software engineering.
     links:
       - name: CV
         url: /cv.pdf

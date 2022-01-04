@@ -1,8 +1,8 @@
 import os
-import tempfile
-import subprocess
-import logging
 import shutil
+import subprocess
+import tempfile
+
 
 # thanks to https://stackoverflow.com/a/12514470/6164984
 def copytree(src, dst, symlinks=False, ignore=None):
