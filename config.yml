@@ -38,6 +38,8 @@ params:
     links:
       - name: CV
         url: /cv.pdf
+      - name: Physics demos
+        url: https://math2001.github.io/physics-demos/
       - name: GitHub
         url: https://github.com/math2001
 
